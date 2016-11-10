@@ -1,18 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en" class="wide wow-animation">
 <head>
     <!-- Site Title -->
     <title>Home</title>
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="viewport"
-          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-
+    <meta name="viewport"content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <!-- Stylesheets -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href='//fonts.googleapis.com/css?family=Roboto:300,300italic%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://livedemo00.template-help.com/wt_58243/css/style.css">
-
+    <link rel="stylesheet" href="http://livedemo00.template-help.com/wt_58243/css/style.css" type='text/css'>
     <!--[if lt IE 10]>
     <div style='background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;'>
         <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
@@ -29,9 +25,7 @@
     <!--========================================================
                               HEADER
     =========================================================-->
-
     <?php $this->load->view("header");?>
-    
     <!--========================================================
                               CONTENT
     =========================================================-->
@@ -91,7 +85,7 @@
             <div class="absolute wow fadeInLeft">
                 <div class="row">
                     <div class="col-md-preffix-6 col-md-6">
-                        <div class="image-wrap"><img src="http://livedemo00.template-help.com/wt_58243/images/page-01_img01.jpg" width="1010" height="1125" alt=""></div>
+                        <div class="image-wrap"><img src="<?php echo site_url().'static/page_front/images/page-01_img01.jpg';?>" width="1010" height="1125" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -137,7 +131,7 @@
             <div class="absolute wow fadeInRight">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="image-wrap"><img src="http://livedemo00.template-help.com/wt_58243/images/page-01_img02.jpg" width="1010" height="1125" alt=""></div>
+                        <div class="image-wrap"><img src="<?php echo site_url().'static/page_front/images/page-01_img02.jpg';?>" width="1010" height="1125" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -162,12 +156,12 @@
                     <p class="inset-1">We value our partners and believe that our program of partnership is very effective business tool that opens many advantages for its participants. First of all, we assume that such project is a great way to share common experience, discuss important problems, and brainstorm.</p>
                     <!-- Flex list -->
                     <ul class="flex-list">
-                        <li><a href="#"><img src="http://livedemo00.template-help.com/wt_58243/images/page-01_img03.png" alt="" width="117" height="86"></a></li>
-                        <li><a href="#"><img src="http://livedemo00.template-help.com/wt_58243/images/page-01_img04.png" alt="" width="117" height="86"></a></li>
-                        <li><a href="#"><img src="http://livedemo00.template-help.com/wt_58243/images/page-01_img05.png" alt="" width="117" height="86"></a></li>
-                        <li><a href="#"><img src="http://livedemo00.template-help.com/wt_58243/images/page-01_img06.png" alt="" width="117" height="86"></a></li>
-                        <li><a href="#"><img src="http://livedemo00.template-help.com/wt_58243/images/page-01_img07.png" alt="" width="117" height="86"></a></li>
-                        <li><a href="#"><img src="http://livedemo00.template-help.com/wt_58243/images/page-01_img08.png" alt="" width="117" height="86"></a></li>
+                        <li><a href="#"><img src="<?php echo site_url().'static/page_front/images/page-01_img03.png';?>" alt="" width="117" height="86"></a></li>
+                        <li><a href="#"><img src="<?php echo site_url().'static/page_front/images/page-01_img04.png';?>" alt="" width="117" height="86"></a></li>
+                        <li><a href="#"><img src="<?php echo site_url().'static/page_front/images/page-01_img05.png';?>" alt="" width="117" height="86"></a></li>
+                        <li><a href="#"><img src="<?php echo site_url().'static/page_front/images/page-01_img06.png';?>" alt="" width="117" height="86"></a></li>
+                        <li><a href="#"><img src="<?php echo site_url().'static/page_front/images/page-01_img07.png';?>" alt="" width="117" height="86"></a></li>
+                        <li><a href="#"><img src="<?php echo site_url().'static/page_front/images/page-01_img08.png';?>" alt="" width="117" height="86"></a></li>
                     </ul>
                     <!-- END Flex list -->
                     <a href="#" class="btn btn-md btn-contrast">Explore More</a>
@@ -255,22 +249,12 @@
     <!--========================================================
                               FOOTER
     ==========================================================-->
-    <footer class="page-footer">
-        <div class="container text-center">
-            <p>
-                <a href="./">Connect</a> &copy; <span id="copyright-year"></span> &bull;
-                <span class="rd-navbar--switch-to-desktop"></span>
-                <a href='index-5.html'>Privacy Policy</a>
-                <!-- {%FOOTER_LINK} -->
-            </p>
-        </div>
-    </footer>
+<?php $this->load->view("footer");?>
 </div>
-
 <!-- Core Scripts -->
-<script src="http://livedemo00.template-help.com/wt_58243/js/core.min.js"></script>
+<script src="<?php echo site_url().'static/page_front/js/core.min.js';?>"></script>
 <!-- Additional Functionality Scripts -->
-<script src="http://livedemo00.template-help.com/wt_58243/js/script.js"></script>
+<script src="<?php echo site_url().'static/page_front/js/script.js';?>"></script>
 <!-- begin olark code -->
 <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
 f[z]=function(){
