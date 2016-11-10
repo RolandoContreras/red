@@ -6,7 +6,10 @@
             $title = "Home";
             break;
         case "about":
-            $title = "About";
+            $title = "About"; 
+            break;
+        case "contact":
+            $title = "Contact"; 
             break;
         default:
              $title = "Home";

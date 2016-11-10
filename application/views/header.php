@@ -100,7 +100,7 @@
                                 <a href="index-3.html">Gallery</a>
                             </li>
                             <li>
-                                <a href="index-4.html">Contacts</a>
+                                <a href="<?php echo site_url().'contact';?>">Contacts</a>
                             </li>
                         </ul>
                         <!-- END RD Navbar Nav -->
