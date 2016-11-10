@@ -94,13 +94,16 @@
 
                             </li>
                             <li>
-                                <a href="index-2.html">Services</a>
+                                <a href="<?php echo site_url().'services';?>">Services</a>
                             </li>
                             <li>
                                 <a href="index-3.html">Gallery</a>
                             </li>
                             <li>
                                 <a href="<?php echo site_url().'contact';?>">Contacts</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo site_url().'contact';?>">Login</a>
                             </li>
                         </ul>
                         <!-- END RD Navbar Nav -->

@@ -25,9 +25,29 @@
                         <div class="box__left"><div class="icon icon-xs icon-contrast fa fa-phone-square"></div></div>
                         <div class="box__body"><a href="callto:#">800 555 7744</a></div>
                     </div>
-
+                    
                     <div class="rd-navbar-nav-wrap">
-
+                     <!--//    CSS ACTIVE FOR THE LINK ACTIVE-->
+                     
+                     <?php 
+                            $style_about = "";
+                            $style_contact = "";
+                            $style_home = "";
+                            $style_services = "";
+                            $url = explode("/",uri_string()); 
+                            switch ($url[0]) {
+                            case "about":
+                                $style_about = "active";
+                                break;
+                            case "services":
+                                $style_services = "active";
+                                break;
+                            case "contact":
+                                $style_contact = "active";
+                                break;
+                            default:
+                                $style_home = "active";
+                    }?>
                         <!-- RD Navbar Nav -->
                         <ul class="rd-navbar-nav">
                             <li>
@@ -58,9 +78,8 @@
                                 </ul>
                                 <!-- END RD Navbar Megamenu -->
                             </li>
-                            <li class="active">
+                            <li class="<?php echo $style_about;?>">
                                 <a href="<?php echo site_url().'about';?>">About</a>
-
                                 <!-- RD Navbar Dropdown -->
                                 <ul class="rd-navbar-dropdown">
                                     <li>
@@ -93,14 +112,17 @@
                                 <!-- END RD Navbar Dropdown -->
 
                             </li>
-                            <li>
-                                <a href="index-2.html">Services</a>
+                            <li class="<?php echo $style_services;?>">
+                                <a href="<?php echo site_url().'services';?>">Services</a>
                             </li>
-                            <li>
+                            <li class="">
                                 <a href="index-3.html">Gallery</a>
                             </li>
-                            <li>
+                            <li class="<?php echo $style_contact;?>">
                                 <a href="<?php echo site_url().'contact';?>">Contacts</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo site_url().'login';?>">Login</a>
                             </li>
                         </ul>
                         <!-- END RD Navbar Nav -->

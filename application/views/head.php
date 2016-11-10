@@ -1,15 +1,28 @@
 <head>
-<!--GET URL AND SELECT TITLE NAME-->    
+<!--GET URL AND SELECT TITLE NAME -->    
 <?php $url = explode("/",uri_string()); 
+//    CSS ACTIVE FOR THE LINK ACTIVE
+        $style_home ="";
+        $style_about ="";
+        $style_services ="";
+        $style_contact ="";
         switch ($url[0]) {
+////////
         case "home":
             $title = "Home";
+            $style_home = "active";
             break;
         case "about":
             $title = "About"; 
+            $style_about = "active";
+            break;
+        case "services":
+            $title = "Services"; 
+            $style_services = "active";
             break;
         case "contact":
             $title = "Contact"; 
+            $style_contact = "active";
             break;
         default:
              $title = "Home";
@@ -31,4 +44,5 @@
     </div>
     <script src="js/html5shiv.min.js"></script>
     <![endif]-->
+    <?php return $title;?>
 </head>
