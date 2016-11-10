@@ -161,7 +161,6 @@ function formato_fecha_db_time($fecha){
     return $anio."/".$mes."/".$dia;
 }
 
-
 function get_day_number($fecha){    
     $dia=substr($fecha, 8, 2);
     return  $dia;
