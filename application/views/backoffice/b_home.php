@@ -1,206 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   <meta name="description" content="Software Millenium">
-   <meta name="keywords" content="millenium, software, multinivel, binario, forzada, matriz, unilevel">
-   
-		<link rel="shortcut icon" type="image/png" href="/angel/favicon.png">
-		<title>BITSHARE</title>
-		
-		<!-- =============== VENDOR STYLES ===============-->
-	   <!-- FONT AWESOME-->
-	   <link rel="stylesheet" href="http://alliancesystemclub.com/millenium/vendor/fontawesome/css/font-awesome.min.css">
-	   <!-- SIMPLE LINE ICONS-->
-	   <!--<link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/page-simple-line-icons.css';?> ">-->
-           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-	   <!-- ANIMATE.CSS-->
-	   <link rel="stylesheet" href="http://alliancesystemclub.com/millenium/vendor/animate.css/animate.min.css">
-	   <!-- WHIRL (spinners)-->
-	   <link rel="stylesheet" href="http://alliancesystemclub.com/millenium/vendor/whirl/dist/whirl.css">
-	   <!-- =============== PAGE VENDOR STYLES ===============-->
-	   <!-- WEATHER ICONS-->
-	   <link rel="stylesheet" href="http://alliancesystemclub.com/millenium/vendor/weather-icons/css/weather-icons.min.css">
-	   <!-- =============== BOOTSTRAP STYLES ===============-->
-	   <link rel="stylesheet" href="http://alliancesystemclub.com/millenium/app/css/bootstrap.css" id="bscss">
-
-	   <!-- SWEET ALERT-->
-	   <link rel="stylesheet" href="http://alliancesystemclub.com/millenium/vendor/sweetalert/dist/sweetalert.css">
-	   
-	   <!-- DATATABLES-->
-   		<link rel="stylesheet" href="http://alliancesystemclub.com/millenium/vendor/datatables-colvis/css/dataTables.colVis.css">
-   		<link rel="stylesheet" href="http://alliancesystemclub.com/millenium/app/vendor/datatable-bootstrap/css/dataTables.bootstrap.css">
-
-	   <!-- =============== APP STYLES ===============-->
-	   <link rel="stylesheet" href="http://alliancesystemclub.com/millenium/app/css/app.css" id="maincss">
-
-	   <!-- =============== APP TEMAS ===============-->
-	   <link id="autoloaded-stylesheet" rel="stylesheet" href="http://alliancesystemclub.com/millenium/app/css/theme-e.css">
-	   <!--<script src="../app/ga.js"></script>-->
-		
-			<style type='text/css'>
-				
-				body,
-				.wrapper > section {}
-				.wrapper > .aside {
-				  background-color: #3a3f51;
-				}
-
-				/* ========================================================================
-				   Component: top-navbar
-				 ========================================================================== */
-				/*Color de fondo donde estan las opciones de la barra superior*/
-				.topnavbar {
-				  /*background-color: ;*/
-				}
-
-				.topnavbar .navbar-header {
-				  background-color: transparent;
-				  background-image: -webkit-linear-gradient(left,  0%,  100%);
-				  background-image: -o-linear-gradient(left,  0%,  100%);
-				  background-image: linear-gradient(to right,  0%,  100%);
-				  background-repeat: repeat-x;
-				  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='', endColorstr='', GradientType=1);
-				}
-
-				@media only screen and (min-width: 768px) {
-				  .topnavbar .navbar-header {
-				    background-image: none;
-				  }
-				}
-
-				.topnavbar .navbar-nav > li > a,
-				.topnavbar .navbar-nav > .open > a {
-				}
-
-				.topnavbar .navbar-nav > li > a:hover,
-				.topnavbar .navbar-nav > .open > a:hover,
-				.topnavbar .navbar-nav > li > a:focus,
-				.topnavbar .navbar-nav > .open > a:focus {
-				}
-
-				.topnavbar .navbar-nav > .active > a,
-				.topnavbar .navbar-nav > .open > a,
-				.topnavbar .navbar-nav > .active > a:hover,
-				.topnavbar .navbar-nav > .open > a:hover,
-				.topnavbar .navbar-nav > .active > a:focus,
-				.topnavbar .navbar-nav > .open > a:focus {
-				  background-color: transparent;
-				}
-
-				.topnavbar .navbar-nav > li > [data-toggle='navbar-search'] {
-				  color: #ffffff;
-				}
-
-				/*Color fondo barra superior*/
-				.topnavbar .nav-wrapper {
-				  background-image: -webkit-linear-gradient(left,  0%,  100%);
-				  background-image: -o-linear-gradient(left,  0%,  100%);
-				  background-image: linear-gradient(to right,  0%,  100%);
-				  background-repeat: repeat-x;
-				  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='', endColorstr='', GradientType=1);
-				}
-
-				@media only screen and (min-width: 768px) {
-				  .topnavbar {
-				    background-image: -webkit-linear-gradient(left,  0%,  100%);
-				    background-image: -o-linear-gradient(left,  0%,  100%);
-				    background-image: linear-gradient(to right,  0%,  100%);
-				    background-repeat: repeat-x;
-				    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='', endColorstr='', GradientType=1);
-				  }
-				  .topnavbar .navbar-nav > .open > a,
-				  .topnavbar .navbar-nav > .open > a:hover,
-				  .topnavbar .navbar-nav > .open > a:focus {
-				    box-shadow: 0 -3px 0 rgba(255, 255, 255, 0.5) inset;
-				  }
-				  .topnavbar .navbar-nav > li > a,
-				  .topnavbar .navbar-nav > .open > a {
-				  }
-				  .topnavbar .navbar-nav > li > a:hover,
-				  .topnavbar .navbar-nav > .open > a:hover,
-				  .topnavbar .navbar-nav > li > a:focus,
-				  .topnavbar .navbar-nav > .open > a:focus {
-				  }
-				}
-
-				/* ========================================================================
-				   Component: sidebar
-				 ========================================================================== */
-				.sidebar {
-				}
-
-				.sidebar .nav-heading {
-				}
-
-				.sidebar .nav > li > a,
-				.sidebar .nav > li > .nav-item {
-				}
-
-				.sidebar .nav > li > a:focus,
-				.sidebar .nav > li > .nav-item:focus,
-				.sidebar .nav > li > a:hover,
-				.sidebar .nav > li > .nav-item:hover {
-                                }
-
-				.sidebar .nav > li > a > em,
-				.sidebar .nav > li > .nav-item > em {
-				  color: inherits;
-				}
-
-				.sidebar .nav > li.active,
-				.sidebar .nav > li.open,
-				.sidebar .nav > li.active > a,
-				.sidebar .nav > li.open > a,
-				.sidebar .nav > li.active .nav,
-				.sidebar .nav > li.open .nav {
-				  /*color: #f05050;*/
-				}
-
-				.sidebar .nav > li.active > a > em,
-				.sidebar .nav > li.open > a > em {
-				}
-
-				.sidebar .nav > li.active {
-				  border-left-color: 0;
-				}
-
-				.sidebar-subnav {
-				  background-color: 0;
-				}
-
-				.sidebar-subnav > .sidebar-subnav-header {
-				  color: 0;
-				}
-
-				.sidebar-subnav > li > a,
-				.sidebar-subnav > li > .nav-item {
-				  color: 0;
-				}
-
-				.sidebar-subnav > li > a:focus,
-				.sidebar-subnav > li > .nav-item:focus,
-				.sidebar-subnav > li > a:hover,
-				.sidebar-subnav > li > .nav-item:hover {
-				  color: 0;
-				}
-
-				.sidebar-subnav > li.active > a,
-				.sidebar-subnav > li.active > .nav-item {
-				  color: 0;
-				}
-
-				.content-wrapper>.content-heading{
-					background-color: #ffffff;
-					padding: 10px;
-				}
-			</style></head>
-
+<?php $this->load->view("backoffice/b_head");?>
 <body>
    <div class="wrapper">
-      
 		<!-- top navbar-->
 	    <header class="topnavbar-wrapper">
 	        <!-- START Top Navbar-->
@@ -209,15 +11,13 @@
 	            <div class="navbar-header">
 	               	<a href="#" class="navbar-brand">
 	                  	<div class="brand-logo">
-	                  		<img src="http://softwaremillenium.com/logos/logo.png" alt="Logo" class="img-responsive">
+	                  		<img src="<?php echo site_url().'static/backoffice/images/logo.png';?>" alt="Logo" class="img-responsive">
 	                  	</div>
 	                  	<div class="brand-logo-collapsed">
-	                     	<img src="http://softwaremillenium.com/logos/logop.png" style="max-height: 40;" alt="App Logo" class="img-responsive">
+	                     	<img src="<?php echo site_url().'static/backoffice/images/logo.png';?>" style="max-height: 40;" alt="App Logo" class="img-responsive">
 	                  	</div>
 	               	</a>
 	            </div>
-	            <!-- END navbar header-->
-	            <!-- START Nav wrapper-->
 	            <div class="nav-wrapper">
 	               <!-- START Left navbar-->
 	               	<ul class="nav navbar-nav">
@@ -231,57 +31,26 @@
 	                        	<em class="icon-list"></em>
 	                     	</a>
 	                  	</li>
-	                  	<!-- START User avatar toggle
-	                  	<li>-->
-	                     	<!-- Button used to collapse the left sidebar. Only visible on tablet and desktops 
-	                     	<a id="user-block-toggle" href="#user-block" data-toggle="collapse">
-	                        	<em class="icon-user"></em>
-	                     	</a>
-	                  	</li>-->
-	                  	<!-- END User avatar toggle-->
-	                  	<!-- START lock screen
-	                  	<li>
-	                     	<a href="#" name="lock" title="Pausa en sesion">
-	                        	<em class="icon-lock"></em>
-	                    </a>-->
-	                </li>
-	                <!-- END lock screen-->
 	            </ul>
-	           	<!-- END Left navbar-->
-
 	            <!-- START Right Navbar-->
 	               	<ul class="nav navbar-nav navbar-right">
-	                  	<!-- Search icon-->
-<!--	                  	<li>
-	                     	<a href="#" data-search-open="">
-	                        	<em class="icon-magnifier"></em>
-	                     	</a>
-	                  	</li>-->
-	                  	<li>
-	                     	<a href="archivos-download" title="Listado de archivos para descargar">
-	                        	<em class="icon-cloud-download"></em>
-	                     	</a>
-	                  	</li>
-	                  	<!-- Fullscreen (only desktops)-->
-<!--	                  	<li class="visible-lg">
-	                     	<a href="#" data-toggle-fullscreen="">
-	                        	<em class="fa fa-expand"></em>
-	                     	</a>
-	                  	</li>-->
+                            <li>
+                                <a href="archivos-download" title="Listado de archivos para descargar">
+                                    <em class="icon-cloud-download"></em>
+                                </a>
+                            </li>
 	                  	<!-- START Alert menu-->
-	                  	<li class="dropdown dropdown-list">
-	                     	<a href="mi-mensajes">
-	                        	<em class="icon-envelope-open"></em>
-	                        	<div class="count-mensajes label label-danger"></div>
-	                     	</a>
-	                  	</li>
-	                  <!-- END Alert menu-->
-	                  <!-- START Offsidebar button-->
-	                  <li>
-	                     <a href="logout" title="Salir">
-	                        <em class="icon-logout"></em>
-	                     </a>
-	                  </li>
+                            <li class="dropdown dropdown-list">
+                                <a href="mi-mensajes">
+                                    <em class="icon-envelope-open"></em>
+                                    <div class="count-mensajes label label-danger"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="logout" title="Salir">
+                                   <em class="icon-logout"></em>
+                                </a>
+                            </li>
 	                  <!-- END Offsidebar menu-->
 	               </ul>
 	               <!-- END Right Navbar-->
@@ -307,161 +76,59 @@
 	            	<nav data-sidebar-anyclick-close="" class="sidebar">
 	               	<!-- START sidebar nav-->
 	               		<ul class="nav">
-	                  		<!-- START user info-->
-	                  		<li class="has-user-block">
-	                     		<div id="user-block" class="">
-	                        		<div class="item user-block">
-	                           		<!-- User picture-->
-	                           			<div class="user-block-picture">
-	                              			<div class="user-block-status">
-	                                 			<a href="mi-perfil"><img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle"></a>
-	                                 			<div class="circle circle-success circle-lg"></div>
-	                              			</div>
-	                           			</div>
-	                          			<!-- Name and Job-->
-	                           			<div class="user-block-info">
-	                              			<span class="user-block-name">Hola, Elizabeth </span>
-	                              			<span class="user-block-name">Click en la foto para ver su perfil.</span>
-	                              			<span class="user-block-role"><span class="label label-success"><em class="icon-star"></em> Activo</span></span></span>
-	                           			</div>
-	                        		</div>
-	                     		</div>
-	                  		</li>
+                                    <!-- START user info-->
+                                    <li class="has-user-block">
+                                        <div id="user-block" class="">
+                                            <div class="item user-block">
+                                            <!-- User picture-->
+                                                <div class="user-block-picture">
+                                                <div class="user-block-status">
+                                                        <a href="mi-perfil"><img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle"></a>
+                                                        <div class="circle circle-success circle-lg"></div>
+                                                </div>
+                                                </div>
+                                                    <!-- Name and Job-->
+                                                <div class="user-block-info">
+                                                <span class="user-block-name">Hola, Elizabeth </span>
+                                                <span class="user-block-name">Click en la foto para ver su perfil.</span>
+                                                <span class="user-block-role"><span class="label label-success"><em class="icon-star"></em> Activo</span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
 	                  		<!-- END user info-->
 	                  		<!-- Iterates over all sidebar items-->
-	                  		<li class="nav-heading">
-	                     		<span>Menu de Navegación</span>
-	                  		</li>
-	                  
-	               
-	                 
-	                  	<!--
-	                  <li class=" ">
-	                     <a href="panels.html#elements" title="Elements" data-toggle="collapse">
-	                        <em class="icon-chemistry"></em>
-	                        <span data-localize="sidebar.nav.element.ELEMENTS">Elements</span>
-	                     </a>
-	                     <ul id="elements" class="nav sidebar-subnav collapse">
-	                        <li class="sidebar-subnav-header">Elements</li>
-	                        <li class=" ">
-	                           <a href="buttons.html" title="Buttons">
-	                              <span data-localize="sidebar.nav.element.BUTTON">Buttons</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="notifications.html" title="Notifications">
-	                              <span data-localize="sidebar.nav.element.NOTIFICATION">Notifications</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="sweetalert.html" title="Sweet Alert">
-	                              <span>Sweet Alert</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="tour.html" title="Tour">
-	                              <span>Tour</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="carousel.html" title="Carousel">
-	                              <span data-localize="sidebar.nav.element.INTERACTION">Carousel</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="spinners.html" title="Spinners">
-	                              <span data-localize="sidebar.nav.element.SPINNER">Spinners</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="animations.html" title="Animations">
-	                              <span data-localize="sidebar.nav.element.ANIMATION">Animations</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="dropdown-animations.html" title="Dropdown">
-	                              <span data-localize="sidebar.nav.element.DROPDOWN">Dropdown</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="nestable.html" title="Nestable">
-	                              <span>Nestable</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="sortable.html" title="Sortable">
-	                              <span>Sortable</span>
-	                           </a>
-	                        </li>
-	                        <li class=" active">
-	                           <a href="panels.html" title="Panels">
-	                              <span data-localize="sidebar.nav.element.PANEL">Panels</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="portlets.html" title="Portlets">
-	                              <span data-localize="sidebar.nav.element.PORTLET">Portlets</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="grid.html" title="Grid">
-	                              <span data-localize="sidebar.nav.element.GRID">Grid</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="grid-masonry.html" title="Grid Masonry">
-	                              <span data-localize="sidebar.nav.element.GRID_MASONRY">Grid Masonry</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="typo.html" title="Typography">
-	                              <span data-localize="sidebar.nav.element.TYPO">Typography</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="icons-font.html" title="Font Icons">
-	                              <div class="pull-right label label-success">+400</div>
-	                              <span data-localize="sidebar.nav.element.FONT_ICON">Font Icons</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="icons-weather.html" title="Weather Icons">
-	                              <div class="pull-right label label-success">+100</div>
-	                              <span data-localize="sidebar.nav.element.WEATHER_ICON">Weather Icons</span>
-	                           </a>
-	                        </li>
-	                        <li class=" ">
-	                           <a href="colors.html" title="Colors">
-	                              <span data-localize="sidebar.nav.element.COLOR">Colors</span>
-	                           </a>
-	                        </li>
-	                     </ul>
-	                  </li>
-	                  -->
+                                    <li class="nav-heading">
+                                    <span>Menu de Navegación</span>
+                                    </li>
+	              
 	                  		<li class="active">
 	                     		<a href="principal" title="Inicio">
-	                        		<em class="icon-home"></em>
-	                        		<span>Inicio</span>
+                                            <em class="icon-home"></em>
+                                            <span>Inicio</span>
 	                     		</a>
+                                            
 	                  		</li>
                                         <li >
 	                     		<a href="principal" title="Mi Datos">
-	                        		<em class="icon-home"></em>
-	                        		<span>Mis Datos</span>
+                                            <em class="icon-home"></em>
+                                            <span>Mis Datos</span>
 	                     		</a>
 	                  		</li>
+                                        
 	                  		<li class=" ">
 	                     		<a href="#forms" title="Facturación" data-toggle="collapse">
-	                        		<em class="icon-docs"></em>
-	                        		<span>Facturación</span>
+                                            <em class="icon-docs"></em>
+                                            <span>Facturación</span>
 	                     		</a>
+                                            
 	                     		<ul id="forms" class="nav sidebar-subnav collapse">
-	                        		<li class="sidebar-subnav-header">Facturación</li>
-			                        <li class="">
-			                           	<a href="afiliados-tienda-7r1pLS-3pGMJKKk7UDSJpd9TzlZuhKvMA7N-VSjaS8c&1" title="Mis Compras">
-			                              	<span>Realizar Compra</span>
-			                           	</a>
-			                        </li>
+                                            <li class="sidebar-subnav-header">Facturación</li>
+                                                <li class="">
+                                                        <a href="afiliados-tienda-7r1pLS-3pGMJKKk7UDSJpd9TzlZuhKvMA7N-VSjaS8c&1" title="Mis Compras">
+                                                        <span>Realizar Compra</span>
+                                                        </a>
+                                                </li>
 			                        <li class="">
 			                           	<a href="mis-compras" title="Mis Compras">
 			                              	<span>Mis Compras</span>
@@ -476,46 +143,49 @@
 	                  		</li>
 	                  		<li class="">
 	                     		<a href="mi-red" title="Mi Red">
-	                        		<em class="icon-organization"></em>
-	                        		<span>Mi Red</span>
+                                            <em class="icon-organization"></em>
+                                            <span>Mi Red</span>
 	                     		</a>
 	                  		</li>
+                                        
 	                  		<li class="">
 	                     		<a href="mi-billetera" title="Mi Billetera">
 	                        		<em class="icon-wallet"></em>
 	                        		<span>Mi Billetera</span>
 	                     		</a>
 	                  		</li>
+                                        
 	                  		<li class=" ">
-		                     	<a href="#comisiones" title="Comisiones" data-toggle="collapse">
-		                        	<em class="icon-grid"></em>
-		                        	<span>Comisiones</span>
-		                     	</a>
-	                     		<ul id="comisiones" class="nav sidebar-subnav collapse">
-	                        		<li class="sidebar-subnav-header">Comisiones</li>
-	                        		<li class="">
-	                           			<a href="mis-calculos" title="Mis Comisiones">
-	                              			<span>Mis Comisiones</span>
-	                           			</a>
-	                        		</li>
-	                        		<li class="">
-	                           			<a href="mi-balance" title="Mi Balance">
-	                              			<span>Mi Balance</span>
-	                           			</a>
-	                        		</li>
-	                        		<li class="">
-	                           			<a href="mi-paks" title="Packs">
-	                              			<span>Mis Packs</span>
-	                           			</a>
-	                        		</li>
-	                     		</ul>
+                                            <a href="#comisiones" title="Comisiones" data-toggle="collapse">
+                                                    <em class="icon-grid"></em>
+                                                    <span>Comisiones</span>
+                                            </a>
+
+                                            <ul id="comisiones" class="nav sidebar-subnav collapse">
+                                                <li class="sidebar-subnav-header">Comisiones</li>
+                                                <li class="">
+                                                        <a href="mis-calculos" title="Mis Comisiones">
+                                                        <span>Mis Comisiones</span>
+                                                        </a>
+                                                </li>
+                                                <li class="">
+                                                        <a href="mi-balance" title="Mi Balance">
+                                                        <span>Mi Balance</span>
+                                                        </a>
+                                                </li>
+                                                <li class="">
+                                                        <a href="mi-paks" title="Packs">
+                                                        <span>Mis Packs</span>
+                                                        </a>
+                                                </li>
+                                            </ul>
 	                  		</li>
 
 	                  		<li class="">
-	                     		<a href="incentivos-ganados" title="Incentivos">
-	                        		<em class="icon-trophy"></em>
-	                        		<span>Incentivos</span>
-	                     		</a>
+                                            <a href="incentivos-ganados" title="Incentivos">
+                                                <em class="icon-trophy"></em>
+                                                <span>Incentivos</span>
+                                            </a>
 	                  		</li>
 
 	                  		<li class=" ">
@@ -523,20 +193,21 @@
 			                        <em class="icon-note"></em>
 			                        <span>Solicitudes</span>
 			                    </a>
-	                     		<ul id="solicitudes" class="nav sidebar-subnav collapse">
-	                        		<li class="sidebar-subnav-header">Solicitudes</li>
-			                        <li class="">
-			                           	<a href="solicitud-pago" title="Solicitar Pagos">
-			                              	<span>Solicitar Pagos</span>
-			                           	</a>
-			                        </li>
-			                        <li class="">
-			                           	<a href="solicitud-saldo" title="Solicitar a Billetera">
-			                              	<span>Solicitar a Billetera</span>
-			                           	</a>
-			                        </li>
-	                     		</ul>
+                                            <ul id="solicitudes" class="nav sidebar-subnav collapse">
+                                                    <li class="sidebar-subnav-header">Solicitudes</li>
+                                                    <li class="">
+                                                            <a href="solicitud-pago" title="Solicitar Pagos">
+                                                            <span>Solicitar Pagos</span>
+                                                            </a>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="solicitud-saldo" title="Solicitar a Billetera">
+                                                            <span>Solicitar a Billetera</span>
+                                                            </a>
+                                                    </li>
+                                            </ul>
 	                  		</li>
+                                        
 	                  		<li class="">
 	                     		<a href="mi-direcciones" title="Mis Direcciones">
 	                        		<em class="icon-directions"></em>
@@ -559,9 +230,10 @@
               <div class="pull-right text-danger">
                 Ethereum: $10.71000000              </div>
                               <div class="col-lg-3">
-                <img src="http://alliancesystemclub.com/millenium/perfiles_img/logo.jpg" class="responsive" height="100px;" id="LogoClienteMill">
+                <img src="<?php echo site_url().'static/backoffice/images/logo.jpg';?>" class="responsive" height="100px;" id="LogoClienteMill">
               </div>
-              <div class="clearfix"></div>            </div>
+              <div class="clearfix"></div>           
+            </div>
             
             <div class="row">
                <div class="col-lg-3 col-sm-6">
@@ -668,25 +340,22 @@
    
 		<!-- =============== VENDOR SCRIPTS ===============-->
 		   <!-- MODERNIZR-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/modernizr/modernizr.js"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/modernizr.js';?>"></script>
 		   <!-- JQUERY-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/jquery/dist/jquery.js"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.js';?>"></script>
 		   <!-- BOOTSTRAP-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/bootstrap/dist/js/bootstrap.js"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/bootstrap.js';?>"></script>
 		   <!-- STORAGE API-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.storageapi.js';?>"></script>
 		   <!-- JQUERY EASING-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/jquery.easing/js/jquery.easing.js"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.easing.js';?>"></script>
 		   <!-- ANIMO-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/animo.js/animo.js"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/animo.js';?>"></script>
 		   <!-- SLIMSCROLL-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/slimScroll/jquery.slimscroll.min.js"></script>
-		   <!-- SCREENFULL-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/screenfull/dist/screenfull.js"></script>
-		   <!-- LOCALIZE-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.slimscroll.min.js';?>"></script>
+S		   <!-- LOCALIZE-->
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.jquery.localize.js';?>"></script>
 		   <!-- RTL demo
-		   <script src="../app/js/demo/demo-rtl.js"></script>-->
 		   <!-- =============== PAGE VENDOR SCRIPTS ===============-->
 		   <!-- SPARKLINE-->
 		   <script src="http://alliancesystemclub.com/millenium/vendor/sparklines/jquery.sparkline.min.js"></script>
@@ -705,20 +374,15 @@
 		   <script src="http://alliancesystemclub.com/millenium/vendor/Flot/jquery.flot.time.js"></script>
 		   <script src="http://alliancesystemclub.com/millenium/vendor/Flot/jquery.flot.categories.js"></script>
 		   <script src="http://alliancesystemclub.com/millenium/vendor/flot-spline/js/jquery.flot.spline.min.js"></script>
-		   
 		   <!-- CLASSY LOADER-->
 		   <script src="http://alliancesystemclub.com/millenium/vendor/jquery-classyloader/js/jquery.classyloader.min.js"></script>
 		   <!-- MOMENT JS-->
 		   <script src="http://alliancesystemclub.com/millenium/vendor/moment/min/moment-with-locales.min.js"></script>
-		   <!-- DEMO
-		   <script src="../app/js/demo/demo-flot.js"></script>-->
-
 		   <!-- DATATABLES-->
 		   <script src="http://alliancesystemclub.com/millenium/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
 		   <script src="http://alliancesystemclub.com/millenium/vendor/datatables-colvis/js/dataTables.colVis.js"></script>
 		   <script src="http://alliancesystemclub.com/millenium/app/vendor/datatable-bootstrap/js/dataTables.bootstrap.js"></script>
 		   <script src="http://alliancesystemclub.com/millenium/app/vendor/datatable-bootstrap/js/dataTables.bootstrapPagination.js"></script>   
-
 		   <!-- =============== APP SCRIPTS ===============-->
 		   <script src="http://alliancesystemclub.com/millenium/app/js/app.js"></script>
 		   <script src="http://alliancesystemclub.com/millenium/js/afiliados.js"></script>
@@ -888,14 +552,8 @@
             }
          });
       }
-
       grafica_registros_afiliados();
       grafica_compras_realizadas();
-
-
-
-
-      
    });
     
    </script>
