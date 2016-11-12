@@ -353,41 +353,38 @@
 		   <script src="<?php echo site_url().'static/backoffice/js/animo.js';?>"></script>
 		   <!-- SLIMSCROLL-->
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.slimscroll.min.js';?>"></script>
-S		   <!-- LOCALIZE-->
+		   <!-- LOCALIZE-->
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.jquery.localize.js';?>"></script>
 		   <!-- RTL demo
 		   <!-- =============== PAGE VENDOR SCRIPTS ===============-->
 		   <!-- SPARKLINE-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/sparklines/jquery.sparkline.min.js"></script>
-
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.sparkline.min.js';?>"></script>
 		   <!-- PARSLEY-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/parsleyjs/dist/parsley.min.js"></script>
-			
-			<!-- SWEET ALERT-->
-			<script src="../vendor/sweetalert/dist/sweetalert.min.js"></script>	
-
+		   <script src="<?php echo site_url().'static/backoffice/js/parsley.min.js';?>"></script>
+                   <!-- SWEET ALERT-->
+                   <script src="<?php echo site_url().'static/backoffice/js/sweetalert.min.js';?>"></script>	
 		   <!-- FLOT CHART-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/Flot/jquery.flot.js"></script>
-		   <script src="http://alliancesystemclub.com/millenium/vendor/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-		   <script src="http://alliancesystemclub.com/millenium/vendor/Flot/jquery.flot.resize.js"></script>
-		   <script src="http://alliancesystemclub.com/millenium/vendor/Flot/jquery.flot.pie.js"></script>
-		   <script src="http://alliancesystemclub.com/millenium/vendor/Flot/jquery.flot.time.js"></script>
-		   <script src="http://alliancesystemclub.com/millenium/vendor/Flot/jquery.flot.categories.js"></script>
-		   <script src="http://alliancesystemclub.com/millenium/vendor/flot-spline/js/jquery.flot.spline.min.js"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.tooltip.min.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.resize.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.pie.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.time.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.categories.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.spline.min.js';?>"></script>
 		   <!-- CLASSY LOADER-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/jquery-classyloader/js/jquery.classyloader.min.js"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.classyloader.min.js';?>"></script>
 		   <!-- MOMENT JS-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/moment/min/moment-with-locales.min.js"></script>
+                   <script src="<?php echo site_url().'static/backoffice/js/moment-with-locales.min.js';?>"></script>
 		   <!-- DATATABLES-->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
-		   <script src="http://alliancesystemclub.com/millenium/vendor/datatables-colvis/js/dataTables.colVis.js"></script>
-		   <script src="http://alliancesystemclub.com/millenium/app/vendor/datatable-bootstrap/js/dataTables.bootstrap.js"></script>
-		   <script src="http://alliancesystemclub.com/millenium/app/vendor/datatable-bootstrap/js/dataTables.bootstrapPagination.js"></script>   
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.dataTables.min.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/dataTables.colVis.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/dataTables.bootstrap.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/dataTables.bootstrapPagination.js';?>"></script>   
 		   <!-- =============== APP SCRIPTS ===============-->
-		   <script src="http://alliancesystemclub.com/millenium/app/js/app.js"></script>
-		   <script src="http://alliancesystemclub.com/millenium/js/afiliados.js"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/app.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/afiliados.js';?>"></script>
 		   <!-- SONIDO -->
-		   <script src="http://alliancesystemclub.com/millenium/vendor/ion.sound/js/ion.sound.js"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/ion.sound.js';?>"></script>
 		   <script type="text/javascript">
    $(document).ready(function() {
       function grafica_registros_afiliados(){        
@@ -558,5 +555,4 @@ S		   <!-- LOCALIZE-->
     
    </script>
 </body>
-
 </html>
