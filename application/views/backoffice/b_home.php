@@ -8,13 +8,14 @@
    <meta name="keywords" content="millenium, software, multinivel, binario, forzada, matriz, unilevel">
    
 		<link rel="shortcut icon" type="image/png" href="/angel/favicon.png">
-		<title>ALLIANCESYSTEMCLUB</title>
+		<title>BITSHARE</title>
 		
 		<!-- =============== VENDOR STYLES ===============-->
 	   <!-- FONT AWESOME-->
 	   <link rel="stylesheet" href="http://alliancesystemclub.com/millenium/vendor/fontawesome/css/font-awesome.min.css">
 	   <!-- SIMPLE LINE ICONS-->
-	   <link rel="stylesheet" href="http://alliancesystemclub.com/millenium/vendor/simple-line-icons/css/simple-line-icons.css">
+	   <!--<link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/page-simple-line-icons.css';?> ">-->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
 	   <!-- ANIMATE.CSS-->
 	   <link rel="stylesheet" href="http://alliancesystemclub.com/millenium/vendor/animate.css/animate.min.css">
 	   <!-- WHIRL (spinners)-->
@@ -78,7 +79,6 @@
 				.topnavbar .navbar-nav > .open > a:hover,
 				.topnavbar .navbar-nav > li > a:focus,
 				.topnavbar .navbar-nav > .open > a:focus {
-				  color: ;
 				}
 
 				.topnavbar .navbar-nav > .active > a,
@@ -96,7 +96,6 @@
 
 				/*Color fondo barra superior*/
 				.topnavbar .nav-wrapper {
-				  background-color: ;
 				  background-image: -webkit-linear-gradient(left,  0%,  100%);
 				  background-image: -o-linear-gradient(left,  0%,  100%);
 				  background-image: linear-gradient(to right,  0%,  100%);
@@ -144,7 +143,7 @@
 				.sidebar .nav > li > .nav-item:focus,
 				.sidebar .nav > li > a:hover,
 				.sidebar .nav > li > .nav-item:hover {
-				}
+                                }
 
 				.sidebar .nav > li > a > em,
 				.sidebar .nav > li > .nav-item > em {
@@ -157,13 +156,11 @@
 				.sidebar .nav > li.open > a,
 				.sidebar .nav > li.active .nav,
 				.sidebar .nav > li.open .nav {
-				  background-color: ;
 				  /*color: #f05050;*/
 				}
 
 				.sidebar .nav > li.active > a > em,
 				.sidebar .nav > li.open > a > em {
-				  color: ;
 				}
 
 				.sidebar .nav > li.active {
@@ -227,11 +224,11 @@
 	                  	<li>
 	                     	<!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
 	                     	<a href="#" data-toggle-state="aside-collapsed" class="hidden-xs">
-	                        	<em class="fa fa-navicon"></em>
+	                        	<em class="icon-list"></em>
 	                     	</a>
 	                     	<!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
 	                     	<a href="#" data-toggle-state="aside-toggled" data-no-persist="true" class="visible-xs sidebar-toggle">
-	                        	<em class="fa fa-navicon"></em>
+	                        	<em class="icon-list"></em>
 	                     	</a>
 	                  	</li>
 	                  	<!-- START User avatar toggle
@@ -255,22 +252,22 @@
 	            <!-- START Right Navbar-->
 	               	<ul class="nav navbar-nav navbar-right">
 	                  	<!-- Search icon-->
-	                  	<li>
+<!--	                  	<li>
 	                     	<a href="#" data-search-open="">
 	                        	<em class="icon-magnifier"></em>
 	                     	</a>
-	                  	</li>
+	                  	</li>-->
 	                  	<li>
 	                     	<a href="archivos-download" title="Listado de archivos para descargar">
 	                        	<em class="icon-cloud-download"></em>
 	                     	</a>
 	                  	</li>
 	                  	<!-- Fullscreen (only desktops)-->
-	                  	<li class="visible-lg">
+<!--	                  	<li class="visible-lg">
 	                     	<a href="#" data-toggle-fullscreen="">
 	                        	<em class="fa fa-expand"></em>
 	                     	</a>
-	                  	</li>
+	                  	</li>-->
 	                  	<!-- START Alert menu-->
 	                  	<li class="dropdown dropdown-list">
 	                     	<a href="mi-mensajes">
@@ -317,7 +314,7 @@
 	                           		<!-- User picture-->
 	                           			<div class="user-block-picture">
 	                              			<div class="user-block-status">
-	                                 			<a href="mi-perfil"><img src="../perfiles_img/default.jpg" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle"></a>
+	                                 			<a href="mi-perfil"><img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle"></a>
 	                                 			<div class="circle circle-success circle-lg"></div>
 	                              			</div>
 	                           			</div>
@@ -325,7 +322,7 @@
 	                           			<div class="user-block-info">
 	                              			<span class="user-block-name">Hola, Elizabeth </span>
 	                              			<span class="user-block-name">Click en la foto para ver su perfil.</span>
-	                              			<span class="user-block-role"><span class="label label-success"><em class="fa fa-star"></em> Activo</span></span></span>
+	                              			<span class="user-block-role"><span class="label label-success"><em class="icon-star"></em> Activo</span></span></span>
 	                           			</div>
 	                        		</div>
 	                     		</div>
@@ -447,6 +444,12 @@
 	                        		<span>Inicio</span>
 	                     		</a>
 	                  		</li>
+                                        <li >
+	                     		<a href="principal" title="Mi Datos">
+	                        		<em class="icon-home"></em>
+	                        		<span>Mis Datos</span>
+	                     		</a>
+	                  		</li>
 	                  		<li class=" ">
 	                     		<a href="#forms" title="Facturación" data-toggle="collapse">
 	                        		<em class="icon-docs"></em>
@@ -473,7 +476,7 @@
 	                  		</li>
 	                  		<li class="">
 	                     		<a href="mi-red" title="Mi Red">
-	                        		<em class="icon-share"></em>
+	                        		<em class="icon-organization"></em>
 	                        		<span>Mi Red</span>
 	                     		</a>
 	                  		</li>
@@ -485,7 +488,7 @@
 	                  		</li>
 	                  		<li class=" ">
 		                     	<a href="#comisiones" title="Comisiones" data-toggle="collapse">
-		                        	<em class="icon-bar-chart"></em>
+		                        	<em class="icon-grid"></em>
 		                        	<span>Comisiones</span>
 		                     	</a>
 	                     		<ul id="comisiones" class="nav sidebar-subnav collapse">
@@ -510,7 +513,7 @@
 
 	                  		<li class="">
 	                     		<a href="incentivos-ganados" title="Incentivos">
-	                        		<em class="fa fa-trophy"></em>
+	                        		<em class="icon-trophy"></em>
 	                        		<span>Incentivos</span>
 	                     		</a>
 	                  		</li>
@@ -536,7 +539,7 @@
 	                  		</li>
 	                  		<li class="">
 	                     		<a href="mi-direcciones" title="Mis Direcciones">
-	                        		<em class="icon-map"></em>
+	                        		<em class="icon-directions"></em>
 	                        		<span>Mis Direcciones</span>
 	                     		</a>
 	                  		</li>
@@ -556,7 +559,7 @@
               <div class="pull-right text-danger">
                 Ethereum: $10.71000000              </div>
                               <div class="col-lg-3">
-                <img src="../perfiles_img/logo.jpg" class="responsive" height="100px;" id="LogoClienteMill">
+                <img src="http://alliancesystemclub.com/millenium/perfiles_img/logo.jpg" class="responsive" height="100px;" id="LogoClienteMill">
               </div>
               <div class="clearfix"></div>            </div>
             
@@ -665,62 +668,62 @@
    
 		<!-- =============== VENDOR SCRIPTS ===============-->
 		   <!-- MODERNIZR-->
-		   <script src="../vendor/modernizr/modernizr.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/modernizr/modernizr.js"></script>
 		   <!-- JQUERY-->
-		   <script src="../vendor/jquery/dist/jquery.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/jquery/dist/jquery.js"></script>
 		   <!-- BOOTSTRAP-->
-		   <script src="../vendor/bootstrap/dist/js/bootstrap.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/bootstrap/dist/js/bootstrap.js"></script>
 		   <!-- STORAGE API-->
-		   <script src="../vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
 		   <!-- JQUERY EASING-->
-		   <script src="../vendor/jquery.easing/js/jquery.easing.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/jquery.easing/js/jquery.easing.js"></script>
 		   <!-- ANIMO-->
-		   <script src="../vendor/animo.js/animo.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/animo.js/animo.js"></script>
 		   <!-- SLIMSCROLL-->
-		   <script src="../vendor/slimScroll/jquery.slimscroll.min.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/slimScroll/jquery.slimscroll.min.js"></script>
 		   <!-- SCREENFULL-->
-		   <script src="../vendor/screenfull/dist/screenfull.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/screenfull/dist/screenfull.js"></script>
 		   <!-- LOCALIZE-->
-		   <script src="../vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
 		   <!-- RTL demo
 		   <script src="../app/js/demo/demo-rtl.js"></script>-->
 		   <!-- =============== PAGE VENDOR SCRIPTS ===============-->
 		   <!-- SPARKLINE-->
-		   <script src="../vendor/sparklines/jquery.sparkline.min.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/sparklines/jquery.sparkline.min.js"></script>
 
 		   <!-- PARSLEY-->
-		   <script src="../vendor/parsleyjs/dist/parsley.min.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/parsleyjs/dist/parsley.min.js"></script>
 			
 			<!-- SWEET ALERT-->
 			<script src="../vendor/sweetalert/dist/sweetalert.min.js"></script>	
 
 		   <!-- FLOT CHART-->
-		   <script src="../vendor/Flot/jquery.flot.js"></script>
-		   <script src="../vendor/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-		   <script src="../vendor/Flot/jquery.flot.resize.js"></script>
-		   <script src="../vendor/Flot/jquery.flot.pie.js"></script>
-		   <script src="../vendor/Flot/jquery.flot.time.js"></script>
-		   <script src="../vendor/Flot/jquery.flot.categories.js"></script>
-		   <script src="../vendor/flot-spline/js/jquery.flot.spline.min.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/Flot/jquery.flot.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/Flot/jquery.flot.resize.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/Flot/jquery.flot.pie.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/Flot/jquery.flot.time.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/Flot/jquery.flot.categories.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/flot-spline/js/jquery.flot.spline.min.js"></script>
 		   
 		   <!-- CLASSY LOADER-->
-		   <script src="../vendor/jquery-classyloader/js/jquery.classyloader.min.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/jquery-classyloader/js/jquery.classyloader.min.js"></script>
 		   <!-- MOMENT JS-->
-		   <script src="../vendor/moment/min/moment-with-locales.min.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/moment/min/moment-with-locales.min.js"></script>
 		   <!-- DEMO
 		   <script src="../app/js/demo/demo-flot.js"></script>-->
 
 		   <!-- DATATABLES-->
-		   <script src="../vendor/datatables/media/js/jquery.dataTables.min.js"></script>
-		   <script src="../vendor/datatables-colvis/js/dataTables.colVis.js"></script>
-		   <script src="../app/vendor/datatable-bootstrap/js/dataTables.bootstrap.js"></script>
-		   <script src="../app/vendor/datatable-bootstrap/js/dataTables.bootstrapPagination.js"></script>   
+		   <script src="http://alliancesystemclub.com/millenium/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/datatables-colvis/js/dataTables.colVis.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/app/vendor/datatable-bootstrap/js/dataTables.bootstrap.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/app/vendor/datatable-bootstrap/js/dataTables.bootstrapPagination.js"></script>   
 
 		   <!-- =============== APP SCRIPTS ===============-->
-		   <script src="../app/js/app.js"></script>
-		   <script src="../js/afiliados.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/app/js/app.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/js/afiliados.js"></script>
 		   <!-- SONIDO -->
-		   <script src="../vendor/ion.sound/js/ion.sound.js"></script>
+		   <script src="http://alliancesystemclub.com/millenium/vendor/ion.sound/js/ion.sound.js"></script>
 		   <script type="text/javascript">
    $(document).ready(function() {
       function grafica_registros_afiliados(){        
