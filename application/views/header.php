@@ -12,26 +12,27 @@
 
                         <!-- RD Navbar Brand -->
                         <div class="rd-navbar-brand">
-                            <img src="<?php echo site_url().'static/page_front/images/logo.png';?>"  class="brand-logo" alt="" width="78" height="40">
-                            <a href="<?php echo site_url();?>" class="brand-name">
-                                C<span>o</span>nnect
+                            <img src="<?php echo site_url().'static/page_front/images/logo_b.png';?>"  class="brand-logo" alt="" width="44" height="40" style="margin-top: -4px;">
+                            <a  href="<?php echo site_url();?>" class="brand-name" style="margin-left: -9px !important;">
+                                IT<span>S</span>HARE
                             </a>
                         </div>
                         <!-- END RD Navbar Brand -->
                     </div>
                     <!-- END RD Navbar Panel -->
-
-                    <div class="rd-navbar-info box box-skin-1">
+                    
+<!--NUMERO TELEFONICO-->
+<!--                    <div class="rd-navbar-info box box-skin-1">
                         <div class="box__left"><div class="icon icon-xs icon-contrast fa fa-phone-square"></div></div>
                         <div class="box__body"><a href="callto:#">800 555 7744</a></div>
-                    </div>
+                    </div>-->
 
                     <div class="rd-navbar-nav-wrap">
 
                         <!-- RD Navbar Nav -->
                         <ul class="rd-navbar-nav">
                             <li class="active">
-                                <a href="<?php echo site_url();?>">Home</a>
+                                <a href="<?php echo site_url();?>">Inicio</a>
                                 <!-- RD Navbar Megamenu -->
                                 <ul class="rd-navbar-megamenu">
                                     <li>
@@ -59,7 +60,7 @@
                                 <!-- END RD Navbar Megamenu -->
                             </li>
                             <li>
-                                <a href="<?php echo site_url().'about';?>">About</a>
+                                <a href="<?php echo site_url().'acerca';?>">Acerca</a>
 
                                 <!-- RD Navbar Dropdown -->
                                 <ul class="rd-navbar-dropdown">
@@ -94,13 +95,13 @@
 
                             </li>
                             <li>
-                                <a href="<?php echo site_url().'services';?>">Services</a>
+                                <a href="<?php echo site_url().'servicios';?>">Servicios</a>
                             </li>
                             <li>
-                                <a href="index-3.html">Gallery</a>
+                                <a href="index-3.html">Galeria</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url().'contact';?>">Contacts</a>
+                                <a href="<?php echo site_url().'contacto';?>">Conacto</a>
                             </li>
                             <li>
                                 <a href="<?php echo site_url().'contact';?>">Login</a>

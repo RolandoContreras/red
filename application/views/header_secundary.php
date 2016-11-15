@@ -36,13 +36,13 @@
                             $style_services = "";
                             $url = explode("/",uri_string()); 
                             switch ($url[0]) {
-                            case "about":
+                            case "acerca":
                                 $style_about = "active";
                                 break;
-                            case "services":
+                            case "servicios":
                                 $style_services = "active";
                                 break;
-                            case "contact":
+                            case "contacto":
                                 $style_contact = "active";
                                 break;
                             default:
@@ -51,7 +51,7 @@
                         <!-- RD Navbar Nav -->
                         <ul class="rd-navbar-nav">
                             <li>
-                                <a href="<?php echo site_url();?>">Home</a>
+                                <a href="<?php echo site_url();?>">Inicio</a>
                                 <!-- RD Navbar Megamenu -->
                                 <ul class="rd-navbar-megamenu">
                                     <li>
@@ -79,7 +79,7 @@
                                 <!-- END RD Navbar Megamenu -->
                             </li>
                             <li class="<?php echo $style_about;?>">
-                                <a href="<?php echo site_url().'about';?>">About</a>
+                                <a href="<?php echo site_url().'acerca';?>">Acerca</a>
                                 <!-- RD Navbar Dropdown -->
                                 <ul class="rd-navbar-dropdown">
                                     <li>
@@ -113,13 +113,13 @@
 
                             </li>
                             <li class="<?php echo $style_services;?>">
-                                <a href="<?php echo site_url().'services';?>">Services</a>
+                                <a href="<?php echo site_url().'servicios';?>">Servicios</a>
                             </li>
                             <li class="">
                                 <a href="index-3.html">Gallery</a>
                             </li>
                             <li class="<?php echo $style_contact;?>">
-                                <a href="<?php echo site_url().'contact';?>">Contacts</a>
+                                <a href="<?php echo site_url().'contacto';?>">Contacto</a>
                             </li>
                             <li>
                                 <a href="<?php echo site_url().'login';?>">Login</a>

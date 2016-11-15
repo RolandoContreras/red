@@ -5,7 +5,6 @@
    <meta name="keywords" content="millenium, software, multinivel, binario, forzada, matriz, unilevel">
     <link rel="shortcut icon" type="image/png"Sref="/angel/favicon.png">
     <title>BITSHARE</title>
-    
        <!-- FONT AWESOME-->
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/font-awesome.min.css';?>">
        <!-- SIMPLE LINE ICONS-->

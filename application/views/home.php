@@ -17,13 +17,13 @@
         <!-- Hello -->
         <section class="well-md well-md-inset-2 bg-primary text-center">
             <div class="container wow fadeInUp">
-                <h1>Hello</h1>
+                <h1>¿QUÉ ES EL BITCOIN?</h1>
                 <div class="row">
                     <div class="col-md-10 col-md-preffix-1">
-                        <p>Our company is a leading international provider of the best communications services. We are dedicated to helping our customers to find perfect solutions and bring high quality services. We can give you much more than other companies do because our services are aimed at satisfying our customers’ needs.</p>
+                        <p>Primera criptodivisa creada en el 2009 que destaca por su eficiencia, seguridad y facilidad de intercambio. Es una moneda descentralizada ya que no necesita un repositorio central o administrador individual, no necesita de un tercero para transaccionar. EL BITCOIN ES EL FUTURO<br><br><br><img src="<?php echo site_url().'static/page_front/images/logo-btc2.png';?>" alt="logo_bitcoin"/></p>
                     </div>
                 </div>
-                <a href="#" class="btn btn-md btn-contrast">Explore More</a>
+                <a href="#" class="btn btn-md btn-contrast">Explorar Más</a>
             </div>
         </section>
         <!-- END Hello-->
@@ -33,30 +33,55 @@
             <div class="row row-no-gutter pricing-table text-center">
                 <div class="col-md-4 wow fadeInLeft bg-grayscale-lightest" data-wow-duration="0.4s" data-wow-delay="0s">
                     <div class="pricing-table__item well-sm">
-                        <div class="pricing-table__title">20</div>
-                        <h1 class="pricing-table__plan-name">Starter</h1>
-                        <div class="pricing-table__price">34.99</div>
-                        <p>Access to 20,000 WiFi hotspots<br>at no extra cost.</p>
+                        <div class="pricing-table__title">30</div>
+                        <h1 class="pricing-table__plan-name">START</h1>
+                        <div class="pricing-table__price">30 puntos para <p>binario</p></div>
+                        <p>Genera una rentabilidad del (30%) <br>de la compra del paquete en 75 días.</p>
                         <a href="#" class="btn btn-md btn-primary">Learn More</a>
                     </div>
                 </div>
 
                 <div class="col-md-4 accented wow fadeInLeft bg-grayscale-lighten-3" data-wow-duration="0.4s" data-wow-delay="0.5s">
                     <div class="pricing-table__item well-sm">
-                        <div class="pricing-table__title">60</div>
-                        <h1 class="pricing-table__plan-name">Home</h1>
-                        <div class="pricing-table__price">79.99</div>
-                        <p>Access to 60,000 WiFi hotspots<br>at no extra cost</p>
+                        <div class="pricing-table__title">50</div>
+                        <h1 class="pricing-table__plan-name">BASIC</h1>
+                        <div class="pricing-table__price">50 puntos para <p>binario</p></div>
+                        <p>Genera una rentabilidad del (40%) <br>de la compra del paquete en 75 días.</p>
                         <a href="#" class="btn btn-md btn-primary">Learn More</a>
                     </div>
                 </div>
 
                 <div class="col-md-4 wow fadeInLeft bg-grayscale-lighten-2" data-wow-duration="0.4s" data-wow-delay="1s">
                     <div class="pricing-table__item well-sm">
-                        <div class="pricing-table__title">130</div>
-                        <h1 class="pricing-table__plan-name">Extreme</h1>
-                        <div class="pricing-table__price">125.99</div>
-                        <p>Access to 130,000 WiFi hotspots<br>at no extra cost</p>
+                        <div class="pricing-table__title">100</div>
+                        <h1 class="pricing-table__plan-name">PLATINIUM</h1>
+                        <div class="pricing-table__price">100 puntos para <p>binario</p></div>
+                       <p>Genera una rentabilidad del (50%) <br>de la compra del paquete en 75 días.</p>
+                        <a href="#" class="btn btn-md btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing table two -->
+        <section>
+            <div class="row row-no-gutter pricing-table text-center">
+                
+                <div class="col-md-6 wow fadeInLeft bg-grayscale-lighten-2" data-wow-duration="0.8s" data-wow-delay="0s">
+                    <div class="pricing-table__item">
+                        <div class="pricing-table__title">250</div>
+                        <h1 class="pricing-table__plan-name">GOLD</h1>
+                        <div class="pricing-table__price">250 puntos para <p>binario</p></div>
+                        <p>Genera una rentabilidad del (60%) <br>de la compra del paquete en 75 días.</p>
+                        <a href="#" class="btn btn-md btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 wow fadeInLeft bg-grayscale-lighten-3" data-wow-duration="1.2s" data-wow-delay="0s">
+                    <div class="pricing-table__item">
+                        <div class="pricing-table__title">500</div>
+                        <h1 class="pricing-table__plan-name">VIP</h1>
+                        <div class="pricing-table__price">500 puntos para <p>binario</p></div>
+                       <p>Genera una rentabilidad del (70%) <br>de la compra del paquete en 75 días.</p>
                         <a href="#" class="btn btn-md btn-primary">Learn More</a>
                     </div>
                 </div>
@@ -77,9 +102,9 @@
             <div class="container wow fadeInRight">
                 <div class="row">
                     <div class="col-md-5">
-                        <h1>About</h1>
-                        <p class="inset-2">You can check out our portfolio and see the results of our work. Our company has a great history and experience that was gained by the years of our company’s existence. Our wide range of services and equipment will beat the competing ones.</p>
-                        <a href="#" class="btn btn-primary btn-md">Explore More</a>
+                        <h1>Acerca</h1>
+                        <p class="inset-2">BitShare (compartir Bitcoin) es una plataforma financiera con el fin de ayudar a capitalizar y dar herramientas para un crecimiento económico y personal a las personas en este nuevo cambio de era.</p>
+                        <a href="<?php echo site_url().'acerca';?>" class="btn btn-primary btn-md">Explorar Más</a>
                     </div>
                 </div>
             </div>
@@ -87,10 +112,10 @@
         <!-- END About-->
 
         <!-- Testimonials -->
-        <section class="well-md well-md-inset-1 bg-primary text-center">
+<!--        <section class="well-md well-md-inset-1 bg-primary text-center">
             <h1 class="wow fadeInUp">Testimonials</h1>
             <div class="row wow fadeInUp">
-                <!-- Owl Carousel -->
+                 Owl Carousel 
                 <div class="owl-carousel" data-nav="true" data-loop="true" data-items="1">
                     <div class="owl-item inset-5">
                         <p>I just don't know how to describe your services... They are extraordinary! I am quite happy with them! Just keep up going this way!</p>
@@ -105,9 +130,9 @@
                         <p>Male from United States</p>
                     </div>
                 </div>
-                <!-- END Owl Carousel -->
+                 END Owl Carousel 
             </div>
-        </section>
+        </section>-->
         <!-- END Testimonials-->
 
         <!-- Quality -->
@@ -135,20 +160,20 @@
         <!-- Partners -->
         <section class="well-sm bg-primary text-center">
             <div class="container wow fadeInUp">
-                <h1>Partners</h1>
+                <h1>Pasarelas de BitCoin</h1>
                 <div class="row row-xs-center">
-                    <p class="inset-1">We value our partners and believe that our program of partnership is very effective business tool that opens many advantages for its participants. First of all, we assume that such project is a great way to share common experience, discuss important problems, and brainstorm.</p>
-                    <!-- Flex list -->
-                    <ul class="flex-list">
-                        <li><a href="#"><img src="<?php echo site_url().'static/page_front/images/page-01_img03.png';?>" alt="" width="117" height="86"></a></li>
-                        <li><a href="#"><img src="<?php echo site_url().'static/page_front/images/page-01_img04.png';?>" alt="" width="117" height="86"></a></li>
-                        <li><a href="#"><img src="<?php echo site_url().'static/page_front/images/page-01_img05.png';?>" alt="" width="117" height="86"></a></li>
-                        <li><a href="#"><img src="<?php echo site_url().'static/page_front/images/page-01_img06.png';?>" alt="" width="117" height="86"></a></li>
-                        <li><a href="#"><img src="<?php echo site_url().'static/page_front/images/page-01_img07.png';?>" alt="" width="117" height="86"></a></li>
-                        <li><a href="#"><img src="<?php echo site_url().'static/page_front/images/page-01_img08.png';?>" alt="" width="117" height="86"></a></li>
-                    </ul>
-                    <!-- END Flex list -->
-                    <a href="#" class="btn btn-md btn-contrast">Explore More</a>
+                    <p class="inset-1">A nivel mundial existen más de 200 pasarelas de pago que aceptan la primera criptomenda “el bitcoin”, negocios y grandes marcas han invertidos más de $927 millones de dólares americanos en infraestructura de esta criptomoneda tales como: visa, citi ventures, goldman sachs, bbva, nyse (new york stock exchanger), overstock, entre otras.</p>
+                        <!-- Flex list -->
+                        <ul class="flex-list">
+                            <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/blockchain.png';?>" alt="" width="117" height="86"></li>
+                            <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/bitinka.png';?>" alt="" width="117" height="86"></li>
+                            <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/xapo.png';?>" alt="" width="117" height="86"></li>
+                            <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/coinbase.png';?>" alt="" width="117" height="86"></li>
+                            <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/uphold.png';?>" alt="" width="117" height="86"></li>
+                            <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/bitcointoyou.png';?>" alt="" width="117" height="86"></li>
+                        </ul>
+                        <!-- END Flex list -->
+                    <!--<a href="#" class="btn btn-md btn-contrast">Explore More</a>-->
                 </div>
             </div>
         </section>
@@ -157,7 +182,7 @@
         <!-- Get in touch -->
         <section class="well-xs text-center">
             <div class="container wow fadeInUp">
-                <h1>Get in Touch</h1>
+                <h1>Mantente en contacto</h1>
                 <!-- RD Mailform -->
                 <form class='rd-mailform' method="post" action="bat/rd-mailform.php">
                     <!-- RD Mailform Type -->
@@ -169,7 +194,7 @@
                                 <label data-add-placeholder>
                                     <input type="text"
                                            name="name"
-                                           placeholder="Name"
+                                           placeholder="Nombre"
                                            data-constraints="@NotEmpty @LettersOnly"/>
                                 </label>
                             </div>
@@ -185,14 +210,14 @@
 
                             <div class="col-xs-12">
                                 <label data-add-placeholder class="wide">
-                                    <textarea name="message" placeholder="Message"
+                                    <textarea name="message" placeholder="Mensaje"
                                               data-constraints="@NotEmpty"></textarea>
                                 </label>
                             </div>
 
                             <div class="col-xs-12 text-center">
                                 <div class="mfControls">
-                                    <button class="btn btn-md btn-primary" type="submit">Send</button>
+                                    <button class="btn btn-md btn-primary" type="submit">Enviar</button>
                                 </div>
                             </div>
                         </div>
@@ -201,14 +226,14 @@
                 </form>
                 <!-- END RD Mailform -->
 
-                <address>8901 Marmora Road, Glasgow, D04 89GR</address>
+                <!--<address>8901 Marmora Road, Glasgow, D04 89GR</address>-->
             </div>
         </section>
         <!-- END Get in touch-->
 
         <!-- Map -->
-        <section>
-            <!-- RD Google Map -->
+<!--        <section>
+             RD Google Map 
             <div class="rd-google-map wow fadeInUp">
                 <div id="google-map" class="rd-google-map__model"></div>
                 <ul class="rd-google-map__locations">
@@ -225,8 +250,8 @@
                     </li>
                 </ul>
             </div>
-            <!-- END RD Google Map -->
-        </section>
+             END RD Google Map 
+        </section>-->
         <!-- END Map-->
 
     </main>
