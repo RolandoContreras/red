@@ -1,0 +1,71 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Login extends CI_Controller {
+    public function __construct() {
+        parent::__construct();     
+        $this->load->model('customer_model','obj_customer');
+    }
+    
+    public function index(){    
+       $this->load->view('dashboard');
+    }
+    
+    public function validate(){
+        
+        if($this->input->is_ajax_request()){    
+            $this->form_validation->set_rules('username','username',"required|trim|callback_validar_customer");
+            $this->form_validation->set_rules('password','password','required|trim');              
+    	    $this->form_validation->set_message('required','Campo requerido %s');    	    
+            
+            if ($this->form_validation->run($this)== false){                
+    	        $cadena  = explode("</p>", validation_errors());                
+    	        $cadena2 = implode("<p>", $cadena);
+    	        $cadena3 = explode("<p>", $cadena2);
+    	        array_pop($cadena3);
+    	        array_shift($cadena3);                
+    	        $data['print'] = $cadena3[0];
+                $data['message'] = "false";       
+                
+    	    }else{
+                $data['message'] = "true";
+    	        $data['print'] = "Bienvenido al sistema";
+                $data['url'] = site_url()."backoffice";               
+            }         
+            echo json_encode($data);  
+            exit();      
+        }
+    }
+    
+    public function validar_customer(){
+        
+        $username = $this->input->post('username');  
+        $password = $this->input->post('password');  
+        $params = array("select" =>"*",
+                         "where" => "username = '$username' and password = '$password'",
+                        );
+        $obj_customer = $this->obj_customer->get_search_row($params);
+        
+        if (count($obj_customer)>0){
+            if ($obj_customer->status_value == 1){                
+                $data_customer_session['customer_id'] = $obj_customer->customer_id;
+                $data_customer_session['name'] = $obj_customer->first_name.' '.$obj_customer->last_name;
+                $data_customer_session['email'] = $obj_customer->email;
+                $data_customer_session['logged_user'] = "TRUE";
+                $data_customer_session['status'] = $obj_customer->status_value;
+                $_SESSION['customer'] = $data_customer_session;                
+                return true;    
+            }else{
+                $this->form_validation->set_message('validar_user', "Usuario Inactivo");
+                return false;
+            }
+        }else{
+            $this->form_validation->set_message('validar_user', "El usuario y/o la contraseña no son correctas");
+            return false;
+        }
+    }
+    public function logout(){        
+        $this->session->unset_userdata('usercms');
+	$this->session->destroy();
+        redirect('home'); 
+    }
+}

@@ -266,6 +266,9 @@ Millones de usuarios y cientos de Miles de comerciantes utilizan bitcoin. La tec
 <!-- Additional Functionality Scripts -->
 <script src="<?php echo site_url().'static/page_front/js/script.js';?>"></script>
 <!-- begin olark code -->
+<!-- Login Backoffice-->
+<script src="static/page_front/js/login.js"></script>
+<!-- End Login-->
 <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
 f[z]=function(){
 (a.s=a.s||[]).push(arguments)};var a=f[z]._={

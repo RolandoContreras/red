@@ -149,7 +149,7 @@
                                                                     <p>Username</p>
                                                                     <label data-add-placeholder>
                                                                         <input class="letter_login" type="text"
-                                                                               name="username"
+                                                                               id ="username"
                                                                                data-constraints="@NotEmpty"/>
                                                                     </label>
                                                             </div>
@@ -160,14 +160,14 @@
                                                                 <p>Contraseña</p>
                                                                 <label data-add-placeholder>
                                                                     <input class="letter_login" type="password"
-                                                                           name="password"
+                                                                           id ="password"
                                                                            data-constraints="@NotEmpty"/>
                                                                 </label>
                                                             </div>
                                                         </li>
                                                         <div class="col-xs-12 text-center">
                                                             <div class="mfControls">
-                                                                <button class="btn btn-md btn-primary" type="submit">Iniciar Sesión</button>
+                                                                <button class="btn btn-md btn-primary" type="button">Iniciar Sesión</button>
                                                             </div>
                                                         </div>
                                                     </div>
