@@ -104,60 +104,24 @@
                             </li>
                             <li>
                                 <a>Login</a>
-                                
-<!--                                <div class="container">
-                                        <h2>Modal Example</h2>
-                                         Trigger the modal with a button 
-                                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-                                         Modal 
-                                        <div class="modal fade" id="myModal" role="dialog">
-                                          <div class="modal-dialog">
-
-                                             Modal content
-                                            <div class="modal-content">
-                                              <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                <h4 class="modal-title">Inisiar Sesión</h4>
-                                              </div>
-                                              <div class="modal-body">
-                                                <p>Username</p>
-                                                <p>Password</p>
-                                              </div>
-                                              <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                              </div>
-                                            </div>
-
-                                          </div>
-                                        </div>
-                                </div>       -->
-  
-                                
-                                
-                                
-                                
                                      <ul class="rd-navbar-megamenu login">
                                          <li class="tittle_li">
                                             <h4 class="tittle_login">Inicio de Sesión</h4>
                                          </li>
                                             <form class='rd-mailform'>
                                                 <fieldset>
-                                                    <div class="row">
-                                                        <li >
-                                                            <div class="col-sm-12">
-                                                                    <p>Username</p>
+                                                    <div class="row row_login">
+                                                        <li>
+                                                            <div class="col-sm-4">
+                                                                <p style="text-align: left;">Username</p>
                                                                     <label data-add-placeholder>
                                                                         <input class="letter_login" type="text"
                                                                                id ="username"
                                                                                data-constraints="@NotEmpty"/>
                                                                     </label>
                                                             </div>
-                                                        </li>    
-                                                        <hr>
-                                                        <li>
-                                                            <div class="col-sm-12">
-                                                                <p>Contraseña</p>
+                                                            <div class="col-sm-6">
+                                                                <p style="text-align: left;">Contraseña</p>
                                                                 <label data-add-placeholder>
                                                                     <input class="letter_login" type="password"
                                                                            id ="password"
@@ -170,29 +134,11 @@
                                                                 <button class="btn btn-md btn-primary" type="button">Iniciar Sesión</button>
                                                             </div>
                                                         </div>
+                                                        <div id="mensaje">
+                                                        </div>
                                                     </div>
-                                                    <div class="mfInfo"></div>
                                                 </fieldset>
                                             </form>
-                                        
-<!--                                        <li>
-                                            <img src="<?php echo site_url().'static/page_front/images/megamenu-1.jpg';?>" alt="" width="343" height="177">
-                                            <h4>Affordable Costs</h4>
-                                            <p>We set low prices for our services to make telecommunications affordable for the global population.</p>
-                                            <a href="#" class="btn btn-md btn-primary">Learn More</a>
-                                        </li>
-                                        <li>
-                                            <img src="<?php echo site_url().'static/page_front/images/megamenu-2.jpg';?>" alt="" width="343" height="177">
-                                            <h4>Diverse Orientation</h4>
-                                            <p>Our services are oriented towards governmental agencies, commercial enterprises, and housing estates.</p>
-                                            <a href="#" class="btn btn-md btn-primary">Learn More</a>
-                                        </li>
-                                        <li>
-                                            <img src="<?php echo site_url().'static/page_front/images/megamenu-3.jpg';?>" alt="" width="343" height="177">
-                                            <h4>Significant Discounts</h4>
-                                            <p>Our customers who make a repeat order of our services get a 30% discount.</p>
-                                            <a href="#" class="btn btn-md btn-primary">Iniciar Sesión</a>
-                                        </li>-->
                                     </ul>
                             </li>
                         </ul>

@@ -23,7 +23,7 @@ class Login extends CI_Controller {
     	        $cadena3 = explode("<p>", $cadena2);
     	        array_pop($cadena3);
     	        array_shift($cadena3);                
-    	        $data['print'] = $cadena3[0];
+    	        $data['print'] = "Datos invalidos";
                 $data['message'] = "false";       
                 
     	    }else{
@@ -37,7 +37,6 @@ class Login extends CI_Controller {
     }
     
     public function validar_customer(){
-        
         $username = $this->input->post('username');  
         $password = $this->input->post('password');  
         $params = array("select" =>"*",

@@ -47,5 +47,8 @@
     </div>
     <script src="js/html5shiv.min.js"></script>
     <![endif]-->
-    <?php return $title;?>
+    <?php // return $title;?>
+    <script src="<?php echo site_url().'static/bootstrap/js/bootstrap.js';?>"></script>	                    
+    <script src="<?php echo site_url().'static/bootstrap/js/bootstrap-alert.js';?>/"></script>
+    <!--<link href="<?php echo site_url().'static/bootstrap/css/bootstrap.min.css';?>" rel="stylesheet">-->
 </head>
