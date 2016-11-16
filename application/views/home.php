@@ -150,7 +150,7 @@
                     <div class="col-md-preffix-7 col-md-5">
                         <h1>EL MUNDO ESTÁ ABIERTO AHORA PARA LOS NEGOCIOS BLOCKCHAIN</h1>
                         <p class="inset-2">Es el corazón de la moneda digital, la tecnología descentralizada que está revolucionando la manera en que la gente intercambia. 
-Millones de usuarios y cientos de Miles de comerciantes utilizan bitcoin.</p>
+Millones de usuarios y cientos de Miles de comerciantes utilizan bitcoin. La tecnología de cadena de bloques es una contabilidad pública entre pares que se mantiene mediante una red distribuida de ordenadores y que no requiere ninguna autoridad central no terceras partes que actúen como intermediario. </p>
                         <a href="#" class="btn btn-primary btn-md">Explore More</a>
                     </div>
                 </div>

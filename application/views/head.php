@@ -35,6 +35,9 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href='//fonts.googleapis.com/css?family=Roboto:300,300italic%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='<?php echo site_url().'static/page_front/css/style.css';?>' rel='stylesheet' type='text/css'>
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     <!--[if lt IE 10]>
     <div style='background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;'>
         <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
