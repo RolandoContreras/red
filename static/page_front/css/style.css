@@ -12801,3 +12801,6 @@ img.mfp-img {
 .page-footer a[href*="./"]:hover {
   color: inherit;
 }
+.logo_btc{
+    width: 300px;
+}

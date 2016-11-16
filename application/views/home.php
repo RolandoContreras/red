@@ -20,7 +20,7 @@
                 <h1>¿QUÉ ES EL BITCOIN?</h1>
                 <div class="row">
                     <div class="col-md-10 col-md-preffix-1">
-                        <p>Primera criptodivisa creada en el 2009 que destaca por su eficiencia, seguridad y facilidad de intercambio. Es una moneda descentralizada ya que no necesita un repositorio central o administrador individual, no necesita de un tercero para transaccionar. EL BITCOIN ES EL FUTURO<br><br><br><img src="<?php echo site_url().'static/page_front/images/logo-btc2.png';?>" alt="logo_bitcoin"/></p>
+                        <p>Primera criptodivisa creada en el 2009 que destaca por su eficiencia, seguridad y facilidad de intercambio. Es una moneda descentralizada ya que no necesita un repositorio central o administrador individual, no necesita de un tercero para transaccionar. EL BITCOIN ES EL FUTURO<br><br><br><img class="logo_btc" src="<?php echo site_url().'static/page_front/images/logo-btc2.png';?>" alt="logo_bitcoin"/></p>
                     </div>
                 </div>
                 <a href="#" class="btn btn-md btn-contrast">Explorar Más</a>
@@ -140,7 +140,7 @@
             <div class="absolute wow fadeInRight">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="image-wrap"><img src="<?php echo site_url().'static/page_front/images/page-01_img02.jpg';?>" width="1010" height="1125" alt=""></div>
+                        <div class="image-wrap"><img src="<?php echo site_url().'static/page_front/images/pasarelas/blockchain.jpg';?>" width="1010" height="1125" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -148,8 +148,9 @@
             <div class="container wow fadeInLeft">
                 <div class="row">
                     <div class="col-md-preffix-7 col-md-5">
-                        <h1>Quality</h1>
-                        <p class="inset-2">We believe that old marketing rules, such as quality and perfect servicing, must be kept and realized in our policy instantly. Our solutions are aimed at creating values and quality in our activity. Our perfect reputation and many positive testimonials prove that quality solution is an effective part of our business.</p>
+                        <h1>EL MUNDO ESTÁ ABIERTO AHORA PARA LOS NEGOCIOS BLOCKCHAIN</h1>
+                        <p class="inset-2">Es el corazón de la moneda digital, la tecnología descentralizada que está revolucionando la manera en que la gente intercambia. 
+Millones de usuarios y cientos de Miles de comerciantes utilizan bitcoin.</p>
                         <a href="#" class="btn btn-primary btn-md">Explore More</a>
                     </div>
                 </div>
