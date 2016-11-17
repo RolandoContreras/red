@@ -39,7 +39,7 @@ class Login extends CI_Controller {
     public function validar_customer(){
         $username = $this->input->post('username');  
         $password = $this->input->post('password');  
-        $params = array("select" =>"*",
+        $params = array("select" =>"customer_id,first_name,last_name,username,email,active,status_value",
                          "where" => "username = '$username' and password = '$password'",
                         );
         $obj_customer = $this->obj_customer->get_search_row($params);
@@ -48,8 +48,10 @@ class Login extends CI_Controller {
             if ($obj_customer->status_value == 1){                
                 $data_customer_session['customer_id'] = $obj_customer->customer_id;
                 $data_customer_session['name'] = $obj_customer->first_name.' '.$obj_customer->last_name;
+                $data_customer_session['username'] = $obj_customer->username;
                 $data_customer_session['email'] = $obj_customer->email;
-                $data_customer_session['logged_user'] = "TRUE";
+                $data_customer_session['active'] = $obj_customer->active;
+                $data_customer_session['logged_customer'] = "TRUE";
                 $data_customer_session['status'] = $obj_customer->status_value;
                 $_SESSION['customer'] = $data_customer_session;                
                 return true;    
@@ -63,7 +65,7 @@ class Login extends CI_Controller {
         }
     }
     public function logout(){        
-        $this->session->unset_userdata('usercms');
+        $this->session->unset_userdata('customer');
 	$this->session->destroy();
         redirect('home'); 
     }

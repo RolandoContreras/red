@@ -141,6 +141,9 @@
                                             </form>
                                     </ul>
                             </li>
+                            <li class="active">
+                                <a href="<?php echo site_url().'registro';?>">Registro</a>
+                            </li>
                         </ul>
                         <!-- END RD Navbar Nav -->
                     </div>

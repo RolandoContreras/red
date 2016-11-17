@@ -20,6 +20,6 @@ class B_data extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('backoffice/b_data');
+                $this->tmp_backoffice->render("backoffice/b_data");
 	}
 }

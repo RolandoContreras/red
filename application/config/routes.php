@@ -53,8 +53,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 $route['acerca'] = "about_us";
 $route['servicios'] = "services";
+$route['registrso'] = "";
 $route['contacto'] = "contact";
 $route['backoffice'] = "b_home";
+$route['logout'] = "b_home/logout";
+$route['misdatos'] = "b_data";
 
 
 

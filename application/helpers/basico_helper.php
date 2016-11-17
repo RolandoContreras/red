@@ -176,6 +176,16 @@ function get_year_number($fecha){
     return  $anio;
 }
 
+function first_capital_letter($name){    
+    $name = ucwords($name);
+    return  $name;
+}
+
+function str_to_minuscula($str){
+    $str = trim(strtolower($str));
+    return  $str;
+}
+
 function get_semilla(){
     $semilla='ab513c75f48d82bcd30aa48e478d2e6e';
     return $semilla;
