@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="wide wow-animation">
      <!--========================================================
@@ -19,14 +18,15 @@
         <!-- Our mission -->
         <section class="well-sm well-sm-inset-1">
             <div class="container">
-                <h1>Our Mission</h1>
+                <h1>Misión & Visión</h1>
                 <div class="row">
                     <div class="col-md-4 text-center">
-                        <img src="<?php echo site_url().'static/page_front/images/page-02_img01.jpg';?>" alt="" width="370" height="279">
+                        <img src="<?php echo site_url().'static/page_front/images/empresa.jpg';?>" alt="misión" width="370" height="279">
                     </div>
                     <div class="col-md-8">
-                        <p>Our company presents the classical business in the sphere of high technologies. We know how to appreciate our clients and improve our services.</p>
-                        <div class="row">
+                        <p>Nuestra misión es ayudar a capitalizar y dar herramientas para un crecimiento económico y personal a las personas en este nuevo cambio de era a través de la comercialización y el  buen manejo del bitcoin; convirtiéndose cada una de las personas que se asocian a bitshare en un cambista de bitcoin.</p><br>
+                        <p>Nuestra visión consiste en lograr el liderazgo en el rubro de criptomoneda mediante un ecosistema sano creado  por los asociados. BitShare tiene como objetivo dar herramientas y ayudar a sus miles de clientes a lograr que los pagos sean más fáciles y rápidos en todo el mundo..</p>
+<!--                        <div class="row">
                             <div class="col-sm-6">
                                 <ul class="marked-list">
                                     <li><a href="#">Inbound Call Centre</a></li>
@@ -45,7 +45,7 @@
                                     <li><a href="#">Financial translation</a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
         <!-- Work team -->
         <section class="well-md well-md-inset-1 bg-primary text-center">
             <div class="container wow fadeInUp">
-                <h1>Work Team</h1>
+                <h1>Equipo de Trabajo</h1>
                 <div class="row flow-offset-1">
                     <div class="col-xs-6 col-md-3">
                         <img src="<?php echo site_url().'static/page_front/images/page-02_img02.jpg';?>" alt="" width="270" height="242">
@@ -102,8 +102,11 @@
             <div class="container wow fadeInLeft">
                 <div class="row">
                     <div class="col-md-preffix-7 col-md-5">
-                        <h1>Why Us</h1>
-                        <p class="inset-2">Our company is your one stop solution for all needs. <br>There is no doubt that we are the leaders and you don’t have to worry about our image because it is perfect. A great number of different grateful clients is the best prove of the previous statement.</p>
+                        <h1>¿Porqué Nosotros? </h1>
+                        <p class="inset-2">Las inversiones de los asociados son diversificadas en un holding de empresas relacionadas al rubro de pesquería, belleza, bienes raíces, casas de cambios y principalmente en trading (compra y venta de bit coin). 
+
+Todas las inversiones de BTCCLICK son hechas en bit coin, y debido a la gran demanda del mercado se estima que este años se cierro en aproximadamente en $1200 por moneda, lo cual da seguridad al proyecto.
+</p>
                         <a href="#" class="btn btn-primary btn-md">Explore More</a>
                     </div>
                 </div>
