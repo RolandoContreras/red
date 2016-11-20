@@ -18,14 +18,14 @@
         <!-- Our mission -->
         <section class="well-sm well-sm-inset-1">
             <div class="container">
-                <h1>Misión & Visión</h1>
+                <h1><?php echo replace_vocales_voculeshtml("Misión & Visión");?></h1>
                 <div class="row">
                     <div class="col-md-4 text-center">
                         <img src="<?php echo site_url().'static/page_front/images/empresa.jpg';?>" alt="misión" width="370" height="279">
                     </div>
                     <div class="col-md-8">
-                        <p>Nuestra misión es ayudar a capitalizar y dar herramientas para un crecimiento económico y personal a los asociados en este nuevo cambio de era a través de la comercialización y el  buen manejo del bitcoin; convirtiéndose cada una de ellas en un cambista de bitcoin.</p><br>
-                        <p>Nuestra visión consiste en lograr el liderazgo en el rubro de criptomoneda mediante un ecosistema sano creado  por los asociados. BitShare tiene como objetivo dar herramientas y ayudar a sus miles de clientes a lograr que los pagos sean más fáciles y rápidos en todo el mundo..</p>
+                        <p><?php echo replace_vocales_voculeshtml("Nuestra misión es ayudar a capitalizar y dar herramientas para un crecimiento económico y personal a los asociados en este nuevo cambio de era a través de la comercialización y el  buen manejo del bitcoin; convirtiéndose cada una de ellas en un cambista de bitcoin.");?></p><br>
+                        <p><?php echo replace_vocales_voculeshtml("Nuestra visión consiste en lograr el liderazgo en el rubro de criptomoneda mediante un ecosistema sano creado  por los asociados. BitShare tiene como objetivo dar herramientas y ayudar a sus miles de clientes a lograr que los pagos sean más fáciles y rápidos en todo el mundo.");?></p>
                     </div>
                 </div>
             </div>
@@ -44,9 +44,9 @@
             <div class="container wow fadeInLeft">
                 <div class="row">
                     <div class="col-md-preffix-7 col-md-5">
-                        <h1>¿Porqué Nosotros? </h1>
-                        <p class="inset-2">Las inversiones de los asociados son diversificadas en un holding de empresas relacionadas al rubro de pesquería, belleza, bienes raíces, casas de cambios y principalmente en trading (compra y venta de bit coin). 
-                        Todas las inversiones de BTCCLICK son hechas en bit coin, y debido a la gran demanda del mercado se estima que este años se cierro en aproximadamente en $1200 por moneda, lo cual da seguridad al proyecto.
+                        <h1><?php echo replace_vocales_voculeshtml("¿Porqué Nosotros?");?></h1>
+                        <p class="inset-2"><?php echo replace_vocales_voculeshtml("Las inversiones de los asociados son diversificadas en un holding de empresas relacionadas al rubro de pesquería, belleza, bienes raíces, casas de cambios y principalmente en trading (compra y venta de bit coin). 
+                        Todas las inversiones de BTCCLICK son hechas en bit coin, y debido a la gran demanda del mercado se estima que este años se cierro en aproximadamente en $1200 por moneda, lo cual da seguridad al proyecto.");?>
                     </p>
                     </div>
                 </div>
@@ -59,7 +59,6 @@
             <div class="container wow fadeInUp">
                 <h1>Empresas</h1>
                 <ul class="index-list row">
-                    
                     <li class="col-md-4">
                         <div class="box">
                             <div class="box__left">
@@ -67,7 +66,7 @@
                             </div>
                             <div class="box__body">
                                 <h4><a href="#">Trading</a></h4>
-                                <p>Hacemos compra y venta de bitcoin no solamente a personas de BitShare sino también a empresarios externos.</p>
+                                <p><?php echo replace_vocales_voculeshtml("Hacemos compra y venta de bitcoin no solamente a personas de BitShare sino también a empresarios externos.");?></p>
                             </div>
                         </div>
                     </li>
@@ -103,7 +102,7 @@
                             </div>
                             <div class="box__body">
                                 <h4><a href="#">Casas de Cambio</a></h4>
-                                <p>Diversificamos en este rubro que está en constante crecimiento y muy atractivo.</p>
+                                <p><?php echo replace_vocales_voculeshtml("Diversificamos en este rubro que está en constante crecimiento y muy atractivo.");?></p>
                             </div>
                         </div>
                     </li>
@@ -115,7 +114,7 @@
                             </div>
                             <div class="box__body">
                                 <h4><a href="#">Importaciones</a></h4>
-                                <p>Comercializamos contenedores desde China y Panamá por más de 2 años con un equipo profesional y experto en el tema</p>
+                                <p><?php echo replace_vocales_voculeshtml("Comercializamos contenedores desde China y Panamá por más de 2 años con un equipo profesional y experto en el tema.");?></p>
                             </div>
                         </div>
                     </li>
@@ -127,7 +126,7 @@
                             </div>
                             <div class="box__body">
                                 <h4><a href="#">Software</a></h4>
-                                <p>Hace más de 7 años nos dedicamos a la construcción de sistemas para empresas y desarrollo de software a nivel internacional</p>
+                                <p><?php echo replace_vocales_voculeshtml("Hace más de 7 años nos dedicamos a la construcción de sistemas para empresas y desarrollo de software a nivel internacional.");?></p>
                             </div>
                         </div>
                     </li>
@@ -142,30 +141,9 @@
     ==========================================================-->
    <?php $this->load->view("footer");?>
 </div>
-
 <!-- Core Scripts -->
 <script src="<?php echo site_url().'static/page_front/js/core.min.js';?>"></script>
 <!-- Additional Functionality Scripts -->
 <script src="<?php echo site_url().'static/page_front/js/script.js';?>"></script>
-<!-- begin olark code -->
-<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
-f[z]=function(){
-(a.s=a.s||[]).push(arguments)};var a=f[z]._={
-},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
-f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
-0:+new Date};a.P=function(u){
-a.p[u]=new Date-a.p[0]};function s(){
-a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
-hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
-return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
-b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
-b.contentWindow[g].open()}catch(w){
-c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
-var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
-b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
-loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
-/* custom configuration goes here (www.olark.com/documentation) */
-olark.identify('7830-582-10-3714');/*\]\]>*/</script><noscript><a href="https://www.olark.com/site/7830-582-10-3714/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
-<!-- end olark code -->
-</body><!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P9FT69');</script><!-- End Google Tag Manager -->
+</body><!-- Google Tag Manager -->
 </html>

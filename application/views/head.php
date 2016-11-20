@@ -16,9 +16,9 @@
             $title = "Acerca"; 
             $style_about = "active";
             break;
-        case "servicios":
-            $title = "Servicios"; 
-            $style_services = "active";
+        case "plan":
+            $title = "Plan"; 
+            $style_plan = "active";
             break;
         case "contacto":
             $title = "Contacto"; 

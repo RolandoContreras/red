@@ -38,10 +38,10 @@
                                 <a href="<?php echo site_url().'acerca';?>">Acerca</a>
                             </li>
                             <li>
-                                <a href="index-3.html">Plan</a>
+                                <a href="<?php echo site_url().'plan';?>">Plan</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url().'contacto';?>">Conacto</a>
+                                <a href="<?php echo site_url().'contacto';?>">Contacto</a>
                             </li>
                             <li>
                                 <a>Login</a>

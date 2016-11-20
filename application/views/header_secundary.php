@@ -33,14 +33,14 @@
                             $style_about = "";
                             $style_contact = "";
                             $style_home = "";
-                            $style_services = "";
+                            $style_plan = "";
                             $url = explode("/",uri_string()); 
                             switch ($url[0]) {
                             case "acerca":
                                 $style_about = "active";
                                 break;
-                            case "servicios":
-                                $style_services = "active";
+                            case "plan":
+                                $style_plan = "active";
                                 break;
                             case "contacto":
                                 $style_contact = "active";
@@ -56,8 +56,8 @@
                             <li class="<?php echo $style_about;?>">
                                 <a href="<?php echo site_url().'acerca';?>">Acerca</a>
                             </li>
-                            <li class="">
-                                <a href="index-3.html">Plan</a>
+                            <li class="<?php echo $style_plan;?>">
+                                <a href="<?php echo site_url().'plan';?>">Plan</a>
                             </li>
                             <li class="<?php echo $style_contact;?>">
                                 <a href="<?php echo site_url().'contacto';?>">Contacto</a>
