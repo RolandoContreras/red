@@ -190,4 +190,11 @@ function get_semilla(){
     $semilla='ab513c75f48d82bcd30aa48e478d2e6e';
     return $semilla;
 }
+
+function replace_vocales_voculeshtml($str){
+    $search  = array('á', 'é', 'í', 'ó', 'ú','Á', 'É', 'Í', 'Ó', 'Ú', '¿');
+    $replace = array('&aacute', '&eacute', '&iacute', '&oacute', '&uacute','&Aacute','&Eacute', '&Iacute', '&Oacute', '&Uacute', '&iquest;');    
+    return str_replace($search, $replace, $str);
+    
+}
 ?>

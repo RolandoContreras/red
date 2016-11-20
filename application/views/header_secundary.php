@@ -56,11 +56,8 @@
                             <li class="<?php echo $style_about;?>">
                                 <a href="<?php echo site_url().'acerca';?>">Acerca</a>
                             </li>
-                            <li class="<?php echo $style_services;?>">
-                                <a href="<?php echo site_url().'servicios';?>">Servicios</a>
-                            </li>
                             <li class="">
-                                <a href="index-3.html">Presentación</a>
+                                <a href="index-3.html">Plan</a>
                             </li>
                             <li class="<?php echo $style_contact;?>">
                                 <a href="<?php echo site_url().'contacto';?>">Contacto</a>
@@ -103,9 +100,6 @@
                                                 </fieldset>
                                             </form>
                                     </ul>
-                            </li>
-                             <li class="active">
-                                <a href="<?php echo site_url().'registro';?>">Registro</a>
                             </li>
                         </ul>
                         <!-- END RD Navbar Nav -->

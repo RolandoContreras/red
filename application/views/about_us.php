@@ -24,71 +24,13 @@
                         <img src="<?php echo site_url().'static/page_front/images/empresa.jpg';?>" alt="misión" width="370" height="279">
                     </div>
                     <div class="col-md-8">
-                        <p>Nuestra misión es ayudar a capitalizar y dar herramientas para un crecimiento económico y personal a las personas en este nuevo cambio de era a través de la comercialización y el  buen manejo del bitcoin; convirtiéndose cada una de las personas que se asocian a bitshare en un cambista de bitcoin.</p><br>
+                        <p>Nuestra misión es ayudar a capitalizar y dar herramientas para un crecimiento económico y personal a los asociados en este nuevo cambio de era a través de la comercialización y el  buen manejo del bitcoin; convirtiéndose cada una de ellas en un cambista de bitcoin.</p><br>
                         <p>Nuestra visión consiste en lograr el liderazgo en el rubro de criptomoneda mediante un ecosistema sano creado  por los asociados. BitShare tiene como objetivo dar herramientas y ayudar a sus miles de clientes a lograr que los pagos sean más fáciles y rápidos en todo el mundo..</p>
-<!--                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="marked-list">
-                                    <li><a href="#">Inbound Call Centre</a></li>
-                                    <li><a href="#">Telemarketing Services</a></li>
-                                    <li><a href="#">Lead Capture Services</a></li>
-                                    <li><a href="#">Advertising Campaign</a></li>
-                                    <li><a href="#">Sales Lead Conversion</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="marked-list">
-                                    <li><a href="#">Web Enabled Call Centre</a></li>
-                                    <li><a href="#">Real Estate Lead Collection</a></li>
-                                    <li><a href="#">Customer Service Call Centre</a></li>
-                                    <li><a href="#">Technical translation</a></li>
-                                    <li><a href="#">Financial translation</a></li>
-                                </ul>
-                            </div>
-                        </div>-->
                     </div>
                 </div>
             </div>
         </section>
         <!-- END Our mission-->
-
-        <!-- Work team -->
-        <section class="well-md well-md-inset-1 bg-primary text-center">
-            <div class="container wow fadeInUp">
-                <h1>Equipo de Trabajo</h1>
-                <div class="row flow-offset-1">
-                    <div class="col-xs-6 col-md-3">
-                        <img src="<?php echo site_url().'static/page_front/images/page-02_img02.jpg';?>" alt="" width="270" height="242">
-                        <h4><a href="#">Eva Adamson</a></h4>
-                        <p>Support Lead, Account</p>
-                        <p>Executive</p>
-                    </div>
-
-                    <div class="col-xs-6 col-md-3">
-                        <img src="<?php echo site_url().'static/page_front/images/page-02_img03.jpg';?>" alt="" width="270" height="242">
-                        <h4><a href="#">David Austin</a></h4>
-                        <p>Marketing and Thought</p>
-                        <p>Leadership</p>
-                    </div>
-
-                    <div class="col-xs-6 col-md-3">
-                        <img src="<?php echo site_url().'static/page_front/images/page-02_img04.jpg';?>" alt="" width="270" height="242">
-                        <h4><a href="#">Natalie Barnes</a></h4>
-                        <p>Programming and Systems</p>
-                        <p>Manager</p>
-                    </div>
-
-                    <div class="col-xs-6 col-md-3">
-                        <img src="<?php echo site_url().'static/page_front/images/page-02_img05.jpg';?>" alt="" width="270" height="242">
-                        <h4><a href="#">Eva Adamson</a></h4>
-                        <p>Marketing, Project</p>
-                        <p>Manager</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END Work team-->
-
         <!-- Why Us -->
         <section class="relative well-lg well-lg-inset-1">
             <div class="absolute wow fadeInRight">
@@ -104,10 +46,8 @@
                     <div class="col-md-preffix-7 col-md-5">
                         <h1>¿Porqué Nosotros? </h1>
                         <p class="inset-2">Las inversiones de los asociados son diversificadas en un holding de empresas relacionadas al rubro de pesquería, belleza, bienes raíces, casas de cambios y principalmente en trading (compra y venta de bit coin). 
-
-Todas las inversiones de BTCCLICK son hechas en bit coin, y debido a la gran demanda del mercado se estima que este años se cierro en aproximadamente en $1200 por moneda, lo cual da seguridad al proyecto.
-</p>
-                        <a href="#" class="btn btn-primary btn-md">Explore More</a>
+                        Todas las inversiones de BTCCLICK son hechas en bit coin, y debido a la gran demanda del mercado se estima que este años se cierro en aproximadamente en $1200 por moneda, lo cual da seguridad al proyecto.
+                    </p>
                     </div>
                 </div>
             </div>
@@ -117,16 +57,29 @@ Todas las inversiones de BTCCLICK son hechas en bit coin, y debido a la gran dem
         <!-- Products -->
         <section class="well-md well-md-inset-1 bg-primary text-center">
             <div class="container wow fadeInUp">
-                <h1>Products</h1>
+                <h1>Empresas</h1>
                 <ul class="index-list row">
+                    
                     <li class="col-md-4">
                         <div class="box">
                             <div class="box__left">
                                 <div class="icon icon-sm icon-secondary-1 index-list__counter"></div>
                             </div>
                             <div class="box__body">
-                                <h4><a href="#">Internet</a></h4>
-                                <p>You get the fastest, most reliable, unlimited Internet in the area.</p>
+                                <h4><a href="#">Trading</a></h4>
+                                <p>Hacemos compra y venta de bitcoin no solamente a personas de BitShare sino también a empresarios externos.</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-4">
+                        <div class="box">
+                            <div class="box__left">
+                                <div class="icon icon-sm icon-secondary-1 index-list__counter"></div>
+                            </div>
+                            <div class="box__body">
+                                <h4><a href="#">Belleza</a></h4>
+                                <p>Primer negocio que empezamos hace más de 6 años, y con gran esfuerzo y dirección empezamos a crear negocios solidos los cuales son partes de nuestro holding.</p>
                             </div>
                         </div>
                     </li>
@@ -137,20 +90,44 @@ Todas las inversiones de BTCCLICK son hechas en bit coin, y debido a la gran dem
                                 <div class="icon icon-sm icon-secondary-1 index-list__counter"></div>
                             </div>
                             <div class="box__body">
-                                <h4><a href="#">Digital TV</a></h4>
-                                <p>You want a wide selction of Digital TV choices and we deliver!</p>
+                                <h4><a href="#">Pesca</a></h4>
+                                <p>Manejamos embarcaciones pesqueras por más de 5 años con buenas rentabilidades anuales.</p>
                             </div>
                         </div>
                     </li>
 
                     <li class="col-md-4">
-                        <div class="box">
+                        <div class="box" style="margin-top: 40px !important;">
                             <div class="box__left">
                                 <div class="icon icon-sm icon-secondary-1 index-list__counter"></div>
                             </div>
                             <div class="box__body">
-                                <h4><a href="#">Telephone</a></h4>
-                                <p>Voice communications have certainly changed over the years.</p>
+                                <h4><a href="#">Casas de Cambio</a></h4>
+                                <p>Diversificamos en este rubro que está en constante crecimiento y muy atractivo.</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-4">
+                        <div class="box" style="margin-top: 40px !important;">
+                            <div class="box__left">
+                                <div class="icon icon-sm icon-secondary-1 index-list__counter"></div>
+                            </div>
+                            <div class="box__body">
+                                <h4><a href="#">Importaciones</a></h4>
+                                <p>Comercializamos contenedores desde China y Panamá por más de 2 años con un equipo profesional y experto en el tema</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-4">
+                        <div class="box" style="margin-top: 40px !important;">
+                            <div class="box__left">
+                                <div class="icon icon-sm icon-secondary-1 index-list__counter"></div>
+                            </div>
+                            <div class="box__body">
+                                <h4><a href="#">Software</a></h4>
+                                <p>Hace más de 7 años nos dedicamos a la construcción de sistemas para empresas y desarrollo de software a nivel internacional</p>
                             </div>
                         </div>
                     </li>

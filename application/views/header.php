@@ -38,10 +38,7 @@
                                 <a href="<?php echo site_url().'acerca';?>">Acerca</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url().'servicios';?>">Servicios</a>
-                            </li>
-                            <li>
-                                <a href="index-3.html">Presentacíon</a>
+                                <a href="index-3.html">Plan</a>
                             </li>
                             <li>
                                 <a href="<?php echo site_url().'contacto';?>">Conacto</a>
@@ -85,9 +82,6 @@
                                             </form>
                                     </ul>
                             </li>
-                            <li class="active">
-                                <a href="<?php echo site_url().'registro';?>">Registro</a>
-                            </li>
                         </ul>
                         <!-- END RD Navbar Nav -->
                     </div>
@@ -104,11 +98,11 @@
                 </div>
                 <div class="swiper-slide" data-slide-bg="<?php echo site_url().'static/page_front/images/slide-2.jpg';?>">
                     <div class="swiper-slide-caption text-center">
-                        <h2>Sé tu propio banco, únete a la revolución de las criptomonedas</h2>
-                        <p>La tecnología descentralizada que está revolucionando la manera de intercambiar a nivel mundial.</p>
+                        <h2><?php echo replace_vocales_voculeshtml("Sé tu propio banco, únete a la revolución de las criptomonedas.");?></h2>
+                        <p><?php echo replace_vocales_voculeshtml("La tecnología descentralizada que está revolucionando la manera de intercambiar a nivel mundial.");?></p>
                         <div class="btn-group">
                             <!--<a href="#" class="btn btn-md btn-secondary-2">Learn More</a>-->
-                            <a href="#" class="btn btn-md btn-secondary-3">Conviértete en un socio</a>
+                            <a href="#" class="btn btn-md btn-secondary-3">Convi&eacute;rtete en un socio</a>
                         </div>
                     </div>
                 </div>
@@ -118,17 +112,17 @@
                         <p>Valoramos las tradiciones de un trabajo eficiente con las herramientas necesarias y creemos que esto es una piedra angular de cualquier empresa exitosa.</p>
                         <div class="btn-group">
                             <!--<a href="#" class="btn btn-md btn-secondary-2">Learn More</a>-->
-                            <a href="#" class="btn btn-md btn-secondary-3">Conviértete en un socio</a>
+                            <a href="#" class="btn btn-md btn-secondary-3">Convi&eacute;rtete en un socio</a>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide" data-slide-bg="<?php echo site_url().'static/page_front/images/slide-3.jpg';?>">
                     <div class="swiper-slide-caption text-center">
                         <h2>Una manera innovadora de comercializar un bien o servicio.</h2>
-                        <p>La tecnología de Bitcoin y BlockChain permite que profesionales y empresas puedan sortear las barreras para recibir pagos de una manera mucho más eficiente.</p>
+                        <p><?php echo replace_vocales_voculeshtml("La tecnología de Bitcoin y BlockChain permite que profesionales y empresas puedan sortear las barreras para recibir pagos de una manera mucho más eficiente.");?></p>
                         <div class="btn-group">
                             <!--<a href="#" class="btn btn-md btn-secondary-2">Learn More</a>-->
-                            <a href="#" class="btn btn-md btn-secondary-3">Conviértete en un socio</a>
+                            <a href="" class="btn btn-md btn-secondary-3">Convi&eacute;rtete en un socio</a>
                         </div>
                     </div>
                 </div>

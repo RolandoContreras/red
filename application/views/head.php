@@ -32,9 +32,12 @@
     <meta name="format-detection" content="telephone=no"/>
     <meta name="viewport"content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <!-- Stylesheets -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/favicon/favicon.ico';?>" type="image/x-icon"/>
-    <link rel="apple-touch-icon" href="https://www.wix.com/favicon.ico" type="image/x-icon"/>
+    <!--<link rel="icon" href="images/favicon.ico" type="image/x-icon">-->
+    
+    
+   
+    <link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon.ico'?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon.ico'?>" type="image/x-icon">
     
     
     <link href='//fonts.googleapis.com/css?family=Roboto:300,300italic%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
