@@ -172,80 +172,8 @@
         <!-- END Partners-->
 
         <!-- Get in touch -->
-        <section class="well-xs text-center">
-            <div class="container wow fadeInUp">
-                <h1>Mantente en contacto</h1>
-                <!-- RD Mailform -->
-                <form class='rd-mailform' method="post" action="bat/rd-mailform.php">
-                    <!-- RD Mailform Type -->
-                    <input type="hidden" name="form-type" value="contact"/>
-                    <!-- END RD Mailform Type -->
-                    <fieldset>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label data-add-placeholder>
-                                    <input type="text"
-                                           name="name"
-                                           placeholder="Nombre"
-                                           data-constraints="@NotEmpty @LettersOnly"/>
-                                </label>
-                            </div>
-
-                            <div class="col-sm-6">
-                                <label data-add-placeholder>
-                                    <input type="text"
-                                           name="email"
-                                           placeholder="Email"
-                                           data-constraints="@NotEmpty @Email"/>
-                                </label>
-                            </div>
-
-                            <div class="col-xs-12">
-                                <label data-add-placeholder class="wide">
-                                    <textarea name="message" placeholder="Mensaje"
-                                              data-constraints="@NotEmpty"></textarea>
-                                </label>
-                            </div>
-
-                            <div class="col-xs-12 text-center">
-                                <div class="mfControls">
-                                    <button class="btn btn-md btn-primary" type="submit">Enviar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mfInfo"></div>
-                    </fieldset>
-                </form>
-                <!-- END RD Mailform -->
-
-                <!--<address>8901 Marmora Road, Glasgow, D04 89GR</address>-->
-            </div>
-        </section>
+      
         <!-- END Get in touch-->
-
-        <!-- Map -->
-<!--        <section>
-             RD Google Map 
-            <div class="rd-google-map wow fadeInUp">
-                <div id="google-map" class="rd-google-map__model"></div>
-                <ul class="rd-google-map__locations">
-                    <li data-x="-73.9994068" data-y="40.643180" data-basic="images/gmap_park.png"
-                        data-active="http://livedemo00.template-help.com/wt_58243/images/gmap_park_active.png">
-                        <p> Lorem ipsum dolor sit amet, consectetur. <span>800-2345-6789</span></p>
-                    </li>
-                    <li data-x="-73.9874068" data-y="40.643180">
-                        <p> 9870 St Vincent Place, Glasgow, DC 45 Fr 45. <span>800-2345-6789</span></p>
-                    </li>
-                    <li data-x="-73.9854068" data-y="40.647180" data-basic="images/gmap_cart.png"
-                        data-active="http://livedemo00.template-help.com/wt_58243/images/gmap_cart_active.png">
-                        <p> 2734 Marmora Road, Glasgow, DC 41 Fr 45. <span>800-5732-6189</span></p>
-                    </li>
-                </ul>
-            </div>
-             END RD Google Map 
-        </section>-->
-        <!-- END Map-->
-
     </main>
     <!--========================================================
                               FOOTER

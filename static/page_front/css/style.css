@@ -12835,4 +12835,17 @@ img.mfp-img {
 .boton-login_si{
     color:green !important;
 }
-
+.text-danger {
+    color: #a94442;
+    margin-top: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+.text-success {
+    color: #3c763d;
+    margin-top: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+}

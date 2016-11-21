@@ -3,7 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/wamp64/www/red/static/page_front/js/register.js</file>
+            <file>file:/C:/wamp64/www/red/static/page_front/js/login.js</file>
+            <file>file:/C:/wamp64/www/red/application/views/header_secundary.php</file>
+            <file>file:/C:/wamp64/www/red/application/views/register.php</file>
             <file>file:/C:/wamp64/www/red/application/views/about_us.php</file>
+            <file>file:/C:/wamp64/www/red/application/models/comments_model.php</file>
+            <file>file:/C:/wamp64/www/red/application/controllers/contact.php</file>
+            <file>file:/C:/wamp64/www/red/application/views/header.php</file>
+            <file>file:/C:/wamp64/www/red/application/helpers/basico_helper.php</file>
+            <file>file:/C:/wamp64/www/red/static/page_front/js/contact.js</file>
+            <file>file:/C:/wamp64/www/red/application/views/contact.php</file>
+            <file>file:/C:/wamp64/www/red/application/controllers/Login.php</file>
+            <file>file:/C:/wamp64/www/red/application/models/customer_model.php</file>
         </group>
     </open-files>
 </project-private>

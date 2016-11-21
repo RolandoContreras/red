@@ -24,7 +24,7 @@ class comments_model_atributos{
     var $status_value='';
 }
 
-class Customer_Model extends CI_Model{ 
+class Comments_Model extends CI_Model{ 
 
     public function __construct() {
         parent::__construct();  
@@ -36,7 +36,7 @@ class Customer_Model extends CI_Model{
         $this->comment='';
 	$this->date_comment='';
 	$this->status_value='';
-	$this->fields = new customer_model_atributos();
+	$this->fields = new comments_model_atributos();
     }   
     
     public function fields(){

@@ -64,6 +64,7 @@ class Login extends CI_Controller {
             return false;
         }
     }
+    
     public function logout(){        
         $this->session->unset_userdata('customer');
 	$this->session->destroy();
