@@ -46,7 +46,7 @@
                     <div class="col-md-preffix-7 col-md-5">
                         <h1><?php echo replace_vocales_voculeshtml("¿Porqué Nosotros?");?></h1>
                         <p class="inset-2"><?php echo replace_vocales_voculeshtml("Las inversiones de los asociados son diversificadas en un holding de empresas relacionadas al rubro de pesquería, belleza, bienes raíces, casas de cambios y principalmente en trading (compra y venta de bit coin). 
-                        Todas las inversiones de BTCCLICK son hechas en bit coin, y debido a la gran demanda del mercado se estima que este años se cierro en aproximadamente en $1200 por moneda, lo cual da seguridad al proyecto.");?>
+                        Todas las inversiones de BITSHARE son hechas en bit coin, y debido a la gran demanda del mercado se estima que este años se cierro en aproximadamente en $1200 por moneda, lo cual da seguridad al proyecto.");?>
                     </p>
                     </div>
                 </div>

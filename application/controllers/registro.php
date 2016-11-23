@@ -29,7 +29,7 @@ class Registro extends CI_Controller {
             $data['print'] = "No esta disponible    ";
         }else{
             $data['message'] = "false";
-            $data['print'] = "✔";
+            $data['print'] = "✔ Disponible";
         }
         echo json_encode($data); 
     }

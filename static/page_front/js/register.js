@@ -17,6 +17,7 @@ function validate_username(username) {
 
 function validate_2passwordr(password2) {
         var password1 = document.getElementById("clave").value;
+        var password2 = document.getElementById("repita_clave").value;
         if(password1 == password2){
             $(".alert-1").removeClass('text-danger').addClass('text-success').html("las contraseña coinciden");
         }else{

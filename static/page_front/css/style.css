@@ -11140,6 +11140,7 @@ html.boxed .rd-navbar--is-clone {
   border-color: transparent transparent #FFF transparent;
 }
 .mfSelect .value {
+  overflow: visible !important;
   cursor: pointer;
   transition: .4s all ease-in-out;
   font-size: 20px;
