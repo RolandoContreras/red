@@ -212,20 +212,9 @@
 	               </ul>
 	               <!-- END Right Navbar-->
 	            </div>
-	            <!-- END Nav wrapper-->
-	            <!-- START Search form-->
-<!--	            <form role="search" action="mi-red-buscar" method="post" class="navbar-form">
-	               <div class="form-group has-feedback">
-	                  <input type="text" name="buscarNavBar" id="buscarNavBar" placeholder="Busqueda rapida de afiliados" class="form-control">
-	                  <div data-search-dismiss="" class="fa fa-times form-control-feedback"></div>
-	               </div>
-	               <button type="submit" class="hidden btn btn-default">Submit</button>
-	            </form>-->
-	            <!-- END Search form-->
 	         </nav>
 	         <!-- END Top Navbar-->
 	      </header>
-<!-- sidebar-->
 	      	<aside class="aside">
 	         	<!-- START Sidebar (left)-->
 	         	<div class="aside-inner">
@@ -247,7 +236,7 @@
                                                 <div class="user-block-info">
                                                 <span class="user-block-name">Hola, &nbsp;<?php echo first_capital_letter($_SESSION['customer']['name'])?></span>
                                                 <span class="user-block-role">
-                                                    <?php if($_SESSION['customer']['status']==1){ ?>
+                                                    <?php if($_SESSION['customer']['active']==1){ ?>
                                                         <span class="label label-success">
                                                             <em class="icon-star"></em> Activo
                                                         </span>

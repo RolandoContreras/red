@@ -13,9 +13,25 @@ class B_home extends CI_Controller {
         /// VISTA
         $customer_id = $_SESSION['customer']['customer_id'];
         $params = array(
-                        "select" =>"*",
-                         "where" => "customer_id = $customer_id",
-                        );
+                        "select" =>"customer.customer_id,
+                                    customer.parents_id,
+                                    customer.username,
+                                    customer.email,
+                                    customer.password,
+                                    customer.first_name,
+                                    customer.last_name,
+                                    customer.dni,
+                                    customer.birth_date,
+                                    customer.address,
+                                    customer.status_value,
+                                    franchise.name as franchise,
+                                    ",
+                         "where" => "customer.customer_id = $customer_id",
+                         "join" => array('franchise, customer.franchise_id = franchise.franchise_id',)
+                                        );
+        
+        
+        
         $obj_customer = $this->obj_customer->get_search_row($params);
         $this->tmp_backoffice->set("obj_customer",$obj_customer);
         $this->tmp_backoffice->render("backoffice/b_home");

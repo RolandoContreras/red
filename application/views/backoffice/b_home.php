@@ -1,10 +1,14 @@
 <section>
+    <?php 
+//    var_dump($obj_customer);
+//    die();
+    ?>
          <!-- Page content-->
          <div class="content-wrapper">
             <div class="content-heading">
-<!--              <div class="pull-right text-danger">
-                Bitcoin: $10.71000000              
-              </div>-->
+              <div class="pull-right text-danger">
+                Bitcoin: $737.00000000              
+              </div>
                               <div class="col-lg-3">
                 <img src="<?php echo site_url().'static/backoffice/images/logo-btc2.png';?>" class="responsive" height="100px;" id="LogoClienteMill">
               </div>
@@ -66,7 +70,7 @@
                         </div>
                         <div class="col-xs-8 pv-lg">
                            <div class="h2 mt0">Paquete</div>
-                           <div class="text-uppercase">Calificación</div>
+                           <div class="text-uppercase"><?php echo $obj_customer->franchise;?></div>
                         </div>
                      </div>
                   </div>
@@ -75,7 +79,7 @@
 
             <div class="row">
               <div class="col-lg-12">
-                  <strong>Tu links para referir: </strong><a href="<?php echo site_url().'afiliados/'.str_to_minuscula($obj_customer->username);?>" class="alert-link"><?php echo site_url().'afiliados/'.str_to_minuscula($obj_customer->username);?></a><br>
+                  <strong>Tu links para referir: </strong><a href="<?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link"><?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>
                 <strong>Aqui esta la liga para pago con bitcoins:</strong> 3QnoVEdfWfMC796gyeWCJcTm4KpoWMJAmX<br><br>
 
                 

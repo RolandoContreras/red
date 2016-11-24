@@ -52,8 +52,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'home';
 $route['acerca'] = "about_us";
-$route['servicios'] = "services";
-$route['registrso'] = "";
+
+$route['registro'] = "registro";
+$route['registro/afiliate/([0-9a-z_-]+)'] = "registro/index/$1";
+//$route['registro/afiliate/registro/validate_username'] = "registro/validate_username";
+//$route['registro/afiliate/registro/validate_region'] = "registro/validate_region";
+//$route['registro/afiliate/registro/crear_registro'] = "registro/crear_registro";
+
 $route['contacto'] = "contact";
 $route['backoffice'] = "b_home";
 $route['logout'] = "b_home/logout";

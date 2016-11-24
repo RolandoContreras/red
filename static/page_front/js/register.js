@@ -1,7 +1,7 @@
-function validate_username(username) {
+function validate_username(username){
         $.ajax({
         type: "post",
-        url: "registro/validate_username",
+        url: site + "registro/validate_username",
         dataType: "json",
         data: {username: username},
         success:function(data){            
@@ -9,7 +9,7 @@ function validate_username(username) {
                 $(".alert-0").removeClass('text-danger').addClass('text-danger').html(data.print)
                 
             }else{
-                $(".alert-0").removeClass('text-danger').addClass('text-success').html(data.print);
+                $(".alert-0").removeClass('text-success').addClass('text-success').html(data.print);
             }
         }            
     });
@@ -19,16 +19,16 @@ function validate_2passwordr(password2) {
         var password1 = document.getElementById("clave").value;
         var password2 = document.getElementById("repita_clave").value;
         if(password1 == password2){
-            $(".alert-1").removeClass('text-danger').addClass('text-success').html("las contraseña coinciden");
+            $(".alert-1").removeClass('text-danger').addClass('text-success').html("las contrase&ntilde;as coinciden");
         }else{
-            $(".alert-1").removeClass('text-danger').addClass('text-danger').html("las contraseña no coinciden");
+            $(".alert-1").removeClass('text-danger').addClass('text-danger').html("las contrase&ntilde;as no coinciden");
         }
 }
 
 function validate_dni(dni) {
         $.ajax({
         type: "post",
-        url: "registro/validate_dni",
+        url: site +  "registro/validate_dni",
         dataType: "json",
         data: {dni: dni},
         success:function(data){            
@@ -46,7 +46,7 @@ function validate_region(id) {
     
         $.ajax({
         type: "post",
-        url: "registro/validate_region",
+        url: site +  "registro/validate_region",
         dataType: "json",
         data: {id: id},
         success:function(data){            
@@ -71,13 +71,14 @@ function validate_region(id) {
 
 function crear_registro() {
     
-    
         var terminos = $("input[type='checkbox'][name='terminos']:checked").val();
         var clave = document.getElementById("clave").value;
         var repita_clave = document.getElementById("repita_clave").value;
-        
+
         if(terminos == 1){
             if(clave == repita_clave){
+                var customer_id = document.getElementById("customer_id").value;
+                var pierna_customer = document.getElementById("pierna_customer").value;
                 var usuario = document.getElementById("usuario").value;
                 var name = document.getElementById("name").value;
                 var last_name = document.getElementById("last_name").value;
@@ -91,13 +92,15 @@ function crear_registro() {
                 var pais = document.getElementById("pais").value;
                 var region = document.getElementById("region").value;
                 var city = document.getElementById("city").value;
-                var pierna = $("input[type='radio'][name='pierna']:checked").val();
+//                var pierna = $("input[type='radio'][name='pierna']:checked").val();
 
                 $.ajax({
                        type: "post",
-                       url: "registro/crear_registro",
+                       url: site + "registro/crear_registro",
                        dataType: "json",
-                       data: {usuario: usuario,
+                       data: {customer_id: customer_id,
+                              pierna_customer: pierna_customer,
+                              usuario: usuario,
                               clave: clave, 
                               name: name,
                               last_name: last_name,
@@ -110,16 +113,14 @@ function crear_registro() {
                               ano: ano,
                               pais: pais,
                               region: region,
-                              city: city,
-                              pierna: pierna},
+                              city: city},
                           
                        success:function(data){            
                                if(data.message == "true"){         
                                    $(".alert-4").removeClass('text-danger').addClass('text-success').html(data.print);
                                    $(location).attr('href',data.url);  
                            }else{
-//                                   $(".alert-4").removeClass('text-danger').addClass('text-danger').html("Debe llenar todos los datos");
-                                    $(location).attr('href',data.url);  
+                                   $(".alert-4").removeClass('text-danger').addClass('text-danger').html("Debe llenar todos los datos");
                            }
                        }            
                    });
@@ -130,11 +131,6 @@ function crear_registro() {
         }else{
                $(".alert-4").removeClass('text-danger').addClass('text-danger').html("Debe seleccionar los términos y condiciones");
         }
-    
-        
-      
-    
-       
 }
 
 

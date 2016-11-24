@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="wide wow-animation">
   <!--========================================================
@@ -23,6 +22,44 @@
                 <form class='rd-mailform'>
                     <fieldset>
                         <div class="row">
+                            <?php if(isset($obj_customer)){ ?>
+                                <h4>Patrocinador</h4>
+                                    <div class="col-xs-12">
+                                        <label></label>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <label data-add-placeholder>
+                                            <input type="text"  readonly="readonly"  value="<?php  
+                                            if(isset($obj_customer->first_name)){
+                                                echo $obj_customer->first_name;
+                                            }
+                                            ?>" placeholder="<?php 
+                                            if(isset($obj_customer->first_name)){
+                                                echo $obj_customer->first_name;
+                                            }?>"/>
+                                            <input type="hidden"  id="customer_id" name="customer_id" value="<?php  
+                                            if(isset($obj_customer->customer_id)){
+                                                echo $obj_customer->customer_id;
+                                            }
+                                            ?>" placeholder="<?php 
+                                            if(isset($obj_customer->customer_id)){
+                                                echo $obj_customer->customer_id;
+                                            }?>"/>
+                                            <input type="hidden" id="pierna_customer" name="pierna_customer" value="<?php  
+                                            if(isset($obj_customer->position_temporal)){
+                                                echo $obj_customer->position_temporal;
+                                            }
+                                            ?>" placeholder="<?php 
+                                            if(isset($obj_customer->position_temporal)){
+                                                echo $obj_customer->position_temporal;
+                                            }?>"/>
+                                        </label>
+                                    </div>
+                            <?php }else{ ?>
+                                <input type="hidden"  readonly="readonly" id="customer_id" value="1"/>
+                                <input type="hidden"  readonly="readonly" id="pierna_customer" value="1"/>
+                            <?php } ?>
+                            
                             <h4>Login</h4>
                             <div class="col-xs-12">
                                 <label></label>
@@ -164,10 +201,13 @@
                             <div class="col-sm-12">
                                 <label></label>
                                 <label data-add-placeholder>
+                                    <input type="text" readonly="readonly"/>
+                                </label>
+                                <label data-add-placeholder>
                                     <input type="text"  id="city" name="city" placeholder="Ciudad" data-constraints="@NotEmpty" maxlength="150"/>
                                 </label>
                             </div>
-                            <
+<!--                            
                             <h4><?php echo replace_vocales_voculeshtml("Selección de Pierna");?></h4>
                             <div class="col-xs-12">
                                 <label></label>
@@ -181,10 +221,10 @@
                                 <label data-add-placeholder>
                                      <input name="pierna" type="radio" value="2"/><h6  style="margin-top: -40px;">Derecha</h6>
                                 </label>
-                            </div>
-                            <label data-add-placeholder>
+                            </div>-->
+<!--                            <label data-add-placeholder>
                                     <input type="text" readonly="readonly"/>
-                                </label>
+                                </label>-->
                             <div class="col-sm-6">
                                 <label></label>
                                 <label data-add-placeholder>

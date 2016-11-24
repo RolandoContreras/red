@@ -10,17 +10,37 @@ class Registro extends CI_Controller {
 
     public function index()
     {
-        //Select params
-        $params = array(
-                        "select" =>"id, nombre, ",
-                        "where" => "id_idioma = 7");
-        $obj_paises['obj_paises'] = $this->obj_paises->search($params);
-        /// VIEW
+        //SELECT URL IF ISSET USERNAME
+        $url = explode("/",uri_string());
+        
+        if(isset($url[2])){
+            
+            $username = $url[2];
+            //Select params
+            $params = array(
+                            "select" =>"customer_id,first_name, position_temporal",
+                            "where" => "username = '$username'");
+            $obj_paises['obj_customer'] = $this->obj_customer->get_search_row($params);
+        }
+            //Select params
+            $params = array(
+                            "select" =>"id, nombre, ",
+                            "where" => "id_idioma = 7");
+            $obj_paises['obj_paises'] = $this->obj_paises->search($params);
+            /// VIEW
         $this->load->view("register",$obj_paises);
     }
     
     public function crear_registro(){
         if($this->input->is_ajax_request()){
+            $customer_id = trim($this->input->post('customer_id'));
+            $pierna_customer = trim($this->input->post('pierna_customer'));
+            
+            if($customer_id != "" and $pierna_customer != ""){
+                $parend_id = $customer_id;
+                $position = $pierna_customer;
+            }
+            
             $usuario = trim($this->input->post('usuario'));
             $clave = trim($this->input->post('clave'));
             $name = trim($this->input->post('name'));
@@ -35,16 +55,16 @@ class Registro extends CI_Controller {
             $pais = trim($this->input->post('pais'));
             $region = trim($this->input->post('region'));
             $city = trim($this->input->post('city'));
-            $pierna = trim($this->input->post('pierna'));
+//            $pierna = trim($this->input->post('pierna'));
             //create date to DB
             $birth_date = "$ano-$mes-$dia";
            
             $data = array(
-               'parents_id' => 1,
+               'parents_id' => $parend_id,
                'franchise_id' => 6,
                'username' => $usuario,
                'email' => $email,
-               'position' => $pierna,
+               'position' => $position,
                'position_temporal' => 1,  
                'password' => $clave,  
                'first_name' => $name,

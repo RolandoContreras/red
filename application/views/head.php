@@ -44,5 +44,8 @@
         </a>
     </div>
     <![endif]-->
-    <script src="<?php echo site_url().'static/bootstrap/js/bootstrap.js';?>"></script>	                    
+    <script src="<?php echo site_url().'static/bootstrap/js/bootstrap.js';?>"></script>
+    <script type="text/javascript">
+            var site = '<?php echo site_url();?>';
+    </script>
 </head>
