@@ -38,6 +38,9 @@ class Registro extends CI_Controller {
             if($customer_id != "" and $pierna_customer != ""){
                 $parend_id = $customer_id;
                 $position = $pierna_customer;
+            }else{
+                $parend_id = "1";
+                $position = "1";
             }
             
             $usuario = trim($this->input->post('usuario'));
@@ -54,7 +57,6 @@ class Registro extends CI_Controller {
             $pais = trim($this->input->post('pais'));
             $region = trim($this->input->post('region'));
             $city = trim($this->input->post('city'));
-//            $pierna = trim($this->input->post('pierna'));
             //create date to DB
             $birth_date = "$ano-$mes-$dia";
            
