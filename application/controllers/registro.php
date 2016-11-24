@@ -14,7 +14,6 @@ class Registro extends CI_Controller {
         $url = explode("/",uri_string());
         
         if(isset($url[2])){
-            
             $username = $url[2];
             //Select params
             $params = array(

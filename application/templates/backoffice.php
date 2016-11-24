@@ -204,7 +204,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url().'login/logout';?>" title="Salir">
+                                <a href="<?php echo site_url().'Login/logout';?>" title="Salir">
                                    <em class="icon-logout"></em>
                                 </a>
                             </li>
@@ -264,7 +264,7 @@
                                             
 	                  		</li>
                                         <li >
-	                     		<a href="<?php echo site_url().'misdatos'?>" title="Mi Datos">
+	                     		<a href="#" title="Mi Datos">
                                             <em class="icon-menu"></em>
                                             <span>Mis Datos</span>
 	                     		</a>
@@ -276,7 +276,7 @@
                                             <span>Facturación</span>
 	                     		</a>
                                             
-	                     		<ul id="forms" class="nav sidebar-subnav collapse">
+<!--	                     		<ul id="forms" class="nav sidebar-subnav collapse">
                                             <li class="sidebar-subnav-header">Facturación</li>
                                                 <li class="">
                                                         <a href="afiliados-tienda-7r1pLS-3pGMJKKk7UDSJpd9TzlZuhKvMA7N-VSjaS8c&1" title="Mis Compras">
@@ -293,28 +293,28 @@
 			                              	<span>Mis Ordenes</span>
 			                           	</a>
 			                        </li>
-	                     		</ul>
+	                     		</ul>-->
 	                  		</li>
 	                  		<li class="">
-	                     		<a href="" title="Mi Red">
+	                     		<a href="#" title="Mi Red">
                                             <em class="icon-organization"></em>
                                             <span>Mi Red</span>
 	                     		</a>
 	                  		</li>
                                         
 	                  		<li class="">
-	                     		<a href="mi-billetera" title="Mi Billetera">
+	                     		<a href="#" title="Mi Billetera">
 	                        		<em class="icon-wallet"></em>
 	                        		<span>Mi Billetera</span>
 	                     		</a>
 	                  		</li>
                                         
 	                  		<li class=" ">
-                                            <a href="#comisiones" title="Comisiones" data-toggle="collapse">
+                                            <a href="#" title="Comisiones" data-toggle="collapse">
                                                     <em class="icon-grid"></em>
                                                     <span>Comisiones</span>
                                             </a>
-
+<!--
                                             <ul id="comisiones" class="nav sidebar-subnav collapse">
                                                 <li class="sidebar-subnav-header">Comisiones</li>
                                                 <li class="">
@@ -332,22 +332,22 @@
                                                         <span>Mis Packs</span>
                                                         </a>
                                                 </li>
-                                            </ul>
+                                            </ul>-->
 	                  		</li>
 
 	                  		<li class="">
-                                            <a href="incentivos-ganados" title="Incentivos">
+                                            <a href="#" title="Incentivos">
                                                 <em class="icon-trophy"></em>
                                                 <span>Incentivos</span>
                                             </a>
 	                  		</li>
 
-	                  		<li class=" ">
-			                    <a href="#solicitudes" title="Solicitudes" data-toggle="collapse">
+	                  		<li class="">
+			                    <a href="#" title="Solicitudes" data-toggle="collapse">
 			                        <em class="icon-note"></em>
 			                        <span>Solicitudes</span>
 			                    </a>
-                                            <ul id="solicitudes" class="nav sidebar-subnav collapse">
+<!--                                            <ul id="solicitudes" class="nav sidebar-subnav collapse">
                                                     <li class="sidebar-subnav-header">Solicitudes</li>
                                                     <li class="">
                                                             <a href="solicitud-pago" title="Solicitar Pagos">
@@ -359,11 +359,11 @@
                                                             <span>Solicitar a Billetera</span>
                                                             </a>
                                                     </li>
-                                            </ul>
+                                            </ul>-->
 	                  		</li>
                                         
 	                  		<li class="">
-	                     		<a href="mi-direcciones" title="Mis Direcciones">
+	                     		<a href="#" title="Mis Direcciones">
 	                        		<em class="icon-directions"></em>
 	                        		<span>Mis Direcciones</span>
 	                     		</a>

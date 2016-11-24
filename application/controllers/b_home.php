@@ -8,7 +8,7 @@ class B_home extends CI_Controller {
 
     public function index()
     {
-//        GET SESION ACTUALY
+//      GET SESION ACTUALY
         $this->get_session();
         /// VISTA
         $customer_id = $_SESSION['customer']['customer_id'];
