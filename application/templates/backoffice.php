@@ -154,6 +154,9 @@
                             padding: 10px;
                     }
             </style>
+<script type="text/javascript">
+    var site = '<?php echo site_url();?>';
+</script>
 </head>
 
 <body>
@@ -252,19 +255,51 @@
                                     </li>
 	                  		<!-- END user info-->
 	                  		<!-- Iterates over all sidebar items-->
+                                    
+                                    <?php 
+                                    $url = explode("/",uri_string()); 
+                                    $style_inicio = "";
+                                    $style_misdatos = "";
+                                    if(isset($url[1])){
+                                        switch ($url[1]) {
+                                            ////////
+                                                    case "misdatos":
+                                                        $style_misdatos = "active";
+                                                        break;
+//                                                    case "acerca":
+//                                                        $title = "Acerca"; 
+//                                                        $style_about = "active";
+//                                                        break;
+//                                                    case "plan":
+//                                                        $title = "Plan"; 
+//                                                        $style_plan = "active";
+//                                                        break;
+//                                                    case "contacto":
+//                                                        $title = "Contacto"; 
+//                                                        $style_contact = "active";
+//                                                        break;
+                                                    default:
+                                                         $title = "Inicio";
+
+                                            }
+                                    }else{
+                                        $style_inicio = "active";
+                                    }
+                                    
+                                    ?>    
                                     <li class="nav-heading">
-                                    <span>Menu de Navegación</span>
+                                        <span>Menu de Navegación</span>
                                     </li>
-	              
-	                  		<li class="active">
+                                    
+	                  		<li class="<?php echo $style_inicio?>">
                                             <a href="<?php echo site_url().'backoffice'?>" title="Inicio">
                                             <em class="icon-home"></em>
                                             <span>Inicio</span>
 	                     		</a>
                                             
 	                  		</li>
-                                        <li >
-	                     		<a href="#" title="Mi Datos">
+                                        <li class="<?php echo $style_misdatos ?>">
+                                            <a href="<?php echo site_url().'backoffice/misdatos'?>" title="Mi Datos">
                                             <em class="icon-menu"></em>
                                             <span>Mis Datos</span>
 	                     		</a>

@@ -59,7 +59,7 @@ $route['registro/afiliate/([0-9a-z_-]+)'] = "registro/index/$1";
 $route['contacto'] = "contact";
 $route['backoffice'] = "b_home";
 $route['logout'] = "b_home/logout";
-$route['misdatos'] = "b_data";
+$route['backoffice/misdatos'] = "b_data";
 
 
 

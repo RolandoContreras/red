@@ -49,12 +49,6 @@ class B_home extends CI_Controller {
             redirect(site_url().'home');
         }
     }
-    
-    public function logout(){
-        $this->session->sess_destroy();
-        redirect('home');
-    }
-    
 }
 
 

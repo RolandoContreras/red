@@ -1,8 +1,4 @@
 <section>
-    <?php 
-//    var_dump($obj_customer);
-//    die();
-    ?>
          <!-- Page content-->
          <div class="content-wrapper">
             <div class="content-heading">
