@@ -30,10 +30,11 @@ class customer_model_atributos{
     var $birth_date='';
     var $address='';
     var $country='';
+    var $region='';
     var $city='';
     var $phone='';
-    var $mobile='';
     var $active='';
+    var $calification='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -61,10 +62,11 @@ class Customer_Model extends CI_Model{
         $this->birth_date='';
         $this->address='';
         $this->country='';
+        $this->region='';
         $this->city='';
 	$this->phone='';
-	$this->mobile='';
         $this->active='';
+        $this->calification='';
 	$this->status_value='';
 	$this->created_at='';
 	$this->created_by='';

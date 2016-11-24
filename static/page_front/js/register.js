@@ -33,175 +33,107 @@ function validate_dni(dni) {
         data: {dni: dni},
         success:function(data){            
                 if(data.message == "true"){         
-                $(".alert-3").removeClass('text-danger').addClass('text-danger').html(data.print)
+                $(".alert-2").removeClass('text-danger').addClass('text-danger').html(data.print)
                 
             }else{
-                $(".alert-3").removeClass('text-danger').addClass('text-success').html(data.print);
+                $(".alert-2").removeClass('text-danger').addClass('text-success').html(data.print);
             }
         }            
     });
 }
 
+function validate_region(id) {
+    
+        $.ajax({
+        type: "post",
+        url: "registro/validate_region",
+        dataType: "json",
+        data: {id: id},
+        success:function(data){            
+                if(data.message == "true"){         
+                    obj_region = data.print;
+                    var texto = "";
+                    texto = texto+'<option value="">Seleccionar</option>';
+                    var x = 0;               
+                    $.each(obj_region, function(){
+                        texto = texto+'<option value="'+obj_region[x]['id']+'">'+obj_region[x]['nombre']+'</option>';
+                        x++; 
+                    });
+                    $("#region").html(texto);
+            }else{
+                    var texto = "";
+                    texto = texto+'<option value="">Seleccionar País</option>';
+                    $("#region").html(texto);
+            }
+        }            
+    });
+}
 
-//   $(document).ready(function(){ 
+function crear_registro() {
+    
+    
+        var terminos = $("input[type='checkbox'][name='terminos']:checked").val();
+        var clave = document.getElementById("clave").value;
+        var repita_clave = document.getElementById("repita_clave").value;
+        
+        if(terminos == 1){
+            if(clave == repita_clave){
+                var usuario = document.getElementById("usuario").value;
+                var name = document.getElementById("name").value;
+                var last_name = document.getElementById("last_name").value;
+                var address = document.getElementById("address").value;
+                var telefono = document.getElementById("telefono").value;
+                var dni = document.getElementById("dni").value;
+                var email = document.getElementById("email").value;
+                var dia = document.getElementById("dia").value;
+                var mes = document.getElementById("mes").value;
+                var ano = document.getElementById("ano").value;
+                var pais = document.getElementById("pais").value;
+                var region = document.getElementById("region").value;
+                var city = document.getElementById("city").value;
+                var pierna = $("input[type='radio'][name='pierna']:checked").val();
 
-
-//
-//         //Validar Identidad
-//         $("input[name=identidad]").blur(function(){
-//            var identidad = $(this).val().trim();
-//            identidad = identidad.replace(/\s/g, '');
-//
-//            $.ajax({
-//               type: "POST",
-//               dataType: "json",
-//               url: "includes/ajax_registro.php", 
-//               data: {"ValidarIdentidadRegistro":identidad},
-//               success: function(result){
-//                  if(result.rps){
-//                     $(".alert-3").removeClass('text-danger').addClass('text-success').html(result.mensaje);
-//                  }else{
-//                     $(".alert-3").removeClass('text-success').addClass('text-danger').html(result.mensaje);
-//                  } 
-//
-//                  $("#identidad").val(identidad);
-//
-//               },error: function(XMLHttpRequest, textStatus, errorThrown){ 
-//                                 }
-//            });
-//         }); 
-//
-//         //Registro
-//         $("form[name=FormRegistrarUsuario]").submit(function(){
-//            var captcha_resp =  $("#g-recaptcha-response").val();
-//            $("input[name=ValCaptcha]").val(captcha_resp);
-//
-//            //Desactivamos el boton
-//            $("button[type=submit]").attr('disabled', 'disabled').html('<em class="fa fa-spin fa-spinner"></em> Por favor espere...');
-//
-//            $.ajax({
-//               type: "POST",
-//               dataType: "json",
-//               url: "includes/ajax_registro.php", 
-//               data: $("form[name=FormRegistrarUsuario]").serialize(),
-//               success: function(result){
-//                  if(result.rps){
-//                     if(result.tipo_registro){
-//                        window.location='registro-pago-'+result.usuario;
-//                     }else{
-//                        swal({
-//                           title: "Registro Exitoso!", 
-//                           text: result.mensaje, 
-//                           type: "success",  
-//                           confirmButtonText: "Ok!",   
-//                           closeOnConfirm: false,   
-//                           }, 
-//                           function(isConfirm){ 
-//                              if(isConfirm){     
-//                                 window.location='registro-bienvenida-'+result.usuario;
-//                              } 
-//                        });
-//                     }
-//
-//                     /*swal("Registro Exitoso!", result.mensaje, "success");*/
-//                  }else{
-//                     (result.error==1)? $("#usuario").focus():'';
-//                     (result.error==2)? $("#clave").focus():'';
-//                     (result.error==3)? $("#identidad").focus():'';
-//                     (result.error==6)? $("#politica").focus():'';
-//                     (result.error==7)? $("#email").focus():'';
-//                     (result.error==8)? $("#campo_adicional1").focus():'';
-//                     (result.error==9)? $("#campo_adicional1").focus():'';
-//                     (result.error==10)? $("#campo_adicional1").focus():'';
-//                     (result.error==11)? $("#campo_adicional1").focus():'';
-//                     (result.error==12)? $("#campo_adicional1").focus():'';
-//                     (result.error==13)? $("#afiliacion").focus():'';
-//                     swal("Disculpe!", result.mensaje, "warning");
-//                     $("button[type=submit]").removeAttr('disabled').html('Crear cuenta');
-//                  }
-//                  
-//               },error: function(XMLHttpRequest, textStatus, errorThrown){ 
-//                                 }
-//            });
-//
-//            return false;  
-//         });
-//
-//         //Paises a estados
-//         if($("#pais").length>0){
-//         
-//            $("#pais").change(function(){
-//               var pais = $(this).val();
-//               
-//               $.ajax({
-//                  type: "POST",
-//                  dataType: "json",
-//                  url: "includes/ajax_registro.php", 
-//                  data: {"RecargaDePaises":pais},
-//                  success: function(result){
-//                     if(result.rps){
-//                        $(".ajax_estado_pais").html('').html(result.result);
-//                     }
-//                  },error: function(XMLHttpRequest, textStatus, errorThrown){ 
-//                                       }
-//               });
-//            });
-//         }
-//
-//      });
-//      
-//      
-//      
+                $.ajax({
+                       type: "post",
+                       url: "registro/crear_registro",
+                       dataType: "json",
+                       data: {usuario: usuario,
+                              clave: clave, 
+                              name: name,
+                              last_name: last_name,
+                              address: address,
+                              telefono: telefono,
+                              dni: dni,
+                              email: email,
+                              dia: dia,
+                              mes: mes,
+                              ano: ano,
+                              pais: pais,
+                              region: region,
+                              city: city,
+                              pierna: pierna},
+                          
+                       success:function(data){            
+                               if(data.message == "true"){         
+                                   $(".alert-4").removeClass('text-danger').addClass('text-success').html(data.print);
+                                   $(location).attr('href',data.url);  
+                           }else{
+                                   $(".alert-4").removeClass('text-danger').addClass('text-danger').html("Debe llenar todos los datos");
+                           }
+                       }            
+                   });
+                
+            }else{
+               $(".alert-4").removeClass('text-danger').addClass('text-danger').html("Las contraseñas no coinciden");
+            }
+        }else{
+               $(".alert-4").removeClass('text-danger').addClass('text-danger').html("Debe seleccionar los términos y condiciones");
+        }
+    
+        
       
-
-
-function delete_car(e) {
-    var t = null;
-    var n = 0;
-    n = $("#spinner").get(0);
-    bootbox.dialog("¿Confirma que desea Eliminar el Producto?", [{
-        label: "Cancelar"
-    }, {
-        label: "Eliminar",
-        "class": "btn-danger",
-        callback: function() {
-            t = (new Spinner(opts)).spin(n);
-            $.ajax({
-                type: "post",
-                url: site + "home/delete_car",
-                dataType: "json",
-                data: {
-                    row_id: e
-                },
-                success: function(e) {
-                    location.reload()
-                }
-            })
-        }
-    }])
+    
+       
 }
 
-function empty_car() {
-    var e = null;
-    var t = 0;
-    t = $("#spinner").get(0);
-    bootbox.dialog("¿Desea limpiar el carrito?", [{
-        label: "Cancelar"
-    }, {
-        label: "Limpiar",
-        "class": "btn-danger",
-        callback: function() {
-            e = (new Spinner(opts)).spin(t);
-            $.ajax({
-                type: "post",
-                url: site + "home/empty_car",
-                dataType: "json",
-                success: function() {
-                    bootbox.dialog("Carrito Vacio", []);
-                    location.reload()
-                }
-            })
-        }
-    }])
-}
 

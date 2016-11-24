@@ -56,7 +56,7 @@
                             </div>
                             <div class="col-xs-12">
                                 <label data-add-placeholder>
-                                    <input type="text" id="usuario" name="name" placeholder="Nombre" maxlength="50" data-constraints="@NotEmpty"/>
+                                    <input type="text" id="name" name="name" placeholder="Nombre" maxlength="50" data-constraints="@NotEmpty"/>
                                 </label>
                             </div>
                             <div class="col-sm-12">
@@ -83,7 +83,8 @@
                             <div class="col-sm-12">
                                 <label></label>
                                 <label data-add-placeholder>
-                                    <input type="text"  id="dni" name="dni" placeholder="DNI  # de identificacion" data-constraints="@NotEmpty" maxlength="150"/>
+                                    <input type="text" onblur="validate_dni(this.value);" id="dni" name="dni" placeholder="DNI  # de identificacion" data-constraints="@NotEmpty" maxlength="150"/>
+                                    <span class="alert-2"></span>
                                 </label>
                             </div>
                             <div class="col-sm-12">
@@ -116,25 +117,25 @@
 				<label for="Mes" class="col-lg-3 control-label">Mes</label>
                                     <select name="mes" id="mes" class="ui dropdown">
                                         <option value="">Mes</option>
-                                                <option value="Enero">Enero</option>
-                                                <option value="Febrero">Febrero</option>
-                                                <option value="Marzo">Marzo</option>
-                                                <option value="Abril">Abril</option>
-                                                <option value="Mayo">Mayo</option>
-                                                <option value="Junio">Junio</option>
-                                                <option value="Julio">Julio</option>
-                                                <option value="Agosto">Agosto</option>
-                                                <option value="Setiembre">Setiembre</option>
-                                                <option value="Octubre">Octubre</option>
-                                                <option value="Noviembre">Noviembre</option>
-                                                <option value="Diciembre">Diciembre</option>
+                                                <option value="01">Enero</option>
+                                                <option value="02">Febrero</option>
+                                                <option value="03">Marzo</option>
+                                                <option value="04">Abril</option>
+                                                <option value="05">Mayo</option>
+                                                <option value="06">Junio</option>
+                                                <option value="07">Julio</option>
+                                                <option value="08">Agosto</option>
+                                                <option value="09">Setiembre</option>
+                                                <option value="10">Octubre</option>
+                                                <option value="11">Noviembre</option>
+                                                <option value="12">Diciembre</option>
                                 </select>
                             </div>
                             <div class="col-xs-4">
                                 <br/><br/>
 				<label for="Año" class="col-lg-3 control-label">Año</label>
                                     <select  name="ano" id="ano" class="ui dropdown">
-                                        <option value="">Año</option>
+                                        <option selected="selected" value="">Año</option>
                                             <?php  for ($x = 1950; $x <= 2016; $x++) {  ?>
                                                 <option value="<?php echo $x?>"><?php echo $x;?></option>
                                             <?php } ?>
@@ -143,20 +144,16 @@
                             <div class="col-xs-12">
                                 <br><br>
                                     <select onchange="validate_region(this.value);" name="pais" id="pais" class="ui dropdown">
-                                        <option value="">País</option>
+                                        <option  selected value="">País</option>
                                             <?php  foreach ($obj_paises as $key => $value) { ?>
-                                                 <option value="<?php echo $value->id;?>"><?php echo $value->nombre;?></option>
+                                                   <option  value="<?php echo $value->id;?>"><?php echo $value->nombre;?></option>
                                             <?php } ?>
                                 </select>
                             </div>
                             <div class="col-xs-12">
                                 <br><br>
-                                    <select onchange="validate_region(this.value);" name="estado" id="estado" class="ui dropdown">
-                                        <option value="">Estado</option>
-                                            <?php  foreach ($obj_paises as $key => $value) { ?>
-                                                 <option value="<?php echo $value->id;?>"><?php echo $value->nombre;?></option>
-                                            <?php } ?>
-                                </select>
+                                    <select  name="region" id="region" class="ui dropdown">
+                                    </select>
                             </div>
                         </div>
                     </fieldset>
@@ -191,7 +188,7 @@
                             <div class="col-sm-6">
                                 <label></label>
                                 <label data-add-placeholder>
-                                    <input type="checkbox" name="vehicle" value="Bike" data-constraints="@NotEmpty"><h6 style="margin-top: -40px;"><a style="color: blue;" href="<?php echo site_url().'static/plan/document/terminos-y-condiciones.docx';?>" download="download">Términos y Condiciones</a></h6>
+                                    <input type="checkbox" id='terminos' name="terminos" value="1" data-constraints="@NotEmpty"><h6 style="margin-top: -40px;"><a style="color: blue;" href="<?php echo site_url().'static/plan/document/terminos-y-condiciones.docx';?>" download="download">Términos y Condiciones</a></h6>
                                 </label>
                             </div>
                             <div class="col-sm-6">
@@ -204,26 +201,14 @@
                             <label></label>
                             <div class="col-xs-12 text-center">
                                 <div class="mfControls">
-                                    <button onclick="send_messages();" class="btn btn-md btn-primary" type="button">Crear Cuenta</button>
+                                    <button onclick="crear_registro();" class="btn btn-md btn-primary" type="button">Crear Cuenta</button>
+                                    <span class="alert-4"></span>
                                 </div>
                             </div>
                      </fieldset>   
                  </form>      
-                <span class="alert-0"></span>
             </div>
         </section>
-        <!-- END Get in touch-->
-
-        <!-- RD Google Map -->
-<!--        <section class="rd-google-map">
-            <div id="google-map" class="rd-google-map__model"></div>
-            <ul class="rd-google-map__locations">
-                <li data-x="-73.9874068" data-y="40.643180">
-                    <p> 9870 St Vincent Place, Glasgow, DC 45 Fr 45. <span>800 2345-6789</span></p>
-                </li>
-            </ul>
-        </section>-->
-        <!-- END RD Google Map -->
     </main>
     <!--========================================================
                               FOOTER
