@@ -5,7 +5,7 @@ $(".btn-primary").on("click",function(){
      password = $("#password").val();     
     $.ajax({
         type: "Post",
-        url: "login/validate",
+        url: "Login/validate",
         dataType: "json",
         data: {username : username, password:password},
         success:function(data){            

@@ -17,7 +17,7 @@
         <!-- Hello -->
         <section class="well-md well-md-inset-2 bg-primary text-center">
             <div class="container wow fadeInUp">
-                <h1><?php echo replace_vocales_voculeshtml("¿QUÉ; ES EL BITCOIN?");?></h1>
+                <h1><?php echo replace_vocales_voculeshtml("¿QUÉ ES EL BITCOIN?");?></h1>
                 <div class="row">
                     <div class="col-md-10 col-md-preffix-1">
                         <p>Primera criptodivisa creada en el 2009 que destaca por su eficiencia, seguridad y facilidad de intercambio. Es una moneda descentralizada ya que no necesita un repositorio central o administrador individual, no necesita de un tercero para transaccionar. EL BITCOIN ES EL FUTURO<br><br><br><img class="logo_btc" src="<?php echo site_url().'static/page_front/images/logo-btc2.png';?>" alt="logo_bitcoin"/></p>

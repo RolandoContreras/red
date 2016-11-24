@@ -66,7 +66,7 @@
                                 <a>Login</a>
                                      <ul class="rd-navbar-megamenu login">
                                          <li class="tittle_li">
-                                            <h4 class="tittle_login">Inicio de Sesión</h4>
+                                            <h4 class="tittle_login"><?php echo replace_vocales_voculeshtml("Inicio de Sesión");?></h4>
                                          </li>
                                             <form class='rd-mailform'>
                                                 <fieldset>
@@ -81,7 +81,7 @@
                                                                     </label>
                                                             </div>
                                                             <div class="col-sm-6">
-                                                                <p style="text-align: left;">Contraseña</p>
+                                                                <p style="text-align: left;"><?php echo replace_vocales_voculeshtml("Contraseña");?></p>
                                                                 <label data-add-placeholder>
                                                                     <input class="letter_login" type="password"
                                                                            id ="password"
@@ -91,7 +91,7 @@
                                                         </li>
                                                         <div class="col-xs-12 text-center">
                                                             <div class="mfControls">
-                                                                <button class="btn btn-md btn-primary" type="button">Iniciar Sesión</button>
+                                                                <button class="btn btn-md btn-primary" type="button"><?php echo replace_vocales_voculeshtml("Iniciar Sesión");?></button>
                                                             </div>
                                                         </div>
                                                         <div id="mensaje">

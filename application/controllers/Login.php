@@ -11,9 +11,7 @@ class Login extends CI_Controller {
     }
     
     public function validate(){
-        
         if($this->input->is_ajax_request()){
-            
             
             echo "HOla";
             die();

@@ -45,5 +45,4 @@
     </div>
     <![endif]-->
     <script src="<?php echo site_url().'static/bootstrap/js/bootstrap.js';?>"></script>	                    
-    <script src="<?php echo site_url().'static/bootstrap/js/bootstrap-alert.js';?>/"></script>
 </head>
