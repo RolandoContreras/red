@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/red/';
-//$config['base_url'] = 'http://www.yourbitshares.com/site/';
+//$config['base_url'] = 'http://www.yourbitshares.com/site';
 
 
 /*
@@ -316,7 +316,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'c7850f98Tc0150Z2191Y29abb3f9fbc9';
 
 /*
 |--------------------------------------------------------------------------

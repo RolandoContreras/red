@@ -221,12 +221,8 @@
 <script src="<?php echo site_url().'static/page_front/js/core.min.js';?>"></script>
 <!-- Additional Functionality Scripts -->
 <script src="<?php echo site_url().'static/page_front/js/script.js';?>"></script>
-<!-- import Js contact -->
-<script src="<?php echo site_url().'static/page_front/js/contact.js';?>"></script>
 <!-- import bootbox.min -->
 <script src="<?php echo site_url().'static/page_front/core/js/dropdown.js';?>"></script>
 <link href='<?php echo site_url().'static/page_front/core/css/dropdown.min.css';?>' rel='stylesheet' type='text/css'>
-
-      
 </body>
 </html>
