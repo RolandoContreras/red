@@ -12,7 +12,12 @@ class Login extends CI_Controller {
     
     public function validate(){
         
-        if($this->input->is_ajax_request()){    
+        if($this->input->is_ajax_request()){
+            
+            
+            echo "HOla";
+            die();
+            
             $this->form_validation->set_rules('username','username',"required|trim|callback_validar_customer");
             $this->form_validation->set_rules('password','password','required|trim');              
     	    $this->form_validation->set_message('required','Campo requerido %s');    	    

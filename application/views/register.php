@@ -37,13 +37,13 @@
                             <div class="col-sm-12">
                                 <label></label>
                                 <label>
-                                    <input type="password"  id="clave" name="clave" placeholder="Contraseña" data-constraints="@NotEmpty" maxlength="50"/>
+                                    <input type="password"  id="clave" name="clave" placeholder="<?php echo replace_vocales_voculeshtml("Contraseña")?>" data-constraints="@NotEmpty" maxlength="50"/>
                                 </label>
                             </div>
                             <div class="col-sm-12">
                                 <label></label>
                                 <label>
-                                    <input type="password" onblur="validate_2passwordr(this.value);"  id="repita_clave" name="repita_clave" placeholder="Repetir contraseña" data-constraints="@NotEmpty" maxlength="50"/>
+                                    <input type="password" onblur="validate_2passwordr(this.value);"  id="repita_clave" name="repita_clave" placeholder="<?php echo replace_vocales_voculeshtml("Repetir Contraseña")?>" data-constraints="@NotEmpty" maxlength="50"/>
                                     <span class="alert-1"></span>
                                 </label>
                             </div>
@@ -70,7 +70,7 @@
                             <div class="col-sm-12">
                                 <label></label>
                                 <label data-add-placeholder>
-                                    <textarea placeholder="Dirección" id="address" name="address" class="form-control" data-constraints="@NotEmpty"></textarea>        
+                                    <textarea placeholder="<?php echo replace_vocales_voculeshtml("Dirección");?>" id="address" name="address" class="form-control" data-constraints="@NotEmpty"></textarea>        
                                 </label>
                             </div>
                             <div class="col-sm-12">
@@ -90,7 +90,7 @@
                             <div class="col-sm-12">
                                 <label></label>
                                 <label data-add-placeholder>
-                                    <input type="text"  id="email" name="email" placeholder="Correo Electrónico" data-constraints="@NotEmpty @Email" maxlength="150"/>
+                                    <input type="text"  id="email" name="email" placeholder="<?php echo replace_vocales_voculeshtml("Correo Electrónico");?>" data-constraints="@NotEmpty @Email" maxlength="150"/>
                                 </label>
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                                 <br/><br/>
                                 <label for="Día" class="control-label">Fecha de Nacimiento</label>
                                     <select  name="dia" id="dia" class="ui dropdown">
-                                        <option value="">Día</option>
+                                        <option value=""><?php echo replace_vocales_voculeshtml("Día")?></option>
                                             <?php  for ($x = 1; $x <= 31; $x++) {  ?>
                                                 <option value="<?php echo $x?>"><?php echo $x;?></option>
                                             <?php } ?>
@@ -133,9 +133,9 @@
                             </div>
                             <div class="col-xs-4">
                                 <br/><br/>
-				<label for="Año" class="col-lg-3 control-label">Año</label>
+                                <label for="Año" class="col-lg-3 control-label">A&ntilde;o</label>
                                     <select  name="ano" id="ano" class="ui dropdown">
-                                        <option selected="selected" value="">Año</option>
+                                        <option selected="selected" value="">A&ntilde;o</option>
                                             <?php  for ($x = 1950; $x <= 2016; $x++) {  ?>
                                                 <option value="<?php echo $x?>"><?php echo $x;?></option>
                                             <?php } ?>
@@ -144,7 +144,7 @@
                             <div class="col-xs-12">
                                 <br><br>
                                     <select onchange="validate_region(this.value);" name="pais" id="pais" class="ui dropdown">
-                                        <option  selected value="">País</option>
+                                        <option  selected value=""><?php echo replace_vocales_voculeshtml("País");?></option>
                                             <?php  foreach ($obj_paises as $key => $value) { ?>
                                                    <option  value="<?php echo $value->id;?>"><?php echo $value->nombre;?></option>
                                             <?php } ?>
@@ -168,7 +168,7 @@
                                 </label>
                             </div>
                             <
-                            <h4>Selección de Pierna</h4>
+                            <h4><?php echo replace_vocales_voculeshtml("Selección de Pierna");?></h4>
                             <div class="col-xs-12">
                                 <label></label>
                             </div>
@@ -188,14 +188,14 @@
                             <div class="col-sm-6">
                                 <label></label>
                                 <label data-add-placeholder>
-                                    <input type="checkbox" id='terminos' name="terminos" value="1" data-constraints="@NotEmpty"><h6 style="margin-top: -40px;"><a style="color: blue;" href="<?php echo site_url().'static/plan/document/terminos-y-condiciones.docx';?>" download="download">Términos y Condiciones</a></h6>
+                                    <input type="checkbox" id='terminos' name="terminos" value="1" data-constraints="@NotEmpty"><h6 style="margin-top: -40px;"><a style="color: blue;" href="<?php echo site_url().'static/plan/document/terminos-y-condiciones.docx';?>" download="download"><?php echo replace_vocales_voculeshtml("Términos y Condiciones");?></a></h6>
                                 </label>
                             </div>
                             <div class="col-sm-6">
                             </div>
                             <div class="col-xs-12 text-left">
                                 <label></label>
-                                <h6 style="font-size: 16px !important; color: skyblue;">¿Está de acuerdo?  Al marcar esta casilla, indico que conozco, he leído y acepto las cláusulas y condiciones.</h6>
+                                <h6 style="font-size: 16px !important; color: skyblue;"><?php echo replace_vocales_voculeshtml("¿Está de acuerdo?  Al marcar esta casilla, indico que conozco, he leído y acepto las cláusulas y condiciones.");?></h6>
                                 </div>
                             </div>
                             <label></label>

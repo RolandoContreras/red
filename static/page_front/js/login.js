@@ -3,7 +3,6 @@
 $(".btn-primary").on("click",function(){
      username = $("#username").val();
      password = $("#password").val();     
-     
     $.ajax({
         type: "Post",
         url: "login/validate",

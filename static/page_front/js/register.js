@@ -118,7 +118,8 @@ function crear_registro() {
                                    $(".alert-4").removeClass('text-danger').addClass('text-success').html(data.print);
                                    $(location).attr('href',data.url);  
                            }else{
-                                   $(".alert-4").removeClass('text-danger').addClass('text-danger').html("Debe llenar todos los datos");
+//                                   $(".alert-4").removeClass('text-danger').addClass('text-danger').html("Debe llenar todos los datos");
+                                    $(location).attr('href',data.url);  
                            }
                        }            
                    });

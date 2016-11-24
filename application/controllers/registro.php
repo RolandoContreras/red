@@ -13,7 +13,7 @@ class Registro extends CI_Controller {
         //Select params
         $params = array(
                         "select" =>"id, nombre, ",
-                        "where" => "id_idioma = 3");
+                        "where" => "id_idioma = 7");
         $obj_paises['obj_paises'] = $this->obj_paises->search($params);
         /// VIEW
         $this->load->view("register",$obj_paises);
@@ -63,8 +63,8 @@ class Registro extends CI_Controller {
                 );
             
                $customer_id = $this->obj_customer->insert($data);
-                
-               //ACTIVE SESSION
+               
+                //ACTIVE SESSION
                 $data_customer_session['customer_id'] = $customer_id;
                 $data_customer_session['name'] = $name;
                 $data_customer_session['username'] = $usuario;
@@ -73,7 +73,6 @@ class Registro extends CI_Controller {
                 $data_customer_session['logged_customer'] = "TRUE";
                 $data_customer_session['status'] = 1;
                 $_SESSION['customer'] = $data_customer_session; 
-                
                 
         $data['message'] = "true";
         $data['print'] = "Registrado con éxito";
@@ -91,7 +90,7 @@ class Registro extends CI_Controller {
         //SELECT ID FROM CUSTOMER
         $param_regiones = array(
                         "select" =>"id,nombre",
-                         "where" => "id_pais = $id_pais and id_idioma = 2");
+                         "where" => "id_pais = $id_pais and id_idioma = 7");
         $region['region'] = $this->obj_regiones->search($param_regiones);
         
         if(count($region) > 0){
