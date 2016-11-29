@@ -43,6 +43,7 @@ class B_data extends CI_Controller {
                                     customer.dni,
                                     customer.birth_date,
                                     customer.address,
+                                    customer.btc_address,
                                     customer.city,
                                     customer.status_value,
                                     paises.nombre as pais,
@@ -74,6 +75,28 @@ class B_data extends CI_Controller {
                            'address' => $address,
                            'phone' => $phone,
                            'position_temporal' => $pierna,
+                           'updated_by' => $customer_id,
+                           'updated_at' => date("Y-m-d H:i:s")
+                       ); 
+                       $this->obj_customer->update($customer_id,$data);
+
+                $data['message'] = "true";
+                $data['print'] = "Datos cambiados con éxito";
+                $data['url'] = "misdatos";
+            echo json_encode($data); 
+            }
+    }
+    
+        public function update_btc_address(){
+            
+         if($this->input->is_ajax_request()){   
+            //SELECT ID FROM CUSTOMER
+           $btc_address = $this->input->post('btc');
+           $customer_id = $this->input->post('customer_id');
+
+           //UPDATE DATA EN CUSTOMER TABLE
+           $data = array(
+                           'btc_address' => $btc_address,
                            'updated_by' => $customer_id,
                            'updated_at' => date("Y-m-d H:i:s")
                        ); 

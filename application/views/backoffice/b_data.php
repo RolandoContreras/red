@@ -4,7 +4,6 @@
             <div class="content-heading">
               <div class="clearfix"></div>            
             </div>
-            
             <div class="row">
                <div class="col-lg-12">
                   <div class="panel panel-info">
@@ -119,7 +118,25 @@
                                  </div>
                               </div>
                                <div class="form-group" id="messages">
-                                   <!--<label style="color:green;"></label>-->
+                              </div>
+                           </div>
+                            
+                            <div class="col-lg-4">
+                               <legend>Datos de Bitcoin</legend>
+                              <div class="form-group">
+                                  <label for="telefono" class="col-lg-3 control-label"><?php echo replace_vocales_voculeshtml("Dirección de BTC");?></label>
+                                 <div class="col-lg-9">
+                                    <input type="text" class="form-control" name="btc" id="btc" placeholder="Direccion de BTC" value="<?php echo $obj_customer->btc_address;?>">
+                                 </div>
+                              </div>
+                               <div class="form-group">
+                                 <div class="col-lg-offset-3 col-lg-9">
+                                     <br><br>
+                                    <input type="hidden" name="GuardarEdicionAfiliado" value="">
+                                    <button type="button" onclick="alter_btc();" class="btn btn-sm btn-primary bg-danger-dark"><?php echo replace_vocales_voculeshtml("Guardar Dirección");?></button>
+                                 </div>
+                              </div> 
+                               <div class="form-group" id="messages">
                               </div>
                            </div>
                            <div class="clearfix"></div>

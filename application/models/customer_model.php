@@ -29,6 +29,7 @@ class customer_model_atributos{
     var $dni='';
     var $birth_date='';
     var $address='';
+    var $btc_address='';
     var $country='';
     var $region='';
     var $city='';
@@ -61,6 +62,7 @@ class Customer_Model extends CI_Model{
         $this->dni='';
         $this->birth_date='';
         $this->address='';
+        $this->btc_address='';
         $this->country='';
         $this->region='';
         $this->city='';
