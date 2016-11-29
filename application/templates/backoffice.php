@@ -311,7 +311,7 @@
                                             <span>Facturación</span>
 	                     		</a>
                                             
-<!--	                     		<ul id="forms" class="nav sidebar-subnav collapse">
+	                     		<ul id="forms" class="nav sidebar-subnav collapse">
                                             <li class="sidebar-subnav-header">Facturación</li>
                                                 <li class="">
                                                         <a href="afiliados-tienda-7r1pLS-3pGMJKKk7UDSJpd9TzlZuhKvMA7N-VSjaS8c&1" title="Mis Compras">
@@ -328,13 +328,28 @@
 			                              	<span>Mis Ordenes</span>
 			                           	</a>
 			                        </li>
-	                     		</ul>-->
+	                     		</ul>
 	                  		</li>
-	                  		<li class="">
-	                     		<a href="#" title="Mi Red">
-                                            <em class="icon-organization"></em>
-                                            <span>Mi Red</span>
-	                     		</a>
+                                        
+                                        
+                                        <li class=" ">
+			                    <a href="#tree" title="Solicitudes" data-toggle="collapse">
+			                        <em class="icon-organization"></em>
+			                        <span>Mi red</span>
+			                    </a>
+	                     		<ul id="tree" class="nav sidebar-subnav collapse">
+	                        		<li class="sidebar-subnav-header">Arbol</li>
+			                        <li class="">
+			                           	<a href="solicitud-pago" title="Solicitar Pagos">
+			                              	<span>Arbol Binario</span>
+			                           	</a>
+			                        </li>
+			                        <li class="">
+			                           	<a href="solicitud-saldo" title="Solicitar a Billetera">
+			                              	<span>Arbol Unilevel</span>
+			                           	</a>
+			                        </li>
+	                     		</ul>
 	                  		</li>
                                         
 	                  		<li class="">
@@ -345,11 +360,10 @@
 	                  		</li>
                                         
 	                  		<li class=" ">
-                                            <a href="#" title="Comisiones" data-toggle="collapse">
+                                            <a id="comisiones" href="#" title="Comisiones" data-toggle="collapse">
                                                     <em class="icon-grid"></em>
                                                     <span>Comisiones</span>
                                             </a>
-<!--
                                             <ul id="comisiones" class="nav sidebar-subnav collapse">
                                                 <li class="sidebar-subnav-header">Comisiones</li>
                                                 <li class="">
@@ -367,7 +381,7 @@
                                                         <span>Mis Packs</span>
                                                         </a>
                                                 </li>
-                                            </ul>-->
+                                            </ul>
 	                  		</li>
 
 	                  		<li class="">
@@ -380,27 +394,14 @@
 	                  		<li class="">
 			                    <a href="#" title="Solicitudes" data-toggle="collapse">
 			                        <em class="icon-note"></em>
-			                        <span>Solicitudes</span>
+			                        <span>Solicitar Pago</span>
 			                    </a>
-<!--                                            <ul id="solicitudes" class="nav sidebar-subnav collapse">
-                                                    <li class="sidebar-subnav-header">Solicitudes</li>
-                                                    <li class="">
-                                                            <a href="solicitud-pago" title="Solicitar Pagos">
-                                                            <span>Solicitar Pagos</span>
-                                                            </a>
-                                                    </li>
-                                                    <li class="">
-                                                            <a href="solicitud-saldo" title="Solicitar a Billetera">
-                                                            <span>Solicitar a Billetera</span>
-                                                            </a>
-                                                    </li>
-                                            </ul>-->
 	                  		</li>
                                         
 	                  		<li class="">
 	                     		<a href="#" title="Mis Direcciones">
 	                        		<em class="icon-directions"></em>
-	                        		<span>Mis Direcciones</span>
+	                        		<span>Mis Direcciones BTC</span>
 	                     		</a>
 	                  		</li>
 	               		</ul>
