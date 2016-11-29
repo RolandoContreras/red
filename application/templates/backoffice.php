@@ -340,12 +340,12 @@
 	                     		<ul id="tree" class="nav sidebar-subnav collapse">
 	                        		<li class="sidebar-subnav-header">Arbol</li>
 			                        <li class="">
-			                           	<a href="solicitud-pago" title="Solicitar Pagos">
+                                                    <a href="<?php echo site_url().'backoffice/binario';?>" title="Arbol Binario">
 			                              	<span>Arbol Binario</span>
 			                           	</a>
 			                        </li>
 			                        <li class="">
-			                           	<a href="solicitud-saldo" title="Solicitar a Billetera">
+			                           	<a href="<?php echo site_url().'backoffice/unilevel';?>" title="Arbol Unilevel">
 			                              	<span>Arbol Unilevel</span>
 			                           	</a>
 			                        </li>
