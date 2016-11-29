@@ -145,5 +145,8 @@
 <script src="<?php echo site_url().'static/page_front/js/core.min.js';?>"></script>
 <!-- Additional Functionality Scripts -->
 <script src="<?php echo site_url().'static/page_front/js/script.js';?>"></script>
+<!-- Login Backoffice-->
+<script src="static/page_front/js/login.js"></script>
+<!-- End Login-->
 </body><!-- Google Tag Manager -->
 </html>

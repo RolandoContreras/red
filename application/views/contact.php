@@ -127,5 +127,8 @@
 <script src="<?php echo site_url().'static/page_front/js/contact.js';?>"></script>
 <!-- import bootbox.min -->
 <script src="<?php echo site_url().'static/page_front/js/bootbox.min.js';?>"></script>
+<!-- Login Backoffice-->
+<script src="static/page_front/js/login.js"></script>
+<!-- End Login-->
 </body>
 </html>

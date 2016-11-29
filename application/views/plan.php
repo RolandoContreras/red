@@ -68,13 +68,16 @@
                 <img data-u="image" src="<?php echo site_url().'static/plan/images/bitcoin-rendimiento_diario10.jpg'?>"/>
                 </div>
                 <div data-p="150.00" style="display: none;">
-                <img data-u="image" src="<?php echo site_url().'static/plan/images/bitcoin-rendimiento_renovacion11.jpg'?>"/>
-                </div>
-                <div data-p="150.00" style="display: none;">
                 <img data-u="image" src="<?php echo site_url().'static/plan/images/bitcoin-directo12.jpg'?>"/>
                 </div>
                 <div data-p="150.00" style="display: none;">
+                <img data-u="image" src="<?php echo site_url().'static/plan/images/bitcoin-rendimiento_renovacion11.jpg'?>"/>
+                </div>
+                <div data-p="150.00" style="display: none;">
                 <img data-u="image" src="<?php echo site_url().'static/plan/images/bitcoin-binario13.jpg'?>"/>
+                </div>
+                <div data-p="150.00" style="display: none;">
+                <img data-u="image" src="<?php echo site_url().'static/plan/images/cobros15.jpg'?>"/>
                 </div>
                 <div data-p="150.00" style="display: none;">
                 <img data-u="image" src="<?php echo site_url().'static/plan/images/gracias-ultimo14.jpg'?>"/>
@@ -145,5 +148,8 @@
 <script src="<?php echo site_url().'static/page_front/js/core.min.js';?>"></script>
 <!-- Additional Functionality Scripts -->
 <script src="<?php echo site_url().'static/page_front/js/script.js';?>"></script>
+<!-- Login Backoffice-->
+<script src="static/page_front/js/login.js"></script>
+<!-- End Login-->
 </body><!-- Google Tag Manager -->
 </html>

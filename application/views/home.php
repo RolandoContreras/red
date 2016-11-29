@@ -67,7 +67,7 @@
                         <div class="pricing-table__title">250</div>
                         <h1 class="pricing-table__plan-name">GOLD</h1>
                         <div class="pricing-table__price">250 puntos para <p>binario</p></div>
-                        <p style="padding-bottom: 100px !important;">Genera una rentabilidad del (60%) <br>de la compra del paquete en 75 días.</p>
+                        <p style="padding-bottom: 100px !important;">Genera una rentabilidad del (60%) <br>de la compra del paquete en 75 d&iacute;as.</p>
                     </div>
                 </div>
 
@@ -154,7 +154,7 @@
             <div class="container wow fadeInUp">
                 <h1>Pasarelas de BitCoin</h1>
                 <div class="row row-xs-center">
-                    <p class="inset-1"><?php echo replace_vocales_voculeshtml("A nivel mundial existen más de 200 pasarelas de pago que aceptan la primera criptomenda “el bitcoin”, negocios y grandes marcas han invertidos más de $927 millones de dólares americanos en infraestructura de esta criptomoneda tales como: visa, citi ventures, goldman sachs, bbva, nyse (new york stock exchanger), overstock, entre otras.")?></p>
+                    <p class="inset-1"><?php echo replace_vocales_voculeshtml("A nivel mundial existen más de 200 pasarelas de pago que aceptan la primera criptomenda EL BITCOIN, negocios y grandes marcas han invertidos más de $927 millones de dólares americanos en infraestructura de esta criptomoneda tales como: visa, citi ventures, goldman sachs, bbva, nyse (new york stock exchanger), overstock, entre otras.")?></p>
                         <!-- Flex list -->
                         <ul class="flex-list">
                             <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/blockchain.png';?>" alt="" width="117" height="86"></li>
