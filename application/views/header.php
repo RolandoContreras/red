@@ -90,6 +90,11 @@
              data-min-height="300px">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-slide-bg="<?php echo site_url().'static/page_front/images/incio-1.jpg';?>">
+                    <div class="swiper-slide-caption text-center">
+                        <div class="btn-group">
+                            <a style="margin-left: -630px;margin-top: 700px;" href="<?php echo site_url().'registro';?>" class="btn btn-md btn-secondary-3">Convi&eacute;rtete en un socio</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-slide" data-slide-bg="<?php echo site_url().'static/page_front/images/slide-2.jpg';?>">
                     <div class="swiper-slide-caption text-center">
