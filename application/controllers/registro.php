@@ -43,22 +43,40 @@ class Registro extends CI_Controller {
                 $position = "1";
             }
             
-            $usuario = trim($this->input->post('usuario'));
-            $clave = trim($this->input->post('clave'));
-            $name = trim($this->input->post('name'));
-            $last_name = trim($this->input->post('last_name'));
-            $address = trim($this->input->post('address'));
-            $telefono = trim($this->input->post('telefono'));
-            $dni = trim($this->input->post('dni'));
-            $email = trim($this->input->post('email'));
-            $dia = trim($this->input->post('dia'));
-            $mes = trim($this->input->post('mes'));
-            $ano = trim($this->input->post('ano'));
-            $pais = trim($this->input->post('pais'));
-            $region = trim($this->input->post('region'));
-            $city = trim($this->input->post('city'));
-            //create date to DB
-            $birth_date = "$ano-$mes-$dia";
+            $this->form_validation->set_rules('usuario','usuario',"required|trim");
+            $this->form_validation->set_rules('name','name','required|trim');    
+            $this->form_validation->set_rules('last_name','last_name',"required|trim");
+            $this->form_validation->set_rules('address','address','required|trim'); 
+            $this->form_validation->set_rules('telefono','telefono',"required|trim");
+            $this->form_validation->set_rules('dni','dni','required|trim'); 
+            $this->form_validation->set_rules('email','email',"required|trim");
+            $this->form_validation->set_rules('city','city','required|trim'); 
+            $this->form_validation->set_rules('dia','dia','required|trim'); 
+            $this->form_validation->set_rules('mes','mes',"required|trim");
+            $this->form_validation->set_rules('ano','ano','required|trim'); 
+    	    $this->form_validation->set_message('required','Campo requerido %s');
+            
+            
+            if ($this->form_validation->run($this)== false){                
+                $data['print'] = "Debe llenar todos los campos";
+                $data['message'] = "false";       
+    	    }else{
+                $usuario = trim($this->input->post('usuario'));
+                $clave = trim($this->input->post('clave'));
+                $name = trim($this->input->post('name'));
+                $last_name = trim($this->input->post('last_name'));
+                $address = trim($this->input->post('address'));
+                $telefono = trim($this->input->post('telefono'));
+                $dni = trim($this->input->post('dni'));
+                $email = trim($this->input->post('email'));
+                $dia = trim($this->input->post('dia'));
+                $mes = trim($this->input->post('mes'));
+                $ano = trim($this->input->post('ano'));
+                $pais = trim($this->input->post('pais'));
+                $region = trim($this->input->post('region'));
+                $city = trim($this->input->post('city'));
+                //create date to DB
+                $birth_date = "$ano-$mes-$dia";
            
             $data = array(
                'parents_id' => $parend_id,
@@ -95,10 +113,12 @@ class Registro extends CI_Controller {
                 $data_customer_session['status'] = 1;
                 $_SESSION['customer'] = $data_customer_session; 
                 
-        $data['message'] = "true";
-        $data['print'] = "Registrado con éxito";
-        $data['url'] = site_url()."backoffice";  
+                $data['message'] = "true";
+                $data['print'] = "Registrado con éxito";
+                $data['url'] = site_url()."backoffice";  
         
+            } 
+            
         echo json_encode($data); 
         exit();
         }

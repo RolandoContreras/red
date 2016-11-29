@@ -207,37 +207,21 @@
                                     <input type="text"  id="city" name="city" placeholder="Ciudad" data-constraints="@NotEmpty" maxlength="150"/>
                                 </label>
                             </div>
-<!--                            
-                            <h4><?php echo replace_vocales_voculeshtml("Selección de Pierna");?></h4>
-                            <div class="col-xs-12">
-                                <label></label>
-                            </div>
-                            <div class="col-xs-6">
-                                <label data-add-placeholder>
-                                    <input name="pierna" type="radio" value="1"/><h6 style="margin-top: -40px;">Izquierda</h6>
-                                </label>
-                            </div>
-                            <div class="col-xs-6">
-                                <label data-add-placeholder>
-                                     <input name="pierna" type="radio" value="2"/><h6  style="margin-top: -40px;">Derecha</h6>
-                                </label>
-                            </div>-->
-<!--                            <label data-add-placeholder>
-                                    <input type="text" readonly="readonly"/>
-                                </label>-->
                             <div class="col-sm-6">
                                 <label></label>
                                 <label data-add-placeholder>
-                                    <input type="checkbox" id='terminos' name="terminos" value="1" data-constraints="@NotEmpty"><h6 style="margin-top: -40px;"><a style="color: blue;" href="<?php echo site_url().'static/plan/document/terminos-y-condiciones.docx';?>" download="download"><?php echo replace_vocales_voculeshtml("Términos y Condiciones");?></a></h6>
+                                    <h6><a style="color: blue;" href="<?php echo site_url().'static/plan/document/terminos-y-condiciones.docx';?>" download="download"><?php echo replace_vocales_voculeshtml("Términos y Condiciones");?></a></h6>
                                 </label>
                             </div>
                             <div class="col-sm-6">
                             </div>
                             <div class="col-xs-12 text-left">
                                 <label></label>
-                                <h6 style="font-size: 16px !important; color: skyblue;"><?php echo replace_vocales_voculeshtml("¿Está de acuerdo?  Al marcar esta casilla, indico que conozco, he leído y acepto las cláusulas y condiciones.");?></h6>
+                                <h6 style="font-size: 16px !important; color: skyblue;"><?php echo replace_vocales_voculeshtml("¿Está de acuerdo?  al dar click en el boton crear cuenta indico que conozco, he leído y acepto las cláusulas y condiciones.");?></h6>
                                 </div>
                             </div>
+                        </fieldset>   
+                 </form>  
                             <label></label>
                             <div class="col-xs-12 text-center">
                                 <div class="mfControls">
@@ -245,8 +229,7 @@
                                     <span class="alert-4"></span>
                                 </div>
                             </div>
-                     </fieldset>   
-                 </form>      
+                         
             </div>
         </section>
     </main>

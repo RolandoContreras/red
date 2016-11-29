@@ -71,11 +71,9 @@ function validate_region(id) {
 
 function crear_registro() {
     
-        var terminos = $("input[type='checkbox'][name='terminos']:checked").val();
         var clave = document.getElementById("clave").value;
         var repita_clave = document.getElementById("repita_clave").value;
 
-        if(terminos == 1){
             if(clave == repita_clave){
                 var customer_id = document.getElementById("customer_id").value;
                 var pierna_customer = document.getElementById("pierna_customer").value;
@@ -92,7 +90,6 @@ function crear_registro() {
                 var pais = document.getElementById("pais").value;
                 var region = document.getElementById("region").value;
                 var city = document.getElementById("city").value;
-//                var pierna = $("input[type='radio'][name='pierna']:checked").val();
 
                 $.ajax({
                        type: "post",
@@ -128,9 +125,6 @@ function crear_registro() {
             }else{
                $(".alert-4").removeClass('text-danger').addClass('text-danger').html("Las contraseñas no coinciden");
             }
-        }else{
-               $(".alert-4").removeClass('text-danger').addClass('text-danger').html("Debe seleccionar los términos y condiciones");
-        }
 }
 
 
