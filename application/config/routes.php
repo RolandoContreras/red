@@ -62,9 +62,10 @@ $route['logout'] = "b_home/logout";
 $route['backoffice/misdatos'] = "b_data";
 
 $route['backoffice/binario'] = "b_binario";
+$route['backoffice/binario/([0-9a-z_-]+)'] = "b_binario/index/$1";
+
 $route['backoffice/unilevel'] = "b_unilevel";
 $route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";
-
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

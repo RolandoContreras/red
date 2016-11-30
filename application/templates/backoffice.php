@@ -351,14 +351,6 @@
 			                        </li>
 	                     		</ul>
 	                  		</li>
-                                        
-	                  		<li class="">
-	                     		<a href="#" title="Mi Billetera">
-	                        		<em class="icon-wallet"></em>
-	                        		<span>Mi Billetera</span>
-	                     		</a>
-	                  		</li>
-                                        
 	                  		<li class=" ">
                                             <a id="comisiones" href="#" title="Comisiones" data-toggle="collapse">
                                                     <em class="icon-grid"></em>
@@ -396,13 +388,6 @@
 			                        <em class="icon-note"></em>
 			                        <span>Solicitar Pago</span>
 			                    </a>
-	                  		</li>
-                                        
-	                  		<li class="">
-	                     		<a href="#" title="Mis Direcciones">
-	                        		<em class="icon-directions"></em>
-	                        		<span>Mis Direcciones BTC</span>
-	                     		</a>
 	                  		</li>
 	               		</ul>
 	               	<!-- END sidebar nav-->

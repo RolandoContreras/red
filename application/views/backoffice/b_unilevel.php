@@ -1,7 +1,3 @@
-<?php 
-//var_dump($obj_customer_n2);
-//die();
-?>  
 <section>
       <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
      <!-- Page content-->
@@ -24,8 +20,7 @@
                 <div class="col-lg-12">
                     <span class="circle circle-success circle-lg"></span> 
                     Afiliado Activo<span class="circle circle-danger circle-lg"></span> 
-                    Afiliado Inactivo<span class="circle circle-lg"></span> 
-                    Afiliado Sin autorizar &nbsp;&nbsp;
+                    Afiliado Inactivo
                     <a href="javascript: history.back(-1)" class="btn btn-primary btn-xs"><em class="icon-action-redo"></em>&nbsp;&nbsp;Atras</a>
                 </div>
                  <!--ARBOL GENEALOGICO-->
