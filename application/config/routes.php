@@ -67,5 +67,10 @@ $route['backoffice/binario/([0-9a-z_-]+)'] = "b_binario/index/$1";
 $route['backoffice/unilevel'] = "b_unilevel";
 $route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";
 
+$route['dashboard'] = "dashboard";
+$route['dashboard/panel'] = "panel";
+
+$route['dashboard/clientes'] = "d_customer";
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

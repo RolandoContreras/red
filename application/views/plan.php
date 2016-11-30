@@ -113,7 +113,7 @@
                         <div class="box">
                             <div class="box__body">
                                 <img style="margin-left:60px" src="<?php echo site_url().'static/plan/files/pdf_file.png';?>" width="150"><br>
-                                <a href="<?php echo site_url().'static/plan/files/presentacion-bitshare-es.pdf';?>" class="btn btn-primary btn-md" download="presentacion_pdf_es">Descargar Presentacion PDF</a>
+                                <a href="<?php echo site_url().'static/plan/document/presentacion-bitshare-es2.pdf';?>" class="btn btn-primary btn-md" download="presentacion_pdf_es">Descargar Presentacion PDF</a>
                             </div>
                         </div>
                     </li>
@@ -121,7 +121,7 @@
                         <div class="box">
                             <div class="box__body">
                                 <img style="margin-left:60px"  src="<?php echo site_url().'static/plan/files/ppt-file.png';?>" width="150"><br>
-                                <a href="<?php echo site_url().'static/plan/files/presentacion-bitshare-es.pptx';?>" class="btn btn-primary btn-md" download="presentacion_ppt_es">Descargar Presentacion PPT</a>
+                                <a href="<?php echo site_url().'static/plan/document/presentacion-bitshare-es2.pptx';?>" class="btn btn-primary btn-md" download="presentacion_ppt_es">Descargar Presentacion PPT</a>
                             </div>
                         </div>
                     </li>
