@@ -19,8 +19,8 @@
             <table id="table" class="display" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th>Producto</th>
-                        <th>Cliente</th>
+                        <th>Nombres</th>
+                        <th>Correo Electrónico</th>
                         <th>Comentario</th>
                         <th>Fecha de Comentario</th>
                         <th>Estado</th>
@@ -31,9 +31,9 @@
                     <?php foreach ($obj_comments as $value): ?>
                         <tr>
                             <td>
-                                <div class="post_title"><?php echo $value->tittle;?></div>
+                                <div class="post_title"><?php echo $value->name;?></div>
                             </td>
-                            <td><?php echo $value->name;?></td>
+                            <td><?php echo $value->email;?></td>
                             <td><?php echo $value->comment;?></td>
                             <td><?php echo formato_fecha($value->date_comment);?></td>
                             <td>
@@ -51,20 +51,17 @@
                                         <div class="btn-group">
                                             <?php 
                                             if($value->status_value == 1){ ?>
-                                                    <button class="btn btn-small" onclick="change_state_no('<?php echo $value->comment_id;?>');">No Publicar</button>
+                                                    <button class="btn btn-small" onclick="change_state_no('<?php echo $value->comment_id;?>');">Marcar como no Contestado</button>
                                             <?php }else{ ?>
-                                                    <button class="btn btn-small" onclick="change_state('<?php echo $value->comment_id;?>');">Publicar</button> 
+                                                    <button class="btn btn-small" onclick="change_state('<?php echo $value->comment_id;?>');">Marcar como Contestado</button> 
                                             <?php } ?>
-                                            
-                                           
                                         </div>
-                                    </div>
+                                </div>
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
-
         </div>
     </div>
 </div>

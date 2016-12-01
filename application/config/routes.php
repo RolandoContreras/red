@@ -76,5 +76,9 @@ $route['dashboard/clientes/no_active_customer'] = "d_customer/no_active_customer
 $route['dashboard/clientes/load/([0-9]+)'] = "d_customer/load/$1";
 $route['dashboard/clientes/validate'] = "d_customer/validate";
 
+$route['dashboard/comentarios'] = "d_comments";
+$route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";
+$route['dashboard/comentarios/cambiar_status_no'] = "d_comments/change_status_no";
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

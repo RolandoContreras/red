@@ -1,5 +1,5 @@
 function change_state(comment_id){
-     bootbox.dialog("Confirma que desea publicar en Comentario?", [        
+     bootbox.dialog("Confirma que desea marcar como leído en Comentario?", [        
         { "label" : "Cancelar"},
         {
             "label" : "Confirmar",
