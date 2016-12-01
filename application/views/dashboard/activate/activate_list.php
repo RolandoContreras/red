@@ -24,12 +24,9 @@
                         <thead>
                             <tr>
                                 <th>USUARIO</th>
-                                <th>ASOCIADO</th>
-                                <th>E-MAIL</th>
+                                <th>CLIENTE</th>
                                 <th>PAQUETE</th>
                                 <th>FECHA DE CREACIÓN</th>
-                                <th>ACTIVACIÓN</th> 
-                                <th>CALIFICACIÓN BINARIO</th> 
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
                             </tr>
@@ -39,49 +36,24 @@
                             <?php foreach ($obj_customer as $value): ?>
                                 <td align="center"><b><?php echo $value->username;?></b></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
-                                <td align="center"><?php echo $value->email;?></td>
                                 <td align="center"><?php echo $value->franchise;?></td>
                                 <td align="center"><?php echo formato_fecha($value->created_at);?></td>
                                 <td align="center">
-                                    <?php if ($value->active == 0) {
-                                        $valor = "Inactivo para bonos";
-                                        $stilo = "label label-important";
-                                    }else{
-                                        $valor = "No activo para bonos";
-                                        $stilo = "label label-success";
-                                    } ?>
-                                    <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
-                                </td>
-                                <td align="center">
-                                    <?php if ($value->calification == 0) {
-                                        $valor = "Inactivo";
-                                        $stilo = "label label-important";
-                                    }else{
-                                        $valor = "Activo";
-                                        $stilo = "label label-success";
-                                    } ?>
-                                    <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
-                                </td>
-                                <td align="center">
                                     <?php if ($value->status_value == 0) {
-                                        $valor = "Inactivo";
+                                        $valor = "Activo";
                                         $stilo = "label label-important";
                                     }else{
-                                        $valor = "Activo";
+                                        $valor = "Inactivo";
                                         $stilo = "label label-success";
                                     } ?>
-                                    <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
+                                    <span class="<?php echo $stilo ?>"><?php echo $valor;?></span>
                                 </td>
+                            
                                 <td>
                                     <div class="operation">
-                                            <div class="btn-group">
-                                                <?php if ($value->calification == 0) { ?>
-                                                    <button class="btn btn-small" onclick="active('<?php echo $value->customer_id;?>');">Activar Binario</button>
-                                                <?php }else{ ?>
-                                                    <button class="btn btn-small" onclick="no_active('<?php echo $value->customer_id;?>');">Desactivar Binario</button>
-                                                <?php } ?>
-                                                    &nbsp;<button class="btn btn-small" onclick="edit_customer('<?php echo $value->customer_id;?>');">Editar</button>
-                                          </div>
+                                        <div class="btn-group">
+                                                    <button class="btn btn-small" onclick="active('<?php echo $value->customer_id;?>');">Activar Paquete</button>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>

@@ -1,6 +1,6 @@
 <?php if ( ! defined("BASEPATH")) exit("No direct script access allowed"); 
 
-class D_customer extends CI_Controller{    
+class D_activate extends CI_Controller{    
     
     public function __construct(){
         parent::__construct();
@@ -13,35 +13,33 @@ class D_customer extends CI_Controller{
     public function index(){  
         
            $this->get_session();
+           
            $params = array(
                         "select" =>"customer.customer_id,
                                     customer.username,
                                     customer.first_name,
-                                    customer.email,
                                     customer.last_name,
-                                    customer.calification,
+                                    customer.last_name,
                                     customer.created_at,
-                                    customer.active,
                                     franchise.name as franchise,
                                     customer.status_value",
                         "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
-                        "group" => "customer.customer_id"
-               
+                        "where" => "customer.franchise_id = 6 and customer.status_value = 1"
                );
            //GET DATA FROM CUSTOMER
            $obj_customer= $this->obj_customer->search($params);
-  
+           
            /// PAGINADO
-            $modulos ='clientes'; 
+            $modulos ='activaciones'; 
             $seccion = 'Lista';        
-            $link_modulo =  site_url().'dashboard/clientes'; 
+            $link_modulo =  site_url().'dashboard/activaciones'; 
             
             /// VISTA
             $this->tmp_mastercms->set('link_modulo',$link_modulo);
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
             $this->tmp_mastercms->set("obj_customer",$obj_customer);
-            $this->tmp_mastercms->render("dashboard/customer/customer_list");
+            $this->tmp_mastercms->render("dashboard/activate/activate_list");
     }
     
     public function validate(){

@@ -80,5 +80,8 @@ $route['dashboard/comentarios'] = "d_comments";
 $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";
 $route['dashboard/comentarios/cambiar_status_no'] = "d_comments/change_status_no";
 
+$route['dashboard/activaciones'] = "d_activate";
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

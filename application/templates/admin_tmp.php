@@ -95,7 +95,7 @@
                                     <div id="activaciones" class="accordion-body collapse">
                                       <div class="accordion-inner">
                                         <ul class="nav nav-list">
-                                             <li><a href="<?php echo site_url()."dashboard/pedidos";?>"><i class="icon-large icon-th"></i>Activaciones</a></li>
+                                             <li><a href="<?php echo site_url()."dashboard/activaciones";?>"><i class="icon-large icon-th"></i>Activaciones</a></li>
                                         </ul>
                                         </div>
                                     </div>
