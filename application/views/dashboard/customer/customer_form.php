@@ -128,10 +128,10 @@
                         <strong>Calificado para Binario:</strong>
                         <select name="calification" id="calification">
                                     <option value="">[ Seleccionar ]</option>
-                                    <option value="1" <?php if(isset($obj_customer)){
+                                    <option value="0" <?php if(isset($obj_customer)){
                                         if($obj_customer->calification == 0){ echo "selected";}
                                     }else{echo "";} ?>>Inactivo</option>
-                                    <option value="2" <?php if(isset($obj_customer)){
+                                    <option value="1" <?php if(isset($obj_customer)){
                                         if($obj_customer->calification == 1){ echo "selected";}
                                     }else{echo "";} ?>>Activo</option>
                         </select>
@@ -143,10 +143,10 @@
                           <strong>Estado para el sistema:</strong>
                           <select name="status_value" id="status_value">
                                       <option value="">[ Seleccionar ]</option>
-                                      <option value="1" <?php if(isset($obj_customer)){
+                                      <option value="0" <?php if(isset($obj_customer)){
                                           if($obj_customer->status_value == 0){ echo "selected";}
                                       }else{echo "";} ?>>Inactivo</option>
-                                      <option value="2" <?php if(isset($obj_customer)){
+                                      <option value="1" <?php if(isset($obj_customer)){
                                           if($obj_customer->status_value == 1){ echo "selected";}
                                       }else{echo "";} ?>>Activo</option>
                           </select>

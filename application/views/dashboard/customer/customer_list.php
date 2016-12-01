@@ -75,10 +75,10 @@
                                 <td>
                                     <div class="operation">
                                             <div class="btn-group">
-                                                <?php if ($value->active == 0) { ?>
-                                                    <button class="btn btn-small" onclick="active('<?php echo $value->customer_id;?>');">Activar Bono</button>
+                                                <?php if ($value->calification == 0) { ?>
+                                                    <button class="btn btn-small" onclick="active('<?php echo $value->customer_id;?>');">Activar Binario</button>
                                                 <?php }else{ ?>
-                                                    <button class="btn btn-small" onclick="no_active('<?php echo $value->customer_id;?>');">Desactivar Bono</button>
+                                                    <button class="btn btn-small" onclick="no_active('<?php echo $value->customer_id;?>');">Desactivar Binario</button>
                                                 <?php } ?>
                                                     &nbsp;<button class="btn btn-small" onclick="edit_customer('<?php echo $value->customer_id;?>');">Editar</button>
                                           </div>

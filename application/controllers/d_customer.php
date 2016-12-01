@@ -81,7 +81,7 @@ class D_customer extends CI_Controller{
                 $customer_id = $this->input->post("customer_id");
                 if(count($customer_id) > 0){
                     $data = array(
-                        'active' => 1,
+                        'calification' => 1,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
@@ -159,7 +159,7 @@ class D_customer extends CI_Controller{
             $customer_id = $this->input->post("customer_id");
                 if(count($customer_id) > 0){
                     $data = array(
-                        'active' => 0,
+                        'calification' => 0,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 

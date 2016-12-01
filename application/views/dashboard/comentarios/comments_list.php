@@ -38,10 +38,10 @@
                             <td><?php echo formato_fecha($value->date_comment);?></td>
                             <td>
                                 <?php if ($value->status_value == 1) {
-                                    $valor = "Activo";
+                                    $valor = "Leido";
                                     $stilo = "label label-success";
                                 }else{
-                                    $valor = "Inactivo";
+                                    $valor = "No Leido";
                                     $stilo = "label label-important";
                                 } ?>
                                 <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
