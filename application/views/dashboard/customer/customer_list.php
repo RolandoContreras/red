@@ -17,23 +17,27 @@
                             </div>
                     </div>
                 
-             <form>
+             <!--<form>-->
                 <div class="well nomargin" style="width: 1050px;">
                     <!--- INCIO DE TABLA DE RE4GISTRO -->
                    <table id="table" class="display" cellspacing="0" width="100%">
                         <thead>
                             <tr>
+                                <th>USUARIO</th>
                                 <th>ASOCIADO</th>
                                 <th>E-MAIL</th>
                                 <th>PAQUETE</th>
                                 <th>FECHA DE CREACIÓN</th>
-                                <th>ACTIVACION</th> 
+                                <th>ACTIVACIÓN</th> 
+                                <th>CALIFICACIÓN BINARIO</th> 
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
                             <?php foreach ($obj_customer as $value): ?>
+                                <td align="center"><b><?php echo $value->username;?></b></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center"><?php echo $value->email;?></td>
                                 <td align="center"><?php echo $value->franchise;?></td>
@@ -44,6 +48,16 @@
                                         $stilo = "label label-important";
                                     }else{
                                         $valor = "No activo para bonos";
+                                        $stilo = "label label-success";
+                                    } ?>
+                                    <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
+                                </td>
+                                <td align="center">
+                                    <?php if ($value->calification == 0) {
+                                        $valor = "Inactivo";
+                                        $stilo = "label label-important";
+                                    }else{
+                                        $valor = "Activo";
                                         $stilo = "label label-success";
                                     } ?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
@@ -66,7 +80,7 @@
                                                 <?php }else{ ?>
                                                     <button class="btn btn-small" onclick="no_active('<?php echo $value->customer_id;?>');">Desactivar Bono</button>
                                                 <?php } ?>
-                                                    &nbsp;<button class="btn btn-small" onclick="active('<?php echo $value->customer_id;?>');">Editar</button>
+                                                    &nbsp;<button class="btn btn-small" onclick="edit_customer('<?php echo $value->customer_id;?>');">Editar</button>
                                           </div>
                                     </div>
                                 </td>
@@ -75,7 +89,7 @@
                         </tbody>
                     </table>
             </div>
-           </form>         
+           <!--</form>-->         
         </div>
     </div>
 </div><!-- main content -->

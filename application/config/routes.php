@@ -71,6 +71,10 @@ $route['dashboard'] = "dashboard";
 $route['dashboard/panel'] = "panel";
 
 $route['dashboard/clientes'] = "d_customer";
+$route['dashboard/clientes/active_customer'] = "d_customer/active_customer";
+$route['dashboard/clientes/no_active_customer'] = "d_customer/no_active_customer";
+$route['dashboard/clientes/load/([0-9]+)'] = "d_customer/load/$1";
+$route['dashboard/clientes/validate'] = "d_customer/validate";
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

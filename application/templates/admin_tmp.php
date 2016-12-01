@@ -34,7 +34,6 @@
 
         <script src="static/cms/js/core/jquery.validate.min.js"></script>
         <script src="static/cms/js/core/bootstrap-alert.js"></script>
-        <!--<script src="static/cms/js/core/functions.js"></script>-->
         
         <script type="text/javascript">
             var site = '<?php echo site_url();?>';
@@ -79,7 +78,7 @@
                                     <div id="dashboardsb" class="accordion-body collapse">
                                       <div class="accordion-inner">
                                         <ul class="nav nav-list">
-                                            <li><a href="<?php echo site_url()."dashboard/clientess";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/panel";?>"><i class="icon-large icon-th"></i>Panel</a></li>
                                         </ul>

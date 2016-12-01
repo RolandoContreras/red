@@ -1,40 +1,31 @@
 function active(customer_id){
-     bootbox.dialog("Confirma que desea activar al cliente?", [        
-        { "label" : "Cancelar"},
-        {
-            "label" : "Confirmar",
-            "class" : "btn-success",
-            "callback": function() {
-               $.ajax({
-                   type: "post",
-                   url: site+"dashboard/clientes/active_customer",
-                   dataType: "json",
-                   data: {customer_id : customer_id},
-                   success:function(data){                             
-                   location.reload();
-                   }         
+           $.ajax({
+               type: "post",
+               url: site+"dashboard/clientes/active_customer",
+               dataType: "json",
+               data: {customer_id : customer_id},
+               success:function(data){                             
+               location.reload();
+               }         
            });
-            }
-        }
-    ]);
 }
+
 function no_active(customer_id){
-     bootbox.dialog("Confirma que desea desactivar al cliente?", [        
-        { "label" : "Cancelar"},
-        {
-            "label" : "Confirmar",
-            "class" : "btn-success",
-            "callback": function() {
-               $.ajax({
-                   type: "post",
-                   url: site+"dashboard/clientes/no_active_customer",
-                   dataType: "json",
-                   data: {customer_id : customer_id},
-                   success:function(data){                             
-                   location.reload();
-                   }         
+           $.ajax({
+               type: "post",
+               url: site+"dashboard/clientes/no_active_customer",
+               dataType: "json",
+               data: {customer_id : customer_id},
+               success:function(data){                             
+               location.reload();
+               }         
            });
-            }
-        }
-    ]);
+}
+function edit_customer(product_id){    
+     var url = 'dashboard/clientes/load/'+product_id;
+     location.href = site+url;   
+}
+function cancelar_customer(){
+	var url= 'dashboard/clientes';
+	location.href = site+url;
 }
