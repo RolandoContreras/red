@@ -80,6 +80,7 @@
                                         <ul class="nav nav-list">
                                             <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/panel";?>"><i class="icon-large icon-th"></i>Panel</a></li>
                                         </ul>
                                         </div>
@@ -101,6 +102,20 @@
                                     </div>
                             </div>
     
+                            <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#activaciones">
+                                        Recargas
+                                        </a>
+                                    </div>
+                                    <div id="activaciones" class="accordion-body collapse">
+                                      <div class="accordion-inner">
+                                        <ul class="nav nav-list">
+                                             <li><a href="<?php echo site_url()."dashboard/recargas";?>"><i class="icon-large icon-th"></i>Recargas de Saldo</a></li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                            </div>
                         
                             <div class="accordion-group">
                                 <div class="accordion-heading">
