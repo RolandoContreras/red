@@ -3,7 +3,7 @@
 <!-- Mirrored from wbpreview.com/previews/WB0LX21H9/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 06 Sep 2012 04:37:29 GMT -->
     <head>
         <meta charset="utf-8">
-        <title>WaveLine CMS Admin</title>
+        <title>BITSHARE CMS Admin</title>
         <base href="<?php echo site_url();?>">
         <link rel="shortcut icon" href="<?php echo site_url().'static/images/icon.ico';?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +44,7 @@
     <div id="header" class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container-fluid">
-                <a class="brand" href="<?php echo site_url();?>dashboard/panel">WaveLine</a> 
+                <a class="brand" href="<?php echo site_url();?>dashboard/panel">Bitshare</a> 
                 <div class="btn-toolbar pull-right">                        
                 <!-- /btn-group -->
                     <div class="btn-group">
@@ -80,14 +80,17 @@
                                         <ul class="nav nav-list">
                                             <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
+                                            <?php if($_SESSION['usercms']['privilage'] == 3){ ?>
                                             <li><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>
+                                            <?php } ?>
                                             <li><a href="<?php echo site_url()."dashboard/panel";?>"><i class="icon-large icon-th"></i>Panel</a></li>
                                         </ul>
                                         </div>
                                     </div>
                             </div>
-                 
-                            <div class="accordion-group">
+                            <?php 
+                            if($_SESSION['usercms']['privilage'] == 3){ ?>
+                                <div class="accordion-group">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#activaciones">
                                         Activaciones
@@ -116,6 +119,8 @@
                                         </div>
                                     </div>
                             </div>
+                            <?php } ?>
+                            
                         
                             <div class="accordion-group">
                                 <div class="accordion-heading">
@@ -137,7 +142,7 @@
                                 </div>
                             </div>
                         
-                        
+                        <?php if($_SESSION['usercms']['privilage'] == 2){ ?>
                             <div class="accordion-group">
                                 <div class="accordion-heading">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#report">
@@ -160,6 +165,7 @@
                                     </div>
                                 </div>
                             </div>
+                        <?php } ?>
                     </div>
             </div>
             <!-- sidebar 

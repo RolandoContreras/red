@@ -2,7 +2,7 @@
 <script src="<?php echo site_url();?>static/cms/js/core/bootstrap-fileupload.js"></script>
 <link href="<?php echo site_url();?>static/cms/plugins/tags/chosen.css" rel="stylesheet" />
 <script src="<?php echo site_url();?>static/cms/plugins/tags/chosen.jquery.js"></script>
-<script src="<?php echo site_url();?>static/cms/js/customer.js"></script>
+<script src="<?php echo site_url();?>static/cms/js/users.js"></script>
 <script src="<?php echo site_url();?>static/cms/plugins/ckeditor/ckeditor.js"></script>
 <!-- main content -->
 
@@ -25,9 +25,9 @@
                     <div class="inner">
                         <strong>Priveligios:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <select name="privilage" id="privilage">
-                                <option value="1">Control Simple</option>
-                                <option value="2">Control Medio</option>
-                                <option value="3">Control Total</option>
+                                <option value="1" <?php if(isset($obj_users->privilage) == 1){echo "selected";}else{echo "";}?>>Control Simple</option>
+                                <option value="2" <?php if(isset($obj_users->privilage) == 2){echo "selected";}else{echo "";}?>>Control Medio</option>
+                                <option value="3" <?php if(isset($obj_users->privilage) == 3){echo "selected";}else{echo "";}?>>Control Total</option>
                             </select>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
             
                  
                 <div class="subnav nobg">
-                    <button class="btn btn-danger btn-small pull-left" type="reset" onclick="cancelar_customer();">Cancelar</button>                    
+                    <button class="btn btn-danger btn-small pull-left" type="reset" onclick="cancelar_users();">Cancelar</button>                    
                     <button class="btn btn-primary btn-small pull-right"  type="submit">Guardar</button>
                 </div>
             </div>

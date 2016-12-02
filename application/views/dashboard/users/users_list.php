@@ -41,7 +41,18 @@
                                 <td align="center"><b><?php echo $value->password;?></b></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center"><?php echo $value->email;?></td>
-                                <td align="center"><?php echo $value->privilage;?></td>
+                                <td align="center">
+                                    <?php 
+                                    if ($value->privilage == 3){
+                                        echo "<b>"."Control Total"."</b>";
+                                    }elseif($value->privilage == 2){
+                                        echo "<b>"."Control Medio"."</b>";
+                                    }else{
+                                        echo "<b>"."Control Simple"."</b>";
+                                    }
+                                    
+                                    ?>
+                                </td>
                                 <td align="center"><?php echo formato_fecha($value->created_at);?></td>
                                 <td align="center">
                                     <?php if ($value->status_value == 0) {
