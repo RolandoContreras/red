@@ -107,11 +107,11 @@
     
                             <div class="accordion-group">
                                     <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#activaciones">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#recargas">
                                         Recargas
                                         </a>
                                     </div>
-                                    <div id="activaciones" class="accordion-body collapse">
+                                    <div id="recargas" class="accordion-body collapse">
                                       <div class="accordion-inner">
                                         <ul class="nav nav-list">
                                              <li><a href="<?php echo site_url()."dashboard/recargas";?>"><i class="icon-large icon-th"></i>Recargas de Saldo</a></li>

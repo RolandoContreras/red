@@ -153,7 +153,7 @@ class Registro extends CI_Controller {
         $customer = count($this->obj_customer->get_search_row($param_customer));
         if($customer > 0){
             $data['message'] = "true";
-            $data['print'] = "No esta disponible    ";
+            $data['print'] = "No esta disponible";
         }else{
             $data['message'] = "false";
             $data['print'] = "✔ Disponible";
