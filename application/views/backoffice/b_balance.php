@@ -2,22 +2,15 @@
       <section>
          <!-- Page content-->
          <div class="content-wrapper">
-            <div class="content-heading">
-               
-		<!-- START Language list-->
-        <div class="pull-right">
-            <div class="btn-group">
-                <button type="button" data-toggle="dropdown" class="btn btn-default">Spanish</button>
-                <ul role="menu" class="dropdown-menu dropdown-menu-right animated fadeInUpShort">
-                	<li><a href="#" class="LenguageSystem" onclick="LenguajeSystem('English');" >English</a></li><li><a href="#" class="LenguageSystem" onclick="LenguajeSystem('Spanish');" >Spanish</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- END Language list    -->
-		               <div class="col-lg-3">
-                <img src="../perfiles_img/logo.jpg" class="responsive" height="100px;" id="LogoClienteMill">
+           <div class="content-heading">
+              <div class="pull-right text-danger">
+                Bitcoin: $737.00000000              
               </div>
-              <div class="clearfix"></div>            </div>
+                              <div class="col-lg-3">
+                <img src="<?php echo site_url().'static/backoffice/images/logo-btc2.png';?>" class="responsive" height="100px;" id="LogoClienteMill">
+              </div>
+              <div class="clearfix"></div>           
+            </div>
 
             <div class="row">
                <div class="col-lg-12">
