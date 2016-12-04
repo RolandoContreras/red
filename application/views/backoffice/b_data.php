@@ -126,7 +126,7 @@
                               <div class="form-group">
                                   <label for="telefono" class="col-lg-3 control-label"><?php echo replace_vocales_voculeshtml("Dirección de BTC");?></label>
                                  <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="btc" id="btc" placeholder="Direccion de BTC" value="<?php echo $obj_customer->btc_address;?>">
+                                     <input type="text" class="form-control" name="btc" id="btc" placeholder="Direccion de BTC" value="<?php echo $obj_customer->btc_address;?>" <?php if(isset($obj_customer->btc_address)){echo "disabled";}?>>
                                  </div>
                               </div>
                                <div class="form-group">
@@ -139,6 +139,35 @@
                                <div class="form-group" id="messages">
                               </div>
                            </div>
+                            
+                            <div class="col-lg-4">
+                                <legend><?php echo replace_vocales_voculeshtml("Cambiar Contraseñas");?></legend>
+                              <div class="form-group">
+                                  <label for="telefono" class="col-lg-3 control-label"><?php echo replace_vocales_voculeshtml("Nueva Contraseña");?></label>
+                                 <div class="col-lg-9">
+                                     <input type="password" class="form-control" name="password" id="password" placeholder="Nueva Contraseña" value="">
+                                 </div>
+                                  
+                              </div>
+                               
+                              <div class="form-group">
+                                  <label for="telefono" class="col-lg-3 control-label"><?php echo replace_vocales_voculeshtml("Repetir Nueva Contraseña");?></label>
+                                 <div class="col-lg-9">
+                                     <input type="password" class="form-control" name="password2" id="password2" placeholder="Repetir Nueva Contraseña" value="">
+                                 </div>
+                                  
+                              </div>
+                               
+                               <div class="form-group">
+                                 <div class="col-lg-offset-3 col-lg-9">
+                                     <br><br>
+                                    <button type="button" onclick="alter_password();" class="btn btn-sm btn-primary bg-danger-dark"><?php echo replace_vocales_voculeshtml("Guardar Contraseña");?></button>
+                                 </div>
+                              </div> 
+                               <div class="form-group" id="messages">
+                              </div>
+                           </div>
+                            
                            <div class="clearfix"></div>
                         </form>
                      </div>

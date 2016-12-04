@@ -87,6 +87,38 @@ class B_data extends CI_Controller {
             }
     }
     
+    
+        public function update_password(){
+
+             if($this->input->is_ajax_request()){   
+                //SELECT ID FROM CUSTOMER
+               $password = $this->input->post('password');
+               $password2 = $this->input->post('password2');
+               $customer_id = $this->input->post('customer_id');
+               
+               if($password != ""){
+                            //UPDATE DATA EN CUSTOMER TABLE
+                            $data = array(
+                                            'password' => $password,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
+
+                                 $data['message'] = "true";
+                                 $data['print'] = "La contraseña de cambio con exito";
+                                 $data['url'] = "misdatos";
+                             echo json_encode($data); 
+                    
+               }else{
+                     $data['message'] = "false";
+                     $data['print'] = "Las contraseñas no deben estan en blanco";
+                     $data['url'] = "misdatos";
+                     echo json_encode($data); 
+               }
+            }
+        }
+    
         public function update_btc_address(){
             
          if($this->input->is_ajax_request()){   
