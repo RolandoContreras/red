@@ -75,9 +75,9 @@
 
             <div class="row">
               <div class="col-lg-12">
-                  <strong>Tu links para referir: </strong><a href="<?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link"><?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>
-                <strong>Aqui esta la liga para pago con bitcoins:</strong> 3QnoVEdfWfMC796gyeWCJcTm4KpoWMJAmX<br><br>
-
+                <strong>Tu links para referir: </strong><a href="<?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link"><?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>
+                <strong>Aqui esta la liga para pago con bitcoins:</strong>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN<br>
+                <strong>Para la activación: </strong><a class="alert-link">Paquete + $15.00 (Membership)</a><br><br>
                 
               </div>
             </div>

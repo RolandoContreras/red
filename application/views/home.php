@@ -30,29 +30,20 @@
         <!-- Pricing table -->
         <section>
             <div class="row row-no-gutter pricing-table text-center">
-                <div class="col-md-4 wow fadeInLeft bg-grayscale-lightest" data-wow-duration="0.4s" data-wow-delay="0s">
+                <div class="col-md-6 accented wow fadeInLeft bg-grayscale-lighten-3" data-wow-duration="0.4s" data-wow-delay="0.5s">
                     <div class="pricing-table__item well-sm">
-                        <div class="pricing-table__title">30</div>
-                        <h1 class="pricing-table__plan-name">START</h1>
-                        <div class="pricing-table__price">30 puntos para <p>binario</p></div>
-                        <p>Genera una rentabilidad del (30%) <br>de la compra del paquete en 75 d&iacute;as.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 accented wow fadeInLeft bg-grayscale-lighten-3" data-wow-duration="0.4s" data-wow-delay="0.5s">
-                    <div class="pricing-table__item well-sm">
-                        <div class="pricing-table__title">50</div>
+                        <div class="pricing-table__title">100</div>
                         <h1 class="pricing-table__plan-name">BASIC</h1>
-                        <div class="pricing-table__price">50 puntos para <p>binario</p></div>
+                        <div class="pricing-table__price">100 puntos para <p>binario</p></div>
                         <p>Genera una rentabilidad del (40%) <br>de la compra del paquete en 75 d&iacute;as.</p>
                     </div>
                 </div>
 
-                <div class="col-md-4 wow fadeInLeft bg-grayscale-lighten-2" data-wow-duration="0.4s" data-wow-delay="1s">
+                <div class="col-md-6 wow fadeInLeft bg-grayscale-lighten-2" data-wow-duration="0.4s" data-wow-delay="1s">
                     <div class="pricing-table__item well-sm">
-                        <div class="pricing-table__title">100</div>
+                        <div class="pricing-table__title">250</div>
                         <h1 class="pricing-table__plan-name">PLATINIUM</h1>
-                        <div class="pricing-table__price">100 puntos para <p>binario</p></div>
+                        <div class="pricing-table__price">250 puntos para <p>binario</p></div>
                        <p>Genera una rentabilidad del (50%) <br>de la compra del paquete en 75 d&iacute;as.</p>
                     </div>
                 </div>
@@ -64,18 +55,18 @@
                 
                 <div class="col-md-6 wow fadeInLeft bg-grayscale-lighten-2" data-wow-duration="0.8s" data-wow-delay="0s">
                     <div class="pricing-table__item">
-                        <div class="pricing-table__title">250</div>
+                        <div class="pricing-table__title">500</div>
                         <h1 class="pricing-table__plan-name">GOLD</h1>
-                        <div class="pricing-table__price">250 puntos para <p>binario</p></div>
+                        <div class="pricing-table__price">500 puntos para <p>binario</p></div>
                         <p style="padding-bottom: 100px !important;">Genera una rentabilidad del (60%) <br>de la compra del paquete en 75 d&iacute;as.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6 wow fadeInLeft bg-grayscale-lighten-3" data-wow-duration="1.2s" data-wow-delay="0s">
                     <div class="pricing-table__item">
-                        <div class="pricing-table__title">500</div>
+                        <div class="pricing-table__title">1000</div>
                         <h1 class="pricing-table__plan-name">VIP</h1>
-                        <div class="pricing-table__price">500 puntos para <p>binario</p></div>
+                        <div class="pricing-table__price">1000 puntos para <p>binario</p></div>
                        <p style="padding-bottom: 100px !important;">Genera una rentabilidad del (70%) <br>de la compra del paquete en 75 d&iacute;as.</p>
                     </div>
                 </div>
