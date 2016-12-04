@@ -67,6 +67,8 @@ $route['backoffice/binario/([0-9a-z_-]+)'] = "b_binario/index/$1";
 $route['backoffice/unilevel'] = "b_unilevel";
 $route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";
 
+$route['backoffice/balance'] = "b_balance";
+
 $route['dashboard'] = "dashboard";
 $route['dashboard/panel'] = "panel";
 

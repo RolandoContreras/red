@@ -10,39 +10,10 @@
               </div>
               <div class="clearfix"></div>           
             </div>
-            
+                         
             <div class="row">
-               <div class="col-lg-3 col-sm-6">
-                  <!-- START widget-->
-                  <div class="panel widget bg-primary">
-                     <div class="row row-table">
-                        <div class="col-xs-4 text-center bg-primary-dark pv-lg">
-                           <em class="icon-credit-card fa-3x"></em>
-                        </div>
-                        <div class="col-xs-8 pv-lg">
-                           <div class="h2 mt0">0</div>
-                           <div class="text-uppercase">Por Cobrar</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-lg-3 col-sm-6">
-                  <!-- START widget-->
-                  <div class="panel widget bg-purple">
-                     <div class="row row-table">
-                        <div class="col-xs-4 text-center bg-purple-dark pv-lg">
-                           <em class="icon-wallet fa-3x"></em>
-                        </div>
-                        <div class="col-xs-8 pv-lg">
-                           <div class="h2 mt0">0</div>
-                           <div class="text-uppercase">Saldo Billetera</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-lg-3 col-md-6 col-sm-12">
+                
+                <div class="col-lg-3 col-md-6 col-sm-12">
                   <!-- START widget-->
                   <div class="panel widget bg-green">
                      <div class="row row-table">
@@ -57,6 +28,39 @@
                   </div>
                </div>
 
+                
+               <div class="col-lg-3 col-sm-6">
+                  <!-- START widget-->
+                  <div class="panel widget bg-primary">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-primary-dark pv-lg">
+                           <em class="icon-credit-card fa-3x"></em>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                           <div class="h2 mt0">0</div>
+                           <div class="text-uppercase">Cuenta Normal</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col-lg-3 col-sm-6">
+                  <!-- START widget-->
+                  <div class="panel widget bg-purple">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-purple-dark pv-lg">
+                           <em class="icon-wallet fa-3x"></em>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                           <div class="h2 mt0">0</div>
+                           <div class="text-uppercase">Cuenta Mandatoria</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               
+
                <div class="col-lg-3 col-md-6 col-sm-12">
                   <!-- START widget-->
                   <div class="panel widget bg-success">
@@ -65,8 +69,8 @@
                            <em class="icon-badge fa-3x"></em>
                         </div>
                         <div class="col-xs-8 pv-lg">
-                           <div class="h2 mt0">Paquete</div>
-                           <div class="text-uppercase"><?php echo $obj_customer->franchise;?></div>
+                           <div class="h2 mt0"><?php echo $obj_customer->franchise;?></div>
+                           <div class="text-uppercase">Calificaci&oacute;n</div>
                         </div>
                      </div>
                   </div>

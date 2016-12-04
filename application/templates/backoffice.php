@@ -195,13 +195,13 @@
 	            <!-- START Right Navbar-->
 	               	<ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="archivos-download" title="Listado de archivos para descargar">
+                                <a href="#" title="Listado de archivos para descargar">
                                     <em class="icon-cloud-download"></em>
                                 </a>
                             </li>
 	                  	<!-- START Alert menu-->
                             <li class="dropdown dropdown-list">
-                                <a href="mi-mensajes">
+                                <a href="#">
                                     <em class="icon-envelope-open"></em>
                                     <div class="count-mensajes label label-danger"></div>
                                 </a>
@@ -305,7 +305,7 @@
 	                     		</a>
 	                  		</li>
                                         
-	                  		<li class=" ">
+<!--	                  		<li class=" ">
 	                     		<a href="#" title="Facturación" data-toggle="collapse">
                                             <em class="icon-docs"></em>
                                             <span>Facturación</span>
@@ -329,7 +329,7 @@
 			                           	</a>
 			                        </li>
 	                     		</ul>
-	                  		</li>
+	                  		</li>-->
                                         
                                         
                                         <li class=" ">
@@ -337,25 +337,26 @@
 			                        <em class="icon-organization"></em>
 			                        <span>Mi red</span>
 			                    </a>
-	                     		<ul id="tree" class="nav sidebar-subnav collapse">
-	                        		<li class="sidebar-subnav-header">Arbol</li>
-			                        <li class="">
-                                                    <a href="<?php echo site_url().'backoffice/binario';?>" title="Arbol Binario">
-			                              	<span>Arbol Binario</span>
-			                           	</a>
-			                        </li>
-			                        <li class="">
-			                           	<a href="<?php echo site_url().'backoffice/unilevel';?>" title="Arbol Unilevel">
-			                              	<span>Arbol Unilevel</span>
-			                           	</a>
-			                        </li>
-	                     		</ul>
+                                            <ul id="tree" class="nav sidebar-subnav collapse">
+                                                    <li class="sidebar-subnav-header">Arbol</li>
+                                                    <li class="">
+                                                        <a href="<?php echo site_url().'backoffice/binario';?>" title="Arbol Binario">
+                                                            <span>Arbol Binario</span>
+                                                            </a>
+                                                    </li>
+                                                    <li class="">
+                                                            <a href="<?php echo site_url().'backoffice/unilevel';?>" title="Arbol Unilevel">
+                                                            <span>Arbol Unilevel</span>
+                                                            </a>
+                                                    </li>
+                                            </ul>
 	                  		</li>
+                                        
 	                  		<li class=" ">
-                                            <a id="comisiones" href="#" title="Comisiones" data-toggle="collapse">
-                                                    <em class="icon-grid"></em>
-                                                    <span>Comisiones</span>
-                                            </a>
+                                            <a href="#comisiones" title="Comisiones" data-toggle="collapse">
+			                        <em class="icon-organization"></em>
+			                        <span>Mi Comisiones</span>
+			                    </a>
                                             <ul id="comisiones" class="nav sidebar-subnav collapse">
                                                 <li class="sidebar-subnav-header">Comisiones</li>
                                                 <li class="">
@@ -364,24 +365,19 @@
                                                         </a>
                                                 </li>
                                                 <li class="">
-                                                        <a href="mi-balance" title="Mi Balance">
+                                                        <a href="<?php echo site_url().'backoffice/balance';?>" title="Mi Balance">
                                                         <span>Mi Balance</span>
-                                                        </a>
-                                                </li>
-                                                <li class="">
-                                                        <a href="mi-paks" title="Packs">
-                                                        <span>Mis Packs</span>
                                                         </a>
                                                 </li>
                                             </ul>
 	                  		</li>
 
-	                  		<li class="">
+<!--	                  		<li class="">
                                             <a href="#" title="Incentivos">
                                                 <em class="icon-trophy"></em>
                                                 <span>Incentivos</span>
                                             </a>
-	                  		</li>
+	                  		</li>-->
 
 	                  		<li class="">
 			                    <a href="#" title="Solicitudes" data-toggle="collapse">
@@ -408,7 +404,7 @@
 		   <!-- MODERNIZR-->
 		   <script src="<?php echo site_url().'static/backoffice/js/modernizr.js';?>"></script>
 		   <!-- JQUERY-->
-		   <script src="<?php echo site_url().'static/backoffice/js/jquery.js';?>"></script>
+		   <script src="<?php // echo site_url().'static/backoffice/js/jquery.js';?>"></script>
 		   <!-- BOOTSTRAP-->
 		   <script src="<?php echo site_url().'static/backoffice/js/bootstrap.js';?>"></script>
 		   <!-- STORAGE API-->
@@ -442,10 +438,10 @@
 		   <!-- MOMENT JS-->
                    <script src="<?php echo site_url().'static/backoffice/js/moment-with-locales.min.js';?>"></script>
 		   <!-- DATATABLES-->
-		   <script src="<?php echo site_url().'static/backoffice/js/jquery.dataTables.min.js';?>"></script>
-		   <script src="<?php echo site_url().'static/backoffice/js/dataTables.colVis.js';?>"></script>
-		   <script src="<?php echo site_url().'static/backoffice/js/dataTables.bootstrap.js';?>"></script>
-		   <script src="<?php echo site_url().'static/backoffice/js/dataTables.bootstrapPagination.js';?>"></script>   
+		   <!--<script src="<?php echo site_url().'static/backoffice/js/jquery.dataTables.min.js';?>"></script>-->
+		   <script src="<?php // echo site_url().'static/backoffice/js/dataTables.colVis.js';?>"></script>
+		   <script src="<?php // echo site_url().'static/backoffice/js/dataTables.bootstrap.js';?>"></script>
+		   <script src="<?php // echo site_url().'static/backoffice/js/dataTables.bootstrapPagination.js';?>"></script>   
 		   <!-- =============== APP SCRIPTS ===============-->
 		   <script src="<?php echo site_url().'static/backoffice/js/app.js';?>"></script>
 		   <script src="<?php echo site_url().'static/backoffice/js/afiliados.js';?>"></script>
