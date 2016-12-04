@@ -354,13 +354,13 @@
                                         
 	                  		<li class=" ">
                                             <a href="#comisiones" title="Comisiones" data-toggle="collapse">
-			                        <em class="icon-organization"></em>
-			                        <span>Mi Comisiones</span>
+			                        <em class="icon-chart"></em>
+			                        <span>Mis Comisiones</span>
 			                    </a>
                                             <ul id="comisiones" class="nav sidebar-subnav collapse">
                                                 <li class="sidebar-subnav-header">Comisiones</li>
                                                 <li class="">
-                                                        <a href="mis-calculos" title="Mis Comisiones">
+                                                        <a href="<?php echo site_url().'backoffice/comisiones';?>" title="Mis Comisiones">
                                                         <span>Mis Comisiones</span>
                                                         </a>
                                                 </li>
@@ -404,7 +404,7 @@
 		   <!-- MODERNIZR-->
 		   <script src="<?php echo site_url().'static/backoffice/js/modernizr.js';?>"></script>
 		   <!-- JQUERY-->
-		   <script src="<?php // echo site_url().'static/backoffice/js/jquery.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.js';?>"></script>
 		   <!-- BOOTSTRAP-->
 		   <script src="<?php echo site_url().'static/backoffice/js/bootstrap.js';?>"></script>
 		   <!-- STORAGE API-->
@@ -438,10 +438,10 @@
 		   <!-- MOMENT JS-->
                    <script src="<?php echo site_url().'static/backoffice/js/moment-with-locales.min.js';?>"></script>
 		   <!-- DATATABLES-->
-		   <!--<script src="<?php echo site_url().'static/backoffice/js/jquery.dataTables.min.js';?>"></script>-->
-		   <script src="<?php // echo site_url().'static/backoffice/js/dataTables.colVis.js';?>"></script>
-		   <script src="<?php // echo site_url().'static/backoffice/js/dataTables.bootstrap.js';?>"></script>
-		   <script src="<?php // echo site_url().'static/backoffice/js/dataTables.bootstrapPagination.js';?>"></script>   
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.dataTables.min.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/dataTables.colVis.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/dataTables.bootstrap.js';?>"></script>
+		   <script src="<?php echo site_url().'static/backoffice/js/dataTables.bootstrapPagination.js';?>"></script>   
 		   <!-- =============== APP SCRIPTS ===============-->
 		   <script src="<?php echo site_url().'static/backoffice/js/app.js';?>"></script>
 		   <script src="<?php echo site_url().'static/backoffice/js/afiliados.js';?>"></script>

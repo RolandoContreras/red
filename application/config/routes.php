@@ -68,6 +68,8 @@ $route['backoffice/unilevel'] = "b_unilevel";
 $route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";
 
 $route['backoffice/balance'] = "b_balance";
+$route['backoffice/comisiones'] = "b_comissions";
+$route['backoffice/comisiones/concepto'] = "b_comissions/consultar";
 
 $route['dashboard'] = "dashboard";
 $route['dashboard/panel'] = "panel";
