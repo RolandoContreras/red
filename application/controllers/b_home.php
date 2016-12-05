@@ -33,13 +33,13 @@ class B_home extends CI_Controller {
            $obj_customer = $this->obj_customer->get_search_row($params);
            
            //GET TOTAL AMOUNT
-                $params = array(
+                $params_total = array(
                         "select" =>"sum(amount) as total,
-                                    (select sum(amount) FROM commissions WHERE status_value = 2) as balance",
+                                    (select sum(amount) FROM commissions WHERE status_value = 2 and customer_id = $customer_id) as balance",
                          "where" => "commissions.customer_id = $customer_id",
                     );
                 
-           $obj_commissions = $this->obj_commissions->get_search_row($params);              
+           $obj_commissions = $this->obj_commissions->get_search_row($params_total);              
         
            $obj_total = $obj_commissions->total;
            $obj_balance = $obj_commissions->balance;

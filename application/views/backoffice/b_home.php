@@ -21,7 +21,7 @@
                            <em class="icon-diamond fa-3x"></em>
                         </div>
                         <div class="col-xs-8 pv-lg">
-                           <div class="h2 mt0"><?php echo "$".$obj_total?></div>
+                            <div class="h2 mt0"><?php if(count($obj_total)>0){echo "$".$obj_total;}else{echo "$0.00";}?></div>
                            <div class="text-uppercase">Total Pagado</div>
                         </div>
                      </div>
@@ -37,7 +37,7 @@
                            <em class="icon-credit-card fa-3x"></em>
                         </div>
                         <div class="col-xs-8 pv-lg">
-                           <div class="h2 mt0"><?php echo "$".$obj_balance;?></div>
+                           <div class="h2 mt0"><?php if(count($obj_balance)>0){echo "$".$obj_balance;}else{echo "$0.00";}?></div>
                            <div class="text-uppercase">Balance por cobrar</div>
                         </div>
                      </div>

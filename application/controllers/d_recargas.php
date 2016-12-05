@@ -53,7 +53,7 @@ class D_Recargas extends CI_Controller{
                         'name' => "recargas",
                         'amount' => $amount,
                         'date' => date("Y-m-d H:i:s"),
-                        'status_value' => 1,
+                        'status_value' => 2,
                         'created_at' => date("Y-m-d H:i:s"),
                         'created_by' => $_SESSION['usercms']['user_id']
                 );          

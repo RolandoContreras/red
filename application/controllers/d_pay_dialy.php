@@ -37,30 +37,6 @@ class D_pay_dialy extends CI_Controller{
             $this->tmp_mastercms->render("dashboard/pay_dialy/pay_dialy");
     }
     
-    public function validate(){
-        
-        //GET CUSTOMER_ID
-        $customer_id = $this->input->post("username");
-        $amount = $this->input->post("amoun");
-        
-        if($customer_id != "" && $amount != 0){
-                $data = array(
-                        'customer_id' => $customer_id,
-                        'bonus_id' => 2,
-                        'name' => "recargas",
-                        'amount' => $amount,
-                        'date' => date("Y-m-d H:i:s"),
-                        'status_value' => 1,
-                        'created_at' => date("Y-m-d H:i:s"),
-                        'created_by' => $_SESSION['usercms']['user_id']
-                );          
-            //SAVE DATA IN TABLE    
-            $this->obj_commissions->insert($data);
-        }
-            
-        redirect(site_url()."dashboard/recargas");
-    }
-    
     public function hacer_pago(){
         //ACTIVE CUSTOMER
         if($this->input->is_ajax_request()){  
@@ -109,7 +85,7 @@ class D_pay_dialy extends CI_Controller{
                             'mandatory_account' => $mandatory_account,
                             'normal_account' => $normal_account,
                             'date' => date("Y-m-d H:i:s"),
-                            'status_value' => 1,
+                            'status_value' => 2,
                             'created_at' => date("Y-m-d H:i:s"),
                             'created_by' => $_SESSION['usercms']['user_id']
                         );
