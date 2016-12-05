@@ -262,6 +262,7 @@
                                     $style_misdatos = "";
                                     $style_comisiones = "";
                                     $style_mired = "";
+                                    $style_billetera = "";
                                     if(isset($url[1])){
                                         switch ($url[1]) {
                                             ////////
@@ -279,6 +280,9 @@
                                                         break;
                                                     case "binario":
                                                         $style_mired = "active";
+                                                        break;
+                                                    case "billetera":
+                                                        $style_billetera = "active";
                                                         break;
                                                     default:
                                                          $title = "Inicio";
@@ -374,12 +378,12 @@
                                             </ul>
 	                  		</li>
 
-<!--	                  		<li class="">
-                                            <a href="#" title="Incentivos">
-                                                <em class="icon-trophy"></em>
-                                                <span>Incentivos</span>
+	                  		<li class="<?php echo $style_billetera;?>">
+                                            <a href="<?php echo site_url().'backoffice/billetera';?>" title="Billetera">
+                                                <em class="icon-wallet"></em>
+                                                <span>Mi Billetera</span>
                                             </a>
-	                  		</li>-->
+	                  		</li>
 
 	                  		<li class="">
 			                    <a href="#" title="Solicitudes" data-toggle="collapse">

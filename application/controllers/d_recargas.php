@@ -20,6 +20,7 @@ class D_Recargas extends CI_Controller{
                                     commissions.date,
                                     commissions.status_value,
                                     bonus.name as bonus",
+               "where" => "commissions.bonus_id = 2",
                "join" => array('customer, commissions.customer_id = customer.customer_id',
                                 'bonus, commissions.bonus_id = bonus.bonus_id'),
                 "order" => "commissions.date DESC"
