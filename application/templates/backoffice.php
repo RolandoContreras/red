@@ -260,24 +260,26 @@
                                     $url = explode("/",uri_string()); 
                                     $style_inicio = "";
                                     $style_misdatos = "";
+                                    $style_comisiones = "";
+                                    $style_mired = "";
                                     if(isset($url[1])){
                                         switch ($url[1]) {
                                             ////////
                                                     case "misdatos":
                                                         $style_misdatos = "active";
                                                         break;
-//                                                    case "acerca":
-//                                                        $title = "Acerca"; 
-//                                                        $style_about = "active";
-//                                                        break;
-//                                                    case "plan":
-//                                                        $title = "Plan"; 
-//                                                        $style_plan = "active";
-//                                                        break;
-//                                                    case "contacto":
-//                                                        $title = "Contacto"; 
-//                                                        $style_contact = "active";
-//                                                        break;
+                                                    case "comisiones":
+                                                        $style_comisiones = "active";
+                                                        break;
+                                                    case "balance":
+                                                        $style_comisiones = "active";
+                                                        break;
+                                                    case "unilevel":
+                                                        $style_mired = "active";
+                                                        break;
+                                                    case "binario":
+                                                        $style_mired = "active";
+                                                        break;
                                                     default:
                                                          $title = "Inicio";
 
@@ -332,7 +334,7 @@
 	                  		</li>-->
                                         
                                         
-                                        <li class=" ">
+                                        <li class="<?php echo $style_mired;?>">
 			                    <a href="#tree" title="Solicitudes" data-toggle="collapse">
 			                        <em class="icon-organization"></em>
 			                        <span>Mi red</span>
@@ -352,7 +354,7 @@
                                             </ul>
 	                  		</li>
                                         
-	                  		<li class=" ">
+	                  		<li class="<?php echo $style_comisiones;?>">
                                             <a href="#comisiones" title="Comisiones" data-toggle="collapse">
 			                        <em class="icon-chart"></em>
 			                        <span>Mis Comisiones</span>

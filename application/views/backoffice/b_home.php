@@ -21,7 +21,7 @@
                            <em class="icon-diamond fa-3x"></em>
                         </div>
                         <div class="col-xs-8 pv-lg">
-                           <div class="h2 mt0">0</div>
+                           <div class="h2 mt0"><?php echo "$".$obj_total?></div>
                            <div class="text-uppercase">Total Pagado</div>
                         </div>
                      </div>
@@ -37,15 +37,15 @@
                            <em class="icon-credit-card fa-3x"></em>
                         </div>
                         <div class="col-xs-8 pv-lg">
-                           <div class="h2 mt0">0</div>
-                           <div class="text-uppercase">Cuenta Normal</div>
+                           <div class="h2 mt0"><?php echo "$".$obj_balance;?></div>
+                           <div class="text-uppercase">Balance por cobrar</div>
                         </div>
                      </div>
                   </div>
                </div>
 
-               <div class="col-lg-3 col-sm-6">
-                  <!-- START widget-->
+<!--               <div class="col-lg-3 col-sm-6">
+                   START widget
                   <div class="panel widget bg-purple">
                      <div class="row row-table">
                         <div class="col-xs-4 text-center bg-purple-dark pv-lg">
@@ -57,7 +57,7 @@
                         </div>
                      </div>
                   </div>
-               </div>
+               </div>-->
 
                
 

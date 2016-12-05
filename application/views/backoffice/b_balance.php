@@ -21,9 +21,6 @@
                                     <div id="panelDemo14" class="panel panel-info">
                      <div class="panel-heading">Mi Balance</div>
                      <div class="panel-body">
-                              
-                        <!--<form name="facturas-frm" id="facturas-frm" method="post" action="reportes-generales-facturas" class="form-horizontal" data-parsley-validate target="_blank">-->
-                             
                            <table id="table" class="display table table-striped table-hover responsive">
                               <thead>
                                 <tr>
@@ -41,13 +38,11 @@
                                           <td>Concepto &nbsp;<?php echo $value->bonus;?></td>
                                             <td>
                                             <span class="text-success"><?php echo "$".$value->amount;?></span>
-                                            <!--<span class="text-danger">(-10%)</span>-->
                                             </td>
                                             <td>
-                                            <!--<span class="label label-warning">En espera por procesar</span>-->
                                                <span class="label label-success">
                                                    <?php 
-                                                   if($value->status_value == 1){ ?>
+                                                   if($value->status_value == 1 || $value->status_value == 2){ ?>
                                                        <span class="label label-success">Procesado</span>
                                                    <?php }else{ ?>
                                                        <span class="label label-warning">En espera por procesar</span>
@@ -56,27 +51,8 @@
                                             </td>
                                        </tr>
                                  <?php } ?>
-                                  
-<!--                                   
-                                   <tr role="row" class="even">
-                                        <td class="sorting_1">2016-11-30 23:00:01</td>
-                                        <td>Concepto Pasivos no calculables (Pack 100) (ID PACKS 73)</td>
-                                        <td>
-                                        <span class="text-success">$1.00</span>
-                                        <span class="text-danger">(-10%)</span>
-                                        </td>
-                                        <td>
-                                        <span class="text-danger">$0.00</span>
-                                        </td>
-                                        <td>
-                                        <span class="label label-success">Procesado</span>
-                                        </td>
-                                   </tr>-->
                               </tbody>
                            </table>
-
-                        <!--</fortablem>-->
-                          
                      </div>
                   </div>
                     

@@ -17,7 +17,7 @@ function consultar(){
                         texto = texto+'<td>"'+obj_commissions[x]['date']+'"</td>';
                         texto = texto+'<td>"'+obj_commissions[x]['bonus']+'"</td>';
                         texto = texto+'<td>"'+obj_commissions[x]['amount']+'"</td>';
-                        if(obj_commissions[x]['status_value'] == 1){
+                        if(obj_commissions[x]['status_value'] == 1 || obj_commissions[x]['status_value'] == 2){
                         texto = texto+'<td><span class="label label-success">Procesado</span></td>';
                         }else{
                         texto = texto+'<td><span class="label label-warning">En espera por procesar</span></td>';

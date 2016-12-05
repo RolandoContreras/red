@@ -4,11 +4,12 @@ class B_home extends CI_Controller {
      function __construct() {
         parent::__construct();
         $this->load->model("customer_model","obj_customer");
+        $this->load->model("commissions_model","obj_commissions");
     }
 
     public function index()
     {
-//      GET SESION ACTUALY
+        //GET SESION ACTUALY
         $this->get_session();
         /// VISTA
         $customer_id = $_SESSION['customer']['customer_id'];
@@ -29,10 +30,22 @@ class B_home extends CI_Controller {
                          "where" => "customer.customer_id = $customer_id",
                          "join" => array('franchise, customer.franchise_id = franchise.franchise_id',)
                                         );
+           $obj_customer = $this->obj_customer->get_search_row($params);
+           
+           //GET TOTAL AMOUNT
+                $params = array(
+                        "select" =>"sum(amount) as total,
+                                    (select sum(amount) FROM commissions WHERE status_value = 2) as balance",
+                         "where" => "commissions.customer_id = $customer_id",
+                    );
+                
+           $obj_commissions = $this->obj_commissions->get_search_row($params);              
         
+           $obj_total = $obj_commissions->total;
+           $obj_balance = $obj_commissions->balance;
         
-        
-        $obj_customer = $this->obj_customer->get_search_row($params);
+        $this->tmp_backoffice->set("obj_total",$obj_total);
+        $this->tmp_backoffice->set("obj_balance",$obj_balance);
         $this->tmp_backoffice->set("obj_customer",$obj_customer);
         $this->tmp_backoffice->render("backoffice/b_home");
     }
