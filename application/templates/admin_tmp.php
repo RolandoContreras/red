@@ -104,6 +104,22 @@
                                         </div>
                                     </div>
                             </div>
+                        
+                            <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#pagos">
+                                        Pagos Diarios
+                                        </a>
+                                    </div>
+                                    <div id="pagos" class="accordion-body collapse">
+                                      <div class="accordion-inner">
+                                        <ul class="nav nav-list">
+                                             <li><a href="<?php echo site_url()."dashboard/pagos_diarios";?>"><i class="icon-large icon-th"></i>Pagos Diarios</a></li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                            </div>
+                        
     
                             <div class="accordion-group">
                                     <div class="accordion-heading">

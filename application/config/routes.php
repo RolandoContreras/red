@@ -97,6 +97,9 @@ $route['dashboard/recargas/validate'] = "d_recargas/validate";
 
 $route['dashboard/activaciones'] = "d_activate";
 
+$route['dashboard/pagos_diarios'] = "d_pay_dialy";
+$route['dashboard/pagos_diarios/hacer_pago'] = "d_pay_dialy/hacer_pago";
+
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
