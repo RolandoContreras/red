@@ -52,6 +52,7 @@ class B_binario extends CI_Controller {
                                         customer.dni,
                                         customer.birth_date,
                                         customer.address,
+                                        customer.identificador,
                                         customer.city,
                                         customer.active,
                                         customer.status_value,
@@ -64,32 +65,58 @@ class B_binario extends CI_Controller {
                                             );
              $obj_customer = $this->obj_customer->get_search_row($params);  
              
-//             var_dump($obj_customer);
-//             die();
+             $identificator = $obj_customer->identificador;
+             $explode_identificator = explode(",", $identificator);
+             $count_explode = count($explode_identificator);
              
-             //GET DATE CREATED
+ 
+             
+           //GET DATE CREATED
              $creacion = $obj_customer->created_at;
-             
-            //SELECT ALL CUSTOMER IN THE TREE    
-            $param_tree = array(
-                        "select" =>"customer.customer_id,
-                                    customer.first_name,
-                                    customer.last_name,
-                                    customer.parents_id,
-                                    customer.username,
-                                    customer.created_at,
-                                    customer.country,
-                                    customer.active,
-                                    franchise.name as franchise,
-                                    customer.position",
-                         "where" => "customer.status_value = 1 and customer.created_at > '$creacion'",
-                        "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
-                         "order" => "created_at ASC"
-                        ); 
-            $obj_tree = $this->obj_customer->search($param_tree);
-            
-//            var_dump($obj_tree);
-//            die();
+
+            if($customer_id == 1 ){
+                
+                            //SELECT ALL CUSTOMER IN THE TREE    
+                        $param_tree = array(
+                                "select" =>"customer.customer_id,
+                                            customer.first_name,
+                                            customer.last_name,
+                                            customer.parents_id,
+                                            customer.username,
+                                            customer.username,
+                                            customer.created_at,
+                                            customer.identificador,
+                                            customer.country,
+                                            customer.active,
+                                            franchise.name as franchise,
+                                            customer.position",
+                                 "where" => "customer.status_value = 1 and customer.created_at > '$creacion'",
+                                "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
+                                 "order" => "created_at ASC",
+                            "limit" => "25");
+                
+                    $obj_tree = $this->obj_customer->search($param_tree); 
+                    
+            }else{
+                
+                    //SELECT ALL CUSTOMER IN THE TREE  
+                    $param_tree = array(
+                                "select" =>"customer.customer_id,
+                                            customer.first_name,
+                                            customer.last_name,
+                                            customer.parents_id,
+                                            customer.username,
+                                            customer.created_at,
+                                            customer.country,
+                                            customer.active,
+                                            customer.identificador,
+                                            franchise.name as franchise,
+                                            customer.position",
+                                 "where" => "customer.created_at > '$creacion' and customer.status_value = 1 and customer.identificador like '%$identificator%'",
+                                 "join" => array('franchise, customer.franchise_id = franchise.franchise_id')
+                                ); 
+                    $obj_tree = $this->obj_customer->search($param_tree); 
+            }
             
             
             $n2_iz = "";

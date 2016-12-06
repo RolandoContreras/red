@@ -53,8 +53,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 $route['acerca'] = "about_us";
 
-$route['registro'] = "registro";
-$route['registro/afiliate/([0-9a-z_-]+)'] = "registro/index/$1";
+//$route['registro'] = "registro";
+//$route['registro/afiliate/([0-9a-z_-]+)'] = "registro/index/$1";
+
+$route['registro'] = "home";
+$route['registro/afiliate/([0-9a-z_-]+)'] = "home/index/$1";
+
 
 $route['contacto'] = "contact";
 $route['backoffice'] = "b_home";
