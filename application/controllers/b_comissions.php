@@ -84,12 +84,7 @@ class b_comissions extends CI_Controller {
                 echo json_encode($data);            
         exit();
             }
-            
-            
-        
-        
-        
-      
+       
         if(count($region) > 0){
             
         }else{

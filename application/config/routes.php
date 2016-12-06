@@ -73,6 +73,9 @@ $route['backoffice/comisiones/concepto'] = "b_comissions/consultar";
 
 $route['backoffice/billetera'] = "b_wallet";
 
+$route['backoffice/pagos'] = "b_pay";
+$route['backoffice/pagos/validar'] = "b_pay/validate";
+
 $route['dashboard'] = "dashboard";
 $route['dashboard/panel'] = "panel";
 

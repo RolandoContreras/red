@@ -253,9 +253,7 @@
                                             </div>
                                         </div>
                                     </li>
-	                  		<!-- END user info-->
-	                  		<!-- Iterates over all sidebar items-->
-                                    
+                		<!-- END user info-->
                                     <?php 
                                     $url = explode("/",uri_string()); 
                                     $style_inicio = "";
@@ -263,6 +261,7 @@
                                     $style_comisiones = "";
                                     $style_mired = "";
                                     $style_billetera = "";
+                                    $style_pagos = "";
                                     if(isset($url[1])){
                                         switch ($url[1]) {
                                             ////////
@@ -284,15 +283,15 @@
                                                     case "billetera":
                                                         $style_billetera = "active";
                                                         break;
+                                                    case "pagos":
+                                                        $style_pagos = "active";
+                                                        break;
                                                     default:
                                                          $title = "Inicio";
-
                                             }
                                     }else{
                                         $style_inicio = "active";
-                                    }
-                                    
-                                    ?>    
+                                    }?>    
                                     <li class="nav-heading">
                                         <span>Menu de Navegación</span>
                                     </li>
@@ -384,9 +383,8 @@
                                                 <span>Mi Billetera</span>
                                             </a>
 	                  		</li>
-
-	                  		<li class="">
-			                    <a href="#" title="Solicitudes" data-toggle="collapse">
+	                  		<li class="<?php echo $style_pagos;?>">
+			                    <a href="<?php echo site_url().'backoffice/pagos';?>" title="Pagos">
 			                        <em class="icon-note"></em>
 			                        <span>Solicitar Pago</span>
 			                    </a>

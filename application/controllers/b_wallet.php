@@ -59,7 +59,9 @@ class B_wallet extends CI_Controller {
            $mandatory_account = $obj_data->mandatory_account;
            $normal_account = $obj_data->normal_account;
            $obj_balance = $obj_data->balance;
+           $obj_balance_disponible = $obj_data->balance - $mandatory_account;
            
+        $this->tmp_backoffice->set("obj_balance_disponible",$obj_balance_disponible); 
         $this->tmp_backoffice->set("obj_balance",$obj_balance);   
         $this->tmp_backoffice->set("normal_account",$normal_account);
         $this->tmp_backoffice->set("mandatory_account",$mandatory_account);

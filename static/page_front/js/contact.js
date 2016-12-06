@@ -1,6 +1,8 @@
 function send_messages(){
     
-    name = $("#name").val();      
+    name = $("#name").val();    
+    
+    var red = document.getElementById("red").value;
     email = $("#email").val();     
     message = $("#message").val();
     

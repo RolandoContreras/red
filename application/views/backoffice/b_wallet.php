@@ -1,9 +1,3 @@
-<?php 
-//var_dump($obj_commissions);
-//die();
-
-?> 
-
 <!-- Main section-->
       <section>
          <!-- Page content-->
@@ -29,11 +23,27 @@
                         </div>
                         <div class="col-xs-8 pv-lg">
                             <div class="h2 mt0"><?php if(count($obj_balance)>0){echo "$".$obj_balance;}else{echo "$0.00";}?></div>
-                           <div class="text-uppercase">Balance por cobrar</div>
+                           <div class="text-uppercase">Balance total</div>
                         </div>
                      </div>
                   </div>
                </div>
+                
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                  <!-- START widget-->
+                  <div class="panel widget bg-purple">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-purple-dark pv-lg">
+                           <em class="icon-wallet fa-3x"></em>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                            <div class="h2 mt0"><?php if(count($obj_balance_disponible)>0){echo "$".$obj_balance_disponible;}else{echo "$0.00";}?></div>
+                            <input type="hidden" id="balance" name="balance" value="<?php if(count($obj_balance_disponible)>0){echo $obj_balance_disponible;}else{echo "0.00";}?>" />
+                           <div class="text-uppercase">Balance total disponible</div>
+                        </div>
+                     </div>
+                  </div>
+               </div> 
                  
                  <div class="col-lg-3 col-md-6 col-sm-12">
                   <!-- START widget-->

@@ -38,7 +38,7 @@
                         </div>
                         <div class="col-xs-8 pv-lg">
                            <div class="h2 mt0"><?php if(count($obj_balance)>0){echo "$".$obj_balance;}else{echo "$0.00";}?></div>
-                           <div class="text-uppercase">Balance por cobrar</div>
+                           <div class="text-uppercase">Balance por disponer</div>
                         </div>
                      </div>
                   </div>
