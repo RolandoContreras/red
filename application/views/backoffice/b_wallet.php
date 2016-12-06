@@ -109,7 +109,7 @@
                                                    if($value->status_value == 1 || $value->status_value == 2){ ?>
                                                        <span class="label label-success">Pagado</span>
                                                    <?php }else{ ?>
-                                                       <span class="label label-danger">Salida</span>
+                                                       <span class="label label-danger">Salida a billetera externa</span>
                                                    <?php } ?>
                                            </td>
                                           <td>Concepto &nbsp;<?php echo $value->bonus;?></td>  

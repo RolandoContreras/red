@@ -78,6 +78,16 @@ class B_pay extends CI_Controller {
             $customer_id = $_SESSION['customer']['customer_id'];
             
             //1 RED
+         
+            $params_total = array(
+                        "select" =>"sum(mandatory_account) as mandatory_account,      
+                                    sum(amount) as total",
+                         "where" => "commissions.customer_id = $customer_id and status_value = 2",
+                    );
+           $obj_commission_total = $this->obj_commissions->get_search_row($params_total);
+           $obj_total_validate = $obj_commission_total->total - $obj_commission_total->mandatory_account;
+            
+         if($obj_total_validate >= 25){
             if($monto == 1){
                 //GET TOTAL AMOUNT
                 $params = array(
@@ -244,6 +254,7 @@ class B_pay extends CI_Controller {
                     
             }
         }
+      } 
     }
 
         public function get_session(){          
