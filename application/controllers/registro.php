@@ -23,7 +23,7 @@ class Registro extends CI_Controller {
         }
             //Select params
             $params = array(
-                            "select" =>"id, nombre, ",
+                            "select" =>"id, nombre",
                             "where" => "id_idioma = 7");
             $obj_paises['obj_paises'] = $this->obj_paises->search($params);
             /// VIEW
@@ -35,12 +35,33 @@ class Registro extends CI_Controller {
             $customer_id = trim($this->input->post('customer_id'));
             $pierna_customer = trim($this->input->post('pierna_customer'));
             
-            if($customer_id != "" and $pierna_customer != ""){
+            //IF CUSTOMER_ID NO ES 1
+            if($customer_id != 1){
                 $parend_id = $customer_id;
                 $position = $pierna_customer;
+                
+                //SELECT IDENTIFICATOR BY CUSTOMER_ID
+                $params = array("select" =>"identificador",
+                                "where" => "customer_id = $customer_id");
+                $obj_dentificator = $this->obj_customer->get_search_row($params);
+                $identificator_param = $obj_dentificator->identificador;
+                $explo_idente =  explode(",", $identificator_param);
+                
+                
+                //IF POSITION ES IZQUIERDA SE ARMA EL IDENTIFICADOR
+                if($position == 1){
+                   $ultimo = $explo_idente[0] + 1; 
+                   $identificator = $ultimo."z,".$identificator_param;
+                }elseif($position == 2){
+                   $ultimo = $explo_idente[0] + 1; 
+                   $identificator = $ultimo."d,".$identificator_param; 
+                }
+                
             }else{
+                //IDENTIFICATOR POR DEFOULT
                 $parend_id = "1";
                 $position = "1";
+                $identificator = "2z,1z";
             }
             
             $this->form_validation->set_rules('usuario','usuario',"required|trim");
@@ -84,6 +105,7 @@ class Registro extends CI_Controller {
                'username' => $usuario,
                'email' => $email,
                'position' => $position,
+               'identificador' => $identificator,
                'position_temporal' => 1,  
                'password' => $clave,  
                'first_name' => $name,
