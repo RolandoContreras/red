@@ -47,6 +47,7 @@ class D_pay_dialy extends CI_Controller{
                 $params = array(
                         "select" =>"customer.customer_id,
                                     customer.first_name,
+                                    customer.username,
                                     customer.date_start,
                                     customer.date_end,
                                     customer.last_name,
@@ -60,16 +61,16 @@ class D_pay_dialy extends CI_Controller{
                 foreach ($obj_customer as $value) {
                     if($value->date_end >= $today){
                         switch ($value->franchise_id) {
-                            case 1:
+                            case 2:
                                 $amount= 1.86;
                                 break;
-                            case 2:
+                            case 3:
                                 $amount= 5.00;
                                 break;
-                            case 3:
+                            case 4:
                                 $amount= 10.60;
                                 break;
-                            case 4:
+                            case 5:
                                 $amount= 22.60;
                                 break;
                         }

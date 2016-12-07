@@ -19,12 +19,12 @@ class D_activate extends CI_Controller{
                                     customer.username,
                                     customer.first_name,
                                     customer.last_name,
-                                    customer.last_name,
+                                    customer.active,
                                     customer.created_at,
                                     franchise.name as franchise,
                                     customer.status_value",
                         "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
-                        "where" => "customer.franchise_id = 6 and customer.status_value = 1"
+                        "where" => "customer.status_value = 1"
                );
            //GET DATA FROM CUSTOMER
            $obj_customer= $this->obj_customer->search($params);
@@ -76,89 +76,20 @@ class D_activate extends CI_Controller{
     public function active_customer(){
         //ACTIVE CUSTOMER
         if($this->input->is_ajax_request()){  
-            
+                //SELECT CUSTOMER_ID
                 $customer_id = $this->input->post("customer_id");
+//                $today = date("Y-m-d");
+//                $today_76 = strtotime ( '+76 day' , strtotime ( $today ) ) ;
+                
+                $today = date('Y-m-j');
+                $today_76 = strtotime ( '+76 day' , strtotime ( $today ) ) ;
+                $today_76 = date ( 'Y-m-j' , $today_76 );
+                
                 if(count($customer_id) > 0){
                     $data = array(
-                        'calification' => 1,
-                        'updated_at' => date("Y-m-d H:i:s"),
-                        'updated_by' => $_SESSION['usercms']['user_id'],
-                    ); 
-                    $this->obj_customer->update($customer_id,$data);
-                }
-                echo json_encode($data);            
-        exit();
-            }
-    }
-    
-    public function load($obj_customer=NULL){
-        //VERIFY IF ISSET CUSTOMER_ID
-        if ($obj_customer != ""){
-            /// PARAMETROS PARA EL SELECT 
-            $where = "customer.customer_id = $obj_customer";
-            $params = array(
-                        "select" =>"customer.username,
-                                    customer.email,
-                                    customer.customer_id,
-                                    customer.position,
-                                    customer.password,
-                                    customer.first_name,
-                                    customer.last_name,
-                                    customer.dni,
-                                    customer.birth_date,
-                                    customer.address,
-                                    customer.city,
-                                    customer.phone,
-                                    customer.btc_address,
-                                    customer.status_value,
-                                    customer.calification,
-                                    customer.country,
-                                    customer.region,
-                                    customer.franchise_id",
-                         "where" => $where,
-            ); 
-            $obj_customer  = $this->obj_customer->get_search_row($params); 
-            //RENDER
-            $this->tmp_mastercms->set("obj_customer",$obj_customer);
-          }
-          
-            //SELECT PAISES
-            $params = array("select" => "",
-                            "where" => "id_idioma = 7");
-            $obj_paises  = $this->obj_paises->search($params);   
-            //RENDER TO VIEW
-            $this->tmp_mastercms->set("obj_paises",$obj_paises);
-            
-            //SELECT REGIONES
-            $params = array("select" => "",
-                            "where" => "id_idioma = 7");
-            $obj_regiones  = $this->obj_regiones->search($params);   
-            //RENDER TO VIEW
-            $this->tmp_mastercms->set("obj_regiones",$obj_regiones); 
-            
-            //SELECT PAQUETES
-            $params = array("select" => "");
-            $obj_franchise  = $this->obj_franchise->search($params);   
-            //RENDER TO VIEW
-            $this->tmp_mastercms->set("obj_franchise",$obj_franchise); 
-            
-            $modulos ='clientes'; 
-            $seccion = 'Formulario';        
-            $link_modulo =  site_url().'dashboard/'.$modulos; 
-
-            $this->tmp_mastercms->set('link_modulo',$link_modulo);
-            $this->tmp_mastercms->set('modulos',$modulos);
-            $this->tmp_mastercms->set('seccion',$seccion);
-            $this->tmp_mastercms->render("dashboard/customer/customer_form");    
-    }
-    
-    public function no_active_customer(){
-            //NO ACTIVE CUSTOMER
-        if($this->input->is_ajax_request()){   
-            $customer_id = $this->input->post("customer_id");
-                if(count($customer_id) > 0){
-                    $data = array(
-                        'calification' => 0,
+                        'active' => 1,
+                        'date_start' => $today,
+                        'date_end' => $today_76,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 

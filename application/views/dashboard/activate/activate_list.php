@@ -39,11 +39,11 @@
                                 <td align="center"><?php echo $value->franchise;?></td>
                                 <td align="center"><?php echo formato_fecha($value->created_at);?></td>
                                 <td align="center">
-                                    <?php if ($value->status_value == 0) {
-                                        $valor = "Activo";
+                                    <?php if ($value->active == 0) {
+                                        $valor = "Inactivo";
                                         $stilo = "label label-important";
                                     }else{
-                                        $valor = "Inactivo";
+                                        $valor = "Activo";
                                         $stilo = "label label-success";
                                     } ?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor;?></span>
@@ -52,7 +52,9 @@
                                 <td>
                                     <div class="operation">
                                         <div class="btn-group">
-                                                    <button class="btn btn-small" onclick="active('<?php echo $value->customer_id;?>');">Activar Paquete</button>
+                                                    <button class="btn btn-small" onclick="active_financiada('<?php echo $value->customer_id;?>');">Activar Financiada</button>
+                                                    
+                                                    <button class="btn btn-small" onclick="active('<?php echo $value->customer_id;?>');">Activar</button>
                                         </div>
                                     </div>
                                 </td>
@@ -73,4 +75,4 @@
     } );
 } );
 </script>
-<script src="static/cms/js/customer.js"></script>
+<script src="static/cms/js/active.js"></script>

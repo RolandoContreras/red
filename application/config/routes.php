@@ -105,6 +105,7 @@ $route['dashboard/recargar/buscar_customer'] = "d_recargas/buscar_customer";
 $route['dashboard/recargas/validate'] = "d_recargas/validate";
 
 $route['dashboard/activaciones'] = "d_activate";
+$route['dashboard/activaciones/active_customer'] = "d_activate/active_customer";
 
 $route['dashboard/pagos_diarios'] = "d_pay_dialy";
 $route['dashboard/pagos_diarios/hacer_pago'] = "d_pay_dialy/hacer_pago";
