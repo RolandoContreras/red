@@ -105,6 +105,7 @@ class B_binario extends CI_Controller {
                                             customer.first_name,
                                             customer.last_name,
                                             customer.parents_id,
+                                            customer.calification,
                                             customer.username,
                                             customer.created_at,
                                             customer.country,
@@ -117,6 +118,9 @@ class B_binario extends CI_Controller {
                                 ); 
                     $obj_tree = $this->obj_customer->search($param_tree); 
             }
+//            var_dump($obj_customer);
+//            var_dump($obj_tree);
+//            die();
             
             
             $n2_iz = "";
@@ -142,6 +146,7 @@ class B_binario extends CI_Controller {
                         $obj_customer->position,
                         $obj_customer->pais,
                         $obj_customer->username,
+                        $obj_customer->identificador,
                         $obj_customer->franchise,
                         $obj_customer->active
                         );
@@ -458,11 +463,12 @@ class B_binario extends CI_Controller {
                             }
                         }
                 }else{
-                   if($value->parents_id == $parents_id_1){
-                         if($n1[4] == $value->position){
-                             if($value->position == 1){
-                                if($n2_iz == ""){
-                                    $n2_iz = array($value->first_name,
+                    //NO ES NINGUN PADRE
+                    if($value->position ==1){
+                        //SI ES POSICION 1
+                        if(strpos($value->identificador, "$n1[8]") !== false){
+                            if($n2_iz == ""){
+                                $n2_iz = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
                                                $value->created_at,
@@ -472,9 +478,9 @@ class B_binario extends CI_Controller {
                                                $value->active,
                                                $value->franchise,
                                                $value->country);
-                                    $this->tmp_backoffice->set("n2_iz",$n2_iz);
-                                }elseif($n3_iz == ""){
-                                    $n3_iz = array($value->first_name,
+                                $this->tmp_backoffice->set("n2_iz",$n2_iz); 
+                            }elseif($n3_iz == ""){
+                                $n3_iz = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
                                                $value->created_at,
@@ -484,10 +490,10 @@ class B_binario extends CI_Controller {
                                                $value->active,
                                                $value->franchise,
                                                $value->country);
-                                    $this->tmp_backoffice->set("n3_iz",$n3_iz);
-                                }
-                                elseif($n4_iz == ""){
-                                    $n4_iz = array($value->first_name,
+                                $this->tmp_backoffice->set("n3_iz",$n3_iz); 
+                            }
+                            elseif($n4_iz == ""){
+                                $n4_iz = array($value->first_name,
                                                $value->last_name,
                                                $value->customer_id,
                                                $value->created_at,
@@ -497,87 +503,179 @@ class B_binario extends CI_Controller {
                                                $value->active,
                                                $value->franchise,
                                                $value->country);
-                                    $this->tmp_backoffice->set("n4_iz",$n4_iz);
-                                }elseif($n3_2_de == ""){
-                                    $n3_2_de = array($value->first_name,
-                                               $value->last_name,
-                                               $value->customer_id,
-                                               $value->created_at,
-                                               $value->parents_id,
-                                               $value->position,
-                                               $value->username,
-                                               $value->active,
-                                               $value->franchise,
-                                               $value->country);
-                                    $this->tmp_backoffice->set("n3_2_de",$n3_2_de);
-                                }elseif($n4_2_de == ""){
-                                    $n4_2_de = array($value->first_name,
-                                               $value->last_name,
-                                               $value->customer_id,
-                                               $value->created_at,
-                                               $value->parents_id,
-                                               $value->position,
-                                               $value->username,
-                                               $value->active,
-                                               $value->franchise,
-                                               $value->country);
-                                    $this->tmp_backoffice->set("n4_2_de",$n4_2_de);
-                                }elseif($n4_4_de == ""){
-                                    
-                                    $n4_2_de = array($value->first_name,
-                                               $value->last_name,
-                                               $value->customer_id,
-                                               $value->created_at,
-                                               $value->parents_id,
-                                               $value->position,
-                                               $value->username,
-                                               $value->active,
-                                               $value->franchise,
-                                               $value->country);
-                                    $this->tmp_backoffice->set("n4_2_de",$n4_2_de);
-                                }
-                            }else{
-                                if($n2_de == ""){
-                                    $n2_de = array($value->first_name,
-                                               $value->last_name,
-                                               $value->customer_id,
-                                               $value->created_at,
-                                               $value->parents_id,
-                                               $value->position,
-                                               $value->username,
-                                               $value->active,
-                                               $value->franchise,
-                                               $value->country);
-                                    $this->tmp_backoffice->set("n2_de",$n2_de);
-                                }elseif($n3_de == ""){
-                                    $n3_de = array($value->first_name,
-                                               $value->last_name,
-                                               $value->customer_id,
-                                               $value->created_at,
-                                               $value->parents_id,
-                                               $value->position,
-                                               $value->username,
-                                               $value->active,
-                                               $value->franchise,
-                                               $value->country);
-                                    $this->tmp_backoffice->set("n3_de",$n3_de);
-                                    
-                                }elseif($n4_de == ""){
-                                    $n4_de = array($value->first_name,
-                                               $value->last_name,
-                                               $value->customer_id,
-                                               $value->created_at,
-                                               $value->parents_id,
-                                               $value->position,
-                                               $value->username,
-                                               $value->active,
-                                               $value->franchise,
-                                               $value->country);
-                                    $this->tmp_backoffice->set("n4_de",$n4_de);
-                                }
+                                $this->tmp_backoffice->set("n4_iz",$n4_iz); 
                             }
                         }
-                }
+                    }else{
+                        //POSITION 2
+                        if(strpos($value->identificador, "$n1[8]") !== false){
+                            if($n2_de == ""){
+                                $n2_de = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country);
+                                $this->tmp_backoffice->set("n2_de",$n2_de); 
+                            }elseif($n3_de == ""){
+                                $n3_de = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country);
+                                $this->tmp_backoffice->set("n3_de",$n3_de); 
+                            }
+                            elseif($n4_de == ""){
+                                $n4_de = array($value->first_name,
+                                               $value->last_name,
+                                               $value->customer_id,
+                                               $value->created_at,
+                                               $value->parents_id,
+                                               $value->position,
+                                               $value->username,
+                                               $value->active,
+                                               $value->franchise,
+                                               $value->country);
+                                $this->tmp_backoffice->set("n4_de",$n4_de); 
+                            }
+                        }
+                    }
+                    
+                    
+                        
+                    
+                    
+                    
+                    
+//                   if($value->parents_id == $parents_id_1){
+//                         if($n1[4] == $value->position){
+//                             if($value->position == 1){
+//                                if($n2_iz == ""){
+//                                    $n2_iz = array($value->first_name,
+//                                               $value->last_name,
+//                                               $value->customer_id,
+//                                               $value->created_at,
+//                                               $value->parents_id,
+//                                               $value->position,
+//                                               $value->username,
+//                                               $value->active,
+//                                               $value->franchise,
+//                                               $value->country);
+//                                    $this->tmp_backoffice->set("n2_iz",$n2_iz);
+//                                }elseif($n3_iz == ""){
+//                                    $n3_iz = array($value->first_name,
+//                                               $value->last_name,
+//                                               $value->customer_id,
+//                                               $value->created_at,
+//                                               $value->parents_id,
+//                                               $value->position,
+//                                               $value->username,
+//                                               $value->active,
+//                                               $value->franchise,
+//                                               $value->country);
+//                                    $this->tmp_backoffice->set("n3_iz",$n3_iz);
+//                                }
+//                                elseif($n4_iz == ""){
+//                                    $n4_iz = array($value->first_name,
+//                                               $value->last_name,
+//                                               $value->customer_id,
+//                                               $value->created_at,
+//                                               $value->parents_id,
+//                                               $value->position,
+//                                               $value->username,
+//                                               $value->active,
+//                                               $value->franchise,
+//                                               $value->country);
+//                                    $this->tmp_backoffice->set("n4_iz",$n4_iz);
+//                                }elseif($n3_2_de == ""){
+//                                    $n3_2_de = array($value->first_name,
+//                                               $value->last_name,
+//                                               $value->customer_id,
+//                                               $value->created_at,
+//                                               $value->parents_id,
+//                                               $value->position,
+//                                               $value->username,
+//                                               $value->active,
+//                                               $value->franchise,
+//                                               $value->country);
+//                                    $this->tmp_backoffice->set("n3_2_de",$n3_2_de);
+//                                }elseif($n4_2_de == ""){
+//                                    $n4_2_de = array($value->first_name,
+//                                               $value->last_name,
+//                                               $value->customer_id,
+//                                               $value->created_at,
+//                                               $value->parents_id,
+//                                               $value->position,
+//                                               $value->username,
+//                                               $value->active,
+//                                               $value->franchise,
+//                                               $value->country);
+//                                    $this->tmp_backoffice->set("n4_2_de",$n4_2_de);
+//                                }elseif($n4_4_de == ""){
+//                                    
+//                                    $n4_2_de = array($value->first_name,
+//                                               $value->last_name,
+//                                               $value->customer_id,
+//                                               $value->created_at,
+//                                               $value->parents_id,
+//                                               $value->position,
+//                                               $value->username,
+//                                               $value->active,
+//                                               $value->franchise,
+//                                               $value->country);
+//                                    $this->tmp_backoffice->set("n4_2_de",$n4_2_de);
+//                                }
+//                            }else{
+//                                if($n2_de == ""){
+//                                    $n2_de = array($value->first_name,
+//                                               $value->last_name,
+//                                               $value->customer_id,
+//                                               $value->created_at,
+//                                               $value->parents_id,
+//                                               $value->position,
+//                                               $value->username,
+//                                               $value->active,
+//                                               $value->franchise,
+//                                               $value->country);
+//                                    $this->tmp_backoffice->set("n2_de",$n2_de);
+//                                }elseif($n3_de == ""){
+//                                    $n3_de = array($value->first_name,
+//                                               $value->last_name,
+//                                               $value->customer_id,
+//                                               $value->created_at,
+//                                               $value->parents_id,
+//                                               $value->position,
+//                                               $value->username,
+//                                               $value->active,
+//                                               $value->franchise,
+//                                               $value->country);
+//                                    $this->tmp_backoffice->set("n3_de",$n3_de);
+//                                    
+//                                }elseif($n4_de == ""){
+//                                    $n4_de = array($value->first_name,
+//                                               $value->last_name,
+//                                               $value->customer_id,
+//                                               $value->created_at,
+//                                               $value->parents_id,
+//                                               $value->position,
+//                                               $value->username,
+//                                               $value->active,
+//                                               $value->franchise,
+//                                               $value->country);
+//                                    $this->tmp_backoffice->set("n4_de",$n4_de);
+//                                }
+//                            }
+//                        }
+//                }
             }
         }
 

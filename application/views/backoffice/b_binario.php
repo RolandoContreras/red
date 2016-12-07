@@ -1,3 +1,65 @@
+<?php 
+//SI EL 4 ES MAS ANTIGUO TOMA POSICION DE 3
+//if($n4_iz[3] < $n3_iz[3]) {
+//    //3Z PASA A TOMAR LOS VALORES DE 4Z
+//     $comodin = array($n3_iz[0],$n3_iz[1],$n3_iz[2],$n3_iz[3],$n3_iz[4],$n3_iz[5],$n3_iz[6],$n3_iz[7],$n3_iz[8],$n3_iz[9]);
+//     
+//    $n3_iz[0] = $n4_iz[0]; 
+//    $n3_iz[1] = $n4_iz[1]; 
+//    $n3_iz[2] = $n4_iz[2]; 
+//    $n3_iz[3] = $n4_iz[3]; 
+//    $n3_iz[4] = $n4_iz[4]; 
+//    $n3_iz[5] = $n4_iz[5]; 
+//    $n3_iz[6] = $n4_iz[6]; 
+//    $n3_iz[7] = $n4_iz[7]; 
+//    $n3_iz[8] = $n4_iz[8]; 
+//    $n3_iz[9] = $n4_iz[9]; 
+//    
+//    
+//    //3Z PASA A TOMAR LOS VALORES DE 4Z
+//    $n4_iz[0] = $comodin[0];
+//    $n4_iz[1] = $comodin[1]; 
+//    $n4_iz[2] = $comodin[2]; 
+//    $n4_iz[3] = $comodin[3]; 
+//    $n4_iz[4] = $comodin[4]; 
+//    $n4_iz[5] = $comodin[5]; 
+//    $n4_iz[6] = $comodin[6]; 
+//    $n4_iz[7] = $comodin[7]; 
+//    $n4_iz[8] = $comodin[8]; 
+//    $n4_iz[9] = $comodin[9];
+//}
+//elseif($n3_iz[3] < $n2_iz[2]){
+//    $comodin = array(v[0],$n2_iz[1],$n2_iz[2],$n2_iz[3],$n2_iz[4],$n2_iz[5],$n2_iz[6],$n2_iz[7],v[8],$n2_iz[9]);
+//    $n2_iz[0] = $n3_iz[0]; 
+//    $n2_iz[1] = $n3_iz[1]; 
+//    $n2_iz[2] = $n3_iz[2]; 
+//    $n2_iz[3] = $n3_iz[3]; 
+//    $n2_iz[4] = $n3_iz[4]; 
+//    $n2_iz[5] = $n3_iz[5]; 
+//    $n2_iz[6] = $n3_iz[6]; 
+//    $n2_iz[7] = $n3_iz[7]; 
+//    $n2_iz[8] = $n3_iz[8]; 
+//    $n2_iz[9] = $n3_iz[9]; 
+//    
+//    
+//    //3Z PASA A TOMAR LOS VALORES DE 4Z
+//    $n3_iz[0] = $comodin[0];
+//    $n3_iz[1] = $comodin[1]; 
+//    $n3_iz[2] = $comodin[2]; 
+//    $n3_iz[3] = $comodin[3]; 
+//    $n3_iz[4] = $comodin[4]; 
+//    $n3_iz[5] = $comodin[5]; 
+//    $n3_iz[6] = $comodin[6]; 
+//    $n3_iz[7] = $comodin[7]; 
+//    $n3_iz[8] = $comodin[8]; 
+//    $n3_iz[9] = $comodin[9];
+//}
+
+//var_dump($n3_iz);
+//die();
+
+?>
+
 <section>
     <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
  <!-- Page content-->
