@@ -21,10 +21,13 @@ class B_home extends CI_Controller {
                                     customer.password,
                                     customer.first_name,
                                     customer.last_name,
+                                    customer.active,
                                     customer.dni,
                                     customer.birth_date,
                                     customer.address,
                                     customer.status_value,
+                                    customer.franchise_id,
+                                    franchise.price,
                                     franchise.name as franchise,
                                     ",
                          "where" => "customer.customer_id = $customer_id",
@@ -49,7 +52,67 @@ class B_home extends CI_Controller {
         $this->tmp_backoffice->set("obj_customer",$obj_customer);
         $this->tmp_backoffice->render("backoffice/b_home");
     }
+    
+    public function make_pedido(){
 
+             if($this->input->is_ajax_request()){   
+                //SELECT ID FROM CUSTOMER
+               $kit = $this->input->post('kit');
+               $customer_id = $_SESSION['customer']['customer_id'];;
+               
+               if($kit != "" && $customer_id != ""){
+                            //UPDATE DATA EN CUSTOMER TABLE
+                            if($kit == 2){
+                                //CHANGE TO BASIC
+                                 $data = array(
+                                            
+                                            'franchise_id' => 2,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
+                            }elseif($kit == 3){
+                                //CHANGE TO PLATINIUM
+                                 $data = array(
+                                            
+                                            'franchise_id' => 3,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
+                            }elseif($kit == 4){
+                                //CHANGE TO GOLD
+                                 $data = array(
+                                            
+                                            'franchise_id' => 4,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
+                            }elseif($kit == 5){
+                                //CHANGE TO VIP
+                                 $data = array(
+                                            
+                                            'franchise_id' => 5,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
+                            }
+
+                                $data['message'] = "true";
+                                $data['print'] = "La contraseña de cambio con exito";
+                                $data['url'] = "misdatos";
+                             echo json_encode($data); 
+                    
+               }else{
+                     $data['message'] = "false";
+                     $data['print'] = "Las contraseñas no deben estan en blanco";
+                     $data['url'] = "misdatos";
+                     echo json_encode($data); 
+               }
+            }
+        }
     
     public function get_session(){          
         if (isset($_SESSION['customer'])){
