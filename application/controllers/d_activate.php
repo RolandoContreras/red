@@ -9,6 +9,7 @@ class D_activate extends CI_Controller{
         $this->load->model("paises_model","obj_paises");
         $this->load->model("regiones_model","obj_regiones");
         $this->load->model("franchise_model","obj_franchise");
+        $this->load->model("bonus_model","obj_bonus");
     }   
                 
     public function index(){  
@@ -21,7 +22,9 @@ class D_activate extends CI_Controller{
                                     customer.first_name,
                                     customer.last_name,
                                     customer.active,
+                                    customer.parents_id,
                                     customer.created_at,
+                                    franchise.price as price,
                                     franchise.name as franchise,
                                     customer.status_value",
                         "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
@@ -125,6 +128,132 @@ class D_activate extends CI_Controller{
         exit();
             }
     }
+    
+    public function active(){
+        //ACTIVE CUSTOMER
+        if($this->input->is_ajax_request()){  
+                //SELECT CUSTOMER_ID
+                $customer_id = $this->input->post("customer_id");
+                $price = $this->input->post("price");
+                $parents_id = $this->input->post("parents_id");
+                
+                //GET BONUS DIRECT
+//                $this->pay_directo($customer_id,$price,$parents_id);
+                
+                //GET BONUS BINARY
+                $this->pay_binario($customer_id);
+                
+                
+                echo json_encode($data);            
+        exit();
+            }
+    }
+    
+    public function pay_directo($customer_id,$price,$parents_id){
+                //GET PERCENT FROM BONUS
+                $params = array(
+                        "select" =>"percent",
+                        "where" => "bonus_id = 1 and status_value = 1"
+               );
+                //GET DATA FROM BONUS
+                $obj_bonus= $this->obj_bonus->get_search_row($params);
+                $percet = $obj_bonus->percent;
+                
+                //CALCULE AMOUNT
+                $amount = ($price  * $percet) / 100;
+                
+                //INSERT COMMISSION TABLE
+                if(count($customer_id) > 0){
+                    $data = array(
+                        'customer_id' => $parents_id,
+                        'bonus_id' => 1,
+                        'name' => "Pago por referido Directo",
+                        'amount' => $amount,
+                        'status_value' => 1,
+                        'date' => date("Y-m-d H:i:s"),
+                        'created_at' => date("Y-m-d H:i:s"),
+                        'created_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_commissions->insert($data);
+                }
+        }
+        
+    public function pay_binario($customer_id){
+            //GET IDENTIFICATOR FROM CUSTOMER
+        
+            $params = array(
+                    "select" =>"identificador,
+                                created_at",
+                    "where" => "customer_id = $customer_id and status_value = 1"
+           );
+            $obj_customer = $this->obj_customer->get_search_row($params); 
+            $identificator = $obj_customer->identificador;
+            $creacion = $obj_customer->created_at;
+            $explo_identificator =  explode(",", $identificator);
+            
+            
+            
+            $str = "";
+            $str_texto = "";
+            foreach ($explo_identificator as $key => $value) {
+                $pos = strpos($identificator, $value);
+                    $encontrar_post = strpos($identificator, $value);
+                    $texto =  substr($identificator, $encontrar_post);
+                    $str .= "or customer.identificador like '$texto%' ";
+                }
+                //ELIMINAR OR DE INICIO
+                $str = substr($str, 3);  
+                
+            if(count($customer_id) > 0){
+                
+                //SELECT TREE
+                $param_tree = array(
+                                    "select" =>"customer.customer_id,
+                                                customer.first_name,
+                                                customer.username,
+                                                customer.created_at,
+                                                customer.last_name,
+                                                customer.parents_id,
+                                                customer.identificador,
+                                                customer.position",
+                                     "where" => "customer.created_at < '$creacion' and customer.status_value = 1 and ($str)",
+                                     "join" => array('franchise, customer.franchise_id = franchise.franchise_id')
+                                    ); 
+                 $obj_tree = $this->obj_customer->search($param_tree); 
+                 
+                 var_dump($obj_tree);
+                 die();
+                 
+                 
+                 
+            }    
+            
+            
+            
+            
+            //GET DATA FROM BONUS
+            $obj_bonus= $this->obj_bonus->get_search_row($params);
+            $percet = $obj_bonus->percent;
+
+            //CALCULE AMOUNT
+            $amount = ($price  * $percet) / 100;
+
+            //INSERT COMMISSION TABLE
+            if(count($customer_id) > 0){
+                $data = array(
+                    'customer_id' => $parents_id,
+                    'bonus_id' => 1,
+                    'name' => "Pago por referido Directo",
+                    'amount' => $amount,
+                    'status_value' => 1,
+                    'date' => date("Y-m-d H:i:s"),
+                    'created_at' => date("Y-m-d H:i:s"),
+                    'created_by' => $_SESSION['usercms']['user_id'],
+                ); 
+                $this->obj_commissions->insert($data);
+            }
+    }
+    
     
     public function get_session(){          
         if (isset($_SESSION['usercms'])){
