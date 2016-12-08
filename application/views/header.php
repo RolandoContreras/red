@@ -40,8 +40,8 @@
                                 <a href="<?php echo site_url().'contacto';?>">Contacto</a>
                             </li>
                             <li>
-                                <a>Login</a>
-                                     <ul class="rd-navbar-megamenu login">
+                                <a href="<?php echo site_url().'login';?>">Login</a>
+<!--                                     <ul class="rd-navbar-megamenu login">
                                          <li class="tittle_li">
                                              <h4 class="tittle_login"><?php echo replace_vocales_voculeshtml("Inicio de Sesión");?></h4>
                                          </li>
@@ -76,7 +76,7 @@
                                                     </div>
                                                 </fieldset>
                                             </form>
-                                    </ul>
+                                    </ul>-->
                             </li>
                         </ul>
                         <!-- END RD Navbar Nav -->

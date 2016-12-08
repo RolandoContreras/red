@@ -5,6 +5,7 @@ class D_activate extends CI_Controller{
     public function __construct(){
         parent::__construct();
         $this->load->model("customer_model","obj_customer");
+        $this->load->model("commissions_model","obj_commissions");
         $this->load->model("paises_model","obj_paises");
         $this->load->model("regiones_model","obj_regiones");
         $this->load->model("franchise_model","obj_franchise");
@@ -78,9 +79,21 @@ class D_activate extends CI_Controller{
         if($this->input->is_ajax_request()){  
                 //SELECT CUSTOMER_ID
                 $customer_id = $this->input->post("customer_id");
-//                $today = date("Y-m-d");
-//                $today_76 = strtotime ( '+76 day' , strtotime ( $today ) ) ;
                 
+                //SELECT PARAM TO GET PRICE
+                $params = array(
+                        "select" =>"franchise.name as franchise,
+                                    franchise.price as price,
+                                    customer.status_value",
+                        "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
+                        "where" => "customer_id = $customer_id and customer.status_value = 1"
+               );
+                //GET DATA FROM CUSTOMER
+                $obj_customer= $this->obj_customer->get_search_row($params);
+                //GET PRICE TO CREATE NEGATIVE
+                $price = 0 - $obj_customer->price;
+                
+                //SELECT TOY AND TODAY+76
                 $today = date('Y-m-j');
                 $today_76 = strtotime ( '+76 day' , strtotime ( $today ) ) ;
                 $today_76 = date ( 'Y-m-j' , $today_76 );
@@ -94,6 +107,19 @@ class D_activate extends CI_Controller{
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
                     $this->obj_customer->update($customer_id,$data);
+                    
+                    //CREATE REGISTER UN COMMISSION
+                    $data_comission = array(
+                        'customer_id' => $customer_id,
+                        'bonus_id' => 2,
+                        'name' => "Financiado",
+                        'amount' => $price,
+                        'date' => $today,
+                        'status_value' => 4,
+                        'created_at' => date("Y-m-d H:i:s"),
+                        'created_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_commissions->insert($data_comission);
                 }
                 echo json_encode($data);            
         exit();
