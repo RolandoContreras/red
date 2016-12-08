@@ -124,7 +124,7 @@ class D_activate extends CI_Controller{
                     ); 
                     $this->obj_commissions->insert($data_comission);
                 }
-                echo json_encode($data);            
+                    echo json_encode($data);            
         exit();
             }
     }
@@ -138,14 +138,30 @@ class D_activate extends CI_Controller{
                 $parents_id = $this->input->post("parents_id");
                 
                 //GET BONUS DIRECT
-//                $this->pay_directo($customer_id,$price,$parents_id);
+                $this->pay_directo($customer_id,$price,$parents_id);
                 
                 //GET BONUS BINARY
                 $this->pay_binario($customer_id);
                 
                 
-                echo json_encode($data);            
-        exit();
+                //SELECT TOY AND TODAY+76
+                $today = date('Y-m-j');
+                $today_76 = strtotime ( '+76 day' , strtotime ( $today ) ) ;
+                $today_76 = date ( 'Y-m-j' , $today_76 );
+                
+                //UPDATE TABLE CUSTOMER ACTIVE = 1
+                if(count($customer_id) > 0){
+                    $data = array(
+                        'active' => 1,
+                        'date_start' => $today,
+                        'date_end' => $today_76,
+                        'updated_at' => date("Y-m-d H:i:s"),
+                        'updated_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_customer->update($customer_id,$data);
+                }
+                echo json_encode($data); 
+                exit();
             }
     }
     
@@ -179,19 +195,31 @@ class D_activate extends CI_Controller{
         }
         
     public function pay_binario($customer_id){
-            //GET IDENTIFICATOR FROM CUSTOMER
-        
+            //GET PARAM TO CUSTOMER
             $params = array(
-                    "select" =>"identificador,
-                                created_at",
-                    "where" => "customer_id = $customer_id and status_value = 1"
-           );
+                        "select" =>"customer.customer_id,
+                                    customer.username,
+                                    customer.first_name,
+                                    customer.last_name,
+                                    customer.active,
+                                    customer.parents_id,
+                                    customer.identificador,
+                                    customer.created_at,
+                                    franchise.price as price,
+                                    franchise.name as franchise,
+                                    customer.status_value",
+                        "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
+                        "where" => "customer_id = $customer_id and customer.status_value = 1"
+               );
+        
             $obj_customer = $this->obj_customer->get_search_row($params); 
+            
+            //SELECT PRICE TO PAQUETE
+            $price_tree = $obj_customer->price;
+            //SELECT IDENTIFICATOR
             $identificator = $obj_customer->identificador;
             $creacion = $obj_customer->created_at;
             $explo_identificator =  explode(",", $identificator);
-            
-            
             
             $str = "";
             $str_texto = "";
@@ -209,49 +237,99 @@ class D_activate extends CI_Controller{
                 //SELECT TREE
                 $param_tree = array(
                                     "select" =>"customer.customer_id,
-                                                customer.first_name,
                                                 customer.username,
                                                 customer.created_at,
-                                                customer.last_name,
-                                                customer.parents_id,
+                                                customer.point_left,
+                                                customer.point_rigth,
                                                 customer.identificador,
                                                 customer.position",
                                      "where" => "customer.created_at < '$creacion' and customer.status_value = 1 and ($str)",
-                                     "join" => array('franchise, customer.franchise_id = franchise.franchise_id')
-                                    ); 
+                                     "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
+                                     "order" => "customer.created_at DESC"); 
                  $obj_tree = $this->obj_customer->search($param_tree); 
+                
+              //SELECT POSITION AND SAVE POINT
                  
-                 var_dump($obj_tree);
-                 die();
-                 
-                 
-                 
+               $params = array(
+                        "select" =>"percent",
+                        "where" => "bonus_id = 4 and status_value = 1"
+               );
+                //GET DATA FROM BONUS
+                $obj_bonus= $this->obj_bonus->get_search_row($params);
+                $percet_binario = $obj_bonus->percent;
+                
+                //SELECT Z O D FROM CUSTOMER_ID
+                $explo_identificator_2 =  explode(",", $identificator);
+                $position_principal = substr($explo_identificator_2[0], -1);
+                
+                //ORDER POINT LEFT OR RIGTH
+                $position_tree = "";
+                                
+                foreach ($obj_tree as $value) {
+                    $identificator_tree  = $value->identificador;
+                    //SELECT Z O D FROM CUSTOMER_ID
+                    $explo_identificator_2 =  explode(",", $identificator_tree);
+                    $position_tree = substr($explo_identificator_2[0], -1);
+                    
+                    //CONDITION IS EQUAL
+                    if($position_tree == $position_principal){
+                        if($position_principal == 'z'){
+                            
+                            $point_left = ($price_tree  * $percet_binario) / 100;
+                            $point_left = $value->point_left + $point_left;
+                            //UPDATE POINT LEFT TABLE CUSTOMER
+                            $data = array(
+                                'point_left' => $point_left,
+                                'updated_at' => date("Y-m-d H:i:s"),
+                                'updated_by' => $_SESSION['usercms']['user_id'],
+                            ); 
+                            $this->obj_customer->update($value->customer_id,$data);
+                            
+                            //SAVE LAST POSITION
+                            $position_principal = $position_tree;
+                                                        
+                        }else{
+                            $point_rigth = ($price_tree  * $percet_binario) / 100;
+                            $point_rigth = $value->point_rigth + $point_rigth;
+                            //UPDATE POINT RIGTH TABLE CUSTOMER
+                            $data = array(
+                                'point_rigth' => $point_rigth,
+                                'updated_at' => date("Y-m-d H:i:s"),
+                                'updated_by' => $_SESSION['usercms']['user_id'],
+                            ); 
+                            $this->obj_customer->update($value->customer_id,$data);
+                            //SAVE LAST POSITION
+                            $position_principal = $position_tree;
+                        }
+                    }else{
+                            if($position_principal == 'z'){
+                                $point_left = ($price_tree  * $percet_binario) / 100;
+                                $point_left = $value->point_left + $point_left;
+
+                                //UPDATE POINT LEFT TABLE CUSTOMER
+                                $data = array(
+                                    'point_left' => $point_left,
+                                    'updated_at' => date("Y-m-d H:i:s"),
+                                    'updated_by' => $_SESSION['usercms']['user_id'],
+                                ); 
+                                $this->obj_customer->update($value->customer_id,$data);
+                                $position_principal = $position_tree;
+
+                            }else{
+                                $point_rigth = ($price_tree  * $percet_binario) / 100;
+                                $point_rigth = $value->point_rigth + $point_rigth;
+                                //UPDATE POINT RIGTH TABLE CUSTOMER
+                                $data = array(
+                                    'point_rigth' => $point_rigth,
+                                    'updated_at' => date("Y-m-d H:i:s"),
+                                    'updated_by' => $_SESSION['usercms']['user_id'],
+                                ); 
+                                $this->obj_customer->update($value->customer_id,$data);
+                                $position_principal = $position_tree;
+                            }
+                    }
+                }
             }    
-            
-            
-            
-            
-            //GET DATA FROM BONUS
-            $obj_bonus= $this->obj_bonus->get_search_row($params);
-            $percet = $obj_bonus->percent;
-
-            //CALCULE AMOUNT
-            $amount = ($price  * $percet) / 100;
-
-            //INSERT COMMISSION TABLE
-            if(count($customer_id) > 0){
-                $data = array(
-                    'customer_id' => $parents_id,
-                    'bonus_id' => 1,
-                    'name' => "Pago por referido Directo",
-                    'amount' => $amount,
-                    'status_value' => 1,
-                    'date' => date("Y-m-d H:i:s"),
-                    'created_at' => date("Y-m-d H:i:s"),
-                    'created_by' => $_SESSION['usercms']['user_id'],
-                ); 
-                $this->obj_commissions->insert($data);
-            }
     }
     
     
