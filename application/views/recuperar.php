@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="wide wow-animation">
   <!--========================================================
@@ -20,30 +19,21 @@
         <!-- Get in touch -->
           <section class="well-xs text-center">
             <div class="container wow fadeInUp">
-                <h1><?php echo replace_vocales_voculeshtml("Iniciar Sesión");?></h1>
+                <h1><?php echo replace_vocales_voculeshtml("Recuperar Contraseña");?></h1>
                 <!-- RD Mailform -->
                 <form class='rd-mailform'>
                     <fieldset>
                         <div class="row">
                             <div class="col-sm-6">
                                 <label data-add-placeholder>
-                                    <a href="#"><h6>Usuario</h6></a>
+                                    <a href="#"><h6>Ingrese Usuario</h6></a>
                                     <input type="text" id="username" name="username" placeholder="" data-constraints="@NotEmpty"/>
                                 </label>
                             </div>
-                            <div class="col-sm-6">
-                                <label data-add-placeholder>
-                                    <a href="#"><h6><?php echo replace_vocales_voculeshtml("Contraseña");?></h6></a>
-                                    <input type="password"  id="password" name="password" placeholder="" data-constraints="@NotEmpty"/>
-                                </label>
-                            </div>
                            <div class="col-sm-12"><a></a></div>
-                           <div class="col-sm-12">
-                               <a href="<?php echo site_url().'recuperar';?>"><h6 class="olvide"><?php echo replace_vocales_voculeshtml("¿Olvidaste tu contraseña?");?></h6></a>
-                            </div>
                             <div class="col-xs-12 text-center">
                                     <div class="mfControls">
-                                        <button onclick="send_login();" class="btn btn-md btn-primary" type="button"><?php echo replace_vocales_voculeshtml("Iniciar Sesión");?></button>
+                                        <button onclick="send_messages();" class="btn btn-md btn-primary" type="button"><?php echo replace_vocales_voculeshtml("Enviar Información");?></button>
                                     </div>
                             </div>
                         </div>
@@ -78,11 +68,8 @@
 <!-- Additional Functionality Scripts -->
 <script src="<?php echo site_url().'static/page_front/js/script.js';?>"></script>
 <!-- import Js contact -->
-<script src="<?php echo site_url().'static/page_front/js/contact.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/recuperar.js';?>"></script>
 <!-- import bootbox.min -->
 <script src="<?php echo site_url().'static/page_front/js/bootbox.min.js';?>"></script>
-<!-- Login Backoffice-->
-<!--<script src="static/page_front/js/login.js"></script>-->
-<!-- End Login-->
 </body>
 </html>

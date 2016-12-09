@@ -55,6 +55,8 @@ $route['acerca'] = "about_us";
 
 $route['login'] = "login_home";
 
+$route['recuperar'] = "recuperar";
+
 $route['registro'] = "registro";
 $route['registro/afiliate/([0-9a-z_-]+)'] = "registro/index/$1";
 
