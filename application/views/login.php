@@ -27,17 +27,19 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <label data-add-placeholder>
-                                    <input type="text" id="username" name="username" placeholder="Usuario" data-constraints="@NotEmpty"/>
+                                    <a href="#"><h6>Usuario</h6></a>
+                                    <input type="text" id="username" name="username" placeholder="" data-constraints="@NotEmpty"/>
                                 </label>
                             </div>
                             <div class="col-sm-6">
                                 <label data-add-placeholder>
-                                    <input type="password"  id="password" name="password" placeholder="<?php echo replace_vocales_voculeshtml("Contraseña");?>" data-constraints="@NotEmpty"/>
+                                    <a href="#"><h6><?php echo replace_vocales_voculeshtml("Contraseña");?></h6></a>
+                                    <input type="password"  id="password" name="password" placeholder="" data-constraints="@NotEmpty"/>
                                 </label>
                             </div>
                            <div class="col-sm-12"><a></a></div>
                            <div class="col-sm-12">
-                               <a href="#"><h6 class="olvide"><?php echo replace_vocales_voculeshtml("¿Olvidaste tu contraseña?");?></h6></a>
+                                                              <a href="#"><h6 class="olvide"><?php echo replace_vocales_voculeshtml("¿Olvidaste tu contraseña?");?></h6></a>
                             </div>
                             <div class="col-xs-12 text-center">
                                     <div class="mfControls">
