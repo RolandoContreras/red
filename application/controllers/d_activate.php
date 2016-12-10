@@ -143,7 +143,6 @@ class D_activate extends CI_Controller{
                 //GET BONUS BINARY
                 $this->pay_binario($customer_id);
                 
-                
                 //SELECT TOY AND TODAY+76
                 $today = date('Y-m-j');
                 $today_76 = strtotime ( '+76 day' , strtotime ( $today ) ) ;
@@ -222,9 +221,8 @@ class D_activate extends CI_Controller{
             $explo_identificator =  explode(",", $identificator);
             
             $str = "";
-            $str_texto = "";
             foreach ($explo_identificator as $key => $value) {
-                $pos = strpos($identificator, $value);
+//                    $pos = strpos($identificator, $value);
                     $encontrar_post = strpos($identificator, $value);
                     $texto =  substr($identificator, $encontrar_post);
                     $str .= "or customer.identificador like '$texto%' ";
@@ -247,7 +245,7 @@ class D_activate extends CI_Controller{
                                      "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
                                      "order" => "customer.created_at DESC"); 
                  $obj_tree = $this->obj_customer->search($param_tree); 
-                
+                 
               //SELECT POSITION AND SAVE POINT
                  
                $params = array(
