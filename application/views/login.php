@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="wide wow-animation">
   <!--========================================================
@@ -55,17 +54,6 @@
             </div>
         </section>
         <!-- END Get in touch-->
-
-        <!-- RD Google Map -->
-<!--        <section class="rd-google-map">
-            <div id="google-map" class="rd-google-map__model"></div>
-            <ul class="rd-google-map__locations">
-                <li data-x="-73.9874068" data-y="40.643180">
-                    <p> 9870 St Vincent Place, Glasgow, DC 45 Fr 45. <span>800 2345-6789</span></p>
-                </li>
-            </ul>
-        </section>-->
-        <!-- END RD Google Map -->
     </main>
     <!--========================================================
                               FOOTER

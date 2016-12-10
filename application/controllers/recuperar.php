@@ -58,7 +58,7 @@ class Recuperar extends CI_Controller {
                         $email = $obj_customer->email;
                         
                         // El mensaje
-                        $mail = "Hola, $obj_customer->first_name.' '.$obj_customer->last_name los datos de tu cuenta son:\r\Username: $obj_customer->email\r\Contraseña: $obj_customer->password";
+                        $mail = "Hola, $obj_customer->first_name $obj_customer->last_name los datos de tu cuenta son:\r\nUsername: $obj_customer->email\r\nContraseña: $obj_customer->password";
 
                         // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
                         $mensaje = wordwrap($mail, 70, "\r\n");
@@ -68,11 +68,11 @@ class Recuperar extends CI_Controller {
                         $headers = "MIME-Version: 1.0\r\n"; 
                         $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
                         //dirección del remitente 
-                        $headers .= "From: Geeky Theory < noreplay@yourbitshares.com >\r\n";
+                        $headers .= "From: Bitshare - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
                         //Enviamos el mensaje a tu_dirección_email 
                         $bool = mail("$email",$titulo,$mensaje,$headers);
                         if($bool){
-                            $data['print'] = "Mensaje enviado correctamente";
+                            $data['print'] = "Se le envio un mensaje al correo electrónico registrado";
                             $data['message'] = "true";  
                         }else{
                             $data['print'] = "El mensaje no se pudo enviar por un error desconocido";
