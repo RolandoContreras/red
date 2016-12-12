@@ -38,12 +38,19 @@ class Registro extends CI_Controller {
             $parent_id = $customer_id;
             
             $position = $pierna_customer;
-                
+                if($position == 1){
+                    $pos = 'z';
+                }else{
+                    $pos = 'd';
+                }
+            
                 //SELECT IDENTIFICATOR BY CUSTOMER_ID
                 $params = array("select" =>"identificador,
-                                            (select count(customer_id) from customer where status_value = 1) as total_registro",
+                                            (select count(customer_id) from customer where status_value = 1 and identificador like ('_$pos%')) ",
                                 "where" => "customer_id = $customer_id");
                 $obj_dentificator = $this->obj_customer->get_search_row($params);
+                //GET IDENTIFICATOR PARA POSIBLE NECESIDADES
+                $identity = $obj_dentificator->identificador;
                 $identificator_param = $obj_dentificator->identificador;
                 $explo_idente =  explode(",", $identificator_param);
                 //TOTAL REGISTER ON TABLE
@@ -64,18 +71,34 @@ class Registro extends CI_Controller {
                     $last_id = 'd';
                    $total_registro =  $total_registro.'d';
                 }
+
                 
                 //SELECT REGISTER < TO THE LAST
                 $params = array("select" =>"identificador",
-                                "where" => "identificador <  '$total_registro' and identificador like '%$identificator_param'  and `identificador` like ('_$last_id%')",
+                                "where" => "identificador <  '$total_registro' and identificador like '%$identificator_param%'  and `identificador` like ('_$last_id%')",
+//                                "where" => "identificador like '%$identificator_param%'  and `identificador` like ('_$last_id%')",
                                 "order" => "customer.identificador DESC");
                 $obj_dentificator = $this->obj_customer->get_search_row($params);
-                
+     
+//                
                 if(count($obj_dentificator) == 0){
-                    $obj_dentificator = $identificator_param;
+                    //SELECT REGISTER < TO THE LAST
+                    $params = array("select" =>"identificador",
+                                    "where" => "identificador like '%$identificator_param%'  and `identificador` like ('_$last_id%')",
+                                    "order" => "customer.identificador DESC");
+                    $obj_dentificator = $this->obj_customer->get_search_row($params);
+                    if(count($obj_dentificator)==0){
+                        $obj_dentificator = $identity;
+                    }else{
+                        $obj_dentificator = $obj_dentificator->identificador;
+                    }
+                    
                 }else{
                     $obj_dentificator = $obj_dentificator->identificador;
                 }
+                
+                
+                
                 
                 //IF POSITION ES IZQUIERDA SE ARMA EL IDENTIFICADOR
                 if($position == 1){
@@ -86,7 +109,25 @@ class Registro extends CI_Controller {
                    $identificator = $ultimo."d,".$obj_dentificator; 
                 }
                 
-
+                //verify if isset obj_dentificator
+                $params_verify = array("select" =>"customer_id",
+                                "where" => "identificador = '$identificator' and status_value = 1");
+                $obj_customer = $this->obj_customer->get_search_row($params_verify);
+                
+                if(count($obj_customer) == 0 ){
+                    $identificator = $identificator;
+                }else{
+                    if($position == 1){
+                        $ultimo = $identificator;
+                        $ultimo = $ultimo[0] + 1; 
+                        $identificator = $ultimo."z,".$identificator;
+                     }elseif($position == 2){
+                        $ultimo = $identificator;
+                        $ultimo = $ultimo[0] + 1; 
+                        $identificator = $ultimo."z,".$identificator;
+                     }
+                 }
+                    
             $this->form_validation->set_rules('usuario','usuario',"required|trim");
             $this->form_validation->set_rules('name','name','required|trim');    
             $this->form_validation->set_rules('last_name','last_name',"required|trim");
@@ -213,7 +254,7 @@ class Registro extends CI_Controller {
                     "select" =>"customer_id",
                     "where" => "dni = '$dni'");
         $customer = count($this->obj_customer->search($param_customer));
-        if($customer >= 3){
+        if($customer >= 5){
             $data['message'] = "true";
             $data['print'] = "Alcanzo el maximo de cuentas por persona";
         }else{
