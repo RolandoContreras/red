@@ -39,6 +39,8 @@ class customer_model_atributos{
     var $phone='';
     var $active='';
     var $calification='';
+    var $point_calification_left='';
+    var $point_calification_rigth='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -75,6 +77,8 @@ class Customer_Model extends CI_Model{
 	$this->phone='';
         $this->active='';
         $this->calification='';
+        $this->point_calification_left='';
+        $this->point_calification_rigth='';
 	$this->status_value='';
 	$this->created_at='';
 	$this->created_by='';

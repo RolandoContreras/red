@@ -78,7 +78,7 @@
                             </div>
                             <div class="box__body">
                                 <h4><a href="#">Belleza</a></h4>
-                                <p>Primer negocio que empezamos hace más de 6 años, y con gran esfuerzo y dirección empezamos a crear negocios solidos los cuales son partes de nuestro holding.</p>
+                                <p><?php echo replace_vocales_voculeshtml("Primer negocio que empezamos hace más de 6 años, y con gran esfuerzo y dirección empezamos a crear negocios solidos los cuales son partes de nuestro holding.");?></p>
                             </div>
                         </div>
                     </li>
@@ -90,7 +90,7 @@
                             </div>
                             <div class="box__body">
                                 <h4><a href="#">Pesca</a></h4>
-                                <p>Manejamos embarcaciones pesqueras por más de 5 años con buenas rentabilidades anuales.</p>
+                                <p><?php echo replace_vocales_voculeshtml("Manejamos embarcaciones pesqueras por más de 5 años con buenas rentabilidades anuales.");?></p>
                             </div>
                         </div>
                     </li>

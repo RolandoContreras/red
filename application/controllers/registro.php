@@ -41,19 +41,40 @@ class Registro extends CI_Controller {
                 $position = $pierna_customer;
                 
                 //SELECT IDENTIFICATOR BY CUSTOMER_ID
-                $params = array("select" =>"identificador",
+                $params = array("select" =>"identificador,
+                                            (select count(customer_id) from customer where status_value = 1) as total_registro",
                                 "where" => "customer_id = $customer_id");
                 $obj_dentificator = $this->obj_customer->get_search_row($params);
                 $identificator_param = $obj_dentificator->identificador;
                 $explo_idente =  explode(",", $identificator_param);
+                //TOTAL REGISTER ON TABLE
+                $total_registro = $obj_dentificator->total_registro;
                 
+                
+                if($position == 1){
+                   $total_registro =  $total_registro.'z';
+                }else{
+                   $total_registro =  $total_registro.'d';
+                }
+                
+//                var_dump($total_registro);
+//                die();
+                
+                
+                //SELECT REGISTER < TO THE LAST
+                $params = array("select" =>"identificador",
+                                "where" => "identificador <  '$total_registro'",
+                                "order" => "customer.identificador DESC");
+                $obj_dentificator = $this->obj_customer->get_search_row($params);
+                
+                $obj_dentificator = $obj_dentificator->identificador;
                 
                 //IF POSITION ES IZQUIERDA SE ARMA EL IDENTIFICADOR
                 if($position == 1){
-                   $ultimo = $explo_idente[0] + 1; 
+                   $ultimo = $obj_dentificator[0] + 1; 
                    $identificator = $ultimo."z,".$identificator_param;
                 }elseif($position == 2){
-                   $ultimo = $explo_idente[0] + 1; 
+                   $ultimo = $obj_dentificator[0] + 1; 
                    $identificator = $ultimo."d,".$identificator_param; 
                 }
                 
