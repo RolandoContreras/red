@@ -1,65 +1,3 @@
-<?php 
-//SI EL 4 ES MAS ANTIGUO TOMA POSICION DE 3
-//if($n4_iz[3] < $n3_iz[3]) {
-//    //3Z PASA A TOMAR LOS VALORES DE 4Z
-//     $comodin = array($n3_iz[0],$n3_iz[1],$n3_iz[2],$n3_iz[3],$n3_iz[4],$n3_iz[5],$n3_iz[6],$n3_iz[7],$n3_iz[8],$n3_iz[9]);
-//     
-//    $n3_iz[0] = $n4_iz[0]; 
-//    $n3_iz[1] = $n4_iz[1]; 
-//    $n3_iz[2] = $n4_iz[2]; 
-//    $n3_iz[3] = $n4_iz[3]; 
-//    $n3_iz[4] = $n4_iz[4]; 
-//    $n3_iz[5] = $n4_iz[5]; 
-//    $n3_iz[6] = $n4_iz[6]; 
-//    $n3_iz[7] = $n4_iz[7]; 
-//    $n3_iz[8] = $n4_iz[8]; 
-//    $n3_iz[9] = $n4_iz[9]; 
-//    
-//    
-//    //3Z PASA A TOMAR LOS VALORES DE 4Z
-//    $n4_iz[0] = $comodin[0];
-//    $n4_iz[1] = $comodin[1]; 
-//    $n4_iz[2] = $comodin[2]; 
-//    $n4_iz[3] = $comodin[3]; 
-//    $n4_iz[4] = $comodin[4]; 
-//    $n4_iz[5] = $comodin[5]; 
-//    $n4_iz[6] = $comodin[6]; 
-//    $n4_iz[7] = $comodin[7]; 
-//    $n4_iz[8] = $comodin[8]; 
-//    $n4_iz[9] = $comodin[9];
-//}
-//elseif($n3_iz[3] < $n2_iz[2]){
-//    $comodin = array(v[0],$n2_iz[1],$n2_iz[2],$n2_iz[3],$n2_iz[4],$n2_iz[5],$n2_iz[6],$n2_iz[7],v[8],$n2_iz[9]);
-//    $n2_iz[0] = $n3_iz[0]; 
-//    $n2_iz[1] = $n3_iz[1]; 
-//    $n2_iz[2] = $n3_iz[2]; 
-//    $n2_iz[3] = $n3_iz[3]; 
-//    $n2_iz[4] = $n3_iz[4]; 
-//    $n2_iz[5] = $n3_iz[5]; 
-//    $n2_iz[6] = $n3_iz[6]; 
-//    $n2_iz[7] = $n3_iz[7]; 
-//    $n2_iz[8] = $n3_iz[8]; 
-//    $n2_iz[9] = $n3_iz[9]; 
-//    
-//    
-//    //3Z PASA A TOMAR LOS VALORES DE 4Z
-//    $n3_iz[0] = $comodin[0];
-//    $n3_iz[1] = $comodin[1]; 
-//    $n3_iz[2] = $comodin[2]; 
-//    $n3_iz[3] = $comodin[3]; 
-//    $n3_iz[4] = $comodin[4]; 
-//    $n3_iz[5] = $comodin[5]; 
-//    $n3_iz[6] = $comodin[6]; 
-//    $n3_iz[7] = $comodin[7]; 
-//    $n3_iz[8] = $comodin[8]; 
-//    $n3_iz[9] = $comodin[9];
-//}
-
-//var_dump($n3_iz);
-//die();
-
-?>
-
 <section>
     <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
  <!-- Page content-->
@@ -80,13 +18,11 @@
        <div class="row">
           <div class="col-lg-12">
             <div class="col-lg-12">
-                    <span class="circle circle-success circle-lg"></span> 
-                    Afiliado Activo<span class="circle circle-danger circle-lg"></span> 
-                    Afiliado Inactivo 
+                    <span class="circle circle-success circle-lg"></span>Afiliado Activo
+                    <span class="circle circle-danger circle-lg"></span>Afiliado Inactivo 
                     <a href="javascript: history.back(-1)" class="btn btn-primary btn-xs"><em class="icon-action-redo"></em>&nbsp;&nbsp;Atras</a>
                 </div>
              <!--ARBOL GENEALOGICO-->
-
                 <div class="row">
                     <div class="col-sm-12 col-lg-12" style="padding: 0;">
                         <div class="cont-arbol"><div class="tree" style="width: 1000%;">                      
@@ -118,7 +54,8 @@
                                       </div>
                                       <div class="col-sm-2" style="padding: 0;">
                                         <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                          <span class="circle circle-success circle-lg"></span>
+                                            <?php if($obj_customer->active == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                          <span class="<?php echo $style;?>"></span>
                                         </span>
                                       </div>
                                     </div>
@@ -152,7 +89,8 @@
                                       </div>
                                       <div class="col-sm-2" style="padding: 0;">
                                         <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                          <span class="circle circle-success circle-lg"></span>
+                                            <?php if($n2_iz[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                          <span class="<?php echo $style;?>"></span>
                                         </span>
                                       </div>
                                     </div>
@@ -184,7 +122,8 @@
                                                 </div>
                                                 <div class="col-sm-2" style="padding: 0;">
                                                   <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                    <span class="circle circle-success circle-lg"></span>
+                                                     <?php if($n3_iz[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                    <span class="<?php echo $style;?>"></span>
                                                   </span>
                                                 </div>
                                               </div>
@@ -215,7 +154,8 @@
                                                             </div>
                                                             <div class="col-sm-2" style="padding: 0;">
                                                               <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                                <span class="circle circle-success circle-lg"></span>
+                                                                <?php if($n4_iz[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                <span class="<?php echo $style;?>"></span>
                                                               </span>
                                                             </div>
                                                           </div>
@@ -226,15 +166,15 @@
                                                 <?php if(isset($n4_2_iz)){ ?>
                                                             <li>
                                                                 <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
-                                                                        Nombre:<?php echo $n4_2_iz[0]." ".$n4_iz[1];?>
-                                                                        Fecha Registro:<?php echo $n4_iz[3];?>
+                                                                        Nombre:<?php echo $n4_2_iz[0]." ".$n4_2_iz[1];?>
+                                                                        Fecha Registro:<?php echo $n4_2_iz[3];?>
                                                                         Estatus:
-                                                                        <?php if($n4_iz[7] == 1){ ?>
+                                                                        <?php if($n4_2_iz[7] == 1){ ?>
                                                                                   Activo
                                                                               <?php }else{ ?>
                                                                                   Inactivo
                                                                               <?php } ?>
-                                                                                  Calificación:<?php echo $n4_iz[8];?>
+                                                                                  Calificación:<?php echo $n4_2_iz[8];?>
                                                                         " class="some-popover-link">
 
                                                                       <div class="row imagen-profile">
@@ -246,7 +186,8 @@
                                                                         </div>
                                                                         <div class="col-sm-2" style="padding: 0;">
                                                                           <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                                            <span class="circle circle-success circle-lg"></span>
+                                                                            <?php if($n4_2_iz[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                                 <span class="<?php echo $style;?>"></span>
                                                                           </span>
                                                                         </div>
                                                                       </div>
@@ -281,7 +222,8 @@
                                                         </div>
                                                         <div class="col-sm-2" style="padding: 0;">
                                                           <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                            <span class="circle circle-success circle-lg"></span>
+                                                            <?php if($n3_2_iz[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                    <span class="<?php echo $style;?>"></span>
                                                           </span>
                                                         </div>
                                                       </div>
@@ -312,7 +254,8 @@
                                                                         </div>
                                                                         <div class="col-sm-2" style="padding: 0;">
                                                                           <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                                            <span class="circle circle-success circle-lg"></span>
+                                                                            <?php if($n4_3_iz[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                                    <span class="<?php echo $style;?>"></span>
                                                                           </span>
                                                                         </div>
                                                                       </div>
@@ -345,7 +288,8 @@
                                                                     </div>
                                                                     <div class="col-sm-2" style="padding: 0;">
                                                                       <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                                        <span class="circle circle-success circle-lg"></span>
+                                                                        <?php if($n4_4_iz[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                            <span class="<?php echo $style;?>"></span>
                                                                       </span>
                                                                     </div>
                                                                   </div>
@@ -359,8 +303,9 @@
                                     </ul>
                                  <?php } ?>
                                 </li>
-
-                                <!--2NIVEL DERECHA-->
+    <!------------------------------------------------------------->                            
+    <!------------------------2NIVEL DERECHA----------------------->
+    <!------------------------------------------------------------->
                              <?php if(isset($n2_de[0])){ ?>
                                 <li>
                                     <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
@@ -373,7 +318,7 @@
                                                       Inactivo
                                                   <?php } ?>
 
-                                                      Calificación:<?php echo $n2_iz[8];?>
+                                                      Calificación:<?php echo $n2_de[8];?>
                                             " class="some-popover-link">
 
                                           <div class="row imagen-profile">
@@ -385,7 +330,8 @@
                                             </div>
                                             <div class="col-sm-2" style="padding: 0;">
                                               <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                <span class="circle circle-success circle-lg"></span>
+                                                <?php if($n2_de[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                    <span class="<?php echo $style;?>"></span>
                                               </span>
                                             </div>
                                           </div>
@@ -416,13 +362,14 @@
                                                           </div>
                                                           <div class="col-sm-2" style="padding: 0;">
                                                             <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                              <span class="circle circle-success circle-lg"></span>
+                                                              <?php if($n3_2_de[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                    <span class="<?php echo $style;?>"></span>
                                                             </span>
                                                           </div>
                                                         </div>
                                                             <a href="<?php echo site_url().'backoffice/binario/'.$n3_2_de[2];?>"><?php echo $n3_2_de[6];?></a>
                                                     </nodo>
-                                                        <!--4_3NIVEL DERECHA-->
+                                                        <!--4_4NIVEL DERECHA-->
                                                         <ul>
                                                             <?php if(isset($n4_4_de)){ ?>
                                                                 <li>
@@ -447,7 +394,8 @@
                                                                             </div>
                                                                             <div class="col-sm-2" style="padding: 0;">
                                                                               <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                                                <span class="circle circle-success circle-lg"></span>
+                                                                                <?php if($n4_4_de[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                                    <span class="<?php echo $style;?>"></span>
                                                                               </span>
                                                                             </div>
                                                                           </div>
@@ -456,12 +404,12 @@
                                                                 </li>
                                                             <?php } ?>
                                                             
-                                                            <!--4_4NIVEL DERECHA-->
+                                                            <!--4_3_NIVEL DERECHA-->
                                                             <?php if(isset($n4_3_de)){ ?>
                                                                     <li>
                                                                             <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                                                                     Nombre:<?php echo $n4_3_de[0]." ".$n4_3_de[1];?>
-                                                                                    Fecha Registro:<?php echo $n4_4_de[3];?>
+                                                                                    Fecha Registro:<?php echo $n4_3_de[3];?>
                                                                                     Estatus:
                                                                                     <?php if($n4_3_de[7] == 1){ ?>
                                                                                         Activo
@@ -480,7 +428,8 @@
                                                                                     </div>
                                                                                     <div class="col-sm-2" style="padding: 0;">
                                                                                       <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                                                        <span class="circle circle-success circle-lg"></span>
+                                                                                        <?php if($n4_3_de[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                                                <span class="<?php echo $style;?>"></span>
                                                                                       </span>
                                                                                     </div>
                                                                                   </div>
@@ -517,7 +466,8 @@
                                                         </div>
                                                         <div class="col-sm-2" style="padding: 0;">
                                                           <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                            <span class="circle circle-success circle-lg"></span>
+                                                            <?php if($n3_de[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                <span class="<?php echo $style;?>"></span>
                                                           </span>
                                                         </div>
                                                       </div>
@@ -548,7 +498,8 @@
                                                             </div>
                                                             <div class="col-sm-2" style="padding: 0;">
                                                               <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                                <span class="circle circle-success circle-lg"></span>
+                                                                <?php if($n4_2_de[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                        <span class="<?php echo $style;?>"></span>
                                                               </span>
                                                             </div>
                                                           </div>
@@ -582,7 +533,8 @@
                                                             </div>
                                                             <div class="col-sm-2" style="padding: 0;">
                                                               <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                                <span class="circle circle-success circle-lg"></span>
+                                                                <?php if($n4_de[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                        <span class="<?php echo $style;?>"></span>
                                                               </span>
                                                             </div>
                                                           </div>
