@@ -34,11 +34,10 @@ class Registro extends CI_Controller {
         if($this->input->is_ajax_request()){
             $customer_id = trim($this->input->post('customer_id'));
             $pierna_customer = trim($this->input->post('pierna_customer'));
+            //PUT CUSTOMER_ID LIKE PAREND
+            $parent_id = $customer_id;
             
-            //IF CUSTOMER_ID NO ES 1
-            if($customer_id != 1){
-                $parend_id = $customer_id;
-                $position = $pierna_customer;
+            $position = $pierna_customer;
                 
                 //SELECT IDENTIFICATOR BY CUSTOMER_ID
                 $params = array("select" =>"identificador,
@@ -52,39 +51,42 @@ class Registro extends CI_Controller {
                 
                 
                 if($position == 1){
+                    if($customer_id == 1){
+                        $identificator_param = '1z';
+                        
+                    }
+                    $last_id = 'z';
                    $total_registro =  $total_registro.'z';
                 }else{
+                     if($customer_id == 1){
+                        $identificator_param = '1d';
+                    }
+                    $last_id = 'd';
                    $total_registro =  $total_registro.'d';
                 }
                 
-//                var_dump($total_registro);
-//                die();
-                
-                
                 //SELECT REGISTER < TO THE LAST
                 $params = array("select" =>"identificador",
-                                "where" => "identificador <  '$total_registro'",
+                                "where" => "identificador <  '$total_registro' and identificador like '%$identificator_param'  and `identificador` like ('_$last_id%')",
                                 "order" => "customer.identificador DESC");
                 $obj_dentificator = $this->obj_customer->get_search_row($params);
                 
-                $obj_dentificator = $obj_dentificator->identificador;
+                if(count($obj_dentificator) == 0){
+                    $obj_dentificator = $identificator_param;
+                }else{
+                    $obj_dentificator = $obj_dentificator->identificador;
+                }
                 
                 //IF POSITION ES IZQUIERDA SE ARMA EL IDENTIFICADOR
                 if($position == 1){
                    $ultimo = $obj_dentificator[0] + 1; 
-                   $identificator = $ultimo."z,".$identificator_param;
+                   $identificator = $ultimo."z,".$obj_dentificator;
                 }elseif($position == 2){
                    $ultimo = $obj_dentificator[0] + 1; 
-                   $identificator = $ultimo."d,".$identificator_param; 
+                   $identificator = $ultimo."d,".$obj_dentificator; 
                 }
                 
-            }else{
-                //IDENTIFICATOR POR DEFOULT
-                $parend_id = "1";
-                $position = "1";
-                $identificator = "2z,1z";
-            }
-            
+
             $this->form_validation->set_rules('usuario','usuario',"required|trim");
             $this->form_validation->set_rules('name','name','required|trim');    
             $this->form_validation->set_rules('last_name','last_name',"required|trim");
@@ -121,7 +123,7 @@ class Registro extends CI_Controller {
                 $birth_date = "$ano-$mes-$dia";
            
             $data = array(
-               'parents_id' => $parend_id,
+               'parents_id' => $parent_id,
                'franchise_id' => 6,
                'username' => $usuario,
                'email' => $email,
