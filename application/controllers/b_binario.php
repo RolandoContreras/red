@@ -112,13 +112,9 @@ class B_binario extends CI_Controller {
                                             customer.status_value",
                                  "where" => "$str customer.created_at > '$creacion' and customer.status_value = 1",
                                  "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
-//                                 "order" => "customer.identificador DESC",
                                   "limit" => "50"
                         ); 
                     $obj_tree = $this->obj_customer->search($param_tree); 
-            
-//                    var_dump($obj_tree);
-//                    die();
                     
             //GET POSITION PIERNA
             $pierna = $obj_customer->position;

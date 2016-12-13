@@ -48,8 +48,6 @@ class Registro extends CI_Controller {
                                 "where" => "customer_id = $customer_id");
                 $obj_customer_principal = $this->obj_customer->get_search_row($params);
                 $identificator_param = $obj_customer_principal->identificador;
-//                var_dump($identificator_param);
-//                die();
                 
                 if($position == 1){
                     //SELECT IDENTIFICATOR BY DEFOULT IF IT CUSTOMER_ID =1 
@@ -67,20 +65,11 @@ class Registro extends CI_Controller {
                     $not_like = "z,$identificator_param";
                 }
                 
-//                var_dump($not_like);
-//                die();
-                
                 //SELECT LAST REGISTER
                 $params = array("select" =>"identificador,customer_id,first_name",
                                 "where" => "identificador like '%$identificator_param'  and `identificador` like ('_$last_id%') and identificador NOT LIKE  '%$not_like'",
-//                                "where" => "identificador like '%$identificator_param'  and `identificador` like ('_$last_id%')",
-//                                "where" => "identificador like '%$identificator_param%'  and `identificador` like ('_$last_id%')",
                                 "order" => "customer.identificador DESC");
                 $obj_dentificator = $this->obj_customer->get_search_row($params);
-                
-                
-//                var_dump($obj_dentificator);
-//                die();
                 
                 //Get identificator last register
                 if(count($obj_dentificator) > 0){
@@ -92,8 +81,6 @@ class Registro extends CI_Controller {
                 $explo_identificator =  explode(",", $idetificator);
                 $ultimo = $explo_identificator[0] + 1; 
                 $identificator = $ultimo.$last_id.','.$idetificator;
-                
-                
                 
                 
             $this->form_validation->set_rules('usuario','usuario',"required|trim");
