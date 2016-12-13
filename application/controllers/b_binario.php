@@ -112,10 +112,14 @@ class B_binario extends CI_Controller {
                                             customer.status_value",
                                  "where" => "$str customer.created_at > '$creacion' and customer.status_value = 1",
                                  "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
-                                  "limit" => "40"
-                                ); 
+//                                 "order" => "customer.identificador DESC",
+                                  "limit" => "50"
+                        ); 
                     $obj_tree = $this->obj_customer->search($param_tree); 
             
+//                    var_dump($obj_tree);
+//                    die();
+                    
             //GET POSITION PIERNA
             $pierna = $obj_customer->position;
             
@@ -130,7 +134,7 @@ class B_binario extends CI_Controller {
                         $obj_customer->last_name,
                         $obj_customer->customer_id,
                         $obj_customer->created_at,
-                        $obj_customer->parents_id,
+                        $obj_customer->parents_id,          
                         $obj_customer->position,
                         $obj_customer->pais,
                         $obj_customer->username,
@@ -152,6 +156,9 @@ class B_binario extends CI_Controller {
                         );             
 
             }
+            
+//            var_dump($n1);
+//            die();
                 
             foreach ($obj_tree as $key => $value) {
                 
@@ -167,7 +174,11 @@ class B_binario extends CI_Controller {
                     $n2_z = $ultimo."z,".$n1[8];
                     $n2_d = $ultimo."d,".$n1[8];
                 }
-                                
+                
+//                var_dump($n2_z);                
+//                var_dump($n2_d);
+//                die();
+                
                 //SELECT LAST IDENTIFICATOR FOR N3_Z
                 $ultimo = $n2_z + 1; 
                 $n3_z = $ultimo."z,".$n2_z;

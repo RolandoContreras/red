@@ -1,3 +1,7 @@
+<?php 
+//var_dump($n4_de);
+//die();
+?>
 <section>
     <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
  <!-- Page content-->
@@ -61,9 +65,10 @@
                                     </div>
                                         <a><?php echo $obj_customer->username;?></a>
                                     </nodo>
-                           <?php if(isset($n2_iz)){ ?>     
+                               
                             <ul>
                                 <li>
+                                    <?php if(isset($n2_iz)){ ?>
                                     <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                       Nombre:<?php echo $n2_iz[0]." ".$n2_iz[1];?>
                                       Fecha Registro:<?php echo $n2_iz[3];?>
@@ -95,7 +100,8 @@
                                       </div>
                                     </div>
                                         <a href="<?php echo site_url().'backoffice/binario/'.$n2_iz[2];?>"><?php echo $n2_iz[6];?></a>
-                                    </nodo>
+                                    </nodo> 
+                                        <?php } ?>
                                  <!--3NIVEL IZQUIERDA-->
                                  
                                  <?php if(isset($n3_iz)){ ?>
@@ -552,7 +558,7 @@
                              <?php } ?>                                           
 
                             </ul>
-                               <?php } ?>
+                               <?php //} ?>
             </li>
           </ul>
           <br>
