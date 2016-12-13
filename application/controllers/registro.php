@@ -44,97 +44,51 @@ class Registro extends CI_Controller {
                     $pos = 'd';
                 }
             
-                //SELECT IDENTIFICATOR BY CUSTOMER_ID
-                $params = array("select" =>"identificador,
-                                            (select count(customer_id) from customer where status_value = 1 and identificador like ('_$pos%')) ",
+                 $params = array("select" =>"identificador",
                                 "where" => "customer_id = $customer_id");
-                $obj_dentificator = $this->obj_customer->get_search_row($params);
-                //GET IDENTIFICATOR PARA POSIBLE NECESIDADES
-                $identity = $obj_dentificator->identificador;
-                $identificator_param = $obj_dentificator->identificador;
-                $explo_idente =  explode(",", $identificator_param);
-                //TOTAL REGISTER ON TABLE
-                $total_registro = $obj_dentificator->total_registro;
+                $obj_customer_principal = $this->obj_customer->get_search_row($params);
+                $identificator_param = $obj_customer_principal->identificador;
                 
                 
                 if($position == 1){
+                    //SELECT IDENTIFICATOR BY DEFOULT IF IT CUSTOMER_ID =1 
                     if($customer_id == 1){
                         $identificator_param = '1z';
-                        
                     }
                     $last_id = 'z';
-                   $total_registro =  $total_registro.'z';
                 }else{
+                    //SELECT IDENTIFICATOR BY DEFOULT IF IT CUSTOMER_ID =1 
                      if($customer_id == 1){
                         $identificator_param = '1d';
                     }
                     $last_id = 'd';
-                   $total_registro =  $total_registro.'d';
                 }
-
                 
-                //SELECT REGISTER < TO THE LAST
-                $params = array("select" =>"identificador",
-                                "where" => "identificador <  '$total_registro' and identificador like '%$identificator_param%'  and `identificador` like ('_$last_id%')",
+                //SELECT LAST REGISTER
+                $params = array("select" =>"identificador,customer_id,first_name",
+                                "where" => "identificador like '%$identificator_param'  and `identificador` like ('_$last_id%')",
 //                                "where" => "identificador like '%$identificator_param%'  and `identificador` like ('_$last_id%')",
                                 "order" => "customer.identificador DESC");
                 $obj_dentificator = $this->obj_customer->get_search_row($params);
-     
-//                
-                if(count($obj_dentificator) == 0){
-                    //SELECT REGISTER < TO THE LAST
-                    $params = array("select" =>"identificador",
-                                    "where" => "identificador like '%$identificator_param%'  and `identificador` like ('_$last_id%')",
-                                    "order" => "customer.identificador DESC");
-                    $obj_dentificator = $this->obj_customer->get_search_row($params);
-                    if(count($obj_dentificator)==0){
-                        $obj_dentificator = $identity;
-                    }else{
-                        $obj_dentificator = $obj_dentificator->identificador;
-                    }
-                    
+                
+                //Get identificator last register
+                if(count($obj_dentificator) > 0){
+                    $idetificator = $obj_dentificator->identificador;
                 }else{
-                    $obj_dentificator = $obj_dentificator->identificador;
+                    $idetificator = $identificator_param;
                 }
                 
+                $explo_identificator =  explode(",", $idetificator);
+                $ultimo = $explo_identificator[0] + 1; 
+                $identificator = $ultimo.$last_id.','.$idetificator;
                 
-                
-                
-                //IF POSITION ES IZQUIERDA SE ARMA EL IDENTIFICADOR
-                if($position == 1){
-                   $ultimo = $obj_dentificator[0] + 1; 
-                   $identificator = $ultimo."z,".$obj_dentificator;
-                }elseif($position == 2){
-                   $ultimo = $obj_dentificator[0] + 1; 
-                   $identificator = $ultimo."d,".$obj_dentificator; 
-                }
-                
-                //verify if isset obj_dentificator
-                $params_verify = array("select" =>"customer_id",
-                                "where" => "identificador = '$identificator' and status_value = 1");
-                $obj_customer = $this->obj_customer->get_search_row($params_verify);
-                
-                if(count($obj_customer) == 0 ){
-                    $identificator = $identificator;
-                }else{
-                    if($position == 1){
-                        $ultimo = $identificator;
-                        $ultimo = $ultimo[0] + 1; 
-                        $identificator = $ultimo."z,".$identificator;
-                     }elseif($position == 2){
-                        $ultimo = $identificator;
-                        $ultimo = $ultimo[0] + 1; 
-                        $identificator = $ultimo."z,".$identificator;
-                     }
-                 }
-                    
             $this->form_validation->set_rules('usuario','usuario',"required|trim");
             $this->form_validation->set_rules('name','name','required|trim');    
             $this->form_validation->set_rules('last_name','last_name',"required|trim");
             $this->form_validation->set_rules('address','address','required|trim'); 
             $this->form_validation->set_rules('telefono','telefono',"required|trim");
             $this->form_validation->set_rules('dni','dni','required|trim'); 
-            $this->form_validation->set_rules('email','email',"required|trim");
+            $this->form_validation->set_rules('email','Email',"required|trim");
             $this->form_validation->set_rules('city','city','required|trim'); 
             $this->form_validation->set_rules('dia','dia','required|trim'); 
             $this->form_validation->set_rules('mes','mes',"required|trim");
@@ -202,9 +156,7 @@ class Registro extends CI_Controller {
                 $data['message'] = "true";
                 $data['print'] = "Registrado con éxito";
                 $data['url'] = site_url()."backoffice";  
-        
             } 
-            
         echo json_encode($data); 
         exit();
         }

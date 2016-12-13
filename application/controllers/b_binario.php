@@ -108,9 +108,11 @@ class B_binario extends CI_Controller {
                                             customer.active,
                                             customer.identificador,
                                             franchise.name as franchise,
-                                            customer.position",
+                                            customer.position,
+                                            customer.status_value",
                                  "where" => "$str customer.created_at > '$creacion' and customer.status_value = 1",
-                                 "join" => array('franchise, customer.franchise_id = franchise.franchise_id')
+                                 "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
+                                  "limit" => "40"
                                 ); 
                     $obj_tree = $this->obj_customer->search($param_tree); 
             
