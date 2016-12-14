@@ -67,6 +67,8 @@ class B_home extends CI_Controller {
                                  $data = array(
                                             
                                             'franchise_id' => 2,
+                                            'point_calification_left' => 100,
+                                            'point_calification_rigth' => 100,
                                             'updated_by' => $customer_id,
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
@@ -76,6 +78,8 @@ class B_home extends CI_Controller {
                                  $data = array(
                                             
                                             'franchise_id' => 3,
+                                            'point_calification_left' => 250,
+                                            'point_calification_rigth' => 250,
                                             'updated_by' => $customer_id,
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
@@ -85,6 +89,8 @@ class B_home extends CI_Controller {
                                  $data = array(
                                             
                                             'franchise_id' => 4,
+                                            'point_calification_left' => 500,
+                                            'point_calification_rigth' => 500,
                                             'updated_by' => $customer_id,
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
@@ -94,6 +100,8 @@ class B_home extends CI_Controller {
                                  $data = array(
                                             
                                             'franchise_id' => 5,
+                                            'point_calification_left' => 1000,
+                                            'point_calification_rigth' => 1000,
                                             'updated_by' => $customer_id,
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
