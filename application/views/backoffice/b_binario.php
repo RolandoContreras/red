@@ -11,17 +11,40 @@
               </div>
               <div class="clearfix"></div>           
             </div>
-    <h3>Árbol Genealógico Binario</h3>
-
+     <h3>Árbol Genealógico Binario</h3>
+                    
     <div class="container-fluid">
        <!-- START DATATABLE 1 -->
        <div class="row">
+                        <div role="alert" class="alert alert-info">
+                                    <strong>Puntaje para calificar:</strong>
+                        </div>
+                        <div class="form-group">
+                                <div class="col-sm-9">
+                                    <!--<label class="radio-inline">-->
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>IZQUIERDA:</b> <span class="label label-warning"><?php echo $obj_customer->point_calification_left;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <!--<label class="radio-inline">-->
+                                        <b>DERECHA:</b><span class="label label-warning"><?php echo $obj_customer->point_calification_rigth;?></span> &nbsp;&nbsp;&nbsp;
+                                    <br/><br/>
+                                </div>
+                          </div>
+            
+           
+       </div>
+       
+       
+       <div class="row">
+           <div role="alert" class="alert alert-info">
+                        </div>
           <div class="col-lg-12">
             <div class="col-lg-12">
+                
                     <span class="circle circle-success circle-lg"></span>Afiliado Activo
                     <span class="circle circle-danger circle-lg"></span>Afiliado Inactivo 
                     <a href="javascript: history.back(-1)" class="btn btn-primary btn-xs"><em class="icon-action-redo"></em>&nbsp;&nbsp;Atras</a>
                 </div>
+                
+              
              <!--ARBOL GENEALOGICO-->
                 <div class="row">
                     <div class="col-sm-12 col-lg-12" style="padding: 0;">

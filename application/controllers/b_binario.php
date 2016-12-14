@@ -53,6 +53,8 @@ class B_binario extends CI_Controller {
                                         customer.birth_date,
                                         customer.address,
                                         customer.identificador,
+                                        customer.point_calification_left,
+                                        customer.point_calification_rigth,
                                         customer.city,
                                         customer.active,
                                         customer.status_value,
