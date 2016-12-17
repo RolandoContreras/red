@@ -17,23 +17,20 @@
        <!-- START DATATABLE 1 -->
        <div class="row">
                         <div role="alert" class="alert alert-info">
-                                    <strong>Puntaje para calificar:</strong>
+                                    <strong>Puntaje para calificar y binario:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Nota: 1 punto = 1 USD)
                         </div>
                         <div class="form-group">
                                 <div class="col-sm-9">
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>IZQUIERDA:</b> <span class="label label-warning"><?php echo $obj_customer->point_calification_left;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <b>DERECHA:</b><span class="label label-warning"><?php echo $obj_customer->point_calification_rigth;?></span> &nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>IZQUIERDA: </b> <span class="label label-warning"><?php echo $obj_customer->point_calification_left;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <b>DERECHA: </b><span class="label label-warning"><?php echo $obj_customer->point_calification_rigth;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>P. IZQUIERDA: </b> <span class="label label-info"><?php echo $obj_customer->point_left;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <b>P. DERECHA: </b><span class="label label-info"><?php echo $obj_customer->point_rigth;?></span> &nbsp;&nbsp;&nbsp;
                                     <br/><br/>
                                 </div>
                           </div>
-            
-           
        </div>
-       
-       
        <div class="row">
-           <div role="alert" class="alert alert-info">
-                        </div>
+           <div role="alert" class="alert alert-info"></div>
           <div class="col-lg-12">
             <div class="col-lg-12">
                 
