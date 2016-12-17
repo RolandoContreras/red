@@ -21,9 +21,7 @@
                         </div>
                         <div class="form-group">
                                 <div class="col-sm-9">
-                                    <!--<label class="radio-inline">-->
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>IZQUIERDA:</b> <span class="label label-warning"><?php echo $obj_customer->point_calification_left;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <!--<label class="radio-inline">-->
                                         <b>DERECHA:</b><span class="label label-warning"><?php echo $obj_customer->point_calification_rigth;?></span> &nbsp;&nbsp;&nbsp;
                                     <br/><br/>
                                 </div>
@@ -72,7 +70,26 @@
                                       <div class="col-sm-2" style="padding: 0;"></div>
                                       <div class="col-sm-8" style="padding: 0;">
                                         <div class="div-img">
-                                            <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                            <?php
+                                            switch ($obj_customer->franchise_id) {
+                                                    case 2:
+                                                        $images = "basic.jpg";
+                                                        break;
+                                                    case 3:
+                                                        $images = "platinium.jpg";
+                                                        break;
+                                                    case 4:
+                                                        $images = "gold.jpg";
+                                                        break;
+                                                    case 5:
+                                                        $images = "vip.jpg";
+                                                        break;
+                                                    case 6:
+                                                        $images = "default.jpg";
+                                                        break;
+                                                }
+                                            ?>
+                                            <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                         </div>
                                       </div>
                                       <div class="col-sm-2" style="padding: 0;">
@@ -108,7 +125,26 @@
                                       <div class="col-sm-2" style="padding: 0;"></div>
                                       <div class="col-sm-8" style="padding: 0;">
                                         <div class="div-img">
-                                            <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                            <?php
+                                            switch ($n2_iz[10]) {
+                                                    case 2:
+                                                        $images = "basic.jpg";
+                                                        break;
+                                                    case 3:
+                                                        $images = "platinium.jpg";
+                                                        break;
+                                                    case 4:
+                                                        $images = "gold.jpg";
+                                                        break;
+                                                    case 5:
+                                                        $images = "vip.jpg";
+                                                        break;
+                                                    case 6:
+                                                        $images = "default.jpg";
+                                                        break;
+                                                }
+                                            ?>
+                                            <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                         </div>
                                       </div>
                                       <div class="col-sm-2" style="padding: 0;">
@@ -142,7 +178,26 @@
                                                 <div class="col-sm-2" style="padding: 0;"></div>
                                                 <div class="col-sm-8" style="padding: 0;">
                                                   <div class="div-img">
-                                                      <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                      <?php
+                                                        switch ($n3_iz[10]) {
+                                                                case 2:
+                                                                    $images = "basic.jpg";
+                                                                    break;
+                                                                case 3:
+                                                                    $images = "platinium.jpg";
+                                                                    break;
+                                                                case 4:
+                                                                    $images = "gold.jpg";
+                                                                    break;
+                                                                case 5:
+                                                                    $images = "vip.jpg";
+                                                                    break;
+                                                                case 6:
+                                                                    $images = "default.jpg";
+                                                                    break;
+                                                            }
+                                                        ?>
+                                                 <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                                   </div>
                                                 </div>
                                                 <div class="col-sm-2" style="padding: 0;">
@@ -174,7 +229,26 @@
                                                             <div class="col-sm-2" style="padding: 0;"></div>
                                                             <div class="col-sm-8" style="padding: 0;">
                                                               <div class="div-img">
-                                                                  <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                                  <?php
+                                                                        switch ($n4_iz[10]) {
+                                                                                case 2:
+                                                                                    $images = "basic.jpg";
+                                                                                    break;
+                                                                                case 3:
+                                                                                    $images = "platinium.jpg";
+                                                                                    break;
+                                                                                case 4:
+                                                                                    $images = "gold.jpg";
+                                                                                    break;
+                                                                                case 5:
+                                                                                    $images = "vip.jpg";
+                                                                                    break;
+                                                                                case 6:
+                                                                                    $images = "default.jpg";
+                                                                                    break;
+                                                                            }
+                                                                        ?>
+                                                                 <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                                               </div>
                                                             </div>
                                                             <div class="col-sm-2" style="padding: 0;">
@@ -206,7 +280,26 @@
                                                                         <div class="col-sm-2" style="padding: 0;"></div>
                                                                         <div class="col-sm-8" style="padding: 0;">
                                                                           <div class="div-img">
-                                                                              <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                                              <?php
+                                                                                switch ($n4_2_iz[10]) {
+                                                                                        case 2:
+                                                                                            $images = "basic.jpg";
+                                                                                            break;
+                                                                                        case 3:
+                                                                                            $images = "platinium.jpg";
+                                                                                            break;
+                                                                                        case 4:
+                                                                                            $images = "gold.jpg";
+                                                                                            break;
+                                                                                        case 5:
+                                                                                            $images = "vip.jpg";
+                                                                                            break;
+                                                                                        case 6:
+                                                                                            $images = "default.jpg";
+                                                                                            break;
+                                                                                    }
+                                                                                ?>
+                                                                         <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                                                           </div>
                                                                         </div>
                                                                         <div class="col-sm-2" style="padding: 0;">
@@ -242,7 +335,26 @@
                                                         <div class="col-sm-2" style="padding: 0;"></div>
                                                         <div class="col-sm-8" style="padding: 0;">
                                                           <div class="div-img">
-                                                              <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                              <?php
+                                                                                switch ($n3_2_iz[10]) {
+                                                                                        case 2:
+                                                                                            $images = "basic.jpg";
+                                                                                            break;
+                                                                                        case 3:
+                                                                                            $images = "platinium.jpg";
+                                                                                            break;
+                                                                                        case 4:
+                                                                                            $images = "gold.jpg";
+                                                                                            break;
+                                                                                        case 5:
+                                                                                            $images = "vip.jpg";
+                                                                                            break;
+                                                                                        case 6:
+                                                                                            $images = "default.jpg";
+                                                                                            break;
+                                                                                    }
+                                                                                ?>
+                                                                         <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                                           </div>
                                                         </div>
                                                         <div class="col-sm-2" style="padding: 0;">
@@ -274,7 +386,26 @@
                                                                         <div class="col-sm-2" style="padding: 0;"></div>
                                                                         <div class="col-sm-8" style="padding: 0;">
                                                                           <div class="div-img">
-                                                                              <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                                              <?php
+                                                                                switch ($n4_3_iz[10]) {
+                                                                                        case 2:
+                                                                                            $images = "basic.jpg";
+                                                                                            break;
+                                                                                        case 3:
+                                                                                            $images = "platinium.jpg";
+                                                                                            break;
+                                                                                        case 4:
+                                                                                            $images = "gold.jpg";
+                                                                                            break;
+                                                                                        case 5:
+                                                                                            $images = "vip.jpg";
+                                                                                            break;
+                                                                                        case 6:
+                                                                                            $images = "default.jpg";
+                                                                                            break;
+                                                                                    }
+                                                                                ?>
+                                                                         <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                                                           </div>
                                                                         </div>
                                                                         <div class="col-sm-2" style="padding: 0;">
@@ -308,7 +439,26 @@
                                                                     <div class="col-sm-2" style="padding: 0;"></div>
                                                                     <div class="col-sm-8" style="padding: 0;">
                                                                       <div class="div-img">
-                                                                          <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                                          <?php
+                                                                                switch ($n4_4_iz[10]) {
+                                                                                        case 2:
+                                                                                            $images = "basic.jpg";
+                                                                                            break;
+                                                                                        case 3:
+                                                                                            $images = "platinium.jpg";
+                                                                                            break;
+                                                                                        case 4:
+                                                                                            $images = "gold.jpg";
+                                                                                            break;
+                                                                                        case 5:
+                                                                                            $images = "vip.jpg";
+                                                                                            break;
+                                                                                        case 6:
+                                                                                            $images = "default.jpg";
+                                                                                            break;
+                                                                                    }
+                                                                                ?>
+                                                                         <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                                                       </div>
                                                                     </div>
                                                                     <div class="col-sm-2" style="padding: 0;">
@@ -350,7 +500,26 @@
                                             <div class="col-sm-2" style="padding: 0;"></div>
                                             <div class="col-sm-8" style="padding: 0;">
                                               <div class="div-img">
-                                                  <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                  <?php
+                                                        switch ($n2_de[10]) {
+                                                                case 2:
+                                                                    $images = "basic.jpg";
+                                                                    break;
+                                                                case 3:
+                                                                    $images = "platinium.jpg";
+                                                                    break;
+                                                                case 4:
+                                                                    $images = "gold.jpg";
+                                                                    break;
+                                                                case 5:
+                                                                    $images = "vip.jpg";
+                                                                    break;
+                                                                case 6:
+                                                                    $images = "default.jpg";
+                                                                    break;
+                                                            }
+                                                        ?>
+                                                 <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                               </div>
                                             </div>
                                             <div class="col-sm-2" style="padding: 0;">
@@ -382,7 +551,26 @@
                                                           <div class="col-sm-2" style="padding: 0;"></div>
                                                           <div class="col-sm-8" style="padding: 0;">
                                                             <div class="div-img">
-                                                                <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                                <?php
+                                                        switch ($n3_2_de[10]) {
+                                                                case 2:
+                                                                    $images = "basic.jpg";
+                                                                    break;
+                                                                case 3:
+                                                                    $images = "platinium.jpg";
+                                                                    break;
+                                                                case 4:
+                                                                    $images = "gold.jpg";
+                                                                    break;
+                                                                case 5:
+                                                                    $images = "vip.jpg";
+                                                                    break;
+                                                                case 6:
+                                                                    $images = "default.jpg";
+                                                                    break;
+                                                            }
+                                                        ?>
+                                                 <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                                             </div>
                                                           </div>
                                                           <div class="col-sm-2" style="padding: 0;">
@@ -414,7 +602,26 @@
                                                                             <div class="col-sm-2" style="padding: 0;"></div>
                                                                             <div class="col-sm-8" style="padding: 0;">
                                                                               <div class="div-img">
-                                                                                  <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                                                   <?php
+                                                                                        switch ($n4_4_de[10]) {
+                                                                                                case 2:
+                                                                                                    $images = "basic.jpg";
+                                                                                                    break;
+                                                                                                case 3:
+                                                                                                    $images = "platinium.jpg";
+                                                                                                    break;
+                                                                                                case 4:
+                                                                                                    $images = "gold.jpg";
+                                                                                                    break;
+                                                                                                case 5:
+                                                                                                    $images = "vip.jpg";
+                                                                                                    break;
+                                                                                                case 6:
+                                                                                                    $images = "default.jpg";
+                                                                                                    break;
+                                                                                            }
+                                                                                        ?>
+                                                                                 <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                                                               </div>
                                                                             </div>
                                                                             <div class="col-sm-2" style="padding: 0;">
@@ -448,7 +655,26 @@
                                                                                     <div class="col-sm-2" style="padding: 0;"></div>
                                                                                     <div class="col-sm-8" style="padding: 0;">
                                                                                       <div class="div-img">
-                                                                                          <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                                                           <?php
+                                                                                        switch ($n4_3_de[10]) {
+                                                                                                case 2:
+                                                                                                    $images = "basic.jpg";
+                                                                                                    break;
+                                                                                                case 3:
+                                                                                                    $images = "platinium.jpg";
+                                                                                                    break;
+                                                                                                case 4:
+                                                                                                    $images = "gold.jpg";
+                                                                                                    break;
+                                                                                                case 5:
+                                                                                                    $images = "vip.jpg";
+                                                                                                    break;
+                                                                                                case 6:
+                                                                                                    $images = "default.jpg";
+                                                                                                    break;
+                                                                                            }
+                                                                                        ?>
+                                                                                 <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                                                                       </div>
                                                                                     </div>
                                                                                     <div class="col-sm-2" style="padding: 0;">
@@ -486,7 +712,26 @@
                                                         <div class="col-sm-2" style="padding: 0;"></div>
                                                         <div class="col-sm-8" style="padding: 0;">
                                                           <div class="div-img">
-                                                              <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                              <?php
+                                                                                        switch ($n3_de[10]) {
+                                                                                                case 2:
+                                                                                                    $images = "basic.jpg";
+                                                                                                    break;
+                                                                                                case 3:
+                                                                                                    $images = "platinium.jpg";
+                                                                                                    break;
+                                                                                                case 4:
+                                                                                                    $images = "gold.jpg";
+                                                                                                    break;
+                                                                                                case 5:
+                                                                                                    $images = "vip.jpg";
+                                                                                                    break;
+                                                                                                case 6:
+                                                                                                    $images = "default.jpg";
+                                                                                                    break;
+                                                                                            }
+                                                                                        ?>
+                                                                                 <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                                           </div>
                                                         </div>
                                                         <div class="col-sm-2" style="padding: 0;">
@@ -518,7 +763,26 @@
                                                             <div class="col-sm-2" style="padding: 0;"></div>
                                                             <div class="col-sm-8" style="padding: 0;">
                                                               <div class="div-img">
-                                                                  <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                                   <?php
+                                                                                        switch ($n4_2_de[10]) {
+                                                                                                case 2:
+                                                                                                    $images = "basic.jpg";
+                                                                                                    break;
+                                                                                                case 3:
+                                                                                                    $images = "platinium.jpg";
+                                                                                                    break;
+                                                                                                case 4:
+                                                                                                    $images = "gold.jpg";
+                                                                                                    break;
+                                                                                                case 5:
+                                                                                                    $images = "vip.jpg";
+                                                                                                    break;
+                                                                                                case 6:
+                                                                                                    $images = "default.jpg";
+                                                                                                    break;
+                                                                                            }
+                                                                                        ?>
+                                                                                 <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                                               </div>
                                                             </div>
                                                             <div class="col-sm-2" style="padding: 0;">
@@ -553,7 +817,26 @@
                                                             <div class="col-sm-2" style="padding: 0;"></div>
                                                             <div class="col-sm-8" style="padding: 0;">
                                                               <div class="div-img">
-                                                                  <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                                  <?php
+                                                                                        switch ($n4_de[10]) {
+                                                                                                case 2:
+                                                                                                    $images = "basic.jpg";
+                                                                                                    break;
+                                                                                                case 3:
+                                                                                                    $images = "platinium.jpg";
+                                                                                                    break;
+                                                                                                case 4:
+                                                                                                    $images = "gold.jpg";
+                                                                                                    break;
+                                                                                                case 5:
+                                                                                                    $images = "vip.jpg";
+                                                                                                    break;
+                                                                                                case 6:
+                                                                                                    $images = "default.jpg";
+                                                                                                    break;
+                                                                                            }
+                                                                                        ?>
+                                                                                 <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                                               </div>
                                                             </div>
                                                             <div class="col-sm-2" style="padding: 0;">
@@ -581,7 +864,10 @@
             </li>
           </ul>
           <br>
-          </div></div></div></div>                     <!--ARBOL GENEALOGICO END-->   
+          </div>
+        </div>
+    </div>
+</div>                     <!--ARBOL GENEALOGICO END-->   
           </div>
        </div>
        <!-- END DATATABLE 1 -->
