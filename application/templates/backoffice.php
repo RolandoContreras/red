@@ -6,7 +6,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
    <meta name="description" content="Software Millenium">
    <meta name="keywords" content="millenium, software, multinivel, binario, forzada, matriz, unilevel">
-    <link rel="shortcut icon" type="image/png"Sref="/angel/favicon.png">
+    <link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon.ico'?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon.ico'?>" type="image/x-icon">
     <title>BITSHARE</title>
        <!-- FONT AWESOME-->
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/font-awesome.min.css';?>">
@@ -231,7 +232,26 @@
                                             <!-- User picture-->
                                                 <div class="user-block-picture">
                                                 <div class="user-block-status">
-                                                        <a><img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle"></a>
+                                                    <?php
+                                                        switch ($_SESSION['customer']['franchise_id']) {
+                                                                case 2:
+                                                                    $images = "basic.jpg";
+                                                                    break;
+                                                                case 3:
+                                                                    $images = "platinium.jpg";
+                                                                    break;
+                                                                case 4:
+                                                                    $images = "gold.jpg";
+                                                                    break;
+                                                                case 5:
+                                                                    $images = "vip.jpg";
+                                                                    break;
+                                                                case 6:
+                                                                    $images = "default.jpg";
+                                                                    break;
+                                                            }
+                                                        ?>
+                                                <a><img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle"></a>
                                                         <div class="circle circle-success circle-lg"></div>
                                                 </div>
                                                 </div>
