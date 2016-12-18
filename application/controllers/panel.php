@@ -5,6 +5,7 @@ class Panel extends CI_Controller{
         parent::__construct();    
         $this->load->model("comments_model","obj_comments");
         $this->load->model("customer_model","obj_customer");
+        $this->load->model("otros_model","obj_otros");
     }
     
     public function index(){
@@ -31,6 +32,14 @@ class Panel extends CI_Controller{
             );
         $obj_last_comment = $this->obj_comments->get_search_row($params);
         
+        //GET PRICE BTC
+        $params = array(
+                        "select" =>"", 
+                        "where" =>"otros_id = 1", 
+            );
+        $obj_otros = $this->obj_otros->get_search_row($params);
+        $price_btc = $obj_otros->precio_btc;
+        
         //GET AND COUNT ALL THE CUSTOMER
         $params = array("select" =>"count(customer_id) as customer_id");
         $obj_customer = $this->obj_customer->get_search_row($params);
@@ -39,6 +48,7 @@ class Panel extends CI_Controller{
         $modulos ='Home'; 
         $link_modulo =  site_url().$modulos; 
         $seccion = 'Vista global';        
+        $this->tmp_mastercms->set('price_btc',$price_btc);
         $this->tmp_mastercms->set('obj_customer',$obj_customer);
         $this->tmp_mastercms->set('obj_last_comment',$obj_last_comment);
         $this->tmp_mastercms->set('obj_comments',$obj_comments);
@@ -49,6 +59,26 @@ class Panel extends CI_Controller{
         $this->tmp_mastercms->set('seccion',$seccion);
         $this->tmp_mastercms->render('panel');
      }
+     
+    public function guardar_btc(){
+        //ACTIVE CUSTOMER
+        if($this->input->is_ajax_request()){  
+            
+                //SELECT PRICE BTC
+                $btc_price = $this->input->post("btc_price");
+               
+                if($btc_price != 0){
+                    $data = array(
+                        'precio_btc' => $btc_price,
+                        'updated_at' => date("Y-m-d H:i:s"),
+                        'updated_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_otros->update(1,$data);
+                }
+                    echo json_encode($data);            
+        exit();
+            }
+    } 
      
     public function get_session(){          
         if (isset($_SESSION['usercms'])){

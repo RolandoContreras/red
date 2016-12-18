@@ -1,3 +1,10 @@
+<script src="static/cms/js/core/bootstrap-modal.js"></script>
+<script src="static/cms/js/core/bootbox.min.js"></script>
+<script src="static/cms/js/core/jquery-1.11.1.min.js"></script>
+<script src="static/cms/js/core/jquery.dataTables.min.js"></script>
+<link href="static/cms/css/core/jquery.dataTables.css" rel="stylesheet"/>
+
+
 <div class="row-fluid">
     <div class="span6">
             <div class="widget_container">
@@ -22,7 +29,11 @@
                                                     <td><a class="pending"><b class="cmd"><?php echo $inactive;?></b> <i class="icon-edit"></i> Pendientes</a></td>
                                             </tr>
                                             <tr>
-                                                    <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_customer?></b> <i class="icon-edit"></i> Clientes</a></td>
+                                                    <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_customer?></b> <i class="icon-edit"></i>Total Asociados</a></td>
+                                                    <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a>Precio del BTC</a>&nbsp;&nbsp;&nbsp;<input type="text" name="btc_price" id="btc_price" value="<?php echo $price_btc;?>" style="vertical-align: middle !important;">&nbsp;&nbsp;&nbsp;<button onclick="guardar_btc();" class="btn btn-info">Guardar</button></td>
                                                     <td></td>
                                             </tr>
                                            
@@ -144,8 +155,6 @@
                                 <a href="#" class="btn btn-duadua">View More</a>
                         </div>
                 </div>
-               
-
         </div>
-
 </div>
+<script src="static/cms/js/panel.js"></script>
