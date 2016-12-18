@@ -52,7 +52,26 @@
                                       <div class="col-sm-2" style="padding: 0;"></div>
                                       <div class="col-sm-8" style="padding: 0;">
                                         <div class="div-img">
-                                            <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                            <?php
+                                            switch ($obj_customer->franchise_id) {
+                                                    case 2:
+                                                        $images = "basic.jpg";
+                                                        break;
+                                                    case 3:
+                                                        $images = "platinium.jpg";
+                                                        break;
+                                                    case 4:
+                                                        $images = "gold.jpg";
+                                                        break;
+                                                    case 5:
+                                                        $images = "vip.jpg";
+                                                        break;
+                                                    case 6:
+                                                        $images = "default.jpg";
+                                                        break;
+                                                }
+                                            ?>
+                                            <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                         </div>
                                       </div>
                                       <div class="col-sm-2" style="padding: 0;">
@@ -88,7 +107,26 @@
                                             <div class="col-sm-2" style="padding: 0;"></div>
                                             <div class="col-sm-8" style="padding: 0;">
                                               <div class="div-img">
-                                                  <img src="<?php echo site_url().'static/backoffice/images/default.jpg';?>" alt="" class="img-responsive img-circle thumb48">
+                                                   <?php
+                                            switch ($value->franchise_id) {
+                                                    case 2:
+                                                        $images = "basic.jpg";
+                                                        break;
+                                                    case 3:
+                                                        $images = "platinium.jpg";
+                                                        break;
+                                                    case 4:
+                                                        $images = "gold.jpg";
+                                                        break;
+                                                    case 5:
+                                                        $images = "vip.jpg";
+                                                        break;
+                                                    case 6:
+                                                        $images = "default.jpg";
+                                                        break;
+                                                }
+                                            ?>
+                                            <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
                                               </div>
                                             </div>
                                             <div class="col-sm-2" style="padding: 0;">
