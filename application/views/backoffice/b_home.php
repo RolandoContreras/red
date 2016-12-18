@@ -2,8 +2,8 @@
          <!-- Page content-->
          <div class="content-wrapper">
             <div class="content-heading">
-              <div class="pull-right text-danger">
-                Bitcoin: $737.00000000              
+              <div class="pull-right text-success">
+                Precio bitcoin: $<?php echo $price_btc;?>
               </div>
                               <div class="col-lg-3">
                 <img src="<?php echo site_url().'static/backoffice/images/logo-btc2.png';?>" class="responsive" height="100px;" id="LogoClienteMill">

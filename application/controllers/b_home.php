@@ -5,6 +5,7 @@ class B_home extends CI_Controller {
         parent::__construct();
         $this->load->model("customer_model","obj_customer");
         $this->load->model("commissions_model","obj_commissions");
+        $this->load->model("otros_model","obj_otros");
     }
 
     public function index()
@@ -41,12 +42,21 @@ class B_home extends CI_Controller {
                                     (select sum(amount) FROM commissions WHERE status_value = 2 and customer_id = $customer_id) as balance",
                          "where" => "commissions.customer_id = $customer_id",
                     );
+             $obj_commissions = $this->obj_commissions->get_search_row($params_total); 
+             
+            //GET PRICE BTC
+                $params_price_btc = array(
+                        "select" =>"",
+                         "where" => "otros_id = 1",
+                    );
                 
-           $obj_commissions = $this->obj_commissions->get_search_row($params_total);              
-        
+           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
+           $price_btc = number_format($obj_otros->precio_btc,8);
+           
            $obj_total = $obj_commissions->total;
            $obj_balance = $obj_commissions->balance;
         
+        $this->tmp_backoffice->set("price_btc",$price_btc);
         $this->tmp_backoffice->set("obj_total",$obj_total);
         $this->tmp_backoffice->set("obj_balance",$obj_balance);
         $this->tmp_backoffice->set("obj_customer",$obj_customer);
