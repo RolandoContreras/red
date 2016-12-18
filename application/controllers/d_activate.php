@@ -104,6 +104,7 @@ class D_activate extends CI_Controller{
                 if(count($customer_id) > 0){
                     $data = array(
                         'active' => 1,
+                        'financy' => 1,
                         'date_start' => $today,
                         'date_end' => $today_76,
                         'updated_at' => date("Y-m-d H:i:s"),
