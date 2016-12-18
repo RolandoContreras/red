@@ -41,13 +41,18 @@ class Panel extends CI_Controller{
         $price_btc = $obj_otros->precio_btc;
         
         //GET AND COUNT ALL THE CUSTOMER
-        $params = array("select" =>"count(customer_id) as customer_id");
+        $params = array("select" =>"count(customer_id) as customer_id,
+                                    (select count(customer_id) from customer where financy = 1) as financiado");
         $obj_customer = $this->obj_customer->get_search_row($params);
+        //TOTAL FINANCIADOS
+        $obj_financiado = $obj_customer->financiado;
+        //TOTAL CUSTOMER
         $obj_customer = $obj_customer->customer_id;
         
         $modulos ='Home'; 
         $link_modulo =  site_url().$modulos; 
         $seccion = 'Vista global';        
+        $this->tmp_mastercms->set('obj_financiado',$obj_financiado);
         $this->tmp_mastercms->set('price_btc',$price_btc);
         $this->tmp_mastercms->set('obj_customer',$obj_customer);
         $this->tmp_mastercms->set('obj_last_comment',$obj_last_comment);

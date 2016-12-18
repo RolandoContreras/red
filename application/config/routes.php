@@ -90,6 +90,7 @@ $route['dashboard/panel/guardar_btc'] = "panel/guardar_btc";
 
 
 $route['dashboard/clientes'] = "d_customer";
+$route['dashboard/financiados'] = "d_customer/financiados";
 $route['dashboard/clientes/active_customer'] = "d_customer/active_customer";
 $route['dashboard/clientes/no_active_customer'] = "d_customer/no_active_customer";
 $route['dashboard/clientes/load/([0-9]+)'] = "d_customer/load/$1";
