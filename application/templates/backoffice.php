@@ -4,10 +4,11 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   <meta name="description" content="Software Millenium">
-   <meta name="keywords" content="millenium, software, multinivel, binario, forzada, matriz, unilevel">
+   <meta name="description" content="BitShare (compartir Bitcoin) es una plataforma financiera con el fin de ayudar a capitalizar y dar herramientas para un crecimiento económico y personal a las personas en este nuevo cambio de era.">
+   <meta name="keywords" content="bitshare, software, multinivel, binario, negocio, mlm, dinero, bitcoin, millones">
     <link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon.ico'?>" type="image/x-icon">
     <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon.ico'?>" type="image/x-icon">
+    <meta name="robots" CONTENT="noindex, nofollow" />
     <title>BITSHARE</title>
        <!-- FONT AWESOME-->
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/font-awesome.min.css';?>">
@@ -423,8 +424,6 @@
  <span>&copy; 2016 - BitShare</span>
 </footer>
    </div>
-   
-		<!-- =============== VENDOR SCRIPTS ===============-->
 		   <!-- MODERNIZR-->
 		   <script src="<?php echo site_url().'static/backoffice/js/modernizr.js';?>"></script>
 		   <!-- JQUERY-->
