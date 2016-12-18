@@ -126,7 +126,7 @@
                               <div class="form-group">
                                   <label for="telefono" class="col-lg-3 control-label"><?php echo replace_vocales_voculeshtml("Dirección de BTC");?></label>
                                  <div class="col-lg-9">
-                                     <input type="text" class="form-control" name="btc" id="btc" placeholder="Direccion de BTC" value="<?php echo $obj_customer->btc_address;?>" <?php if(isset($obj_customer->btc_address)){echo "disabled";}?>>
+                                     <input type="text" class="form-control" name="btc" id="btc" placeholder="Direccion de BTC" value="<?php echo $obj_customer->btc_address;?>">
                                  </div>
                               </div>
                                <div class="form-group">

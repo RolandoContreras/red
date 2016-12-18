@@ -87,7 +87,6 @@ class B_data extends CI_Controller {
             }
     }
     
-    
         public function update_password(){
 
              if($this->input->is_ajax_request()){   
@@ -126,6 +125,21 @@ class B_data extends CI_Controller {
            $btc_address = $this->input->post('btc');
            $customer_id = $this->input->post('customer_id');
 
+           $param = array(
+                        "select" =>"customer.customer_id,
+                                    customer.username,
+                                    customer.first_name,
+                                    customer.last_name,
+                                    customer.email,
+                                    customer.btc_address,
+                                    customer.status_value",
+                        "where" => "customer.customer_id = $customer_id");
+           $obj_customer = $this->obj_customer->get_search_row($param);
+           //GET EMAIL
+           $email = $obj_customer->email;
+           //GET BTC ADDRESS
+           $btc = $obj_customer->btc_address;
+           
            //UPDATE DATA EN CUSTOMER TABLE
            $data = array(
                            'btc_address' => $btc_address,
@@ -133,7 +147,22 @@ class B_data extends CI_Controller {
                            'updated_at' => date("Y-m-d H:i:s")
                        ); 
                        $this->obj_customer->update($customer_id,$data);
+            
+                       // El mensaje
+                $mail = "Hola, $obj_customer->first_name $obj_customer->last_name la dirección de su cuenta de bitcoin se cambio por: $btc";
 
+                // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
+                $mensaje = wordwrap($mail, 70, "\r\n");
+                //Titulo
+                $titulo = "Cambio de dirección BTC - BITSHARE";
+                //cabecera
+                $headers = "MIME-Version: 1.0\r\n"; 
+                $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                //dirección del remitente 
+                $headers .= "From: Bitshare - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
+                //Enviamos el mensaje a tu_dirección_email 
+                $bool = mail("$email",$titulo,$mensaje,$headers);
+                       
                 $data['message'] = "true";
                 $data['print'] = "Datos cambiados con éxito";
                 $data['url'] = "misdatos";

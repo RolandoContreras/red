@@ -67,9 +67,9 @@ class D_customer extends CI_Controller{
            $obj_customer= $this->obj_customer->search($params);
   
            /// PAGINADO
-            $modulos ='clientes'; 
+            $modulos ='financiados'; 
             $seccion = 'Lista';        
-            $link_modulo =  site_url().'dashboard/clientes'; 
+            $link_modulo =  site_url().'dashboard/financiados'; 
             
             /// VISTA
             $this->tmp_mastercms->set('link_modulo',$link_modulo);

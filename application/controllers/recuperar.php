@@ -58,7 +58,7 @@ class Recuperar extends CI_Controller {
                         $email = $obj_customer->email;
                         
                         // El mensaje
-                        $mail = "Hola, $obj_customer->first_name $obj_customer->last_name los datos de tu cuenta son:\r\nUsername: $obj_customer->email\r\nContraseña: $obj_customer->password";
+                        $mail = "Hola, $obj_customer->first_name $obj_customer->last_name los datos de tu cuenta son:\r\n Username: $obj_customer->username\r\n Contraseña: $obj_customer->password";
 
                         // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
                         $mensaje = wordwrap($mail, 70, "\r\n");
