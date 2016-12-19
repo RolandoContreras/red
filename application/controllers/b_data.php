@@ -137,8 +137,6 @@ class B_data extends CI_Controller {
            $obj_customer = $this->obj_customer->get_search_row($param);
            //GET EMAIL
            $email = $obj_customer->email;
-           //GET BTC ADDRESS
-           $btc = $obj_customer->btc_address;
            
            //UPDATE DATA EN CUSTOMER TABLE
            $data = array(
@@ -149,7 +147,7 @@ class B_data extends CI_Controller {
                        $this->obj_customer->update($customer_id,$data);
             
                        // El mensaje
-                $mail = "Hola, $obj_customer->first_name $obj_customer->last_name la dirección de su cuenta de bitcoin se cambio por: $btc";
+                $mail = "Hola, $obj_customer->first_name $obj_customer->last_name la dirección de su cuenta de bitcoin se cambio por: $btc_address";
 
                 // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
                 $mensaje = wordwrap($mail, 70, "\r\n");

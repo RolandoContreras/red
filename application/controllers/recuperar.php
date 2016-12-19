@@ -79,7 +79,7 @@ class Recuperar extends CI_Controller {
                             $data['message'] = "false"; 
                         }
                     }else{
-                            $data['print'] = "El usuario ingresado esta registrado";
+                            $data['print'] = "El usuario ingresado no esta registrado";
                             $data['message'] = "false";
                     }
                 }         
