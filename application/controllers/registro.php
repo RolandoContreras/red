@@ -184,8 +184,25 @@ class Registro extends CI_Controller {
                     'status_value' => 1,
                     'created_at' => date("Y-m-d H:i:s"),
                 );
-
+                
                 $customer_id = $this->obj_customer->insert($data);
+                
+                
+                // Envio de Correo de Bienvenida
+                $mail = "Hola, $name $last_name, te damos la más cordial bienvenida al equipo de BITSHARE, los datos de tu cuenta son usuario: $usuario contrseña:$clave";
+
+                // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
+                $mensaje = wordwrap($mail, 70, "\r\n");
+                //Titulo
+                $titulo = "Bienvenido a BITSHARE";
+                //cabecera
+                $headers = "MIME-Version: 1.0\r\n"; 
+                $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                //dirección del remitente 
+                $headers .= "From: Bitshare - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
+                //Enviamos el mensaje a tu_dirección_email 
+                $bool = mail("$email",$titulo,$mensaje,$headers);
+                
 
                 //ACTIVE SESSION
                 $data_customer_session['customer_id'] = $customer_id;
