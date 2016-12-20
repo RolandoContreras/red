@@ -78,6 +78,7 @@ class Registro extends CI_Controller {
                 "where" => "identificador like '%$identificator_param'  and position = $position",
                 "order" => "customer.identificador DESC");
             $obj_identificator = $this->obj_customer->search($params);
+            
             //COUNT $identificator_param y quitar ,
             $count_identificator = strlen($identificator_param) + 1;
 
@@ -86,26 +87,37 @@ class Registro extends CI_Controller {
 
                 $key = 1;
                 $str = "";
+                $str_number = "";
                 foreach ($obj_identificator as $key => $value) {
                     //GET IDENTIFICATOR TREE 
                     $identificador = $value->identificador;
                     //QUITAR IDENTIFICADOR DEL PADRE
                     $identificador_2 = substr($identificador, 0, -$count_identificator);
-
+                    
                     //CONSULT IF CONTAINT Z O D
                     $find = strpos($identificador_2, "$verify");
 
                     if ($find == false) {
-                        $count =  strlen($identificador);
-                        $str .= "$count&$identificador|";
+//                        $count =  strlen($identificador);
+//                        $str_number .= "$count|";
+                        $str .= "$identificador|";
                     }
                 }
-                $array_identificator = explode("|", $str);
-                $idetificator = max($array_identificator);
                 
-                $idetificator =  explode("&", $idetificator);
-                $idetificator =  $idetificator[1];             
+                $array_identificator = explode("|", $str);
+                
+                $count = 0;
+                foreach ($array_identificator as $value) {
+                    
+                    $count_str = strlen($value);
+                    
+                    if($count_str > $count){
+                        $idetificator = $value;
+                        $count = $count_str;
+                    }
+                }
 
+                $idetificator =  $idetificator;             
             } else {
                 $idetificator = $identificator_param;
             }
@@ -178,6 +190,7 @@ class Registro extends CI_Controller {
                 //ACTIVE SESSION
                 $data_customer_session['customer_id'] = $customer_id;
                 $data_customer_session['name'] = $name;
+                $data_customer_session['franchise_id'] = 6;
                 $data_customer_session['username'] = $usuario;
                 $data_customer_session['email'] = $email;
                 $data_customer_session['active'] = 0;
