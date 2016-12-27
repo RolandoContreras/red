@@ -23,8 +23,10 @@
                                 <div class="col-sm-9">
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>IZQUIERDA: </b> <span class="label label-warning"><?php echo $obj_customer->point_calification_left;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <b>DERECHA: </b><span class="label label-warning"><?php echo $obj_customer->point_calification_rigth;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>P. IZQUIERDA: </b> <span class="label label-info"><?php echo $obj_customer->point_left;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <b>P. DERECHA: </b><span class="label label-info"><?php echo $obj_customer->point_rigth;?></span> &nbsp;&nbsp;&nbsp;
+                                        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>P. IZQUIERDA: </b> <span class="label label-info"><?php echo $obj_customer->point_left / 0.12;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <b>P. DERECHA: </b><span class="label label-info"><?php echo $obj_customer->point_rigth / 0.12;?></span> &nbsp;&nbsp;&nbsp;
+                                        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>$. IZQUIERDA : </b> <span class="label label-inverse"><?php echo $obj_customer->point_left;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <b>$. DERECHA : </b><span class="label label-inverse"><?php echo $obj_customer->point_rigth;?></span> &nbsp;&nbsp;&nbsp;
                                     <br/><br/>
                                 </div>
                           </div>
