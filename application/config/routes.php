@@ -106,6 +106,8 @@ $route['dashboard/usuarios/load'] = "d_users/load";
 $route['dashboard/usuarios/load/([0-9]+)'] = "d_users/load/$1";
 $route['dashboard/usuarios/validate'] = "d_users/validate";
 
+$route['dashboard/cobros'] = "d_pays";
+
 $route['dashboard/recargas'] = "d_recargas";
 $route['dashboard/recargas/load'] = "d_recargas/load";
 $route['dashboard/recargar/buscar_customer'] = "d_recargas/buscar_customer";

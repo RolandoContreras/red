@@ -120,6 +120,21 @@
                                     </div>
                             </div>
                         
+                        <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#cobros">
+                                        Cobros
+                                        </a>
+                                    </div>
+                                    <div id="cobros" class="accordion-body collapse">
+                                      <div class="accordion-inner">
+                                        <ul class="nav nav-list">
+                                             <li><a href="<?php echo site_url()."dashboard/cobros";?>"><i class="icon-large icon-th"></i>Cobros</a></li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                            </div>
+                        
     
                             <div class="accordion-group">
                                     <div class="accordion-heading">
