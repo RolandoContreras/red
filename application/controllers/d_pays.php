@@ -6,9 +6,6 @@ class D_pays extends CI_Controller{
         parent::__construct();
         $this->load->model("customer_model","obj_customer");
         $this->load->model("pay_model","obj_pay");
-//        $this->load->model("paises_model","obj_paises");
-//        $this->load->model("regiones_model","obj_regiones");
-//        $this->load->model("franchise_model","obj_franchise");
     }   
                 
     public function index(){  
@@ -20,6 +17,7 @@ class D_pays extends CI_Controller{
                                     pay.amount,
                                     pay.status_value,
                                     customer.first_name,
+                                    customer.username,
                                     customer.last_name,
                                     customer.dni",
                         "join" => array('customer, pay.customer_id = customer.customer_id')

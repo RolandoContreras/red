@@ -81,31 +81,110 @@ class D_customer extends CI_Controller{
     
     public function validate(){
         
+        $parents_id =  $this->input->post('parents_id');
+        //fecha inicio de pago
+        $date_start =  $this->input->post('date_start');
+        //fecha final de pago
+        $date_end =  $this->input->post('date_end');
+        //financiada
+        $financy =  $this->input->post('financy');
+        //position temporal
+        $position_temporal =  $this->input->post('position_temporal');
+        //activo o pagado
+        $point_calification_left =  $this->input->post('point_calification_left');
+        $point_calification_rigth =  $this->input->post('point_calification_rigth');
+        $identificador =  $this->input->post('identificador');
+        //puntos izquierda
+        $point_left =  $this->input->post('point_left');
+        //puntos derecha
+        $point_rigth =  $this->input->post('point_rigth');
+        //franchise_id
+        $franchise=  $this->input->post('franchise');
+        
         //GET CUSTOMER_ID
         $customer_id = $this->input->post("customer_id");
         $data = array(
-               'first_name' => $this->input->post('first_name'),
-               'last_name   ' => $this->input->post('last_name'),
-               'username' => $this->input->post('username'),
-               'password' => $this->input->post('password'),
-               'email' => $this->input->post('email'),
-               'dni' => $this->input->post('dni'),  
-               'birth_date' => $this->input->post('fecha_de_nacimiento'),  
-               'phone' => $this->input->post('phone'),
-               'country' => $this->input->post('pais'),
-               'region' => $this->input->post('region'),
-               'franchise_id' => $this->input->post('franchise'),
-               'position' => $this->input->post('position'),
-               'address' => $this->input->post('address'),
-               'btc_address' => $this->input->post('btc_address'),
-               'city' => $this->input->post('city'),
-               'calification' => $this->input->post('calification'),
-               'status_value' => $this->input->post('status_value'),
-               'updated_at' => date("Y-m-d H:i:s"),
-               'updated_by' => $_SESSION['usercms']['user_id']
+                
+                'first_name' => $this->input->post('first_name'),
+                'last_name   ' => $this->input->post('last_name'),
+                'username' => $this->input->post('username'),
+                'password' => $this->input->post('password'),
+                'email' => $this->input->post('email'),
+                'dni' => $this->input->post('dni'),  
+                'parents_id' => $parents_id,  
+                'date_start' => $date_start,  
+                'date_end' => $date_end,  
+                'financy' => $financy,  
+                'position_temporal' => $position_temporal,  
+                'point_calification_left' => $point_calification_left,  
+                'point_calification_rigth' => $point_calification_rigth,  
+                'identificador' => $identificador,  
+                'point_left' => $point_left,  
+                'point_rigth' => $point_rigth,  
+                'birth_date' => $this->input->post('fecha_de_nacimiento'),  
+                'phone' => $this->input->post('phone'),
+                'country' => $this->input->post('pais'),
+                'region' => $this->input->post('region'),
+                'franchise_id' => $franchise,
+                'position' => $this->input->post('position'),
+                'address' => $this->input->post('address'),
+                'btc_address' => $this->input->post('btc_address'),
+                'city' => $this->input->post('city'),
+                'calification' => $this->input->post('calification'),
+                'status_value' => $this->input->post('status_value'),
+                'updated_at' => date("Y-m-d H:i:s"),
+                'updated_by' => $_SESSION['usercms']['user_id']
                 );          
             //SAVE DATA IN TABLE    
             $this->obj_customer->update($customer_id, $data);
+            
+            if($franchise == 2){
+            //CHANGE TO BASIC
+             $data = array(
+                        'point_calification_left' => 100,
+                        'point_calification_rigth' => 100,
+                        'updated_by' => $customer_id,
+                        'updated_at' => date("Y-m-d H:i:s")
+                    ); 
+                    $this->obj_customer->update($customer_id,$data);
+            }elseif($franchise == 3){
+                //CHANGE TO PLATINIUM
+                 $data = array(
+                            'point_calification_left' => 250,
+                            'point_calification_rigth' => 250,
+                            'updated_by' => $customer_id,
+                            'updated_at' => date("Y-m-d H:i:s")
+                        ); 
+                        $this->obj_customer->update($customer_id,$data);
+            }elseif($franchise == 4){
+                //CHANGE TO GOLD
+                 $data = array(
+                            'point_calification_left' => 500,
+                            'point_calification_rigth' => 500,
+                            'updated_by' => $customer_id,
+                            'updated_at' => date("Y-m-d H:i:s")
+                        ); 
+                        $this->obj_customer->update($customer_id,$data);
+            }elseif($franchise == 5){
+                //CHANGE TO VIP
+                 $data = array(
+                            'point_calification_left' => 1000,
+                            'point_calification_rigth' => 1000,
+                            'updated_by' => $customer_id,
+                            'updated_at' => date("Y-m-d H:i:s")
+                        ); 
+                        $this->obj_customer->update($customer_id,$data);
+            }elseif($franchise == 6){
+                //CHANGE TO MEMBERSHIP
+                 $data = array(
+                            'point_calification_left' => 0,
+                            'point_calification_rigth' => 0,
+                            'updated_by' => $customer_id,
+                            'updated_at' => date("Y-m-d H:i:s")
+                        ); 
+                        $this->obj_customer->update($customer_id,$data);
+            }
+            
             
         redirect(site_url()."dashboard/clientes");
     }
@@ -134,24 +213,7 @@ class D_customer extends CI_Controller{
             /// PARAMETROS PARA EL SELECT 
             $where = "customer.customer_id = $obj_customer";
             $params = array(
-                        "select" =>"customer.username,
-                                    customer.email,
-                                    customer.customer_id,
-                                    customer.position,
-                                    customer.password,
-                                    customer.first_name,
-                                    customer.last_name,
-                                    customer.dni,
-                                    customer.birth_date,
-                                    customer.address,
-                                    customer.city,
-                                    customer.phone,
-                                    customer.btc_address,
-                                    customer.status_value,
-                                    customer.calification,
-                                    customer.country,
-                                    customer.region,
-                                    customer.franchise_id",
+                        "select" =>"*",
                          "where" => $where,
             ); 
             $obj_customer  = $this->obj_customer->get_search_row($params); 

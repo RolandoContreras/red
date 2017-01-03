@@ -25,6 +25,7 @@
                             <tr>
                                 <th>FECHA</th>
                                 <th>MONTO</th>
+                                <th>USUARIO</th>
                                 <th>NOMBRES</th>
                                 <th>ESTADO</th>
                                 <th>DETALLE</th>
@@ -36,6 +37,7 @@
                             <?php foreach ($obj_pay as $value): ?>
                                 <td align="center"><b><?php echo formato_fecha_barras($value->date);?></b></td>
                                 <td align="center"><?php echo $value->amount;?></td>
+                                <td align="center"><?php echo $value->username;?></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center">
                                     <?php if ($value->status_value == 3) {
@@ -78,4 +80,4 @@
     } );
 } );
 </script>
-<script src="static/cms/js/customer.js"></script>
+<script src="static/cms/js/cobros.js"></script>
