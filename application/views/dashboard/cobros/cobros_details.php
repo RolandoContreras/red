@@ -11,61 +11,63 @@
             <div class="well">
                     <div class="navbar navbar-static navbar_as_heading">
                             <div class="navbar-inner">
-                                    <div class="container" style="width: auto;">
-                                            <a class="brand">LISTADO DE  COBROS</a>
+                                    <div class="container" style="width: 100%;">
+                                            <a class="brand">LISTADO DETALLE DE COBRO</a>
                                     </div>
                             </div>
                     </div>
                 
              <!--<form>-->
-                <div class="well nomargin" style="width: 100% !important;">
+                <div class="well nomargin" style="width: 100%;">
                     <!--- INCIO DE TABLA DE RE4GISTRO -->
                    <table id="table" class="display" cellspacing="0" width="100%">
                         <thead>
                             <tr>
+                                <th>ID</th>
                                 <th>FECHA</th>
+                                <th>NOMBRE COMISIÓN</th>
                                 <th>MONTO</th>
-                                <th>USUARIO</th>
-                                <th>NOMBRES</th>
+                                <th>BILLETERA NORMAL</th>
                                 <th>ESTADO</th>
-                                <th>DETALLE</th>
-                                <th>ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php $sum_normal = "";?>
+                            <?php foreach ($obj_pay_commission as $value): ?>
+                            <?php 
+                            
+                            $sum_normal += $value->normal_account;
+                            ?>
+                            
                             <tr>
-                            <?php foreach ($obj_pay as $value): ?>
+                            
+                                <td align="center"><?php echo $value->commissions_id;?></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
-                                <td align="center"><b><a class="pending"><?php echo $value->amount;?></a></b></td>
-                                <td align="center"><?php echo $value->username;?></td>
-                                <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
+                                <td align="center"><?php echo $value->name;?></td>
+                                <td align="center"><b><?php echo $value->amount;?></b></td>
+                                <td align="center"><a class="pending"><b><?php echo $value->normal_account;?></a></b></td>
                                 <td align="center">
                                     <?php if ($value->status_value == 3) {
-                                        $valor = "No pagado";
+                                        $valor = "En espera de procesar";
                                         $stilo = "label label-important";
                                     }else{
-                                        $valor = "Pagado";
+                                        $valor = "Procesado";
                                         $stilo = "label label-success";
                                     } ?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
                                 </td>
-                                <td align="center">
-                                    <div class="operation">
-                                            <div class="btn-group">
-                                                <button class="btn btn-small" onclick="ver_detalle('<?php echo $value->pay_id;?>');">VER</button>
-                                          </div>
-                                    </div>
-                                </td>
-                                <td align="center">
-                                    <div class="operation">
-                                            <div class="btn-group">
-                                                    <button class="btn btn-small" onclick="status_pagado('<?php echo $value->pay_id;?>');">Pagado</button>
-                                          </div>
-                                    </div>
-                                </td>
-                            </tr>
+                                </tr>
                             <?php endforeach; ?>
+                                
                         </tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td align="center"><a class="pending"><b><?php echo $sum_normal;?></a></b></td>
+                            <td></td>
+                        </tr>
                     </table>
             </div>
            <!--</form>-->         
@@ -76,7 +78,6 @@
 <script type="text/javascript">
    $(document).ready(function() {
     $('#table').dataTable( {
-         "order": [[ 0, "desc" ]]
     } );
 } );
 </script>

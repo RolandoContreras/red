@@ -5,6 +5,7 @@ class D_pays extends CI_Controller{
     public function __construct(){
         parent::__construct();
         $this->load->model("customer_model","obj_customer");
+        $this->load->model("pay_commission_model","obj_pay_commission");
         $this->load->model("pay_model","obj_pay");
     }   
                 
@@ -38,39 +39,34 @@ class D_pays extends CI_Controller{
             $this->tmp_mastercms->render("dashboard/cobros/cobros_list");
     }
     
-    public function financiados(){  
+    public function details($pay_id){  
         
            $this->get_session();
            $params = array(
-                        "select" =>"customer.customer_id,
-                                    customer.username,
-                                    customer.first_name,
-                                    customer.email,
-                                    customer.last_name,
-                                    customer.calification,
-                                    customer.created_at,
-                                    customer.active,
-                                    franchise.name as franchise,
-                                    customer.status_value",
-                        "where" => "customer.financy = 1",
-                        "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
-                        "group" => "customer.customer_id"
-               
-               );
+                        "select" =>"commissions.commissions_id,
+                                    commissions.name, 
+                                    commissions.amount,
+                                    commissions.normal_account,
+                                    commissions.date,
+                                    commissions.status_value",
+                        "where" => "pay_commission.pay_id = $pay_id",
+                        "join" => array('commissions, pay_commission.commissions_id = commissions.commissions_id'),
+                        "order" => "commissions.date ASC"
+                        );
            //GET DATA FROM CUSTOMER
-           $obj_customer= $this->obj_customer->search($params);
-  
+           $obj_pay_commission= $this->obj_pay_commission->search($params);
+           
            /// PAGINADO
-            $modulos ='financiados'; 
+            $modulos ='cobros'; 
             $seccion = 'Lista';        
-            $link_modulo =  site_url().'dashboard/financiados'; 
+            $link_modulo =  site_url().'dashboard/cobros'; 
             
             /// VISTA
             $this->tmp_mastercms->set('link_modulo',$link_modulo);
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
-            $this->tmp_mastercms->set("obj_customer",$obj_customer);
-            $this->tmp_mastercms->render("dashboard/customer/customer_list");
+            $this->tmp_mastercms->set("obj_pay_commission",$obj_pay_commission);
+            $this->tmp_mastercms->render("dashboard/cobros/cobros_details");
     }
     
     public function validate(){
@@ -112,84 +108,6 @@ class D_pays extends CI_Controller{
                 if(count($customer_id) > 0){
                     $data = array(
                         'calification' => 1,
-                        'updated_at' => date("Y-m-d H:i:s"),
-                        'updated_by' => $_SESSION['usercms']['user_id'],
-                    ); 
-                    $this->obj_customer->update($customer_id,$data);
-                }
-                echo json_encode($data);            
-        exit();
-            }
-    }
-    
-    public function load($obj_customer=NULL){
-        //VERIFY IF ISSET CUSTOMER_ID
-        if ($obj_customer != ""){
-            /// PARAMETROS PARA EL SELECT 
-            $where = "customer.customer_id = $obj_customer";
-            $params = array(
-                        "select" =>"customer.username,
-                                    customer.email,
-                                    customer.customer_id,
-                                    customer.position,
-                                    customer.password,
-                                    customer.first_name,
-                                    customer.last_name,
-                                    customer.dni,
-                                    customer.birth_date,
-                                    customer.address,
-                                    customer.city,
-                                    customer.phone,
-                                    customer.btc_address,
-                                    customer.status_value,
-                                    customer.calification,
-                                    customer.country,
-                                    customer.region,
-                                    customer.franchise_id",
-                         "where" => $where,
-            ); 
-            $obj_customer  = $this->obj_customer->get_search_row($params); 
-            //RENDER
-            $this->tmp_mastercms->set("obj_customer",$obj_customer);
-          }
-          
-            //SELECT PAISES
-            $params = array("select" => "",
-                            "where" => "id_idioma = 7");
-            $obj_paises  = $this->obj_paises->search($params);   
-            //RENDER TO VIEW
-            $this->tmp_mastercms->set("obj_paises",$obj_paises);
-            
-            //SELECT REGIONES
-            $params = array("select" => "",
-                            "where" => "id_idioma = 7");
-            $obj_regiones  = $this->obj_regiones->search($params);   
-            //RENDER TO VIEW
-            $this->tmp_mastercms->set("obj_regiones",$obj_regiones); 
-            
-            //SELECT PAQUETES
-            $params = array("select" => "");
-            $obj_franchise  = $this->obj_franchise->search($params);   
-            //RENDER TO VIEW
-            $this->tmp_mastercms->set("obj_franchise",$obj_franchise); 
-            
-            $modulos ='clientes'; 
-            $seccion = 'Formulario';        
-            $link_modulo =  site_url().'dashboard/'.$modulos; 
-
-            $this->tmp_mastercms->set('link_modulo',$link_modulo);
-            $this->tmp_mastercms->set('modulos',$modulos);
-            $this->tmp_mastercms->set('seccion',$seccion);
-            $this->tmp_mastercms->render("dashboard/customer/customer_form");    
-    }
-    
-    public function no_active_customer(){
-            //NO ACTIVE CUSTOMER
-        if($this->input->is_ajax_request()){   
-            $customer_id = $this->input->post("customer_id");
-                if(count($customer_id) > 0){
-                    $data = array(
-                        'calification' => 0,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
