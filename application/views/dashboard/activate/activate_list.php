@@ -24,7 +24,7 @@
                     </div>
                 
              <!--<form>-->
-                <div class="well nomargin" style="width: 1050px;">
+                <div class="well nomargin" style="width: 100%;">
                     <!--- INCIO DE TABLA DE RE4GISTRO -->
                    <table id="table" class="display" cellspacing="0" width="100%">
                         <thead>

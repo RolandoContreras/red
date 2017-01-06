@@ -7,18 +7,18 @@
 <!-- main content -->
 <div id="main_content" class="span9">
     <div class="row-fluid">
-        <div class="widget_container">
+        <div class="widget_container" style="width: 110%;">
             <div class="well">
                     <div class="navbar navbar-static navbar_as_heading">
                             <div class="navbar-inner">
-                                    <div class="container" style="width: auto;">
+                                    <div class="container" style="width: 110%;">
                                             <a class="brand">LISTADO DE  ASOCIADOS</a>
                                     </div>
                             </div>
                     </div>
                 
              <!--<form>-->
-                <div class="well nomargin" style="width: 1050px;">
+                <div class="well nomargin" style="width: 100%;">
                     <!--- INCIO DE TABLA DE RE4GISTRO -->
                    <table id="table" class="display" cellspacing="0" width="100%">
                         <thead>
@@ -27,7 +27,6 @@
                                 <th>ASOCIADO</th>
                                 <th>E-MAIL</th>
                                 <th>PAQUETE</th>
-                                <th>FECHA DE CREACIÓN</th>
                                 <th>ACTIVACIÓN</th> 
                                 <th>CALIFICACIÓN BINARIO</th> 
                                 <th>ESTADO</th> 
@@ -41,7 +40,6 @@
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center"><?php echo $value->email;?></td>
                                 <td align="center"><?php echo $value->franchise;?></td>
-                                <td align="center"><?php echo formato_fecha($value->created_at);?></td>
                                 <td align="center">
                                     <?php if ($value->active == 0) {
                                         $valor = "Inactivo para bonos";

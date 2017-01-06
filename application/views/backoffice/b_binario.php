@@ -2,9 +2,9 @@
     <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
  <!-- Page content-->
  <div class="content-wrapper">
-    <div class="content-heading">
-              <div class="pull-right text-danger">
-                Bitcoin: $737.00000000              
+     <div class="content-heading">
+              <div class="pull-right text-success">
+                Precio bitcoin: $<?php echo $price_btc;?>
               </div>
                               <div class="col-lg-3">
                 <img src="<?php echo site_url().'static/backoffice/images/logo-btc2.png';?>" class="responsive" height="100px;" id="LogoClienteMill">
@@ -25,8 +25,8 @@
                                         <b>DERECHA: </b><span class="label label-warning"><?php echo $obj_customer->point_calification_rigth;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>P. IZQUIERDA: </b> <span class="label label-info"><?php echo $obj_customer->point_left / 0.12;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <b>P. DERECHA: </b><span class="label label-info"><?php echo $obj_customer->point_rigth / 0.12;?></span> &nbsp;&nbsp;&nbsp;
-                                        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>$. IZQUIERDA : </b> <span class="label label-inverse"><?php echo $obj_customer->point_left;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <b>$. DERECHA : </b><span class="label label-inverse"><?php echo $obj_customer->point_rigth;?></span> &nbsp;&nbsp;&nbsp;
+<!--                                        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>$. IZQUIERDA : </b> <span class="label label-inverse"><?php echo $obj_customer->point_left;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <b>$. DERECHA : </b><span class="label label-inverse"><?php echo $obj_customer->point_rigth;?></span> &nbsp;&nbsp;&nbsp;-->
                                     <br/><br/>
                                 </div>
                           </div>

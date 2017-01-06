@@ -5,6 +5,7 @@ class B_wallet extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model("commissions_model","obj_commissions");
+        $this->load->model("otros_model","obj_otros");
     }
 
 	/**
@@ -60,7 +61,18 @@ class B_wallet extends CI_Controller {
            $normal_account = $obj_data->normal_account;
            $obj_balance = $obj_data->balance;
            $obj_balance_disponible = $obj_data->balance - $mandatory_account;
+        
+        //GET PRICE BTC
+            $params_price_btc = array(
+                    "select" =>"",
+                     "where" => "otros_id = 1",
+            );
+                
+           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
+           $price_btc = number_format($obj_otros->precio_btc,8);  
            
+            
+        $this->tmp_backoffice->set("price_btc",$price_btc);   
         $this->tmp_backoffice->set("obj_balance_disponible",$obj_balance_disponible); 
         $this->tmp_backoffice->set("obj_balance",$obj_balance);   
         $this->tmp_backoffice->set("normal_account",$normal_account);

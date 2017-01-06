@@ -7,6 +7,7 @@ class B_pay extends CI_Controller {
         $this->load->model("commissions_model","obj_commissions");
         $this->load->model("pay_commission_model","obj_pay_commission");
         $this->load->model("pay_model","obj_pay");
+        $this->load->model("otros_model","obj_otros");
     }
 
 	/**
@@ -59,7 +60,17 @@ class B_pay extends CI_Controller {
            $obj_balance_disponible = number_format($obj_balance_disponible, 2);
            
            $obj_balance_red = $obj_data->balance - ($mandatory_account + $normal_account);
+           //GET PRICE BTC
+            $params_price_btc = array(
+                    "select" =>"",
+                     "where" => "otros_id = 1",
+            );
+                
+           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
+           $price_btc = number_format($obj_otros->precio_btc,8);  
            
+            
+        $this->tmp_backoffice->set("price_btc",$price_btc);  
 
         $this->tmp_backoffice->set("obj_balance_red",$obj_balance_red);   
         $this->tmp_backoffice->set("obj_balance_disponible",$obj_balance_disponible);   

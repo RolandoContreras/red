@@ -5,6 +5,7 @@ class b_comissions extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model("commissions_model","obj_commissions");
+        $this->load->model("otros_model","obj_otros");
     }
 
 	/**
@@ -44,8 +45,19 @@ class b_comissions extends CI_Controller {
                 "order" => "commissions.date DESC",
                 "limit" => "50");
            //GET DATA FROM CUSTOMER
-        $obj_commissions= $this->obj_commissions->search($params);  
-
+        $obj_commissions= $this->obj_commissions->search($params);
+        
+        //GET PRICE BTC
+            $params_price_btc = array(
+                    "select" =>"",
+                     "where" => "otros_id = 1",
+            );
+                
+           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
+           $price_btc = number_format($obj_otros->precio_btc,8);  
+           
+            
+        $this->tmp_backoffice->set("price_btc",$price_btc);
         $this->tmp_backoffice->set("obj_commissions",$obj_commissions);
         $this->tmp_backoffice->render("backoffice/b_comissions");
 	}

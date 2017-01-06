@@ -5,6 +5,7 @@ class B_binario extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model("customer_model","obj_customer");
+        $this->load->model("otros_model","obj_otros");
     }
 
 	/**
@@ -410,6 +411,16 @@ class B_binario extends CI_Controller {
                 }
             }
   
+        //GET PRICE BTC
+                $params_price_btc = array(
+                        "select" =>"",
+                         "where" => "otros_id = 1",
+                    );
+                
+           $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
+           $price_btc = number_format($obj_otros->precio_btc,8);    
+            
+        $this->tmp_backoffice->set("price_btc",$price_btc);    
         $this->tmp_backoffice->set("obj_customer",$obj_customer);
         $this->tmp_backoffice->render("backoffice/b_binario");
 	}
