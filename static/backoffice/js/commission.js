@@ -14,9 +14,9 @@ function consultar(){
                     
                     $.each(obj_commissions, function(){
                         texto = texto+'<tr role="row" class="odd">';
-                        texto = texto+'<td>"'+obj_commissions[x]['date']+'"</td>';
-                        texto = texto+'<td>"'+obj_commissions[x]['bonus']+'"</td>';
-                        texto = texto+'<td>"'+obj_commissions[x]['amount']+'"</td>';
+                        texto = texto+'<td>'+obj_commissions[x]['date']+'</td>';
+                        texto = texto+'<td>'+obj_commissions[x]['bonus']+'</td>';
+                        texto = texto+'<td>'+obj_commissions[x]['amount']+'</td>';
                         if(obj_commissions[x]['status_value'] == 1 || obj_commissions[x]['status_value'] == 2){
                         texto = texto+'<td><span class="label label-success">Procesado</span></td>';
                         }else{
