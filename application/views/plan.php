@@ -38,7 +38,10 @@
                 </div>
                 <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 240px; width: 720px; height: 480px; overflow: hidden;">
                 <div data-p="150.00">
-                    <img data-u="image" src="<?php echo site_url().'static/plan/images/inicio-1.jpg'?>" />
+                <img data-u="image" src="<?php echo site_url().'static/plan/images/inicio-1.jpg'?>" />
+                </div>
+                <div data-p="150.00" style="display: none;">
+                <img data-u="image" src="<?php echo site_url().'static/plan/images/nuevo_concepto.jpg'?>" />
                 </div>
                 <div data-p="150.00" style="display: none;">
                 <img data-u="image" src="<?php echo site_url().'static/plan/images/bitcoin-2.jpg'?>" />
@@ -47,13 +50,16 @@
                 <img data-u="image" src="<?php echo site_url().'static/plan/images/bitcoin-3-historias.jpg'?>" />
                 </div>
                 <div data-p="150.00" style="display: none;">
-                <img data-u="image" src="<?php echo site_url().'static/plan/images/bitcoin-pizza4.jpg'?>" />
-                </div>
-                <div data-p="150.00" style="display: none;">
                 <img data-u="image" src="<?php echo site_url().'static/plan/images/bitcoin-empresas5.jpg'?>"/>
                 </div>
                 <div data-p="150.00" style="display: none;">
                 <img data-u="image" src="<?php echo site_url().'static/plan/images/bancos6.jpg'?>" />
+                </div>
+                <div data-p="150.00" style="display: none;">
+                <img data-u="image" src="<?php echo site_url().'static/plan/images/el_oro.jpg'?>"/>
+                </div>
+                <div data-p="150.00" style="display: none;">
+                <img data-u="image" src="<?php echo site_url().'static/plan/images/el_oro_importancia.jpg'?>"/>
                 </div>
                 <div data-p="150.00" style="display: none;">
                 <img data-u="image" src="<?php echo site_url().'static/plan/images/bitcoin-que_es7.jpg'?>"/>
@@ -113,7 +119,7 @@
                         <div class="box">
                             <div class="box__body">
                                 <img style="margin-left:60px" src="<?php echo site_url().'static/plan/files/pdf_file.png';?>" width="150"><br>
-                                <a href="<?php echo site_url().'static/plan/document/presentacion-bitshare-es2.pdf';?>" class="btn btn-primary btn-md" download="presentacion_pdf_es">Descargar Presentacion PDF</a>
+                                <a href="<?php echo site_url().'static/plan/document/presentacion-bitshare-esx.pdf';?>" class="btn btn-primary btn-md" download="presentacion_pdf_es">Descargar Presentacion PDF</a>
                             </div>
                         </div>
                     </li>
@@ -121,7 +127,7 @@
                         <div class="box">
                             <div class="box__body">
                                 <img style="margin-left:60px"  src="<?php echo site_url().'static/plan/files/ppt-file.png';?>" width="150"><br>
-                                <a href="<?php echo site_url().'static/plan/document/presentacion-bitshare-es2.pptx';?>" class="btn btn-primary btn-md" download="presentacion_ppt_es">Descargar Presentacion PPT</a>
+                                <a href="<?php echo site_url().'static/plan/document/presentacion-bitshare-esx.pptx';?>" class="btn btn-primary btn-md" download="presentacion_ppt_es">Descargar Presentacion PPT</a>
                             </div>
                         </div>
                     </li>
@@ -129,7 +135,7 @@
                         <div class="box">
                             <div class="box__body">
                                 <img style="margin-left:35px" src="<?php echo site_url().'static/plan/files/jpg_file.jpg';?>" width="150"><br>
-                                <a href="<?php echo site_url().'static/plan/files/images.rar';?>" class="btn btn-primary btn-md" download="presentacion_imagenes">Descargar Imagenes</a>
+                                <a href="<?php echo site_url().'static/plan/files/imagenes_bitshare.rar';?>" class="btn btn-primary btn-md" download="presentacion_imagenes">Descargar Imagenes</a>
                             </div>
                         </div>
                     </li>

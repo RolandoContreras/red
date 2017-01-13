@@ -18,11 +18,15 @@ class D_pay_dialy extends CI_Controller{
                 "where" =>"bonus.bonus_id = 3",
                "join" => array('customer, commissions.customer_id = customer.customer_id',
                                 'bonus, commissions.bonus_id = bonus.bonus_id'),
-                "order" => "commissions.date DESC",
+//                "order" => "commissions.date DESC",
+                "group" =>  "commissions.date DESC",
                 "limit" => "20"
                         );
            //GET DATA FROM CUSTOMER
            $obj_commissions= $this->obj_commissions->search($params);
+           
+           var_dump($obj_commissions);
+           die();
       
            /// PAGINADO
             $modulos ='pagos_diarios'; 
