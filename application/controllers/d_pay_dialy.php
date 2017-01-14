@@ -51,7 +51,7 @@ class D_pay_dialy extends CI_Controller{
                                     customer.date_end,
                                     customer.last_name,
                                     customer.franchise_id",
-                "where" =>"customer.active = 1 and franchise.franchise_id in (1,2,3,4,5)",
+                "where" =>"customer.active = 1 and franchise.franchise_id in (1,2,3,4,5,7)",
                "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
                          );
                 //GET DATA FROM CUSTOMER
@@ -59,7 +59,40 @@ class D_pay_dialy extends CI_Controller{
                 
                 foreach ($obj_customer as $value) {
                     if($value->date_end >= $today){
-                        switch ($value->franchise_id) {
+                        if($value->date_start >= '2017-01-10'){
+                            
+                            switch ($value->franchise_id) {
+                            case 2:
+                                $amount= 0.95;
+                                break;
+                            case 3:
+                                $amount= 2.50;
+                                break;
+                            case 4:
+                                $amount= 5.20;
+                                break;
+                            case 5:
+                                $amount= 10.83;
+                                break;
+                            case 7:
+                                $amount= 56.25;
+                                break;
+                            }
+                            $data = array(
+                                'customer_id' => $value->customer_id,
+                                'bonus_id' => 3,
+                                'name' => "Rentabilidad Diaria",
+                                'amount' => $amount,
+                                'normal_account' => $amount,
+                                'date' => date("Y-m-d H:i:s"),
+                                'status_value' => 2,
+                                'created_at' => date("Y-m-d H:i:s"),
+                                'created_by' => $_SESSION['usercms']['user_id']
+                                );
+                            $this->obj_commissions->insert($data);
+                            
+                        }elseif($value->date_start < '2017-01-10'){
+                            switch ($value->franchise_id) {
                             case 2:
                                 $amount= 1.86;
                                 break;
@@ -72,7 +105,7 @@ class D_pay_dialy extends CI_Controller{
                             case 5:
                                 $amount= 22.60;
                                 break;
-                        }
+                            }
                             
                         $mandatory_account = $amount*0.3;
                         $normal_account = $amount*0.7;
@@ -90,10 +123,10 @@ class D_pay_dialy extends CI_Controller{
                             'created_by' => $_SESSION['usercms']['user_id']
                         );
                         $this->obj_commissions->insert($data);
-                    } 
-                $data['message'] = "true";
+                     }
+                } 
             }
-                
+                $data['message'] = "true";
                 echo json_encode($data);            
         exit();
             }
