@@ -15,18 +15,13 @@ class D_pay_dialy extends CI_Controller{
                         "select" =>"commissions.date,
                                     commissions.status_value,
                                     bonus.name as bonus",
-                "where" =>"bonus.bonus_id = 3",
+                "where" =>"bonus.bonus_id = 3 and commissions.status_value = 2",
                "join" => array('customer, commissions.customer_id = customer.customer_id',
                                 'bonus, commissions.bonus_id = bonus.bonus_id'),
-//                "order" => "commissions.date DESC",
-                "group" =>  "commissions.date DESC",
-                "limit" => "20"
-                        );
+                "group" =>  "commissions.date, commissions.status_value, bonus.name",
+                "order" => "commissions.date DESC");
            //GET DATA FROM CUSTOMER
            $obj_commissions= $this->obj_commissions->search($params);
-           
-           var_dump($obj_commissions);
-           die();
       
            /// PAGINADO
             $modulos ='pagos_diarios'; 
