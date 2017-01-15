@@ -98,7 +98,7 @@
                 <div class="row">
                     <div class="col-md-5">
                         <h1>Acerca</h1>
-                        <p class="inset-2"><?php echo replace_vocales_voculeshtml("BitShare (compartir Bitcoin) es una plataforma financiera con el fin de ayudar a capitalizar y dar herramientas para un crecimiento económico y personal a las personas en este nuevo cambio de era.");?></p>
+                        <p class="inset-2"><?php echo replace_vocales_voculeshtml("BitShare (compartir bitcoin) es una tienda online de mercadeo en red con un concepto revolucionario de negocio en donde se ha fusionado los metales preciosos con la criptomoneda.");?></p>
                         <a href="<?php echo site_url().'acerca';?>" class="btn btn-primary btn-md">Explorar M&aacute;s</a>
                     </div>
                 </div>
