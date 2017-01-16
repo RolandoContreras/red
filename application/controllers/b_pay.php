@@ -43,16 +43,17 @@ class B_pay extends CI_Controller {
            //GET DATA FROM CUSTOMER
         $obj_commissions= $this->obj_pay->search($params);
         
+        
         //GET TOTAL AMOUNT
                 $params_total = array(
                         "select" =>"sum(mandatory_account) as mandatory_account,
                                     sum(normal_account) as normal_account,
-                                    (select sum(amount) FROM commissions WHERE status_value = 2 and customer_id = $customer_id) as balance",
-                         "where" => "commissions.customer_id = $customer_id and status_value = 2",
+                                    (select sum(amount) FROM commissions WHERE status_value in (1,2) and customer_id = $customer_id) as balance",
+                         "where" => "commissions.customer_id = $customer_id and status_value in(1,2)",
                     );
                 
-           $obj_data = $this->obj_commissions->get_search_row($params_total);              
-        
+           $obj_data = $this->obj_commissions->get_search_row($params_total); 
+           
            $mandatory_account = $obj_data->mandatory_account;
            $normal_account = $obj_data->normal_account;
            
@@ -60,6 +61,7 @@ class B_pay extends CI_Controller {
            $obj_balance_disponible = number_format($obj_balance_disponible, 2);
            
            $obj_balance_red = $obj_data->balance - ($mandatory_account + $normal_account);
+           
            //GET PRICE BTC
             $params_price_btc = array(
                     "select" =>"",
@@ -69,9 +71,8 @@ class B_pay extends CI_Controller {
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
            $price_btc = number_format($obj_otros->precio_btc,8);  
            
-            
+           
         $this->tmp_backoffice->set("price_btc",$price_btc);  
-
         $this->tmp_backoffice->set("obj_balance_red",$obj_balance_red);   
         $this->tmp_backoffice->set("obj_balance_disponible",$obj_balance_disponible);   
         $this->tmp_backoffice->set("normal_account",$normal_account);
