@@ -1,7 +1,5 @@
 function enviar_pago(){
-    
     monto =  $('select[name=monto]').val();
-    
     if(monto != ""){
        $.ajax({
        type: "post",

@@ -23,6 +23,7 @@
                    <table id="table" class="display" cellspacing="0" width="100%">
                         <thead>
                             <tr>
+                                <th>ID</th>
                                 <th>FECHA</th>
                                 <th>MONTO</th>
                                 <th>USUARIO</th>
@@ -35,6 +36,7 @@
                         <tbody>
                             <tr>
                             <?php foreach ($obj_pay as $value): ?>
+                                <td align="center"><?php echo $value->pay_id;?></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
                                 <td align="center"><b><a class="pending"><?php echo $value->amount;?></a></b></td>
                                 <td align="center"><?php echo $value->username;?></td>

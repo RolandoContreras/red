@@ -21,10 +21,16 @@ class D_pays extends CI_Controller{
                                     customer.username,
                                     customer.last_name,
                                     customer.dni",
-                        "join" => array('customer, pay.customer_id = customer.customer_id')
+                        "join" => array('customer, pay.customer_id = customer.customer_id'),
+                        "order" => "pay.pay_id DESC"
                );
            //GET DATA FROM CUSTOMER
            $obj_pay= $this->obj_pay->search($params);
+           
+//           var_dump($obj_pay);
+//           die();
+           
+           
            
            /// PAGINADO
             $modulos ='cobros'; 

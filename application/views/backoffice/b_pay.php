@@ -22,7 +22,7 @@
                         <div class="panel-body">
                             <div role="alert" class="alert alert-info">
                             <strong>Nota:</strong>
-                            El monto minimo para solicitar el pago es de $25.
+                            El monto minimo para solicitar el pago es de $15.
                             </div>
                             
                             <div class="form-inline" >
