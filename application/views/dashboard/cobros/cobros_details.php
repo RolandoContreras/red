@@ -34,24 +34,22 @@
                         <tbody>
                             <?php $sum_normal = "";?>
                             <?php foreach ($obj_pay_commission as $value): ?>
-                            <?php 
-                            
-                            $sum_normal += $value->normal_account;
-                            ?>
-                            
+                            <?php $sum_normal += $value->normal_account;?>
                             <tr>
-                            
                                 <td align="center"><?php echo $value->commissions_id;?></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
                                 <td align="center"><?php echo $value->name;?></td>
                                 <td align="center"><b><?php echo $value->amount;?></b></td>
                                 <td align="center"><a class="pending"><b><?php echo $value->normal_account;?></a></b></td>
                                 <td align="center">
-                                    <?php if ($value->status_value == 3) {
-                                        $valor = "En espera de procesar";
+                                    <?php if ($value->status_value == 2) {
+                                        $valor = "Devuelto o Cancelado";
                                         $stilo = "label label-important";
-                                    }else{
-                                        $valor = "Procesado";
+                                    }elseif($value->status_value == 3){
+                                        $valor = "Es espera de procesamiento";
+                                        $stilo = "label label-warning";
+                                    }elseif($value->status_value == 4){
+                                        $valor = "Pagado";
                                         $stilo = "label label-success";
                                     } ?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>

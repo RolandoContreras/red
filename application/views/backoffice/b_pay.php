@@ -66,12 +66,14 @@
                                             <span class="text-success"><?php echo "$".$value->amount;?></span>
                                           </td>
                                           <td>
-                                                   <?php 
-                                                   if($value->status_value == 1 || $value->status_value == 2){ ?>
-                                                       <span class="label label-success">Pagado</span>
-                                                   <?php }else{ ?>
-                                                       <span class="label label-warning">En espera de procesar</span>
-                                                   <?php } ?>
+                                               <?php 
+                                               if($value->status_value == 2){ ?>
+                                                   <span class="label label-danger">Cancelado/Devuelto</span>
+                                               <?php }elseif($value->status_value == 3){ ?>
+                                                   <span class="label label-warning">En espera de procesar</span>
+                                               <?php }elseif($value->status_value == 4){ ?>
+                                                   <span class="label label-success">Procesado</span>
+                                               <?php } ?>
                                            </td>
                                        </tr>
                                   <?php } ?>

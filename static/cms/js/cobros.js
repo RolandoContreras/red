@@ -3,8 +3,8 @@ function ver_detalle(pay_id){
 	location.href = site+url;
 }
         
-function active(customer_id,price,parents_id){
-    bootbox.dialog("Confirma que desea activar la cuenta?", [        
+function pagado(pay_id){
+    bootbox.dialog("Confirma que desea marcar como pagado?", [        
         { "label" : "Cancelar"},
         {
             "label" : "Confirmar",
@@ -12,11 +12,30 @@ function active(customer_id,price,parents_id){
             "callback": function() {
            $.ajax({
                type: "post",
-               url: site+"dashboard/activaciones/active",
+               url: site+"dashboard/cobros/pagado",
                dataType: "json",
-               data: {customer_id : customer_id,
-                      parents_id : parents_id,
-                      price:price},
+               data: {pay_id : pay_id},
+               success:function(data){                             
+               location.reload();
+               }         
+           });
+           }
+        }
+    ]);
+}
+
+function devolver(pay_id){
+    bootbox.dialog("Confirma que desea marcar como devuelto?", [        
+        { "label" : "Cancelar"},
+        {
+            "label" : "Confirmar",
+            "class" : "btn-success",
+            "callback": function() {
+           $.ajax({
+               type: "post",
+               url: site+"dashboard/cobros/devolver",
+               dataType: "json",
+               data: {pay_id : pay_id},
                success:function(data){                             
                location.reload();
                }         

@@ -108,6 +108,8 @@ $route['dashboard/usuarios/validate'] = "d_users/validate";
 
 $route['dashboard/cobros'] = "d_pays";
 $route['dashboard/cobros_details/([0-9]+)'] = "d_pays/details/$1";
+$route['dashboard/cobros/pagado'] = "d_pays/pagado";
+$route['dashboard/cobros/devolver'] = "d_pays/devolver";
 
 $route['dashboard/recargas'] = "d_recargas";
 $route['dashboard/recargas/load'] = "d_recargas/load";

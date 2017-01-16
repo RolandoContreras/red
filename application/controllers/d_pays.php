@@ -5,6 +5,7 @@ class D_pays extends CI_Controller{
     public function __construct(){
         parent::__construct();
         $this->load->model("customer_model","obj_customer");
+        $this->load->model("commissions_model","obj_commission");
         $this->load->model("pay_commission_model","obj_pay_commission");
         $this->load->model("pay_model","obj_pay");
     }   
@@ -26,11 +27,6 @@ class D_pays extends CI_Controller{
                );
            //GET DATA FROM CUSTOMER
            $obj_pay= $this->obj_pay->search($params);
-           
-//           var_dump($obj_pay);
-//           die();
-           
-           
            
            /// PAGINADO
             $modulos ='cobros'; 
@@ -62,6 +58,10 @@ class D_pays extends CI_Controller{
            //GET DATA FROM CUSTOMER
            $obj_pay_commission= $this->obj_pay_commission->search($params);
            
+//           var_dump($obj_pay_commission);
+//           die();
+           
+           
            /// PAGINADO
             $modulos ='cobros'; 
             $seccion = 'Lista';        
@@ -75,54 +75,91 @@ class D_pays extends CI_Controller{
             $this->tmp_mastercms->render("dashboard/cobros/cobros_details");
     }
     
-    public function validate(){
+    public function pagado(){
         
-        //GET CUSTOMER_ID
-        $customer_id = $this->input->post("customer_id");
-        $data = array(
-               'first_name' => $this->input->post('first_name'),
-               'last_name   ' => $this->input->post('last_name'),
-               'username' => $this->input->post('username'),
-               'password' => $this->input->post('password'),
-               'email' => $this->input->post('email'),
-               'dni' => $this->input->post('dni'),  
-               'birth_date' => $this->input->post('fecha_de_nacimiento'),  
-               'phone' => $this->input->post('phone'),
-               'country' => $this->input->post('pais'),
-               'region' => $this->input->post('region'),
-               'franchise_id' => $this->input->post('franchise'),
-               'position' => $this->input->post('position'),
-               'address' => $this->input->post('address'),
-               'btc_address' => $this->input->post('btc_address'),
-               'city' => $this->input->post('city'),
-               'calification' => $this->input->post('calification'),
-               'status_value' => $this->input->post('status_value'),
-               'updated_at' => date("Y-m-d H:i:s"),
-               'updated_by' => $_SESSION['usercms']['user_id']
-                );          
-            //SAVE DATA IN TABLE    
-            $this->obj_customer->update($customer_id, $data);
+        if($this->input->is_ajax_request()){  
+            ///GET PAY_ID
+            $pay_id = $this->input->post("pay_id");
             
-        redirect(site_url()."dashboard/clientes");
+            //UPDATE FILES PAY
+            $data_pay = array(
+                        'status_value' => 4,
+                        'updated_by' =>  $_SESSION['usercms']['user_id'],
+                        'updated_at' => date("Y-m-d H:i:s")
+                    ); 
+            $this->obj_pay->update($pay_id,$data_pay);
+                    
+            //SELECT ALL FILE WHERE PAY_ID = $pay_id
+            $params = array(
+                        "select" =>"pay_commission_id,commissions_id",
+                        "where" => "pay_id = $pay_id"
+               );
+           //GET DATA FROM CUSTOMER
+           $obj_pay_commission= $this->obj_pay_commission->search($params);
+            
+           foreach ($obj_pay_commission as $value) {
+               $data_pay_comission = array(
+                        'status_value' => 4,
+                        'updated_by' =>  $_SESSION['usercms']['user_id'],
+                        'updated_at' => date("Y-m-d H:i:s")
+                    ); 
+                    $this->obj_pay_commission->update($value->pay_commission_id,$data_pay_comission);
+                    
+                $data_comission = array(
+                        'status_value' => 4,
+                        'updated_by' =>  $_SESSION['usercms']['user_id'],
+                        'updated_at' => date("Y-m-d H:i:s")
+                    ); 
+                    $this->obj_commission->update($value->commissions_id,$data_comission);    
+           }    
+                    $data['message'] = "true";
+                    echo json_encode($data); 
+            exit();
+        }
     }
     
-    public function active_customer(){
-        //ACTIVE CUSTOMER
+    public function devolver(){
         if($this->input->is_ajax_request()){  
+            ///GET PAY_ID
+            $pay_id = $this->input->post("pay_id");
             
-                $customer_id = $this->input->post("customer_id");
-                if(count($customer_id) > 0){
-                    $data = array(
-                        'calification' => 1,
-                        'updated_at' => date("Y-m-d H:i:s"),
-                        'updated_by' => $_SESSION['usercms']['user_id'],
+            //UPDATE FILES PAY
+            $data_pay = array(
+                        'status_value' => 2,
+                        'updated_by' =>  $_SESSION['usercms']['user_id'],
+                        'updated_at' => date("Y-m-d H:i:s")
                     ); 
-                    $this->obj_customer->update($customer_id,$data);
-                }
-                echo json_encode($data);            
-        exit();
-            }
+            $this->obj_pay->update($pay_id,$data_pay);
+                    
+            //SELECT ALL FILE WHERE PAY_ID = $pay_id
+            $params = array(
+                        "select" =>"pay_commission_id,commissions_id",
+                        "where" => "pay_id = $pay_id"
+               );
+           //GET DATA FROM CUSTOMER
+           $obj_pay_commission= $this->obj_pay_commission->search($params);
+            
+           foreach ($obj_pay_commission as $value) {
+               $data_pay_comission = array(
+                        'status_value' => 2,
+                        'updated_by' =>  $_SESSION['usercms']['user_id'],
+                        'updated_at' => date("Y-m-d H:i:s")
+                    ); 
+                    $this->obj_pay_commission->update($value->pay_commission_id,$data_pay_comission);
+                    
+                $data_comission = array(
+                        'status_value' => 2,
+                        'updated_by' =>  $_SESSION['usercms']['user_id'],
+                        'updated_at' => date("Y-m-d H:i:s")
+                    ); 
+                    $this->obj_commission->update($value->commissions_id,$data_comission);    
+           }    
+                    $data['message'] = "true";
+                    echo json_encode($data); 
+            exit();
+        }
     }
+
     
     public function get_session(){          
         if (isset($_SESSION['usercms'])){

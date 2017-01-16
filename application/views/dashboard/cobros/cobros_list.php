@@ -42,10 +42,13 @@
                                 <td align="center"><?php echo $value->username;?></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center">
-                                    <?php if ($value->status_value == 3) {
-                                        $valor = "No pagado";
+                                    <?php if ($value->status_value == 2) {
+                                        $valor = "Devuelto o Cancelado";
                                         $stilo = "label label-important";
-                                    }else{
+                                    }elseif($value->status_value == 3){
+                                        $valor = "Es espera de procesamiento";
+                                        $stilo = "label label-warning";
+                                    }elseif($value->status_value == 4){
                                         $valor = "Pagado";
                                         $stilo = "label label-success";
                                     } ?>
@@ -61,7 +64,8 @@
                                 <td align="center">
                                     <div class="operation">
                                             <div class="btn-group">
-                                                    <button class="btn btn-small" onclick="status_pagado('<?php echo $value->pay_id;?>');">Pagado</button>
+                                                    <button class="btn btn-small" onclick="pagado('<?php echo $value->pay_id;?>');">Pagado</button>
+                                                    <button class="btn btn-small" onclick="devolver('<?php echo $value->pay_id;?>');">Devolver</button>
                                           </div>
                                     </div>
                                 </td>
