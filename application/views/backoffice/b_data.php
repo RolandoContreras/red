@@ -33,7 +33,12 @@
                                      <input type="text" class="form-control" disabled required value="<?php echo $obj_customer->dni;?>">
                                  </div>
                               </div>
-
+                              <div class="form-group">
+                                 <label for="fecha_nacimiento" class="col-lg-3 control-label">Fecha de Nacimiento</label>
+                                 <div class="col-lg-9">
+                                     <input type="text" class="form-control" id="fecha_registro" disabled value="<?php echo formato_fecha_barras($obj_customer->birth_date);?>">
+                                 </div>
+                              </div>  
                               <div class="form-group">
                                  <label for="fecha_registro" class="col-lg-3 control-label">Fecha de Registro</label>
                                  <div class="col-lg-9">
