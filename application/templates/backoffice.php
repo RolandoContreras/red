@@ -253,7 +253,12 @@
                                                             }
                                                         ?>
                                                 <a><img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle"></a>
-                                                        <div class="circle circle-success circle-lg"></div>
+                                                <?php if($_SESSION['customer']['active'] == 1){ ?>
+                                                    <div class="circle circle-success circle-lg"></div>
+                                                <?php }else{ ?>
+                                                    <div class="circle circle-danger circle-lg"></div>
+                                                <?php } ?>
+                                                        
                                                 </div>
                                                 </div>
                                                     <!-- Name and Job-->
