@@ -59,8 +59,11 @@ class B_wallet extends CI_Controller {
         
            $mandatory_account = $obj_data->mandatory_account;
            $normal_account = $obj_data->normal_account;
+           
            $obj_balance = $obj_data->balance;
            $obj_balance_disponible = $obj_data->balance - $mandatory_account;
+           
+           $obj_balance_disponible = number_format($obj_balance_disponible,2);
         
         //GET PRICE BTC
             $params_price_btc = array(
