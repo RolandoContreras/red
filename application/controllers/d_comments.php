@@ -17,10 +17,11 @@ class D_comments extends CI_Controller{
                                     comments.email,
                                     comments.status_value,
                                     comments.date_comment",
-                         "order" => "date_comment DESC"
+                         "order" => "date_comment ASC"
             );
             //GET DATA COMMENTS
             $obj_comments= $this->obj_comments->search($params);
+            
             
             /// PAGINADO
             $modulos ='comentarios'; 

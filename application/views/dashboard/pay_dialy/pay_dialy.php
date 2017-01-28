@@ -55,10 +55,7 @@
         },{
             targets: [ 3 ],
             orderData: [ 3, 0 ]
-        }, {
-            targets: [ 4 ],
-            orderData: [ 4, 0 ]
-        } ]
+        }]
     } );
 } );
 </script>

@@ -34,8 +34,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            
                             <?php foreach ($obj_pay as $value): ?>
+                            <tr>
                                 <td align="center"><?php echo $value->pay_id;?></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
                                 <td align="center"><b><a class="pending"><?php echo $value->amount;?></a></b></td>

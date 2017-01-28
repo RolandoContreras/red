@@ -4,32 +4,38 @@
 <script src="static/cms/js/core/jquery.dataTables.min.js"></script>
 <link href="static/cms/css/core/jquery.dataTables.css" rel="stylesheet"/>
 
-<div class="row-fluid">
-    <div class="widget_container">
-        <div class="well ">
-             <div class="navbar navbar-static navbar_as_heading">
+<!-- main content -->
+<div id="main_content" class="span9">
+    <div class="row-fluid">
+        <div class="widget_container">
+            <div class="well">
+                    <div class="navbar navbar-static navbar_as_heading">
                             <div class="navbar-inner">
                                     <div class="container" style="width: auto;">
                                             <a class="brand">COMENTARIOS</a>
                                     </div>
                             </div>
                     </div>
-
-            <!--- INCIO DE TABLA DE RE4GISTRO -->
-            <table id="table" class="display" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th>Nombres</th>
-                        <th>Correo Electrónico</th>
-                        <th>Comentario</th>
-                        <th>Fecha de Comentario</th>
-                        <th>Estado</th>
-                        <th>Acción</th>
-                    </tr>
-                </thead>
-                <tbody> 
-                    <?php foreach ($obj_comments as $value): ?>
-                        <tr>
+                
+             <!--<form>-->
+                <div class="well nomargin" style="width: 100% !important;">
+                    <!--- INCIO DE TABLA DE RE4GISTRO -->
+                   <table id="table" class="display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombres</th>
+                                <th>Correo Electrónico</th>
+                                <th>Comentario</th>
+                                <th>Fecha de Comentario</th>
+                                <th>Estado</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($obj_comments as $value): ?>
+                                <tr>
+                            <th><?php echo $value->comment_id;?></th>
                             <td>
                                 <div class="post_title"><?php echo $value->name;?></div>
                             </td>
@@ -59,26 +65,19 @@
                                 </div>
                             </td>
                         </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+            </div>
+           <!--</form>-->         
         </div>
     </div>
+</div><!-- main content -->
 </div>
-
 <script type="text/javascript">
    $(document).ready(function() {
     $('#table').dataTable( {
-        columnDefs: [ {
-            targets: [ 0 ],
-            orderData: [ 0, 1 ]
-        }, {
-            targets: [ 1 ],
-            orderData: [ 1, 0 ]
-        }, {
-            targets: [ 4 ],
-            orderData: [ 4, 0 ]
-        } ]
+         "order": [[ 0, "desc" ]]
     } );
 } );
 </script>
