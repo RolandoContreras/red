@@ -86,22 +86,31 @@
                         <div class="form-group">
                                 <div class="col-sm-9">
                                     <label class="radio-inline">
+                                        <input  type="radio" name="kit" id="kit" value="8" 
+                                        <?php if($obj_customer->franchise_id == 8){ ?> checked="" <?php } ?> >
+                                        <span class=""></span><b>START</b> $50.00 &nbsp;&nbsp;&nbsp;|</label>
+                                    <label class="radio-inline">
                                         <input  type="radio" name="kit" id="kit" value="2" 
                                         <?php if($obj_customer->franchise_id == 2){ ?> checked="" <?php } ?> >
-                                        <span class=""></span>BASIC $100.00 &nbsp;&nbsp;&nbsp;|</label>
+                                        <span class=""></span><b>BASIC</b> $100.00 &nbsp;&nbsp;&nbsp;|</label>
                                     <label class="radio-inline">
                                         <input type="radio" name="kit" id="kit" value="3"
                                         <?php if($obj_customer->franchise_id == 3){ ?> checked="" <?php } ?> >
-                                       <span class=""></span>PLATINIUM $250.00 &nbsp;&nbsp;&nbsp;|</label>
+                                       <span class=""></span><b>PLATINIUM</b> $250.00 &nbsp;&nbsp;&nbsp;|</label>
                                     <label class="radio-inline">
                                         <input  type="radio" name="kit" id="kit" value="4"
                                         <?php if($obj_customer->franchise_id == 4){ ?> checked="" <?php } ?> >
-                                       <span class=""></span>GOLD $500.00 &nbsp;&nbsp;&nbsp;|</label>
+                                       <span class=""></span><b>GOLD</b> $500.00 &nbsp;&nbsp;&nbsp;|</label>
                                     <label class="radio-inline">
                                         <input  type="radio" name="kit" id="kit" value="5"
                                         <?php if($obj_customer->franchise_id == 5){ ?> checked="" <?php } ?> >        
-                                       <span class=""></span>VIP $1000.00
-                                    </label><br/><br/>
+                                       <span class=""></span><b>VIP</b> $1000.00 &nbsp;&nbsp;&nbsp;|</label>
+                                    <label class="radio-inline">
+                                        <input  type="radio" name="kit" id="kit" value="7"
+                                        <?php if($obj_customer->franchise_id == 7){ ?> checked="" <?php } ?> >        
+                                       <span class=""></span><b>ELITE</b> $5000.00
+                                    </label>
+                                    <br/><br/>
                                     <button type="button" onclick="make_pedido();" class="btn btn-sm btn-primary bg-danger-dark"><?php echo replace_vocales_voculeshtml("Hacer Pedido");?></button>
                                 </div>
                           </div>

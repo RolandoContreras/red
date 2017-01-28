@@ -116,6 +116,28 @@ class B_home extends CI_Controller {
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
                                         $this->obj_customer->update($customer_id,$data);
+                            }elseif($kit == 7){
+                                //CHANGE TO VIP
+                                 $data = array(
+                                            
+                                            'franchise_id' => 7,
+                                            'point_calification_left' => 5000,
+                                            'point_calification_rigth' => 5000,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
+                            }elseif($kit == 8){
+                                //CHANGE TO VIP
+                                 $data = array(
+                                            
+                                            'franchise_id' => 8,
+                                            'point_calification_left' => 50,
+                                            'point_calification_rigth' => 50,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
                             }
 
                                 $data['message'] = "true";
