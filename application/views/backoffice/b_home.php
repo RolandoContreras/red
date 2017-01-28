@@ -85,10 +85,13 @@
                         </div>
                         <div class="form-group">
                                 <div class="col-sm-9">
-                                    <label class="radio-inline">
+                                    <?php 
+                                    if($_SESSION['customer']['country'] == 95){ ?>
+                                        <label class="radio-inline">
                                         <input  type="radio" name="kit" id="kit" value="8" 
                                         <?php if($obj_customer->franchise_id == 8){ ?> checked="" <?php } ?> >
                                         <span class=""></span><b>START</b> $50.00 &nbsp;&nbsp;&nbsp;|</label>
+                                    <?php } ?>
                                     <label class="radio-inline">
                                         <input  type="radio" name="kit" id="kit" value="2" 
                                         <?php if($obj_customer->franchise_id == 2){ ?> checked="" <?php } ?> >

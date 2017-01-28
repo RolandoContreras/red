@@ -250,6 +250,12 @@
                                                                 case 6:
                                                                     $images = "default.jpg";
                                                                     break;
+                                                                case 7:
+                                                                    $images = "elite.jpg";
+                                                                    break;
+                                                                case 8:
+                                                                    $images = "start.jpg";
+                                                                    break;
                                                             }
                                                         ?>
                                                 <a><img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle"></a>

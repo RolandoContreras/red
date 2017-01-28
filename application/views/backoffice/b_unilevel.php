@@ -69,6 +69,12 @@
                                                     case 6:
                                                         $images = "default.jpg";
                                                         break;
+                                                    case 7:
+                                                        $images = "elite.jpg";
+                                                        break;
+                                                    case 8:
+                                                        $images = "start.jpg";
+                                                        break;
                                                 }
                                             ?>
                                             <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
@@ -123,6 +129,12 @@
                                                         break;
                                                     case 6:
                                                         $images = "default.jpg";
+                                                        break;
+                                                    case 7:
+                                                        $images = "elite.jpg";
+                                                        break;
+                                                    case 8:
+                                                        $images = "start.jpg";
                                                         break;
                                                 }
                                             ?>

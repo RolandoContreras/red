@@ -40,7 +40,7 @@ class Login extends CI_Controller {
     public function validar_customer(){
         $username = $this->input->post('username');  
         $password = $this->input->post('password');  
-        $params = array("select" =>"customer.customer_id,customer.first_name,customer.last_name,customer.username,customer.email,customer.active,franchise.franchise_id,customer.status_value",
+        $params = array("select" =>"customer.customer_id,customer.first_name,customer.last_name,customer.username,customer.email,customer.country,customer.active,franchise.franchise_id,customer.status_value",
                          "where" => "username = '$username' and password = '$password'",
                          "join" => array('franchise, customer.franchise_id = franchise.franchise_id'));
                         
@@ -53,6 +53,7 @@ class Login extends CI_Controller {
                 $data_customer_session['username'] = $obj_customer->username;
                 $data_customer_session['franchise_id'] = $obj_customer->franchise_id;
                 $data_customer_session['email'] = $obj_customer->email;
+                $data_customer_session['country'] = $obj_customer->country;
                 $data_customer_session['active'] = $obj_customer->active;
                 $data_customer_session['logged_customer'] = "TRUE";
                 $data_customer_session['status'] = $obj_customer->status_value;
