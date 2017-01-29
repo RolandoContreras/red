@@ -51,7 +51,7 @@ class D_pay_dialy extends CI_Controller{
                                     customer.date_end,
                                     customer.last_name,
                                     customer.franchise_id",
-                "where" =>"customer.active = 1 and franchise.franchise_id in (1,2,3,4,5,7)",
+                "where" =>"customer.active = 1 and franchise.franchise_id in (1,2,3,4,5,7,8)",
                "join" => array('franchise, customer.franchise_id = franchise.franchise_id'),
                          );
                 //GET DATA FROM CUSTOMER
@@ -76,6 +76,9 @@ class D_pay_dialy extends CI_Controller{
                                 break;
                             case 7:
                                 $amount= 56.25;
+                                break;
+                            case 8:
+                                $amount= 0.47;
                                 break;
                             }
                             $data = array(

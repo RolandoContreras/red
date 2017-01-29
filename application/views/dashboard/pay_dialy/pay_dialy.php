@@ -13,6 +13,7 @@
                             <div class="navbar-inner">
                                     <div class="container" style="width: auto;">
                                             <a class="brand">PAGOS DIARIOS</a>
+                                             <button class="btn btn-small" onclick="nuevo_pago();">Nuevo Pago</button>
                                     </div>
                             </div>
                     </div>

@@ -89,7 +89,7 @@
                                                     case 7:
                                                         $images = "elite.jpg";
                                                         break;
-                                                    case 6:
+                                                    case 8:
                                                         $images = "start.jpg";
                                                         break;
                                                 }
