@@ -65,6 +65,12 @@
                 <img data-u="image" src="<?php echo site_url().'static/plan/images/bitcoin-que_es7.jpg'?>"/>
                 </div>
                 <div data-p="150.00" style="display: none;">
+                <img data-u="image" src="<?php echo site_url().'static/plan/images/corporativo_carlos.jpg'?>"/>
+                </div>
+                <div data-p="150.00" style="display: none;">
+                <img data-u="image" src="<?php echo site_url().'static/plan/images/corporativo_sk_ro.jpg'?>"/>
+                </div>
+                <div data-p="150.00" style="display: none;">
                 <img data-u="image" src="<?php echo site_url().'static/plan/images/bitcoin-como_funciona8.jpg'?>"/>
                 </div>
                 <div data-p="150.00" style="display: none;">
@@ -119,7 +125,7 @@
                         <div class="box">
                             <div class="box__body">
                                 <img style="margin-left:60px" src="<?php echo site_url().'static/plan/files/pdf_file.png';?>" width="150"><br>
-                                <a href="<?php echo site_url().'static/plan/document/presentacion-bitshare-esx.pdf';?>" class="btn btn-primary btn-md" download="presentacion_pdf_es">Descargar Presentacion PDF</a>
+                                <a href="<?php echo site_url().'static/plan/document/presentacion-bitshare-esx-pe.pdf';?>" class="btn btn-primary btn-md" download="presentacion_pdf_es">Descargar Presentacion PDF</a>
                             </div>
                         </div>
                     </li>
@@ -127,7 +133,7 @@
                         <div class="box">
                             <div class="box__body">
                                 <img style="margin-left:60px"  src="<?php echo site_url().'static/plan/files/ppt-file.png';?>" width="150"><br>
-                                <a href="<?php echo site_url().'static/plan/document/presentacion-bitshare-esx.pptx';?>" class="btn btn-primary btn-md" download="presentacion_ppt_es">Descargar Presentacion PPT</a>
+                                <a href="<?php echo site_url().'static/plan/document/presentacion-bitshare-esx-pe.pptx';?>" class="btn btn-primary btn-md" download="presentacion_ppt_es">Descargar Presentacion PPT</a>
                             </div>
                         </div>
                     </li>
