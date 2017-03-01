@@ -124,10 +124,10 @@
              <br/><br/>
             <div class="row">
               <div class="col-lg-12">
-                <strong>Tu links para referir: </strong><a href="<?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link"><?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>
+                <strong>Tu links para referir: </strong><a href="<?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link" target="_blank"><?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>
+                <strong>Aqui esta la dirección para pago con bitcoin:</strong><a>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</a><br>
                 <?php 
                 if($obj_customer->active != "1"){ ?>
-                    <strong>Aqui esta la dirección para pago con bitcoins:</strong><a> 188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</a><br>
                     <strong>Para la activación debe enviar a nuestra dirección de bitcoin: </strong>
                     <a class="alert-link">
                         <?php if($obj_customer->franchise_id != 6){echo "$".number_format($obj_customer->price,2)."($obj_customer->franchise)";}
