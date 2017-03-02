@@ -82,7 +82,8 @@
                                       </div>
                                       <div class="col-sm-2" style="padding: 0;">
                                         <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                          <span class="circle circle-success circle-lg"></span>
+                                            <?php if($obj_customer->active == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                          <span class="<?php echo $style;?>"></span>
                                         </span>
                                       </div>
                                     </div>
@@ -143,7 +144,8 @@
                                             </div>
                                             <div class="col-sm-2" style="padding: 0;">
                                               <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
-                                                <span class="circle circle-success circle-lg"></span>
+                                                  <?php if($value->active == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                <span class="<?php echo $style;?>"></span>
                                               </span>
                                             </div>
                                           </div>
