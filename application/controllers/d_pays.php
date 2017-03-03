@@ -17,6 +17,8 @@ class D_pays extends CI_Controller{
                         "select" =>"pay.pay_id,
                                     pay.date,
                                     pay.amount,
+                                    pay.descount as fee,
+                                    pay.amount_total,
                                     pay.status_value,
                                     customer.first_name,
                                     customer.username,
