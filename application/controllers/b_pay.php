@@ -35,6 +35,8 @@ class B_pay extends CI_Controller {
             $params = array(
                         "select" =>"pay.date,
                                     pay.amount,
+                                    pay.descount as fee,
+                                    pay.amount_total,
                                     pay.status_value",
                "join" => array('customer, pay.customer_id = customer.customer_id'),
                 "where" => "pay.customer_id = $customer_id",
@@ -118,10 +120,17 @@ class B_pay extends CI_Controller {
                     );
            $obj_total = $this->obj_commissions->get_search_row($params_total);
            
+           //FEE OR COMISION BY DO PAYOUT
+           $fee = $obj_total->total * 0.07;
+           //AMOUNT TOTAL TO PAY
+           $amount_total  = $obj_total->total - $fee;
+           
            //CREATE DATA IN PAY
                 $data = array(
                     'status_value' => 3,
                     'amount' => $obj_total->total,
+                    'descount' => $fee,
+                    'amount_total' => $amount_total,
                     'customer_id' => $_SESSION['customer']['customer_id'],
                     'date' => date("Y-m-d H:i:s"),
                     'created_at' => date("Y-m-d H:i:s"),
@@ -170,11 +179,17 @@ class B_pay extends CI_Controller {
                          "where" => "commissions.customer_id = $customer_id and status_value = 2",
                     );
            $obj_total = $this->obj_commissions->get_search_row($params_total);
+           //FEE OR COMISION BY DO PAYOUT
+           $fee = $obj_total->normal_account * 0.07;
+           //AMOUNT TOTAL TO PAY
+           $amount_total  = $obj_total->normal_account - $fee;
            
            //CREATE DATA IN PAY
                 $data = array(
                     'status_value' => 3,
                     'amount' => $obj_total->normal_account,
+                    'descount' => $fee,
+                    'amount_total' => $amount_total,
                     'customer_id' => $_SESSION['customer']['customer_id'],
                     'date' => date("Y-m-d H:i:s"),
                     'created_at' => date("Y-m-d H:i:s"),
@@ -208,7 +223,6 @@ class B_pay extends CI_Controller {
                 
                 
             }elseif($monto == 3){
-                
                   //GET TOTAL AMOUNT AND TO BE PAGOS DIARIOS "3"
                 $params = array(
                         "select" =>"commissions_id,
@@ -228,11 +242,17 @@ class B_pay extends CI_Controller {
                     );
            $obj_commission_total = $this->obj_commissions->get_search_row($params_total);
            $obj_total = $obj_commission_total->total - $obj_commission_total->mandatory_account;
+           //FEE OR COMISION BY DO PAYOUT
+           $fee = $obj_total * 0.07;
+           //AMOUNT TOTAL TO PAY
+           $amount_total  = $obj_total - $fee;
            
            //CREATE DATA IN PAY
                 $data = array(
                     'status_value' => 3,
                     'amount' => $obj_total,
+                    'descount' => $fee,
+                    'amount_total' => $amount_total,
                     'customer_id' => $_SESSION['customer']['customer_id'],
                     'date' => date("Y-m-d H:i:s"),
                     'created_at' => date("Y-m-d H:i:s"),

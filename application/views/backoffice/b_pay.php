@@ -54,16 +54,20 @@
                                          <th class="all">Fecha</th>
                                          <th>Concepto</th>
                                          <th>Monto Enviado</th>
+                                         <th>Cuota</th>
                                          <th>Estado</th>
                                     </tr>
                                  </thead>
                                  <tbody >
                                      <?php foreach ($obj_commissions as $value) { ?>
                                       <tr role="row" class="odd">
-                                          <td><?php echo $value->date;?></td>
+                                          <td><?php echo formato_fecha($value->date);?></td>
                                           <td class="sorting_1">Pagos por comisiones</td>
                                           <td>
                                             <span class="text-success"><?php echo "$".$value->amount;?></span>
+                                          </td>
+                                          <td>
+                                            <span class="text-danger"><?php echo "$".$value->fee;?></span>
                                           </td>
                                           <td>
                                                <?php 
