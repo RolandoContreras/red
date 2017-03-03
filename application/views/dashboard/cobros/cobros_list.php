@@ -36,14 +36,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
                             <?php foreach ($obj_pay as $value): ?>
                             <tr>
                                 <td align="center"><?php echo $value->pay_id;?></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
                                 <td align="center"><b><a class="pending"><?php echo $value->amount;?></a></b></td>
                                 <td align="center"><b><a style="color:red;"><?php echo $value->fee;?></a></b></td>
-                                <td align="center"><b><a style="color:yellowgreen;"><?php echo $value->amount_total;?></a></b></td>
+                                <td align="center"><b><a style="color:green;"><?php echo $value->amount_total;?></a></b></td>
                                 <td align="center"><b><?php echo $value->username;?></b></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center">

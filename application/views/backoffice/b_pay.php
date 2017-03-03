@@ -51,18 +51,19 @@
                               <table id="table" class="display table table-striped table-hover responsive">
                                  <thead>
                                     <tr>
-                                         <th class="all">Fecha</th>
                                          <th>Concepto</th>
+                                         <th class="all">Fecha</th>
                                          <th>Monto Enviado</th>
-                                         <th>Cuota</th>
+                                         <th class="all">Cuota</th>
                                          <th>Estado</th>
                                     </tr>
                                  </thead>
                                  <tbody >
                                      <?php foreach ($obj_commissions as $value) { ?>
                                       <tr role="row" class="odd">
-                                          <td><?php echo formato_fecha($value->date);?></td>
+                                          
                                           <td class="sorting_1">Pagos por comisiones</td>
+                                          <td><?php echo formato_fecha($value->date);?></td>
                                           <td>
                                             <span class="text-success"><?php echo "$".$value->amount;?></span>
                                           </td>
