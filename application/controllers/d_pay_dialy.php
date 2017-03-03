@@ -41,12 +41,14 @@ class D_pay_dialy extends CI_Controller{
         if($this->input->is_ajax_request()){  
                 //GET TODAY DATE
                 $today = date("Y-m-d");
-                
                 //SELECT PARAM
                 $params = array(
                         "select" =>"customer.customer_id,
                                     customer.first_name,
                                     customer.username,
+                                    customer.point_left,
+                                    customer.point_rigth,
+                                    customer.calification,
                                     customer.date_start,
                                     customer.date_end,
                                     customer.last_name,
@@ -57,7 +59,12 @@ class D_pay_dialy extends CI_Controller{
                 //GET DATA FROM CUSTOMER
                 $obj_customer= $this->obj_customer->search($params);
                 
+                //CODE BINARY
+                $this->binary($obj_customer);
+                //END BINARY
+              
                 foreach ($obj_customer as $value) {
+                    
                     if($value->date_end >= $today){
                         if($value->date_start >= '2017-01-10'){
                             
@@ -133,6 +140,62 @@ class D_pay_dialy extends CI_Controller{
                 echo json_encode($data);            
         exit();
             }
+    }
+    
+    public function binary($obj_customer){          
+        
+                foreach ($obj_customer as $value) {
+                    //CONDITICION IF BE CALIFICATE AND THE POINT LEFT AND RIGTH TO BE MAIOR TO ZERO
+                    if($value->calification == 1 && $value->point_left > 0 && $value->point_rigth > 0){
+                        $customer_id = $value->customer_id;
+                        $left = $value->point_left;
+                        $rigth = $value->point_rigth;
+                        
+                        if($left > $rigth){
+                           $maior = $left - $rigth;
+                           //UPDATE DATA CUSTOMER            
+                           $data = array(
+                            'point_left' => $maior,
+                            'point_rigth' => 0
+                            ); 
+                            $this->obj_customer->update($customer_id,$data);
+                            
+                            //INSERT DATA ON COMMISSION
+                            $data_comission = array(
+                                'customer_id' => $customer_id,
+                                'bonus_id' => 4,
+                                'name' => "Binario",
+                                'amount' => $rigth,
+                                'date' => date("Y-m-d H:i:s"),
+                                'status_value' => 2,
+                                'created_at' => date("Y-m-d H:i:s"),
+                                'created_by' => $_SESSION['usercms']['user_id']
+                                );
+                            $this->obj_commissions->insert($data_comission);
+                        }else{
+                            $maior = $rigth - $left;
+                            //UPDATE DATA CUSTOMER            
+                           $data = array(
+                            'point_rigth' => $maior,
+                            'point_left' => 0
+                            ); 
+                            $this->obj_customer->update($customer_id,$data);
+                            
+                            //INSERT DATA ON COMMISSION
+                            $data_comission = array(
+                                'customer_id' => $customer_id,
+                                'bonus_id' => 4,
+                                'name' => "Binario",
+                                'amount' => $left,
+                                'date' => date("Y-m-d H:i:s"),
+                                'status_value' => 2,
+                                'created_at' => date("Y-m-d H:i:s"),
+                                'created_by' => $_SESSION['usercms']['user_id']
+                                );
+                            $this->obj_commissions->insert($data_comission);
+                        }
+                    }
+                }
     }
     
     public function get_session(){          
