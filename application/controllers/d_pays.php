@@ -20,9 +20,11 @@ class D_pays extends CI_Controller{
                                     pay.descount as fee,
                                     pay.amount_total,
                                     pay.status_value,
+                                    customer.customer_id,
                                     customer.first_name,
                                     customer.username,
                                     customer.last_name,
+                                    customer.email,
                                     customer.dni",
                         "join" => array('customer, pay.customer_id = customer.customer_id'),
                         "order" => "pay.pay_id DESC"
@@ -82,6 +84,11 @@ class D_pays extends CI_Controller{
         if($this->input->is_ajax_request()){  
             ///GET PAY_ID
             $pay_id = $this->input->post("pay_id");
+            //GET DATA FROM EMAIL
+            $first_name = $this->input->post("first_name");
+            $username = $this->input->post("username");
+            $amount = $this->input->post("amount");
+            $email = $this->input->post("email");
             
             //UPDATE FILES PAY
             $data_pay = array(
@@ -113,7 +120,42 @@ class D_pays extends CI_Controller{
                         'updated_at' => date("Y-m-d H:i:s")
                     ); 
                     $this->obj_commission->update($value->commissions_id,$data_comission);    
-           }    
+           }  
+           
+         // Envio de Correo de confirmacion de pago
+               $mail = '<html> 
+                            <head> 
+                               <title>PEDIDO DE COBRO PROCESADO</title> 
+                            </head> 
+                            <body> 
+                            <h2>Pedido de cobro procesado</h2> 
+                            <p>     
+                            Saludos líder '.$first_name.' la petición de cobro del usuario: '.$username.' por la cantidad: '.$amount.', fue procesada exitósamente. <br>Gracias por tu confianza. 
+                            </p> 
+                            <br>
+                            <br>
+                            <br>
+                            <p><b><u>Department of Payments</u></b><br>
+                            Bitshare - Una solución para las personas<br>
+                            <i>http://www.yourbitshares.com</i></p> 
+                            </body> 
+                            </html> 
+                            '; 
+
+                // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
+                $mensaje = wordwrap($mail, 70, "\r\n");
+                //Titulo
+                $titulo = "PEDIDO DE COBRO PROCESADO";
+                //cabecera
+                $headers = "MIME-Version: 1.0\r\n"; 
+                $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                //dirección del remitente 
+                $headers .= "From: Bitshare - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
+                //Enviamos el mensaje a tu_dirección_email 
+                $bool = mail("$email",$titulo,$mensaje,$headers);
+           
+           
+           
                     $data['message'] = "true";
                     echo json_encode($data); 
             exit();
@@ -124,6 +166,11 @@ class D_pays extends CI_Controller{
         if($this->input->is_ajax_request()){  
             ///GET PAY_ID
             $pay_id = $this->input->post("pay_id");
+            //GET DATA FROM EMAIL
+            $first_name = $this->input->post("first_name");
+            $username = $this->input->post("username");
+            $amount = $this->input->post("amount");
+            $email = $this->input->post("email");
             
             //UPDATE FILES PAY
             $data_pay = array(
@@ -155,7 +202,41 @@ class D_pays extends CI_Controller{
                         'updated_at' => date("Y-m-d H:i:s")
                     ); 
                     $this->obj_commission->update($value->commissions_id,$data_comission);    
-           }    
+           }
+            
+           // Envio de Correo de confirmacion de pago
+                $mail = '<html> 
+                            <head> 
+                               <title>PEDIDO DE COBRO CANCELADO</title> 
+                            </head> 
+                            <body> 
+                            <h2>Pedido de Cobro Cancelado</h2> 
+                            <p>     
+                            Saludos líder '.$first_name.' la petición de cobro del usuario: '.$username.' por la cantidad: '.$amount.', fue procesada cancelada. 
+                            <br>Comunicarse con soporte. Gracias por tu confianza. 
+                            </p> 
+                            <br>
+                            <br>
+                            <br>
+                            <p><b><u>Department of Payments</u></b> 
+                            Bitshare - Una solución para las personas
+                            <i>http://www.yourbitshares.com</i></p> 
+                            </body> 
+                            </html> 
+                            '; 
+
+                // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
+                $mensaje = wordwrap($mail, 70, "\r\n");
+                //Titulo
+                $titulo = "PEDIDO DE COBRO PROCESADO";
+                //cabecera
+                $headers = "MIME-Version: 1.0\r\n"; 
+                $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                //dirección del remitente 
+                $headers .= "From: Bitshare - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
+                //Enviamos el mensaje a tu_dirección_email 
+                $bool = mail("$email",$titulo,$mensaje,$headers);
+           
                     $data['message'] = "true";
                     echo json_encode($data); 
             exit();

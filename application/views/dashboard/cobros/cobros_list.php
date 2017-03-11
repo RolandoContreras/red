@@ -68,8 +68,8 @@
                                 <td align="center">
                                     <div class="operation">
                                             <div class="btn-group">
-                                                    <button class="btn btn-small" onclick="pagado('<?php echo $value->pay_id;?>');">Pagado</button>
-                                                    <button class="btn btn-small" onclick="devolver('<?php echo $value->pay_id;?>');">Devolver</button>
+                                                    <button class="btn btn-small" onclick="pagado('<?php echo $value->pay_id;?>','<?php echo $value->first_name;?>','<?php echo $value->username;?>','<?php echo $value->amount;?>','<?php echo $value->email;?>;?>');">Pagado</button>
+                                                    <button class="btn btn-small" onclick="devolver('<?php echo $value->pay_id;?>','<?php echo $value->first_name;?>','<?php echo $value->username;?>','<?php echo $value->amount;?>','<?php echo $value->email;?>');">Devolver</button>
                                           </div>
                                     </div>
                                 </td>
