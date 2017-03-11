@@ -210,14 +210,14 @@
                             <div class="col-sm-6">
                                 <label></label>
                                 <label data-add-placeholder>
-                                    <h6><a style="color: blue;" href="<?php echo site_url().'static/plan/document/terminos-y-condiciones.docx';?>" download="download"><?php echo replace_vocales_voculeshtml("Términos y Condiciones");?></a></h6>
+                                    <h6><a style="color: blue;" href="<?php echo site_url().'static/plan/document/Contrato_de_Dsitribuidor_BITSHARE.docx';?>" download="Contrato_de_Dsitribuidor_BITSHARE.docx"><?php echo replace_vocales_voculeshtml("Contrato Bitshare (descargar)");?></a></h6>
                                 </label>
                             </div>
                             <div class="col-sm-6">
                             </div>
                             <div class="col-xs-12 text-left">
                                 <label></label>
-                                <h6 style="font-size: 16px !important; color: skyblue;"><?php echo replace_vocales_voculeshtml("¿Está de acuerdo?  al dar click en el boton crear cuenta indico que conozco, he leído y acepto las cláusulas y condiciones.");?></h6>
+                                <h6 style="font-size: 16px !important; color: skyblue;"><?php echo replace_vocales_voculeshtml("¿Está de acuerdo?  al dar click en el boton crear cuenta indico que conozco, he leído y acepto las cláusulas y condiciones del contrato bitshare.");?></h6>
                                 </div>
                             </div>
                         </fieldset>   

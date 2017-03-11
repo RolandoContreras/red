@@ -214,8 +214,8 @@ class D_pays extends CI_Controller{
                             <br>
                             <br>
                             <br>
-                            <p><b><u>Department of Payments</u></b> 
-                            Bitshare - Una solución para las personas
+                            <p><b><u>Department of Payments</u></b><br> 
+                            Bitshare - Una solución para las personas<br>
                             <i>http://www.yourbitshares.com</i></p> 
                             </body> 
                             </html> 
