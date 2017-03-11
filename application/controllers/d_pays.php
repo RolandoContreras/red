@@ -62,9 +62,6 @@ class D_pays extends CI_Controller{
            //GET DATA FROM CUSTOMER
            $obj_pay_commission= $this->obj_pay_commission->search($params);
            
-//           var_dump($obj_pay_commission);
-//           die();
-           
            
            /// PAGINADO
             $modulos ='cobros'; 
@@ -130,7 +127,7 @@ class D_pays extends CI_Controller{
                             <body> 
                             <h2>Pedido de cobro procesado</h2> 
                             <p>     
-                            Saludos líder '.$first_name.' la petición de cobro del usuario: '.$username.' por la cantidad: '.$amount.', fue procesada exitósamente. <br>Gracias por tu confianza. 
+                            Saludos líder '.$first_name.' la petición de cobro del usuario: '.$username.' por la cantidad: '.$amount.', fue procesada exitósamente. <br>Gracias por su confianza. 
                             </p> 
                             <br>
                             <br>
@@ -152,12 +149,11 @@ class D_pays extends CI_Controller{
                 //dirección del remitente 
                 $headers .= "From: Bitshare - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
                 //Enviamos el mensaje a tu_dirección_email 
+                
                 $bool = mail("$email",$titulo,$mensaje,$headers);
-           
-           
-           
-                    $data['message'] = "true";
-                    echo json_encode($data); 
+
+                $data['message'] = "true";
+                echo json_encode($data); 
             exit();
         }
     }
@@ -213,7 +209,7 @@ class D_pays extends CI_Controller{
                             <h2>Pedido de Cobro Cancelado</h2> 
                             <p>     
                             Saludos líder '.$first_name.' la petición de cobro del usuario: '.$username.' por la cantidad: '.$amount.', fue procesada cancelada. 
-                            <br>Comunicarse con soporte. Gracias por tu confianza. 
+                            <br>Comunicarse con soporte. Gracias por su confianza. 
                             </p> 
                             <br>
                             <br>
@@ -228,7 +224,7 @@ class D_pays extends CI_Controller{
                 // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
                 $mensaje = wordwrap($mail, 70, "\r\n");
                 //Titulo
-                $titulo = "PEDIDO DE COBRO PROCESADO";
+                $titulo = "PEDIDO DE COBRO CANCELADO";
                 //cabecera
                 $headers = "MIME-Version: 1.0\r\n"; 
                 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
