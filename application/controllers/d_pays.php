@@ -23,6 +23,7 @@ class D_pays extends CI_Controller{
                                     customer.customer_id,
                                     customer.first_name,
                                     customer.username,
+                                    customer.btc_address,
                                     customer.last_name,
                                     customer.email,
                                     customer.dni",
