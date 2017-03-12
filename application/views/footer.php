@@ -6,10 +6,11 @@
             <p>
                 <a href="./">BitShare</a> &copy; <span id="copyright-year"></span> &bull;
                 <span class="rd-navbar--switch-to-desktop"></span>
-                Privacy Policy
+                Privacy Policy &bull;
+                <span class="rd-navbar--switch-to-desktop"></span>
+                <a href="<?php echo site_url()."faq";?>">FAQ</a>
                 <!-- {%FOOTER_LINK} -->
             </p>
-            
-            <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+            <!--<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>-->
         </div>
     </footer>

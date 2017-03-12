@@ -19,10 +19,19 @@
                     </div>
                     <!-- END RD Navbar Panel -->
 <!--NUMERO TELEFONICO-->
-<!--                    <div class="rd-navbar-info box box-skin-1">
-                        <div class="box__left"><div class="icon icon-xs icon-contrast fa fa-phone-square"></div></div>
-                        <div class="box__body"><a href="callto:#">800 555 7744</a></div>
-                    </div>-->
+                    <div class="rd-navbar-info box box-skin-1">
+                        <div class="box__left">
+                            <em class="icon-face">
+                                
+                            </em>
+                            <div class="fb-like" data-href="https://www.facebook.com/bitshareoficial/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+
+                        </div>
+                        <div class="box__body">
+                            Síguenos
+                            <a href="callto:#">800 555 7744</a>
+                        </div>
+                    </div>
                     <div class="rd-navbar-nav-wrap">
 
                         <!-- RD Navbar Nav -->
