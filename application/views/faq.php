@@ -50,10 +50,44 @@
                          <p><?php echo replace_vocales_voculeshtml("-El 7% del monto enviado por gastos administrativos y operacionales.");?></p><br>
                     </div>                        
                     <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
-                        <p><strong><?php echo replace_vocales_voculeshtml("¿Cuánto es la comisión por sacar nuestro dinero a otros monederos externos de bitcoin?");?></strong></p>  
-                         <p><?php echo replace_vocales_voculeshtml("-El 7% del monto enviado por gastos administrativos y operacionales.");?></p><br>
-                    </div>                        
-                    
+                        <p><strong><?php echo replace_vocales_voculeshtml("¿Cuánto es lo mínimo para cobrar en bitshare?");?></strong></p>  
+                         <p><?php echo replace_vocales_voculeshtml("-Desde 15 dólares un asociado ya puede solicitar la pedirían de cobro.");?></p><br>
+                    </div>  
+                    <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
+                        <p><strong><?php echo replace_vocales_voculeshtml("¿Cuantas cuentas puedo tener en la empresa?");?></strong></p>  
+                         <p><?php echo replace_vocales_voculeshtml("-El máximo de cuentas permitido por persona son de 10, cada cuenta es independiente y autónoma. Todas las ganancias son enviadas a una misma billetera de bitcoin si desea.");?></p><br>
+                    </div> 
+                    <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
+                        <p><strong><?php echo replace_vocales_voculeshtml("¿Tengo algún límite de personas para invitar a bitshare?");?></strong></p>  
+                         <p><?php echo replace_vocales_voculeshtml("- No, un socio puede invitar a tantas personas como quiera lo único que se pide es que cumplan con reglas de ética de la empresa.");?></p><br>
+                    </div> 
+                    <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
+                        <p><strong><?php echo replace_vocales_voculeshtml("¿Tengo que esperar los 120 días para sacar mi dinero y en cuanto tiempo retorna mi capital  ?");?></strong></p>  
+                        <p><?php echo replace_vocales_voculeshtml("-No, en bitshare los asociados pueden cobrar de forma diaria de lunes a domingo, lo mínimo que la empresa pide para cobrar es tener $15 de ganancia como mínimo. Si un distribuidor o asociado solo genera por usufructo, el retorno de capital en promedio se recupera la inversión en 3 meses.");?></p><br>
+                    </div>
+                    <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
+                        <p><strong><?php echo replace_vocales_voculeshtml("¿Tengo algún límite de personas para invitar a bitshare?");?></strong></p>  
+                         <p><?php echo replace_vocales_voculeshtml("- No, un socio puede invitar a tantas personas como quiera lo único que se pide es que cumplan con reglas de ética de la empresa.");?></p><br>
+                    </div> 
+                    <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
+                        <p><strong><?php echo replace_vocales_voculeshtml("¿Qué es el usufructo?");?></strong></p>  
+                         <p><?php echo replace_vocales_voculeshtml("- Derecho por el que una persona puede usar los bienes  de otra y disfrutar  de sus beneficios con la obligación  de conservarlos y cuidarlos como si fueran propios.");?></p><br>
+                    </div>
+                    <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
+                        <p><strong><?php echo replace_vocales_voculeshtml("¿Bitshare tiene alguna pasarela de bitcoin?");?></strong></p>  
+                         <p><?php echo replace_vocales_voculeshtml("No, en los próximos meses se está lanzando la primera pasarela de bitcoin de la empresa llamada BITSHARE WALLET, de esa forma se pudrá comercializar los bitcoin directamente de bitshare como negocio hacia la pasarela bitshare.");?></p><br>
+                    </div>
+                    <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
+                        <p><strong><?php echo replace_vocales_voculeshtml("¿En qué momento se puede hacer el upgrade?");?></strong></p>  
+                         <p><?php echo replace_vocales_voculeshtml("En cualquier momento que desee, el requisito es que tiene que pagar el 100% de cuenta a adquirir.");?></p><br>
+                    </div>
+                    <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
+                        <p><strong><?php echo replace_vocales_voculeshtml("¿Qué riesgos tengo si soy parte de bitshare?");?></strong></p>  
+                         <p><?php echo replace_vocales_voculeshtml("Todo negocio tiene riesgos, Bitshare no es la excepción, pero lo que buscamos es minimizar los riegos con 3 puntos principales.");?></p>
+                         <p><i><?php echo replace_vocales_voculeshtml("1) Ser pionero: La empresa fue lanzada el 1ro de Enero del 2017. Como primeros asociados tenemos una mayor probabilidad  tener más ganancias a diferencia de una persona que ingrese a la compañía los últimos años.");?></p>
+                         <p><?php echo replace_vocales_voculeshtml("2) Tenemos y comercializamos el mejor producto que es el oro, el cual respalda gobiernos, banco, empresas, etc. El oro actualmente la tendencia es a subir");?></p>
+                         <p><?php echo replace_vocales_voculeshtml("3) Los cobros se efectúan de forma diaria lo cual permite que usted vea su dinero todos los días.");?></p><br>
+                    </div>
                 </div>
             </div>
         </section>
