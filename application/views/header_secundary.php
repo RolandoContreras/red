@@ -65,6 +65,9 @@
                              <li>
                                 <a href="<?php echo site_url().'login';?>">Login</a>
                             </li>
+                            <li>
+                                <a href="<?php echo site_url().'faq';?>">FAQ</a>
+                            </li>
                         </ul>
                         <!-- END RD Navbar Nav -->
                     </div>

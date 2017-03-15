@@ -19,7 +19,7 @@
                     </div>
                     <!-- END RD Navbar Panel -->
 <!--NUMERO TELEFONICO-->
-                    <div class="rd-navbar-info box box-skin-1">
+<!--                    <div class="rd-navbar-info box box-skin-1">
                         <div class="box__left">
                             <em class="icon-face">
                                 
@@ -31,7 +31,7 @@
                             Síguenos
                             <a href="callto:#">800 555 7744</a>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="rd-navbar-nav-wrap">
 
                         <!-- RD Navbar Nav -->
@@ -86,6 +86,9 @@
                                                 </fieldset>
                                             </form>
                                     </ul>-->
+                            </li>
+                            <li>
+                                <a href="<?php echo site_url().'faq';?>">FAQ</a>
                             </li>
                         </ul>
                         <!-- END RD Navbar Nav -->
