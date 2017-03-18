@@ -54,5 +54,5 @@
             var site = '<?php echo site_url();?>';
     </script>
     <script src="https://use.fontawesome.com/684aca07c3.js"></script>
-<link href='<?php echo site_url().'static/page_front/css/mystyle.css';?>' rel='stylesheet' type='text/css'>
+    <link href='<?php echo site_url().'static/page_front/css/mystyle.css';?>' rel='stylesheet' type='text/css'>
 </head>

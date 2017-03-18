@@ -23,7 +23,7 @@
                     <!--SOCIAL NETWORK-->
                     <div class="rd-navbar-info box box-skin-1">
                        <div class="box__body">
-                           <span class="siguenos">Síguenos</span>
+                           <span class="siguenos">S&iacute;guenos</span>
                             <!--<i class="fa fa-camera-retro"></i>-->
                             <a href="https://www.facebook.com/bitshareoficial/" target="_blank">
                               <span class="icon-wrapp">
