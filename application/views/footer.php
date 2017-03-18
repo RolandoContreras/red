@@ -16,12 +16,12 @@
                        <span class="siguenos">S&iacute;guenos</span>
                         <!--<i class="fa fa-camera-retro"></i>-->
                         <a href="https://www.facebook.com/bitshareoficial/" target="_blank">
-                          <span class="icon-wrapp">
+                          <span class="icon-wrapp_face">
                             <i class="fa fa-facebook fa-1g"></i>
                           </span>
                         </a>
                        <a href="https://www.youtube.com/channel/UCnvEpHFTdj0LZ8JaMKKTUMQ" target="_blank">
-                           <span class="icon-wrapp">
+                           <span class="icon-wrapp_you">
                              <i class="fa fa-youtube-play fa-1g"></i>
                            </span>
                        </a>
