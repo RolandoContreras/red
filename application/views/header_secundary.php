@@ -20,11 +20,24 @@
                         <!-- END RD Navbar Brand -->
                     </div>
                     <!-- END RD Navbar Panel -->
-<!--
+                    <!--SOCIAL NETWORK-->
                     <div class="rd-navbar-info box box-skin-1">
-                        <div class="box__left"><div class="icon icon-xs icon-contrast fa fa-phone-square"></div></div>
-                        <div class="box__body"><a href="callto:#">800 555 7744</a></div>
-                    </div>-->
+                       <div class="box__body">
+                           <span class="siguenos">Síguenos</span>
+                            <!--<i class="fa fa-camera-retro"></i>-->
+                            <a href="https://www.facebook.com/bitshareoficial/" target="_blank">
+                              <span class="icon-wrapp">
+                                <i class="fa fa-facebook fa-1g"></i>
+                              </span>
+                            </a>
+                           <a href="https://www.youtube.com/channel/UCnvEpHFTdj0LZ8JaMKKTUMQ" target="_blank">
+                               <span class="icon-wrapp">
+                                 <i class="fa fa-youtube-play fa-1g"></i>
+                               </span>
+                           </a>
+                        </div>
+                    </div>
+                    <!--END SOCIAL NETWORK-->
                     
                     <div class="rd-navbar-nav-wrap">
                      <!--//    CSS ACTIVE FOR THE LINK ACTIVE-->

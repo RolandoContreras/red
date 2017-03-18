@@ -50,24 +50,9 @@
     </div>
     <![endif]-->
     <script src="<?php echo site_url().'static/bootstrap/js/bootstrap.js';?>"></script>
-    
-    <script src="<?php echo site_url().'static/bootstrap/social/bootstrap-social.css';?>"></script>
-    
-    <script src="<?php echo site_url().'static/bootstrap/social/assets/css/bootstrap.css';?>"></script>
-    <script src="<?php echo site_url().'static/bootstrap/social/assets/css/font-awesome.css';?>"></script>
-    <script src="<?php echo site_url().'static/bootstrap/social/assets/css/docs.css';?>"></script>
-    
     <script type="text/javascript">
             var site = '<?php echo site_url();?>';
     </script>
-    
-    <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-    
+    <script src="https://use.fontawesome.com/684aca07c3.js"></script>
+<link href='<?php echo site_url().'static/page_front/css/mystyle.css';?>' rel='stylesheet' type='text/css'>
 </head>

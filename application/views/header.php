@@ -18,22 +18,25 @@
                         <!-- END RD Navbar Brand -->
                     </div>
                     <!-- END RD Navbar Panel -->
-<!--NUMERO TELEFONICO-->
-<!--                    <div class="rd-navbar-info box box-skin-1">
-                        <div class="box__left">
-                            <em class="icon-face">
-                                
-                            </em>
-                            <div class="fb-like" data-href="https://www.facebook.com/bitshareoficial/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-
+                    <!--SOCIAL NETWORK-->
+                    <div class="rd-navbar-info box box-skin-1">
+                       <div class="box__body">
+                           <span class="siguenos">Síguenos</span>
+                            <!--<i class="fa fa-camera-retro"></i>-->
+                            <a href="https://www.facebook.com/bitshareoficial/" target="_blank">
+                              <span class="icon-wrapp">
+                                <i class="fa fa-facebook fa-1g"></i>
+                              </span>
+                            </a>
+                           <a href="https://www.youtube.com/channel/UCnvEpHFTdj0LZ8JaMKKTUMQ" target="_blank">
+                               <span class="icon-wrapp">
+                                 <i class="fa fa-youtube-play fa-1g"></i>
+                               </span>
+                           </a>
                         </div>
-                        <div class="box__body">
-                            Síguenos
-                            <a href="callto:#">800 555 7744</a>
-                        </div>
-                    </div>-->
+                    </div>
+                    <!--END SOCIAL NETWORK-->
                     <div class="rd-navbar-nav-wrap">
-
                         <!-- RD Navbar Nav -->
                         <ul class="rd-navbar-nav">
                             <li class="active">

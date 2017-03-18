@@ -197,17 +197,17 @@
 	            <!-- START Right Navbar-->
 	               	<ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="#" title="Listado de archivos para descargar">
+                                <a href="<?php echo site_url().'backoffice/archivos';?>" title="Listado de archivos para descargar">
                                     <em class="icon-cloud-download"></em>
                                 </a>
                             </li>
 	                  	<!-- START Alert menu-->
-                            <li class="dropdown dropdown-list">
+<!--                            <li class="dropdown dropdown-list">
                                 <a href="#">
                                     <em class="icon-envelope-open"></em>
                                     <div class="count-mensajes label label-danger"></div>
                                 </a>
-                            </li>
+                            </li>-->
                             <li>
                                 <a href="<?php echo site_url().'Login/logout';?>" title="Salir">
                                    <em class="icon-logout"></em>

@@ -95,12 +95,16 @@
                          <p><?php echo replace_vocales_voculeshtml("- El máximo de ganancia por cuenta es de 5 veces la compra del paquete adquirido.");?></p><br>
                     </div>
                     <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
-                        <p style="color: #1db8ea;"><strong><?php echo replace_vocales_voculeshtml("¿Cuál es la visión de bitshare?");?></strong></p>  
-                         <p><?php echo replace_vocales_voculeshtml("- Nuestra visión consiste en lograr el liderazgo en el rubro de criptomoneda y metales preciosos mediante un ecosistema sano creado por los asociados. Bitshare tiene como objetivo dar herramientas y ayudar a sus miles de clientes a lograr que los pagos sean más fáciles y rápidos en todo el mundo.");?></p><br>
+                        <p style="color: #1db8ea;"><strong><?php echo replace_vocales_voculeshtml("¿Cuál es la visión de BITSHARE?");?></strong></p>  
+                         <p><?php echo replace_vocales_voculeshtml("- Nuestra visión consiste en lograr el liderazgo en el rubro de criptomoneda y metales preciosos mediante un ecosistema sano creado por los asociados. BITSHARE tiene como objetivo dar herramientas y ayudar a sus miles de clientes a lograr que los pagos sean más fáciles y rápidos en todo el mundo.");?></p><br>
                     </div>
                     <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
-                        <p style="color: #1db8ea;"><strong><?php echo replace_vocales_voculeshtml("¿Es obligatoria renovar la cuenta en bitshare?");?></strong></p>  
+                        <p style="color: #1db8ea;"><strong><?php echo replace_vocales_voculeshtml("¿Es obligatoria renovar la cuenta en BITSHARE?");?></strong></p>  
                          <p><?php echo replace_vocales_voculeshtml("- No es obligatorio, unas de facultades de todos los distribuidores es de decidir seguir con la compañía o no en base a su experiencia con nosotros.");?></p><br>
+                    </div>
+                    <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
+                        <p style="color: #1db8ea;"><strong><?php echo replace_vocales_voculeshtml("¿Cuándo ingreso a BITSHARE firmo algún contrato?");?></strong></p>  
+                         <p><?php echo replace_vocales_voculeshtml("-  Sí, cuando una persona ingresa a BITSHARE, firma un contrato de distribución mercantil que será válido durante la permanencia en BITSHARE.");?></p><br>
                     </div>
                 </div>
             </div>

@@ -71,6 +71,8 @@ $route['backoffice'] = "b_home";
 $route['logout'] = "b_home/logout";
 $route['backoffice/misdatos'] = "b_data";
 
+$route['backoffice/archivos'] = "b_files";
+
 $route['backoffice/binario'] = "b_binario";
 $route['backoffice/binario/([0-9a-z_-]+)'] = "b_binario/index/$1";
 
