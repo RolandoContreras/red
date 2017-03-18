@@ -11,23 +11,23 @@
     <meta name="robots" CONTENT="noindex, nofollow" />
     <title>BITSHARE</title>
        <!-- FONT AWESOME-->
-       <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/font-awesome.min.css';?>">
-       <!-- SIMPLE LINE ICONS-->
+<!--       <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/font-awesome.min.css';?>">
+        SIMPLE LINE ICONS
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-       <!-- ANIMATE.CSS-->
+        ANIMATE.CSS
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/animate.min.css';?>">
-       <!-- WHIRL (spinners)-->
+        WHIRL (spinners)
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/whirl.css';?>">
-       <!-- =============== PAGE VENDOR STYLES ===============-->
-       <!-- WEATHER ICONS-->
+        =============== PAGE VENDOR STYLES ===============
+        WEATHER ICONS
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/weather-icons.min.css';?>">
-       <!-- =============== BOOTSTRAP STYLES ===============-->
-       <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/bootstrap.css';?>" id="bscss">
-       <!-- SWEET ALERT-->
-       <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/sweetalert.css';?>">
+        =============== BOOTSTRAP STYLES ===============
+       <link rel="stylesheet" href="<?php // echo site_url().'static/backoffice/css/bootstrap.css';?>" id="bscss">
+        SWEET ALERT
+       <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/sweetalert.css';?>">-->
        <!-- DATATABLES-->
-            <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/dataTables.colVis.css';?>">
-            <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/dataTables.bootstrap.css';?>">
+<!--            <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/dataTables.colVis.css';?>">
+            <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/dataTables.bootstrap.css';?>">-->
        <!-- =============== APP STYLES ===============-->
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/app.css';?>" id="maincss">
        <!-- =============== APP TEMAS ===============-->
@@ -436,30 +436,30 @@
 </footer>
    </div>
 		   <!-- MODERNIZR-->
-		   <script src="<?php echo site_url().'static/backoffice/js/modernizr.js';?>"></script>
-		   <!-- JQUERY-->
-		   <script src="<?php echo site_url().'static/backoffice/js/jquery.js';?>"></script>
-		   <!-- BOOTSTRAP-->
+<!--		   <script src="<?php echo site_url().'static/backoffice/js/modernizr.js';?>"></script>
+		    JQUERY
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.js';?>"></scrispt>
+		    BOOTSTRAP
 		   <script src="<?php echo site_url().'static/backoffice/js/bootstrap.js';?>"></script>
-		   <!-- STORAGE API-->
+		    STORAGE API
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.storageapi.js';?>"></script>
-		   <!-- JQUERY EASING-->
+		    JQUERY EASING
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.easing.js';?>"></script>
-		   <!-- ANIMO-->
+		    ANIMO
 		   <script src="<?php echo site_url().'static/backoffice/js/animo.js';?>"></script>
-		   <!-- SLIMSCROLL-->
+		    SLIMSCROLL
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.slimscroll.min.js';?>"></script>
-		   <!-- LOCALIZE-->
-		   <script src="<?php echo site_url().'static/backoffice/js/jquery.jquery.localize.js';?>"></script>
+		    LOCALIZE
+		   <script src="<?php echo site_url().'static/backoffice/js/jquery.jquery.localize.js';?>"></script>-->
 		   <!-- RTL demo
 		   <!-- =============== PAGE VENDOR SCRIPTS ===============-->
 		   <!-- SPARKLINE-->
-		   <script src="<?php echo site_url().'static/backoffice/js/jquery.sparkline.min.js';?>"></script>
-		   <!-- PARSLEY-->
+<!--		   <script src="<?php echo site_url().'static/backoffice/js/jquery.sparkline.min.js';?>"></script>
+		    PARSLEY
 		   <script src="<?php echo site_url().'static/backoffice/js/parsley.min.js';?>"></script>
-                   <!-- SWEET ALERT-->
+                    SWEET ALERT
                    <script src="<?php echo site_url().'static/backoffice/js/sweetalert.min.js';?>"></script>	
-		   <!-- FLOT CHART-->
+		    FLOT CHART
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.js';?>"></script>
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.tooltip.min.js';?>"></script>
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.resize.js';?>"></script>
@@ -467,19 +467,19 @@
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.time.js';?>"></script>
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.categories.js';?>"></script>
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.flot.spline.min.js';?>"></script>
-		   <!-- CLASSY LOADER-->
+		    CLASSY LOADER
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.classyloader.min.js';?>"></script>
-		   <!-- MOMENT JS-->
+		    MOMENT JS
                    <script src="<?php echo site_url().'static/backoffice/js/moment-with-locales.min.js';?>"></script>
-		   <!-- DATATABLES-->
+		    DATATABLES
 		   <script src="<?php echo site_url().'static/backoffice/js/jquery.dataTables.min.js';?>"></script>
 		   <script src="<?php echo site_url().'static/backoffice/js/dataTables.colVis.js';?>"></script>
 		   <script src="<?php echo site_url().'static/backoffice/js/dataTables.bootstrap.js';?>"></script>
 		   <script src="<?php echo site_url().'static/backoffice/js/dataTables.bootstrapPagination.js';?>"></script>   
-		   <!-- =============== APP SCRIPTS ===============-->
+		    =============== APP SCRIPTS ===============
 		   <script src="<?php echo site_url().'static/backoffice/js/app.js';?>"></script>
 		   <script src="<?php echo site_url().'static/backoffice/js/afiliados.js';?>"></script>
-		   <!-- SONIDO -->
-		   <script src="<?php echo site_url().'static/backoffice/js/ion.sound.js';?>"></script>
+		    SONIDO 
+		   <script src="<?php echo site_url().'static/backoffice/js/ion.sound.js';?>"></script>-->
 </body>
 </html>
