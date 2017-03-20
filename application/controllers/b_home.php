@@ -25,6 +25,7 @@ class B_home extends CI_Controller {
                                     customer.active,
                                     customer.dni,
                                     customer.birth_date,
+                                    customer.date_end,
                                     customer.address,
                                     customer.status_value,
                                     customer.franchise_id,
@@ -43,6 +44,43 @@ class B_home extends CI_Controller {
                          "where" => "commissions.customer_id = $customer_id",
                     );
              $obj_commissions = $this->obj_commissions->get_search_row($params_total); 
+             
+             $today = date("Y-m-j");
+             $date_end_contract = $obj_customer->date_end;
+             
+             if($date_end_contract != "" && $today > $date_end_contract){
+//                 if(){
+                    //UPDATE DATA EN CUSTOMER TABLE
+//                $data = array(
+//                           'address' => $address,
+//                           'phone' => $phone,
+//                           'position_temporal' => $pierna,
+//                           'updated_by' => $customer_id,
+//                           'updated_at' => date("Y-m-d H:i:s")
+//                       ); 
+//                       $this->obj_customer->update($customer_id,$data); 
+                 }
+                     
+//                 echo "hola";
+                 
+                 //UPDATE DATA EN CUSTOMER TABLE
+//                $data = array(
+//                           'address' => $address,
+//                           'phone' => $phone,
+//                           'position_temporal' => $pierna,
+//                           'updated_by' => $customer_id,
+//                           'updated_at' => date("Y-m-d H:i:s")
+//                       ); 
+//                       $this->obj_customer->update($customer_id,$data);
+                 
+                 
+//             }else{
+//                 echo "olamp";
+//             }
+//                 die();
+             
+//             var_dump($obj_commissions);
+//             die();
              
             //GET PRICE BTC
                 $params_price_btc = array(

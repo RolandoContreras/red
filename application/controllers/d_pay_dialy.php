@@ -39,6 +39,9 @@ class D_pay_dialy extends CI_Controller{
     public function hacer_pago(){
         //ACTIVE CUSTOMER
         if($this->input->is_ajax_request()){  
+                //SET TIMEZONE AMERICA
+                date_default_timezone_set('America/Lima');
+                
                 //GET TODAY DATE
                 $today = date("Y-m-d");
                 //SELECT PARAM
