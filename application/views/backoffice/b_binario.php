@@ -1,3 +1,7 @@
+<?php 
+//var_dump($n4_2_iz);
+//die();
+?>
 <section>
     <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
  <!-- Page content-->
@@ -106,7 +110,10 @@
                                     </div>
                                         <a><?php echo $obj_customer->username;?></a>
                                     </nodo>
-                               
+                                
+    <!------------------------------------------------------------->                            
+    <!------------------------2NIVEL IZQUIERDA----------------------->
+    <!-------------------------------------------------------------> 
                             <ul>
                                 <li>
                                     <?php if(isset($n2_iz)){ ?>
@@ -227,9 +234,10 @@
                                                   <a href="<?php echo site_url().'backoffice/binario/'.$n3_iz[2];?>"><?php echo $n3_iz[6];?></a>
                                         </nodo>
                                         <!--4NIVEL IZQUIERDA-->
-                                        <?php if(isset($n4_iz)){ ?>
-                                                <ul>
+                                        
+                                            <ul>
                                                 <li>
+                                                   <?php if(isset($n4_iz)){ ?>
                                                     <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                                             Nombre:<?php echo $n4_iz[0]." ".$n4_iz[1];?>
                                                             Fecha Registro:<?php echo $n4_iz[3];?>
@@ -283,10 +291,11 @@
                                                           </div>
                                                               <a href="<?php echo site_url().'backoffice/binario/'.$n4_iz[2];?>"><?php echo $n4_iz[6];?></a>
                                                     </nodo>
+                                                <?php } ?>
                                                 </li>
                                                 <!--4_2NIVEL IZQUIERDA-->
-                                                <?php if(isset($n4_2_iz)){ ?>
                                                             <li>
+                                                                <?php if(isset($n4_2_iz)){ ?>
                                                                 <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                                                         Nombre:<?php echo $n4_2_iz[0]." ".$n4_2_iz[1];?>
                                                                         Fecha Registro:<?php echo $n4_2_iz[3];?>
@@ -340,14 +349,13 @@
                                                                       </div>
                                                                           <a href="<?php echo site_url().'backoffice/binario/'.$n4_2_iz[2];?>"><?php echo $n4_2_iz[6];?></a>
                                                                 </nodo>
+                                                            <?php }?>
                                                             </li>
-                                                <?php }?>
                                             </ul>
-                                        <?php } ?>
                                         </li>
                                         <!--3NIVEL IZQUIERDA-->
-                                        <?php if(isset($n3_2_iz[0])){?>
                                         <li>
+                                            <?php if(isset($n3_2_iz[0])){?>
                                                 <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                                         Nombre:<?php echo $n3_2_iz[0]." ".$n3_2_iz[1];?>
                                                         Fecha Registro:<?php echo $n3_2_iz[3];?>
@@ -403,8 +411,8 @@
                                                 </nodo> 
                                                 <ul>
                                                     <!--3_3NIVEL IZQUIERDA-->
-                                                  <?php if(isset($n4_3_iz)){?> 
-                                                                <li>
+                                                            <li>
+                                                                <?php if(isset($n4_3_iz)){?> 
                                                                     <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                                                         Nombre:<?php echo $n4_3_iz[0]." ".$n4_3_iz[1];?>
                                                                         Fecha Registro:<?php echo $n4_3_iz[3];?>
@@ -458,12 +466,13 @@
                                                                       </div>
                                                                           <a href="<?php echo site_url().'backoffice/binario/'.$n4_3_iz[2];?>"><?php echo $n4_3_iz[6];?></a>
                                                                     </nodo> 
+                                                                <?php } ?>
                                                                 </li>
-                                                  <?php } ?>
+                                                  
                                                        
                                                     <!--3_4NIVEL IZQUIERDA-->
-                                                  <?php if(isset($n4_4_iz)){?>
-                                                            <li>
+                                                        <li>
+                                                            <?php if(isset($n4_4_iz)){?>
                                                                  <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                                                     Nombre:<?php echo $n4_4_iz[0]." ".$n4_4_iz[1];?>
                                                                     Fecha Registro:<?php echo $n4_4_iz[3];?>
@@ -517,19 +526,21 @@
                                                                   </div>
                                                                       <a href="<?php echo site_url().'backoffice/binario/'.$n4_4_iz[2];?>"><?php echo $n4_4_iz[6];?></a>
                                                                 </nodo> 
+                                                            <?php } ?>
                                                             </li> 
-                                                    <?php } ?>
+                                                    
                                                 </ul>
-                                        </li>
-                                        <?php } ?>
+                                            <?php } ?>        
+                                       </li>
+                                        
                                     </ul>
                                  <?php } ?>
                                 </li>
     <!------------------------------------------------------------->                            
     <!------------------------2NIVEL DERECHA----------------------->
     <!------------------------------------------------------------->
-                             <?php if(isset($n2_de[0])){ ?>
                                 <li>
+                                    <?php if(isset($n2_de[0])){ ?>
                                     <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                             Nombre:<?php echo $n2_de[0]." ".$n2_de[1];?>
                                             Fecha Registro:<?php echo $n2_de[3];?>
@@ -586,8 +597,8 @@
                                     </nodo>
                                     <ul>
                                         <!--3_2NIVEL IZQUIERDA-->
-                                        <?php if(isset($n3_2_de)){?>
                                          <li>
+                                             <?php if(isset($n3_2_de)){?>
                                                <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                                     Nombre:<?php echo $n3_2_de[0]." ".$n3_2_de[1];?>
                                                     Fecha Registro:<?php echo $n3_2_de[3];?>
@@ -643,8 +654,8 @@
                                                     </nodo>
                                                         <!--4_4NIVEL DERECHA-->
                                                         <ul>
-                                                            <?php if(isset($n4_4_de)){ ?>
-                                                                <li>
+                                                            <li>
+                                                                <?php if(isset($n4_4_de)){ ?>
                                                                     <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                                                             Nombre:<?php echo $n4_4_de[0]." ".$n4_4_de[1];?>
                                                                             Fecha Registro:<?php echo $n4_4_de[3];?>
@@ -698,13 +709,14 @@
                                                                           </div>
                                                                               <a href="<?php echo site_url().'backoffice/binario/'.$n4_4_de[2];?>"><?php echo $n4_4_de[6];?></a>
                                                                     </nodo>
-                                                                </li>
-                                                            <?php } ?>
+                                                                <?php } ?>
+                                                            </li>
+                                                            
                                                             
                                                             <!--4_3_NIVEL DERECHA-->
-                                                            <?php if(isset($n4_3_de)){ ?>
-                                                                    <li>
-                                                                            <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
+                                                            <li>
+                                                                 <?php if(isset($n4_3_de)){ ?>
+                                                                        <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                                                                     Nombre:<?php echo $n4_3_de[0]." ".$n4_3_de[1];?>
                                                                                     Fecha Registro:<?php echo $n4_3_de[3];?>
                                                                                     Estatus:
@@ -757,15 +769,16 @@
                                                                                   </div>
                                                                                       <a href="<?php echo site_url().'backoffice/binario/'.$n4_3_de[2];?>"><?php echo $n4_3_de[6];?></a>
                                                                             </nodo>
-                                                                        </li>
-                                                            <?php } ?>
+                                                                        <?php } ?>
+                                                                    </li>
+                                                            
                                                         </ul>
-                                         
-                                         </li>
                                          <?php } ?>
+                                         </li>
+                                         
                                          <!--3NIVEL DERECHA-->
-                                         <?php if(isset($n3_de)){?>
-                                            <li>
+                                         <li>
+                                            <?php if(isset($n3_de)){?>
                                                   <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                                         Nombre:<?php echo $n3_de[0]." ".$n3_de[1];?>
                                                         Fecha Registro:<?php echo $n3_de[3];?>
@@ -821,9 +834,9 @@
                                                           <a href="<?php echo site_url().'backoffice/binario/'.$n3_de[2];?>"><?php echo $n3_de[6];?></a>
                                                 </nodo>                                        
                                         <ul>
-                                                <!--4NIVEL DERECHA-->
-                                            <?php  if(isset($n4_2_de)){?>  
-                                              <li>
+                                            <!--4NIVEL DERECHA-->
+                                            <li>
+                                                <?php  if(isset($n4_2_de)){?>  
                                                     <nodo href="#" data-toggle="popover" data-placement="right" data-container="body" title="Datos del Afiliado" data-content="
                                                             Nombre:<?php echo $n4_2_de[0]." ".$n4_2_de[1];?>
                                                             Fecha Registro:<?php echo $n4_2_de[3];?>
@@ -877,8 +890,9 @@
                                                           </div>
                                                               <a href="<?php echo site_url().'backoffice/binario/'.$n4_2_de[2];?>"><?php echo $n4_2_de[6];?></a>
                                                     </nodo>
-                                                </li>  
-                                            <?php } ?>
+                                                <?php } ?>
+                                            </li>  
+                                            
                                                <!--4_2NIVEL DERECHA--> 
                                                <?php 
                                                if(isset($n4_de)){?>
@@ -941,13 +955,11 @@
                                               <?php } ?>
                                                 
                                                 </ul>
+                                            <?php } ?>
                                         </li>
-                                      <?php } ?>
                                     </ul>
+                                  <?php } ?> 
                                 </li>
-                                
-                             <?php } ?>                                           
-
                             </ul>
                                <?php //} ?>
             </li>
