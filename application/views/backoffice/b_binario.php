@@ -1,7 +1,3 @@
-<?php 
-//var_dump($n4_2_iz);
-//die();
-?>
 <section>
     <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
  <!-- Page content-->

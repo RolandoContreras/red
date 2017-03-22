@@ -6,6 +6,7 @@ class B_home extends CI_Controller {
         $this->load->model("customer_model","obj_customer");
         $this->load->model("commissions_model","obj_commissions");
         $this->load->model("otros_model","obj_otros");
+        $this->load->model("franchise_model","obj_franchise");
     }
 
     public function index()
@@ -40,65 +41,64 @@ class B_home extends CI_Controller {
            //GET TOTAL AMOUNT
                 $params_total = array(
                         "select" =>"sum(amount) as total,
-                                    (select sum(amount) FROM commissions WHERE status_value = 2 and customer_id = $customer_id) as balance",
+                                    (select sum(amount) FROM commissions WHERE status_value = 2 and customer_id = $customer_id) as balance,"
+                        . "         (select sum(mandatory_account) FROM commissions WHERE customer_id = $customer_id) as mandatory",
                          "where" => "commissions.customer_id = $customer_id",
                     );
              $obj_commissions = $this->obj_commissions->get_search_row($params_total); 
              
-             $today = date("Y-m-j");
-             $date_end_contract = $obj_customer->date_end;
+             //GET MANDATORY ACCOUNT
+             $obj_madatory = $obj_commissions->mandatory;
              
-             if($date_end_contract != "" && $today > $date_end_contract){
-//                 if(){
-                    //UPDATE DATA EN CUSTOMER TABLE
-//                $data = array(
-//                           'address' => $address,
-//                           'phone' => $phone,
-//                           'position_temporal' => $pierna,
-//                           'updated_by' => $customer_id,
-//                           'updated_at' => date("Y-m-d H:i:s")
-//                       ); 
-//                       $this->obj_customer->update($customer_id,$data); 
-                 }
-                     
-//                 echo "hola";
-                 
-                 //UPDATE DATA EN CUSTOMER TABLE
-//                $data = array(
-//                           'address' => $address,
-//                           'phone' => $phone,
-//                           'position_temporal' => $pierna,
-//                           'updated_by' => $customer_id,
-//                           'updated_at' => date("Y-m-d H:i:s")
-//                       ); 
-//                       $this->obj_customer->update($customer_id,$data);
-                 
-                 
-//             }else{
-//                 echo "olamp";
-//             }
-//                 die();
-             
-//             var_dump($obj_commissions);
-//             die();
-             
-            //GET PRICE BTC
-                $params_price_btc = array(
-                        "select" =>"",
-                         "where" => "otros_id = 1",
-                    );
+             //GET PRICE BTC
+            $params_price_btc = array(
+                                    "select" =>"",
+                                     "where" => "otros_id = 1");
                 
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
            $price_btc = number_format($obj_otros->precio_btc,8);
            
            $obj_total = $obj_commissions->total;
            $obj_balance = $obj_commissions->balance;
-        
-        $this->tmp_backoffice->set("price_btc",$price_btc);
-        $this->tmp_backoffice->set("obj_total",$obj_total);
-        $this->tmp_backoffice->set("obj_balance",$obj_balance);
-        $this->tmp_backoffice->set("obj_customer",$obj_customer);
-        $this->tmp_backoffice->render("backoffice/b_home");
+           
+             $today = date("Y-m-j");
+             //GET DATE END CONTRACT
+             $date_end_contract = $obj_customer->date_end;
+             
+             if($date_end_contract != "" && $today > $date_end_contract){
+                 if($obj_customer->active == 1){
+                    //UPDATE DATA EN CUSTOMER SET INACTIVE
+                            $data = array(
+                               'active' => 0,
+                               'updated_by' => $customer_id,
+                               'updated_at' => date("Y-m-d H:i:s")
+                            ); 
+                            $this->obj_customer->update($customer_id,$data); 
+                    }
+                    
+            //GET FRANCHISE PRICE
+            $params_franchise = array(
+                        "select" =>"price",
+                        "where" => "franchise_id = $obj_customer->franchise_id"
+                        );
+                    
+             $obj_franchise_price = $this->obj_franchise->get_search_row($params_franchise); 
+             
+              //GET AMOUNT TO SEND TO RENOVATION
+              $amount_send = $obj_franchise_price->price - $obj_madatory;
+                
+                $this->tmp_backoffice->set("amount_send",$amount_send);
+                $this->tmp_backoffice->set("price_btc",$price_btc);
+                $this->tmp_backoffice->set("obj_madatory",$obj_madatory);
+                $this->tmp_backoffice->set("obj_customer",$obj_customer);
+                $this->tmp_backoffice->render("backoffice/b_renovation");
+             }else{
+                $this->tmp_backoffice->set("price_btc",$price_btc);
+                $this->tmp_backoffice->set("obj_total",$obj_total);
+                $this->tmp_backoffice->set("obj_balance",$obj_balance);
+                $this->tmp_backoffice->set("obj_customer",$obj_customer);
+                $this->tmp_backoffice->render("backoffice/b_home");
+             }
     }
     
     public function make_pedido(){

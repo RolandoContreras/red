@@ -158,19 +158,6 @@
                 
               </div>
             </div>
-
-<!--            <div class="row">
-               <div class="col-lg-6">
-                  <div id="panelChart2" class="panel panel-default">
-                     <div class="panel-heading">
-                        <div class="panel-title">Afiliados Registrados en Mi Red</div>
-                     </div>
-                     <div class="panel-body">
-                        <div class="chart-bar flot-chart"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>-->
          </div>
       </section>
 <script src="<?php echo site_url().'static/backoffice/js/home.js';?>"></script>
