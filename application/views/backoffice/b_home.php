@@ -107,24 +107,29 @@
                                         <label class="radio-inline">
                                         <input  type="radio" name="kit" id="kit" value="8" 
                                         <?php if($obj_customer->franchise_id == 8){ ?> checked="" <?php } ?> >
-                                        <span class=""></span><b>START</b> $50.00 &nbsp;&nbsp;&nbsp;|</label>
+                                        <span class=""></span><b>START</b> $50.00 &nbsp;&nbsp;&nbsp;</label>
                                     <?php } ?>
+                                    <img src="<?php echo site_url().'static/backoffice/images/basic.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
                                     <label class="radio-inline">
                                         <input  type="radio" name="kit" id="kit" value="2" 
                                         <?php if($obj_customer->franchise_id == 2){ ?> checked="" <?php } ?> >
-                                        <span class=""></span><b>BASIC</b> $100.00 &nbsp;&nbsp;&nbsp;|</label>
+                                        <span class=""></span><b>BASIC</b> $100.00 &nbsp;&nbsp;&nbsp;</label>
+                                    <img src="<?php echo site_url().'static/backoffice/images/platinium.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
                                     <label class="radio-inline">
                                         <input type="radio" name="kit" id="kit" value="3"
                                         <?php if($obj_customer->franchise_id == 3){ ?> checked="" <?php } ?> >
-                                       <span class=""></span><b>PLATINIUM</b> $250.00 &nbsp;&nbsp;&nbsp;|</label>
+                                       <span class=""></span><b>PLATINIUM</b> $250.00 &nbsp;&nbsp;&nbsp;</label>
+                                    <img src="<?php echo site_url().'static/backoffice/images/gold.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
                                     <label class="radio-inline">
                                         <input  type="radio" name="kit" id="kit" value="4"
                                         <?php if($obj_customer->franchise_id == 4){ ?> checked="" <?php } ?> >
-                                       <span class=""></span><b>GOLD</b> $500.00 &nbsp;&nbsp;&nbsp;|</label>
+                                       <span class=""></span><b>GOLD</b> $500.00 &nbsp;&nbsp;&nbsp;</label>
+                                    <img src="<?php echo site_url().'static/backoffice/images/vip.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
                                     <label class="radio-inline">
                                         <input  type="radio" name="kit" id="kit" value="5"
                                         <?php if($obj_customer->franchise_id == 5){ ?> checked="" <?php } ?> >        
-                                       <span class=""></span><b>VIP</b> $1000.00 &nbsp;&nbsp;&nbsp;|</label>
+                                       <span class=""></span><b>VIP</b> $1000.00 &nbsp;&nbsp;&nbsp;</label>
+                                    <img src="<?php echo site_url().'static/backoffice/images/elite.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
                                     <label class="radio-inline">
                                         <input  type="radio" name="kit" id="kit" value="7"
                                         <?php if($obj_customer->franchise_id == 7){ ?> checked="" <?php } ?> >        

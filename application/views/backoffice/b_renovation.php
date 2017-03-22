@@ -13,22 +13,6 @@
                          
             <div class="row">
                 
-<!--                <div class="col-lg-3 col-md-6 col-sm-12">
-                   START widget
-                  <div class="panel widget bg-green">
-                     <div class="row row-table">
-                        <div class="col-xs-4 text-center bg-green-dark pv-lg">
-                           <em class="icon-diamond fa-3x"></em>
-                        </div>
-                        <div class="col-xs-8 pv-lg">
-                            <div class="h2 mt0"><?php if(count($obj_total)>0){echo "$".$obj_total;}else{echo "$0.00";}?></div>
-                           <div class="text-uppercase">Total Pagado</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>-->
-
-                
                <div class="col-lg-3 col-sm-6">
                   <!-- START widget-->
                   <div class="panel widget bg-danger">

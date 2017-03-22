@@ -64,9 +64,10 @@ class B_home extends CI_Controller {
              $today = date("Y-m-j");
              //GET DATE END CONTRACT
              $date_end_contract = $obj_customer->date_end;
-             
-             if($date_end_contract != "" && $today > $date_end_contract){
-                 if($obj_customer->active == 1){
+            
+            
+             if($date_end_contract != "0000-00-00" && $today > $date_end_contract && $obj_customer->franchise_id != 6){
+                     if($obj_customer->active == 1){
                     //UPDATE DATA EN CUSTOMER SET INACTIVE
                             $data = array(
                                'active' => 0,
@@ -76,22 +77,22 @@ class B_home extends CI_Controller {
                             $this->obj_customer->update($customer_id,$data); 
                     }
                     
-            //GET FRANCHISE PRICE
-            $params_franchise = array(
-                        "select" =>"price",
-                        "where" => "franchise_id = $obj_customer->franchise_id"
-                        );
-                    
-             $obj_franchise_price = $this->obj_franchise->get_search_row($params_franchise); 
-             
-              //GET AMOUNT TO SEND TO RENOVATION
-              $amount_send = $obj_franchise_price->price - $obj_madatory;
-                
-                $this->tmp_backoffice->set("amount_send",$amount_send);
-                $this->tmp_backoffice->set("price_btc",$price_btc);
-                $this->tmp_backoffice->set("obj_madatory",$obj_madatory);
-                $this->tmp_backoffice->set("obj_customer",$obj_customer);
-                $this->tmp_backoffice->render("backoffice/b_renovation");
+                    //GET FRANCHISE PRICE
+                    $params_franchise = array(
+                                "select" =>"price",
+                                "where" => "franchise_id = $obj_customer->franchise_id"
+                                );
+
+                     $obj_franchise_price = $this->obj_franchise->get_search_row($params_franchise); 
+
+                  //GET AMOUNT TO SEND TO RENOVATION
+                  $amount_send = $obj_franchise_price->price - $obj_madatory;
+
+                    $this->tmp_backoffice->set("amount_send",$amount_send);
+                    $this->tmp_backoffice->set("price_btc",$price_btc);
+                    $this->tmp_backoffice->set("obj_madatory",$obj_madatory);
+                    $this->tmp_backoffice->set("obj_customer",$obj_customer);
+                    $this->tmp_backoffice->render("backoffice/b_renovation");
              }else{
                 $this->tmp_backoffice->set("price_btc",$price_btc);
                 $this->tmp_backoffice->set("obj_total",$obj_total);
