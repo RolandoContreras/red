@@ -31,6 +31,9 @@ class Registro extends CI_Controller {
 
     public function crear_registro() {
         if ($this->input->is_ajax_request()) {
+            //SET TIMEZONE AMERICA
+            date_default_timezone_set('America/Lima');
+            
             $customer_id = trim($this->input->post('customer_id'));
             $pierna_customer = trim($this->input->post('pierna_customer'));
             //PUT CUSTOMER_ID LIKE PAREND
