@@ -53,7 +53,7 @@ function validate_region(id) {
                 if(data.message == "true"){         
                     obj_region = data.print;
                     var texto = "";
-                    texto = texto+'<option value="">Seleccionar</option>';
+                    texto = texto+'<option value="">Seleccionar  Regi&oacuten</option>';
                     var x = 0;               
                     $.each(obj_region, function(){
                         texto = texto+'<option value="'+obj_region[x]['id']+'">'+obj_region[x]['nombre']+'</option>';

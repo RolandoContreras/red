@@ -24,8 +24,8 @@
                         <img src="<?php echo site_url().'static/page_front/images/empresa.jpg';?>" alt="misión" width="370" height="279">
                     </div>
                     <div class="col-md-8">
-                        <p><?php echo replace_vocales_voculeshtml("Nuestra misión es ayudar a capitalizar y dar herramientas para un crecimiento económico y personal a los asociados en este nuevo cambio de era a través de la comercialización y el  buen manejo del bitcoin y los metales preciosos; convirtiéndose cada una de ellos en los nuevos emprendedores.");?></p><br>
-                        <p><?php echo replace_vocales_voculeshtml("Nuestra visión consiste en lograr el liderazgo en el rubro de criptomoneda y metales preciosos mediante un ecosistema sano creado  por los asociados. BitShare tiene como objetivo dar herramientas y ayudar a sus miles de clientes a lograr que los pagos sean más fáciles y rápidos en todo el mundo.");?></p>
+                        <p><?php echo replace_vocales_voculeshtml("Nuestra visión es ser el primer banco físico de criptomonedas y tener la mayor reserva de oro en el mundo en donde por medio de este logro muchas familias cambien su estilo de vida.");?></p><br>
+                        <p><?php echo replace_vocales_voculeshtml("Nuestra misión es ayudar a capitalizar y dar herramientas a nuestros asociados en un crecimiento económico y personal para este nuevo cambio de era a través  de la comercialización y el buen manejo de las criptomonedas y metales preciosos convirtiéndose cada una de ellos en historias nuevas de éxito.");?></p>
                     </div>
                 </div>
             </div>
