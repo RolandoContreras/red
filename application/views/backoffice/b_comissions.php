@@ -32,7 +32,7 @@
                                              <select class="form-control" name="concepto" id="concepto" required>
                                                 <option value="">***Seleccione***</option>
                                                 <option value="1">Bono Referido Directo</option>
-                                                <option value="3">Bono Rentabilidad Diaria</option>
+                                                <option value="3">Bono Usufructo Diario</option>
                                                 <option value="4">Bono Binario</option>
                                                 <option value="5">Bono Renovaci&oacute;n</option>
                                                 <option value="2">Recargas de Bitcoin</option>
@@ -62,7 +62,7 @@
                                  </thead>
                                  <tbody id="resultado">
                                      <tr>
-                                         <td style="display: none;"></td>
+                                         <td colspan="5" align="center">No data available in table</td>
                                          <td style="display: none;"></td>
                                          <td style="display: none;"></td>
                                          <td style="display: none;"></td>

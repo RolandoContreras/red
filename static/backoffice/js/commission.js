@@ -11,9 +11,9 @@ function consultar(){
                     obj_commissions = data.print;
                     var x = 0;               
                     var texto = "";
-                    
+               
                     $.each(obj_commissions, function(){
-                        texto = texto+'<tr role="row" class="odd">';
+                        texto = texto+'<tr>';
                         texto = texto+'<td>'+obj_commissions[x]['date']+'</td>';
                         texto = texto+'<td>'+obj_commissions[x]['bonus']+'</td>';
                         texto = texto+'<td>'+obj_commissions[x]['amount']+'</td>';
@@ -25,6 +25,12 @@ function consultar(){
                         texto = texto+'</tr>';
                         x++; 
                     });
+                    $("#resultado").html(texto);
+            }else{
+                        var texto = "";
+                        texto = texto+'<tr role="row" class="odd">';
+                        texto = texto+'<td colspan="5" align="center">No data available in table</td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td><td style="display: none;"></td>';
+                        texto = texto+'</tr>';
                     $("#resultado").html(texto);
             }
        }         

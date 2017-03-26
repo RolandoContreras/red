@@ -88,22 +88,18 @@ class b_comissions extends CI_Controller {
                             //GET DATA FROM CUSTOMER
                             $commissions['commissions'] = $this->obj_commissions->search($params);  
                             
-                            //SEND DATA
-                            $data['message'] = "true";
-                            $data['print'] =  $commissions['commissions'];
-        
+                            if(count($commissions['commissions']) > 0){
+                                //SEND DATA
+                                $data['message'] = "true";
+                                $data['print'] =  $commissions['commissions'];
+                            }else{
+                                $data['message'] = "false";
+                            }
+                            
                 }
                 echo json_encode($data);            
         exit();
             }
-       
-        if(count($region) > 0){
-            
-        }else{
-            $data['message'] = "false";
-            $data['print'] = "Seleccionar un país";
-        }
-        echo json_encode($data); 
     }
         
         public function get_session(){          

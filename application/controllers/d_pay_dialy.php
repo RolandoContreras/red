@@ -94,7 +94,7 @@ class D_pay_dialy extends CI_Controller{
                             $data = array(
                                 'customer_id' => $value->customer_id,
                                 'bonus_id' => 3,
-                                'name' => "Rentabilidad Diaria",
+                                'name' => "Usufructo Diario",
                                 'amount' => $amount,
                                 'normal_account' => $amount,
                                 'date' => date("Y-m-d H:i:s"),
@@ -126,7 +126,7 @@ class D_pay_dialy extends CI_Controller{
                         $data = array(
                             'customer_id' => $value->customer_id,
                             'bonus_id' => 3,
-                            'name' => "Rentabilidad Diaria",
+                            'name' => "Usufructo Diario",
                             'amount' => $amount,
                             'mandatory_account' => $mandatory_account,
                             'normal_account' => $normal_account,
