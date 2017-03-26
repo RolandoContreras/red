@@ -5,6 +5,7 @@ class B_wallet extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model("commissions_model","obj_commissions");
+        $this->load->model("customer_model","obj_customer");
         $this->load->model("otros_model","obj_otros");
     }
 
@@ -30,6 +31,17 @@ class B_wallet extends CI_Controller {
          
         //VERIFIRY GET SESSION    
          $this->get_session();
+            //GET DATA CUSTOMER
+            $param_customer = array(
+                           "select" =>"username,
+                                       first_name,
+                                       last_name,
+                                       date_start",
+                   "where" => "customer.customer_id = $customer_id",
+                   );
+              //GET DATA FROM CUSTOMER
+           $obj_customer= $this->obj_customer->get_search_row($param_customer); 
+         
             $params = array(
                         "select" =>"customer.username,
                                     customer.first_name,
@@ -47,9 +59,11 @@ class B_wallet extends CI_Controller {
            //GET DATA FROM CUSTOMER
         $obj_commissions= $this->obj_commissions->search($params);  
         
+        
+        
         //GET TOTAL AMOUNT
                 $params_total = array(
-                        "select" =>"sum(mandatory_account) as mandatory_account,
+                        "select" =>"(select sum(mandatory_account) FROM commissions WHERE customer_id = $customer_id) as mandatory_account,
                                     sum(normal_account) as normal_account,
                                     (select sum(amount) FROM commissions WHERE status_value = 2 and customer_id = $customer_id) as balance",
                          "where" => "commissions.customer_id = $customer_id and status_value = 2",
@@ -74,7 +88,7 @@ class B_wallet extends CI_Controller {
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
            $price_btc = number_format($obj_otros->precio_btc,8);  
            
-            
+        $this->tmp_backoffice->set("obj_customer",$obj_customer);   
         $this->tmp_backoffice->set("price_btc",$price_btc);   
         $this->tmp_backoffice->set("obj_balance_disponible",$obj_balance_disponible); 
         $this->tmp_backoffice->set("obj_balance",$obj_balance);   

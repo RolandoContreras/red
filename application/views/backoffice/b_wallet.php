@@ -45,7 +45,9 @@
                   </div>
                </div> 
                  
-                 <div class="col-lg-3 col-md-6 col-sm-12">
+                 <?php 
+                 if($obj_customer->date_start < '2017-01-10'){ ?>
+                     <div class="col-lg-3 col-md-6 col-sm-12">
                   <!-- START widget-->
                   <div class="panel widget bg-danger">
                      <div class="row row-table">
@@ -73,7 +75,10 @@
                         </div>
                      </div>
                   </div>
-               </div>  
+              </div>  
+              <?php } ?>
+                 
+                 
 
             <div class="row">
                <div class="col-lg-12">
