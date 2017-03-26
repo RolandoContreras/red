@@ -70,7 +70,7 @@
                            <em class="icon-wallet fa-3x"></em>
                         </div>
                         <div class="col-xs-8 pv-lg">
-                            <div class="h2 mt0"><?php if(count($mandatory_account)>0){echo "$".$mandatory_account;}else{echo "$0.00";}?></div>
+                            <div class="h2 mt0"><?php if(count($mandatory)>0){echo "$".$mandatory;}else{echo "$0.00";}?></div>
                            <div class="text-uppercase">Balance Cuenta Mandatoria</div>
                         </div>
                      </div>
@@ -94,21 +94,23 @@
                                  <thead>
                                     <tr>
                                          <th class="all">Usuario Responzable</th>
+                                         <th class="all">Fecha</th>
                                          <th>Afiliado</th>
                                          <th>Monto</th>
-                                         <th>Estado</th>
                                          <th>Concepto</th>
-                                         <th class="all">Fecha</th>
+                                         <th>Estado</th>
                                     </tr>
                                  </thead>
                                  <tbody >
                                      <?php foreach ($obj_commissions as $value) { ?>
                                       <tr role="row" class="odd">
                                           <td>Administrador</td>
+                                          <td><?php echo formato_fecha($value->date);?></td>
                                           <td class="sorting_1"><?php echo $value->username;?></td>
                                           <td>
                                             <span class="text-success"><?php echo "$".$value->amount;?></span>
                                           </td>
+                                          <td>Concepto &nbsp;<?php echo $value->bonus;?></td> 
                                           <td>
                                                    <?php 
                                                    if($value->status_value == 1 || $value->status_value == 2){ ?>
@@ -117,18 +119,8 @@
                                                        <span class="label label-danger">Salida a billetera externa</span>
                                                    <?php } ?>
                                            </td>
-                                          <td>Concepto &nbsp;<?php echo $value->bonus;?></td>  
-                                          <td><?php echo formato_fecha($value->date);?></td>
                                        </tr>
                                   <?php } ?>
-                                     <tr>
-                                         <td></td>
-                                         <td></td>
-                                         <td></td>
-                                         <td></td>
-                                         <td></td>
-                                         <td></td>
-                                     </tr>
                                  </tbody>
                               </table>
                            </div>
