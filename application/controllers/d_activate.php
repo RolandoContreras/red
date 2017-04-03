@@ -78,7 +78,7 @@ class D_activate extends CI_Controller{
     }
     
     public function active_customer(){
-        //ACTIVE CUSTOMER
+        //ACTIVE CUSTOMER FINANCADO
         if($this->input->is_ajax_request()){  
                 //SELECT CUSTOMER_ID
                 $customer_id = $this->input->post("customer_id");
@@ -98,21 +98,21 @@ class D_activate extends CI_Controller{
                 
                 //SELECT TOY AND TODAY+76
                 $today = date('Y-m-j');
-                $today_76 = strtotime ( '+76 day' , strtotime ( $today ) ) ;
-                $today_76 = date ( 'Y-m-j' , $today_76 );
+                $today_120 = strtotime ( '+120 day' , strtotime ( $today ) ) ;
+                $today_120 = date ( 'Y-m-j' , $today_120 );
                 
                 if(count($customer_id) > 0){
                     $data = array(
                         'active' => 1,
                         'financy' => 1,
                         'date_start' => $today,
-                        'date_end' => $today_76,
+                        'date_end' => $today_120,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
                     $this->obj_customer->update($customer_id,$data);
                     
-                    //CREATE REGISTER UN COMMISSION
+                    //CREATE REGISTER ON COMMISSION
                     $data_comission = array(
                         'customer_id' => $customer_id,
                         'bonus_id' => 2,
@@ -131,7 +131,7 @@ class D_activate extends CI_Controller{
     }
     
     public function active(){
-        //ACTIVE CUSTOMER
+        //ACTIVE CUSTOMER NORMALY
         if($this->input->is_ajax_request()){  
                 //SELECT CUSTOMER_ID
                 $customer_id = $this->input->post("customer_id");
@@ -146,15 +146,15 @@ class D_activate extends CI_Controller{
                 
                 //SELECT TOY AND TODAY+76
                 $today = date('Y-m-j');
-                $today_76 = strtotime ( '+76 day' , strtotime ( $today ) ) ;
-                $today_76 = date ( 'Y-m-j' , $today_76 );
+                $today_120 = strtotime ( '+120 day' , strtotime ( $today ) ) ;
+                $today_120 = date ( 'Y-m-j' , $today_120 );
                 
                 //UPDATE TABLE CUSTOMER ACTIVE = 1
                 if(count($customer_id) > 0){
                     $data = array(
                         'active' => 1,
                         'date_start' => $today,
-                        'date_end' => $today_76,
+                        'date_end' => $today_120,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
