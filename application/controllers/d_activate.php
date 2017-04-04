@@ -165,6 +165,39 @@ class D_activate extends CI_Controller{
             }
     }
     
+    public function modify_day(){
+        
+          $params = array(
+                        "select" =>"customer.customer_id,
+                                    customer.username,
+                                    customer.first_name,
+                                    customer.last_name,
+                                    customer.date_start,
+                                    customer.date_end,
+                                    customer.active,
+                                    customer.parents_id,
+                                    customer.status_value",
+                        "where" => "customer.date_start >= '2017-01-10'",
+                        "order" => "date_start ASC"
+               );
+           //GET DATA FROM CUSTOMER
+           $obj_customer= $this->obj_customer->search($params);
+           
+           foreach ($obj_customer as $value) {
+               
+                $date_start = $value->date_start;
+                
+                $date_end = strtotime ( '+120 day' , strtotime ( $date_start ) ) ;
+                $date_end = date ( 'Y-m-j' , $date_end );
+                
+                $data = array(
+                        'date_end' => $date_end,
+                    ); 
+                $this->obj_customer->update($value->customer_id,$data);
+           }   
+            
+    }
+    
     public function pay_directo($customer_id,$price,$parents_id){
                 //GET PERCENT FROM BONUS
                 $params = array(
