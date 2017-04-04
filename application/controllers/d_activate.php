@@ -177,7 +177,7 @@ class D_activate extends CI_Controller{
                                     customer.active,
                                     customer.parents_id,
                                     customer.status_value",
-                        "where" => "customer.date_start >= '2017-01-10'",
+                        "where" => "customer.date_start >= '2017-01-10' and <= '2017-04-30'",
                         "order" => "date_start ASC"
                );
            //GET DATA FROM CUSTOMER
