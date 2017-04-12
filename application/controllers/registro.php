@@ -16,7 +16,7 @@ class Registro extends CI_Controller {
             $username = $url[2];
             //Select params
             $params = array(
-                "select" => "customer_id,first_name, position_temporal",
+                "select" => "customer_id,first_name, position_temporal,username",
                 "where" => "username = '$username'");
             $obj_paises['obj_customer'] = $this->obj_customer->get_search_row($params);
         }
@@ -124,7 +124,11 @@ class Registro extends CI_Controller {
             } else {
                 $idetificator = $identificator_param;
             }
-
+            
+            if($idetificator == ""){
+                 $idetificator = $obj_customer_principal->identificador;
+            }
+            
             $explo_identificator = explode(",", $idetificator);
             $ultimo = $explo_identificator[0] + 1;
             $identificator = $ultimo . $last_id . ',' . $idetificator;

@@ -30,12 +30,11 @@
                                     <div class="col-xs-12">
                                         <label data-add-placeholder>
                                             <input type="text"  readonly="readonly"  value="<?php  
-                                            if(isset($obj_customer->first_name)){
-                                                echo $obj_customer->first_name;
-                                            }
-                                            ?>" placeholder="<?php 
-                                            if(isset($obj_customer->first_name)){
-                                                echo $obj_customer->first_name;
+                                            if(isset($obj_customer->username)){
+                                                echo $obj_customer->username;
+                                            }?>" placeholder="<?php 
+                                            if(isset($obj_customer->username)){
+                                                echo $obj_customer->username;
                                             }?>"/>
                                             <input type="hidden"  id="customer_id" name="customer_id" value="<?php  
                                             if(isset($obj_customer->customer_id)){
