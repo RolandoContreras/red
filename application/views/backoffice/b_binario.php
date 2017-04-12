@@ -1,3 +1,7 @@
+<?php 
+//var_dump($obj_customer->franchise_id);
+//die();
+?>
 <section>
     <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
  <!-- Page content-->
@@ -22,13 +26,18 @@
                         <div class="form-group">
                                 <div class="col-sm-9">
                                     <?php 
-                                    if($obj_customer->point_calification_left <= 0 && $obj_customer->point_calification_rigth <= 0){ ?>
+                                    if($obj_customer->franchise_id != 6){
+                                        if($obj_customer->point_calification_left <= 0 && $obj_customer->point_calification_rigth <= 0){ ?>
                                     <b><span class="label label-success"><?php echo replace_vocales_voculeshtml("CALIFICADO PARA BINARIO")?></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
                                     <?php }else{ ?>
                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>IZQUIERDA: </b> <span class="label label-warning"><?php if($obj_customer->point_calification_left > 0){echo $obj_customer->point_calification_left;}else{echo "0";}?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <b>DERECHA: </b><span class="label label-warning"><?php if($obj_customer->point_calification_rigth > 0){echo $obj_customer->point_calification_rigth;}else{echo "0";}?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <?php } ?>
-                                        
+                                    <?php }else{ ?>
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>IZQUIERDA: </b> <span class="label label-warning"><?php if($obj_customer->point_calification_left > 0){echo $obj_customer->point_calification_left;}else{echo "0";}?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <b>DERECHA: </b><span class="label label-warning"><?php if($obj_customer->point_calification_rigth > 0){echo $obj_customer->point_calification_rigth;}else{echo "0";}?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php } ?>
+                                    
                                         | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>P. IZQUIERDA: </b> <span class="label label-info"><?php echo $obj_customer->point_left / 0.12;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <b>P. DERECHA: </b><span class="label label-info"><?php echo $obj_customer->point_rigth / 0.12;?></span> &nbsp;&nbsp;&nbsp;
                                     <br/><br/>
