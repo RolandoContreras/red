@@ -12,7 +12,7 @@
                             <div class="navbar navbar-static navbar_as_heading">
                                     <div class="navbar-inner">
                                             <div class="container" style="width: auto;">
-                                                    <a class="brand">Quick View</a>
+                                                    <a class="brand">Vista Rápida</a>
                                             </div>
                                     </div>
                             </div>
@@ -41,13 +41,52 @@
                             </table>
                     </div>
             </div>
+        
+            <div class="widget_container">
+                    <div class="well nomargin">
+                            <div class="navbar navbar-static navbar_as_heading">
+                                    <div class="navbar-inner">
+                                            <div class="container" style="width: auto;">
+                                                    <a class="brand">Producción e Ingresos</a>
+                                            </div>
+                                    </div>
+                            </div>
+                            <table id="quick_view" class="table">
+                                    <thead>
+                                            <tr>
+                                                    <th>CMS</th>
+                                                    <th>Discuciones</th>
+                                            </tr>
+                                    </thead><!-- table heading -->
+                                    <tbody>
+                                            <tr>
+                                                    <td><a href="#"><b>0</b> <i class="icon-edit"></i> Reportes</a></td>
+                                                    <td><a class="pending"><b class="cmd"><?php echo $inactive;?></b> <i class="icon-edit"></i> Pendientes</a></td>
+                                            </tr>
+                                            <tr>
+                                                    <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_customer?></b> <i class="icon-edit"></i>Total Asociados</a></td>
+                                                    <td><a href="<?php echo site_url().'dashboard/financiados';?>" class="pending"><b class="cmd"><?php echo $obj_financiado;?></b> <i class="icon-edit"></i> Financiados</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" align="right" >
+                                                    <a href="<?php echo site_url("dashboard/comentarios");?>" class="btn btn-duadua">Ver más</a>
+                                                </td>
+                                            </tr>
+                                            
+                                            
+                                    </tbody>
+                            </table>
+                    </div>
+            </div>
+        
+        
 
             <div id="quick_post" class="widget_container">
                     <div class="well">
                             <div class="navbar navbar-static navbar_as_heading">
                                     <div class="navbar-inner">
                                             <div class="container" style="width: auto;">
-                                                    <a class="brand">Quick Post</a>
+                                                    <a class="brand">Mensaje Masivo Rápido</a>
                                             </div>
                                     </div>
                             </div>
@@ -91,23 +130,28 @@
                                 <div class="navbar navbar-static navbar_as_heading">
                                         <div class="navbar-inner">
                                                 <div class="container" style="width: auto;">
-                                                        <a class="brand">Ultimo Comentario</a>
+                                                        <a class="brand">Último Comentario</a>
                                                 </div>
                                         </div>
                                 </div>
                             <?php 
                             if(count($obj_last_comment) > 0){ ?>
                                 <div class="row-fluid">
-                                        <div class="comment_container span12" style="margin-left:auto;">
-                                                <div class="comment_content">
-                                                    <p class="meta"><span class="comment_date"><?php echo formato_fecha($obj_last_comment->date_comment);?></span> | <a href="#"><?php echo $obj_last_comment->email;?></a></p>
-                                                        <p><a href="#" class="comment_author"><?php echo $obj_last_comment->name;?></a> : <?php echo $obj_last_comment->comment;?></p>
-                                                        <p>
-                                                                <a class="btn btn-mini btn-primary" href="#">Reply</a> <a class="btn btn-mini btn-danger" href="#">Delete</a> <a class="btn btn-mini btn-warning" href="#">Mark as Spam</a> 
-                                                        </p>
-                                                </div>
+                                    <div class="comment_container span12" style="margin-left:auto;">
+                                        <div class="span2">
+                                            <img style="padding: 8px" src="<?php echo site_url('static/cms/images/email-icon.jpg');?>" alt="mensajes"/>
                                         </div>
-                                        <a href="#" class="btn btn-duadua">View More</a>
+                                        <div class="span10" style="margin-left:auto;">
+                                            <div class="comment_content">
+                                                <p class="meta"><span class="comment_date"><?php echo formato_fecha($obj_last_comment->date_comment);?></span> | <a href="#"><?php echo $obj_last_comment->email;?></a></p>
+                                                    <p><a href="#" class="comment_author"><?php echo $obj_last_comment->name;?></a> : <?php echo $obj_last_comment->comment;?></p>
+                                                    <p>
+                                                            <a class="btn btn-mini btn-primary" href="#">Reply</a> <a class="btn btn-mini btn-danger" href="#">Delete</a> <a class="btn btn-mini btn-warning" href="#">Mark as Spam</a> 
+                                                    </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="<?php echo site_url("dashboard/comentarios");?>" class="btn btn-duadua">Ver más</a>
                                 </div>
                             <?php }  ?>
                         </div>
@@ -118,7 +162,7 @@
                                 <div class="navbar navbar-static navbar_as_heading">
                                         <div class="navbar-inner">
                                                 <div class="container" style="width: auto;">
-                                                        <a class="brand">Popular Posts</a>
+                                                        <a class="brand">Últimos Mensajes Masivos</a>
                                                 </div>
                                         </div>
                                 </div>
