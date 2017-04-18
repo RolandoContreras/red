@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="wide wow-animation">
+<html lang="es" class="wide wow-animation">
      <!--========================================================
                               HEAD
     =========================================================-->
@@ -33,7 +33,7 @@
                     <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
                         <p style="color: #1db8ea;"><strong><?php echo replace_vocales_voculeshtml("¿Quiénes son los dueños de BITSHARE?");?></strong></p>  
                          <p><?php echo replace_vocales_voculeshtml("- Son 3 dueños quienes están al frente de compañía BITSHARE:");?></p>
-                         <p><i><?php echo replace_vocales_voculeshtml("1) Dr. Carlos Gómez: Presidente de la cooperativa de los más importante mineros independiente del Perú. Empresario de minas de oro, plata y cobre.");?></p>
+                         <p><?php echo replace_vocales_voculeshtml("1) Dr. Carlos Gómez: Presidente de la cooperativa de los más importante mineros independiente del Perú. Empresario de minas de oro, plata y cobre.");?></p>
                          <p><?php echo replace_vocales_voculeshtml("2) Silene Carrasco: Networker de la industria por más de 10 años de experiencia con grandes resultados y a la vez ejecutiva de administración y negocios internacionales.");?></p>
                          <p><?php echo replace_vocales_voculeshtml("3) Rolando Contreras: Experto en informática y desarrollador de software para grandes empresas a nivel internacional y a la vez networker de la industria MLM.");?></p><br>
                     </div>
@@ -80,14 +80,14 @@
                     <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
                         <p style="color: #1db8ea;"><strong><?php echo replace_vocales_voculeshtml("¿Qué riesgos tengo si soy parte de BITSHARE?");?></strong></p>  
                          <p><?php echo replace_vocales_voculeshtml("Todo negocio tiene riesgos, Bitshare no es la excepción, pero lo que buscamos es minimizar los riegos con 3 puntos principales.");?></p>
-                         <p><i><?php echo replace_vocales_voculeshtml("1) Ser pionero: La empresa fue lanzada el 1ro de enero del 2017. Como primeros distribuidores tenemos una mayor probabilidad  tener más ganancias a diferencia de una persona que ingrese a la compañía los últimos años.");?></p>
+                         <p><?php echo replace_vocales_voculeshtml("1) Ser pionero: La empresa fue lanzada el 1ro de enero del 2017. Como primeros distribuidores tenemos una mayor probabilidad  tener más ganancias a diferencia de una persona que ingrese a la compañía los últimos años.");?></p>
                          <p><?php echo replace_vocales_voculeshtml("2) Tenemos y comercializamos el mejor producto que es el oro, el cual respalda gobiernos, banco, empresas, etc. El oro actualmente la tendencia es a subir");?></p>
                          <p><?php echo replace_vocales_voculeshtml("3) Los cobros se efectúan de forma diaria lo cual permite que usted vea su dinero todos los días.");?></p><br>
                     </div>
                     <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
                         <p style="color: #1db8ea;"><strong><?php echo replace_vocales_voculeshtml("¿A qué monedero debo enviar mis bitcoins para mi registro?");?></strong></p>  
                          <p><?php echo replace_vocales_voculeshtml("Para ser activado en el sistema, deberás realizar el envío de tus bitcoins a este código de billetera.");?></p>
-                         <p><i><?php echo replace_vocales_voculeshtml("188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN");?></p>
+                         <p><?php echo replace_vocales_voculeshtml("188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN");?></p>
                          <p><?php echo replace_vocales_voculeshtml("Una vez realizado el envío, enviar el comprobante de transferencia en imagen perfectamente legible al correo payments@yourbitshares.com especificando el login de registro que desea activar.");?></p><br>
                     </div>
                      <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
@@ -122,5 +122,5 @@
 <!-- Login Backoffice-->
 <script src="static/page_front/js/login.js"></script>
 <!-- End Login-->
-</body><!-- Google Tag Manager -->
+</body>
 </html>
