@@ -66,9 +66,44 @@
                                     <input type="hidden" name="GuardarEdicionAfiliado" value="">
                                     <button type="button" onclick="alter_data();" class="btn btn-sm btn-primary bg-danger-dark">Guardar Cambios</button>
                                  </div>
-                              </div>  
+                              </div> 
+                              <br>
+                               <div class="form-group" id="messages">
+                              </div>                          
+
+                              
+                              
+                               <legend>Datos Bancarios</legend>
+                               <div class="form-group">
+                                 <label for="Nombre del Banco" class="col-lg-3 control-label">Nombre del Banco</label>
+                                 <div class="col-lg-9">
+                                     <input type="text" id="bank_name" class="form-control" placeholder="Nombre de Banco" value="<?php echo $obj_customer->bank_name;?>">
+                                 </div>
+                              </div>
+                               <div class="form-group">
+                                 <label for="Nombre del Títular" class="col-lg-3 control-label">Nombre del Títular</label>
+                                 <div class="col-lg-9">
+                                     <input type="text" id="titular_name" class="form-control" placeholder="Títular" value="<?php echo $obj_customer->titular_name;?>">
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label for="N° Cuenta Bancaria" class="col-lg-3 control-label">N° Cuenta Bancaria</label>
+                                 <div class="col-lg-9">
+                                    <textarea class="form-control" id="bank_account" name="address" placeholder="Direccion"><?php echo $obj_customer->bank_account;?></textarea>
+                                 </div>
+                              </div>
+                               <div class="form-group">
+                                 <div class="col-lg-offset-3 col-lg-9">
+                                     <br><br>
+                                    <input type="hidden" name="GuardarDatos" value="">
+                                    <button type="button" onclick="save_bank();" class="btn btn-sm btn-primary bg-danger-dark"><?php echo replace_vocales_voculeshtml("Guardar Datos Bancarios");?></button>
+                                 </div>
+                              </div> 
+                               <div class="form-group" id="messages_bank">
+                              </div>
                            </div>
 
+                            
                            <div class="col-lg-4">
                                <legend><?php echo replace_vocales_voculeshtml("Información Personal");?></legend>
                               <div class="form-group">
@@ -125,6 +160,8 @@
                                <div class="form-group" id="messages">
                               </div>
                            </div>
+                            
+                            
                             
                             <div class="col-lg-4">
                                <legend>Datos de Bitcoin</legend>

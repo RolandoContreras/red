@@ -37,6 +37,9 @@ class customer_model_atributos{
     var $region='';
     var $city='';
     var $phone='';
+    var $bank_name='';
+    var $name_titular='';
+    var $bank_account='';
     var $active='';
     var $calification='';
     var $point_calification_left='';
@@ -75,6 +78,9 @@ class Customer_Model extends CI_Model{
         $this->region='';
         $this->city='';
 	$this->phone='';
+        $this->bank_name='';
+        $this->name_titular='';
+        $this->bank_account='';
         $this->active='';
         $this->calification='';
         $this->point_calification_left='';

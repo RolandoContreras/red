@@ -479,7 +479,5 @@
 		   <!-- =============== APP SCRIPTS ===============-->
 		   <script src="<?php echo site_url().'static/backoffice/js/app.js';?>"></script>
 		   <script src="<?php echo site_url().'static/backoffice/js/afiliados.js';?>"></script>
-		   <!-- SONIDO -->
-		   <script src="<?php echo site_url().'static/backoffice/js/ion.sound.js';?>"></script>
 </body>
 </html>

@@ -45,6 +45,9 @@ class B_data extends CI_Controller {
                                     customer.address,
                                     customer.btc_address,
                                     customer.city,
+                                    customer.bank_name,
+                                    customer.titular_name,
+                                    customer.bank_account,
                                     customer.status_value,
                                     paises.nombre as pais,
                                     regiones.nombre as region
@@ -164,6 +167,34 @@ class B_data extends CI_Controller {
                 $data['message'] = "true";
                 $data['print'] = "Datos cambiados con éxito";
                 $data['url'] = "misdatos";
+            echo json_encode($data); 
+            }
+    }
+    
+    public function update_bank(){
+            
+         if($this->input->is_ajax_request()){   
+            //SELECT ID FROM CUSTOMER
+           $customer_id = $this->input->post('customer_id');
+           $bank_name = $this->input->post('bank_name');
+           $titular_name = $this->input->post('titular_name');
+           $bank_account = $this->input->post('bank_account');
+           
+           //UPDATE DATA EN CUSTOMER TABLE
+           if($customer_id != ""){
+                     $data = array(
+                           'bank_name' => $bank_name,
+                           'titular_name' => $titular_name,
+                           'bank_account' => $bank_account,
+                           'updated_by' => $customer_id,
+                           'updated_at' => date("Y-m-d H:i:s")
+                       ); 
+                       $this->obj_customer->update($customer_id,$data);
+           }
+                       
+            $data['message'] = "true";
+            $data['print'] = "Datos guardos con éxito";
+            $data['url'] = "misdatos";
             echo json_encode($data); 
             }
     }

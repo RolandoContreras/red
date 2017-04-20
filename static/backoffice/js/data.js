@@ -46,6 +46,33 @@ function alter_btc(){
     });
 }
 
+function save_bank(){
+        var customer_id = document.getElementById("customer_id").value;
+        var bank_name = document.getElementById("bank_name").value;
+        var titular_name = document.getElementById("titular_name").value;
+        var bank_account = document.getElementById("bank_account").value;
+        
+        $.ajax({
+        type: "post",
+        url: site +"b_data/update_bank",
+        dataType: "json",
+        data: {customer_id:customer_id,
+               bank_name:bank_name,
+               titular_name:titular_name,
+               bank_account:bank_account,
+            },
+        success:function(data){            
+              if(data.message == "true"){
+                 $("#messages_bank").html();
+                 var texto = "";
+                 texto = texto+'<label style="color:green;">'+data.print+'</label>';
+                 $("#messages_bank").html(texto);
+                $(location).attr('href',data.url);  
+            }
+        }            
+    });
+}
+
 function alter_password(){
         var customer_id = document.getElementById("customer_id").value;
         var password = document.getElementById("password").value;
