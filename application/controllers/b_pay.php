@@ -238,7 +238,7 @@ class B_pay extends CI_Controller {
            $params_total = array(
                         "select" =>"sum(mandatory_account) as mandatory_account,      
                                     sum(amount) as total",
-                         "where" => "commissions.customer_id = $customer_id and status_value = 2",
+                         "where" => "commissions.customer_id = $customer_id and status_value <= 2",
                     );
            $obj_commission_total = $this->obj_commissions->get_search_row($params_total);
            $obj_total = $obj_commission_total->total - $obj_commission_total->mandatory_account;
@@ -284,6 +284,8 @@ class B_pay extends CI_Controller {
                     exit();   
                     
             }
+            echo json_encode($data);   
+                    exit(); 
         }
       } 
     }

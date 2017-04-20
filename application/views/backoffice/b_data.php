@@ -89,7 +89,7 @@
                               <div class="form-group">
                                  <label for="N° Cuenta Bancaria" class="col-lg-3 control-label">N° Cuenta Bancaria</label>
                                  <div class="col-lg-9">
-                                    <textarea class="form-control" id="bank_account" name="address" placeholder="Direccion"><?php echo $obj_customer->bank_account;?></textarea>
+                                     <textarea class="form-control" id="bank_account" name="address" placeholder="<?php echo replace_vocales_voculeshtml("Especificar Soles y/o Dólares");?>"><?php echo $obj_customer->bank_account;?></textarea>
                                  </div>
                               </div>
                                <div class="form-group">
