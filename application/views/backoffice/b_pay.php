@@ -1,3 +1,7 @@
+<?php 
+//GET TODAY DATE
+$today = date("Y-m-j"); 
+?>
 <!-- Main section-->
       <section>
          <!-- Page content-->
@@ -17,12 +21,12 @@
                     
                      <div class="panel panel-info">
                         <div class="panel-heading">
-                           Moviemientos
+                           Solicitar Pago
                         </div>
                         <div class="panel-body">
                             <div role="alert" class="alert alert-info">
                                 <strong>Nota:</strong><br>
-                            El monto minimo para solicitar el pago es de $15.<br>Los pedidos de cobro se efectúan de lunes a viernes.
+                            El monto minimo para solicitar el pago es de $15.<br>Los pedidos de cobro se efectúan de lunes a viernes.<br>Los pagos por usufructo se efectuarán después de 35 días de la fecha de activación.
                             </div>
                             <div class="form-inline" >
                                 <p class="lead">
@@ -33,13 +37,12 @@
                                 <label for="monto">Monto que Solicita:</label>
                                 <select id="monto" name="monto" class="form-control">
                                     <option value="">***Seleccionar***</option>
-                                    <option value="1"><?php if(count($obj_balance_red)>0){echo "$".$obj_balance_red." - "."Balance en Red";}else{echo "$0.00";}?></option>
-                                    <option value="2"><?php if(count($normal_account)>0){echo "$".$normal_account." - "."Balance Pagos Diarios";}else{echo "$0.00";}?></option>
-                                    <option value="3"><?php if(count($obj_balance_disponible)>0){echo "$".$obj_balance_disponible." - "."Ambos";}else{echo "$0.00";}?></option>
+                                    <option value="1"><?php if(count($obj_balance_red)>0){echo "$".$obj_balance_red." - "."Balance por Red";}else{echo "$0.00 - Balance por Red";}?></option>
+                                    <option value="2" <?php if($today < $date_limit_pay){echo "disabled='disabled'";}?>><?php if(count($normal_account)>0){echo "$".$normal_account." - "."Balance por Usufructo";}else{echo "$0.00 - Balance por Usufructo";}?></option>
+                                    <option value="3" <?php if($today < $date_limit_pay){echo "disabled='disabled'";}?>><?php if(count($obj_balance_disponible)>0){echo "$".$obj_balance_disponible." - "."Ambos Balances";}else{echo "$0.00 - Ambos Balances";}?></option>
                                 </select>
                                 </div>
                                 <?php 
-                                $today = date("Y-m-j");
                                 //GET SATURDAY AND SUNDAY
                                 $s_and_s = date('w',strtotime($today));
                                 if($s_and_s == '6' || $s_and_s == '0'){$style="disabled";}else{$style="";} ?>

@@ -85,7 +85,7 @@
                     
                      <div class="panel panel-info">
                         <div class="panel-heading">
-                           Moviemientos
+                           Movimientos
                         </div>
                         <div class="panel-body">
                            <div class="proceso_1 col-lg-12">

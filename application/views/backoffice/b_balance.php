@@ -14,11 +14,7 @@
 
             <div class="row">
                <div class="col-lg-12">
-                  <div role="alert" class="alert alert-info">
-                     <strong>Nota: </strong>Recordamos que el 7% de sus comisiones es para gastos administrativos para la empresa.
-                  </div>
-
-                                    <div id="panelDemo14" class="panel panel-info">
+                    <div id="panelDemo14" class="panel panel-info">
                      <div class="panel-heading">Mi Balance</div>
                      <div class="panel-body">
                            <table id="table" class="display table table-striped table-hover responsive">
