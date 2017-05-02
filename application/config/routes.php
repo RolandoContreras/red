@@ -76,6 +76,8 @@ $route['backoffice/archivos'] = "b_files";
 $route['backoffice/binario'] = "b_binario";
 $route['backoffice/binario/([0-9a-z_-]+)'] = "b_binario/index/$1";
 
+$route['backoffice/centro-informacion'] = "b_information_center";
+
 $route['backoffice/unilevel'] = "b_unilevel";
 $route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";
 

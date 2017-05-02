@@ -1,7 +1,3 @@
-<?php 
-//var_dump($obj_customer->franchise_id);
-//die();
-?>
 <section>
     <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
  <!-- Page content-->

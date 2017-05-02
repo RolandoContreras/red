@@ -32,6 +32,7 @@
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/app.css';?>" id="maincss">
        <!-- =============== APP TEMAS ===============-->
        <link id="autoloaded-stylesheet" rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/theme-e.css';?>">
+       <script src="https://use.fontawesome.com/684aca07c3.js"></script>
             <style type='text/css'>
 
                     body,
@@ -291,6 +292,7 @@
                                     $style_inicio = "";
                                     $style_misdatos = "";
                                     $style_comisiones = "";
+                                    $style_information_center = "";
                                     $style_mired = "";
                                     $style_billetera = "";
                                     $style_pagos = "";
@@ -311,6 +313,9 @@
                                                         break;
                                                     case "binario":
                                                         $style_mired = "active";
+                                                        break; 
+                                                    case "centro-informacion":
+                                                        $style_information_center = "active";
                                                         break;
                                                     case "billetera":
                                                         $style_billetera = "active";
@@ -341,34 +346,6 @@
                                             <span>Mis Datos</span>
 	                     		</a>
 	                  		</li>
-                                        
-<!--	                  		<li class=" ">
-	                     		<a href="#" title="Facturación" data-toggle="collapse">
-                                            <em class="icon-docs"></em>
-                                            <span>Facturación</span>
-	                     		</a>
-                                            
-	                     		<ul id="forms" class="nav sidebar-subnav collapse">
-                                            <li class="sidebar-subnav-header">Facturación</li>
-                                                <li class="">
-                                                        <a href="afiliados-tienda-7r1pLS-3pGMJKKk7UDSJpd9TzlZuhKvMA7N-VSjaS8c&1" title="Mis Compras">
-                                                        <span>Realizar Compra</span>
-                                                        </a>
-                                                </li>
-			                        <li class="">
-			                           	<a href="mis-compras" title="Mis Compras">
-			                              	<span>Mis Compras</span>
-			                           	</a>
-			                        </li>
-			                        <li class="">
-			                           	<a href="mis-ordenes" title="Mis Ordenes">
-			                              	<span>Mis Ordenes</span>
-			                           	</a>
-			                        </li>
-	                     		</ul>
-	                  		</li>-->
-                                        
-                                        
                                         <li class="<?php echo $style_mired;?>">
 			                    <a href="#tree" title="Solicitudes" data-toggle="collapse">
 			                        <em class="icon-organization"></em>
@@ -388,7 +365,12 @@
                                                     </li>
                                             </ul>
 	                  		</li>
-                                        
+                                        <li class="<?php echo $style_information_center;?>">
+                                            <a href="<?php echo site_url().'backoffice/centro-informacion';?>" title="Billetera">
+                                                <em class="icon-cloud-download"></em>
+                                                <span><?php echo replace_vocales_voculeshtml("Centro de Información");?></span>
+                                            </a>
+	                  		</li>
 	                  		<li class="<?php echo $style_comisiones;?>">
                                             <a href="#comisiones" title="Comisiones" data-toggle="collapse">
 			                        <em class="icon-chart"></em>
