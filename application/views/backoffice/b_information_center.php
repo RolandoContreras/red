@@ -35,6 +35,42 @@
                                                 <td>
                                                     <em class="fa fa-file-pdf-o fa-2x"/>
                                                 </td>
+                                                <td>Ficha RUC (PDF)</td>
+                                                <td class="text-center">
+                                                    <a href="<?php echo site_url().'static/plan/document/ficha_ruc_bitshare.pdf';?>" download="ficha_ruc_bitshare" class="btn btn-info" title="Descargar Ficha Ruc">Descargar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <em class="fa fa-file-pdf-o fa-2x"/>
+                                                </td>
+                                                <td>Registro Especial de Comercializadores y Procesadores de ORO (PDF)</td>
+                                                <td class="text-center">
+                                                    <a href="<?php echo site_url().'static/plan/document/registro_especial_de_comercializadores_y_procesadores_de_oro.pdf';?>" download="registro_de_comercializadores_oro" class="btn btn-info" title="Descargar Registro de Comercializadores">Descargar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <em class="fa fa-file-pdf-o fa-2x"/>
+                                                </td>
+                                                <td><?php echo replace_vocales_voculeshtml("Plan de Acción (PDF)");?></td>
+                                                <td class="text-center">
+                                                    <a href="<?php echo site_url().'static/plan/document/presentacion-bitshares.pptx';?>" download="presentacion_ppt_es" disabled="true" class="btn btn-info" title="Descargar Presentación">Descargar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                <em class="fa fa-file-word-o fa-2x"/>
+                                                </td>
+                                                <td>Contrato Bitshare (DOCX)</td>
+                                                <td class="text-center">
+                                                    <a href="<?php echo site_url().'static/plan/document/Contrato_de_Dsitribuidor_BITSHARE.docx';?>" download="contrato_distribuidor_bitshare" class="btn btn-info" title="Descargar Contrato Bitshare">Descargar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <em class="fa fa-file-pdf-o fa-2x"/>
+                                                </td>
                                                 <td>Plan de Compensación (PDF)</td>
                                                 <td class="text-center">
                                                     <a href="<?php echo site_url().'static/plan/document/presentacion-bitshares.pptx';?>" download="presentacion_ppt_es" class="btn btn-info" title="Descargar Presentación">Descargar</a>
@@ -58,24 +94,7 @@
                                                     <a href="<?php echo site_url().'static/plan/files/imagenes_bitshare.rar';?>" download="imagenes_presetacion" class="btn btn-info" title="Descargar Imagenes Presentación">Descargar</a>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                <em class="fa fa-file-word-o fa-2x"/>
-                                                </td>
-                                                <td>Contrato Bitshare (DOCX)</td>
-                                                <td class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/Contrato_de_Dsitribuidor_BITSHARE.docx';?>" download="contrato_distribuidor_bitshare" class="btn btn-info" title="Descargar Contrato Bitshare">Descargar</a>
-                                                </td>
-                                            </tr>
-<!--                                            <tr>
-                                                <td>
-                                                    <em class="fa fa-file-image-o fa-2x"/>
-                                                </td>
-                                                <td>1 horarios.jpg</td>
-                                                <td class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/presentacion-bitshares.pptx';?>" class="btn btn-info" title="Descargar 1 horarios.jpg">Descargar</a>
-                                                </td>
-                                            </tr>-->
+                                            
                                         </tbody>
                                     </table>
                                 </div>
