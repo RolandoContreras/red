@@ -38,10 +38,15 @@
                                     <option value="2"><?php if(count($normal_account)>0){echo "$".$normal_account." - "."Balance Pagos Diarios";}else{echo "$0.00";}?></option>
                                     <option value="3"><?php if(count($obj_balance_disponible)>0){echo "$".$obj_balance_disponible." - "."Ambos";}else{echo "$0.00";}?></option>
                                 </select>
-                                
                                 </div>
-                                <input class="form-inline" type="hidden" name="SolicitarPago" value="1"/>
-                                <button onclick="enviar_pago();" class="btn btn-sm btn-primary bg-danger-dark">Enviar Solicitud</button>
+                                <?php 
+                                $today = date("Y-m-j");
+                                //GET SATURDAY AND SUNDAY
+                                $s_and_s = date('w',strtotime($today));
+                                if($s_and_s == '6' || $s_and_s == '0'){$style="disabled";}else{$style="";} ?>
+                                <!--BLOCK THE BOTON IF IS SATUDAY OR SUNDAY-->
+                                        <input class="form-inline" type="hidden" name="SolicitarPago" value="1"/>
+                                        <button onclick="enviar_pago();" <?php echo $style;?> class="btn btn-sm btn-primary bg-danger-dark">Enviar Solicitud</button>
                                 </div>
                             <br/>
                             <br/>
