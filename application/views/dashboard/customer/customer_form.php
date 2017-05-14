@@ -122,7 +122,8 @@
               <input type="text" id="titular_name" name="titular_name" class="input-small-fluid" placeholder="Nombre del Títular" value="<?php echo isset($obj_customer->titular_name)?$obj_customer->titular_name:"";?>">
               <br><br>
               <strong># Cuenta Bancaria:</strong><br>
-              <input type="text" id="bank_account" name="bank_account" class="input-small-fluid" placeholder="Cuenta Bancaria" value="<?php echo isset($obj_customer->bank_account)?$obj_customer->bank_account:"";?>">
+              <textarea name="bank_account" id="bank_account" placeholder="Cuenta Bancaria ..." style="width: 90%; height: 100px;"><?php echo isset($obj_customer->bank_account)?$obj_customer->bank_account:"";?></textarea>
+              
               <br><br><hr>
               <strong>Fecha Inicio de Pagos:</strong><br>
               <input type="text" id="date_start" name="date_start" class="input-small-fluid" placeholder="Fecha de Inicio" value="<?php echo isset($obj_customer->date_start)?$obj_customer->date_start:"";?>">

@@ -35,7 +35,7 @@
                     <div class="navbar navbar-static navbar_as_heading">
                         <div class="navbar-inner">
                             <div class="container" style="width: auto;">
-                                <a class="brand">WaveLine - CMS Admin</a>
+                                <a class="brand">BITSHARE - CMS Admin</a>
                                 
                             </div>
                         </div>
