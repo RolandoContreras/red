@@ -114,7 +114,16 @@
               <br><br>
               <strong>Telefono:</strong><br>
               <input type="text" id="phone" name="phone" class="input-small-fluid" placeholder="Telefono" value="<?php echo isset($obj_customer->phone)?$obj_customer->phone:"";?>">
+              <br><br><hr>
+              <strong>Nombre del Banco:</strong><br>
+              <input type="text" id="bank_name" name="bank_name" class="input-small-fluid" placeholder="Nombre del Banco" value="<?php echo isset($obj_customer->bank_name)?$obj_customer->bank_name:"";?>">
               <br><br>
+              <strong>Nombre del Títular:</strong><br>
+              <input type="text" id="titular_name" name="titular_name" class="input-small-fluid" placeholder="Nombre del Títular" value="<?php echo isset($obj_customer->titular_name)?$obj_customer->titular_name:"";?>">
+              <br><br>
+              <strong># Cuenta Bancaria:</strong><br>
+              <input type="text" id="bank_account" name="bank_account" class="input-small-fluid" placeholder="Cuenta Bancaria" value="<?php echo isset($obj_customer->bank_account)?$obj_customer->bank_account:"";?>">
+              <br><br><hr>
               <strong>Fecha Inicio de Pagos:</strong><br>
               <input type="text" id="date_start" name="date_start" class="input-small-fluid" placeholder="Fecha de Inicio" value="<?php echo isset($obj_customer->date_start)?$obj_customer->date_start:"";?>">
               <br><br>

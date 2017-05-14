@@ -21,10 +21,9 @@
                         </div>
                         <div class="panel-body">
                             <div role="alert" class="alert alert-info">
-                            <strong>Nota:</strong>
-                            El monto minimo para solicitar el pago es de $15.
+                                <strong>Nota:</strong><br>
+                            El monto minimo para solicitar el pago es de $15.<br>Los pedidos de cobro se efectúan de lunes a viernes.
                             </div>
-                            
                             <div class="form-inline" >
                                 <p class="lead">
                                 Saldo Disponible en Billetera:

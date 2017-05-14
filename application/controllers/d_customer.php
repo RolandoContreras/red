@@ -101,6 +101,9 @@ class D_customer extends CI_Controller{
         //franchise_id
         $franchise=  $this->input->post('franchise');
         
+        
+        
+        
         //GET CUSTOMER_ID
         $customer_id = $this->input->post("customer_id");
         $data = array(
@@ -123,6 +126,9 @@ class D_customer extends CI_Controller{
                 'point_rigth' => $point_rigth,  
                 'birth_date' => $this->input->post('fecha_de_nacimiento'),  
                 'phone' => $this->input->post('phone'),
+                'bank_name' => $this->input->post('bank_name'),
+                'titular_name' => $this->input->post('titular_name'),
+                'bank_account' => $this->input->post('bank_account'),
                 'country' => $this->input->post('pais'),
                 'region' => $this->input->post('region'),
                 'franchise_id' => $franchise,
@@ -217,6 +223,7 @@ class D_customer extends CI_Controller{
                          "where" => $where,
             ); 
             $obj_customer  = $this->obj_customer->get_search_row($params); 
+            
             //RENDER
             $this->tmp_mastercms->set("obj_customer",$obj_customer);
           }

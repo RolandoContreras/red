@@ -11337,15 +11337,7 @@ html.boxed .rd-navbar--is-clone {
   display: none;
 }
 
-/*
-* @subsection   RD Parallax
-*
-* @description  Describes style declarations for RD Parallax extension
-*
-* @author       Evgeniy Gusarov
-* @link         https://ua.linkedin.com/pub/evgeniy-gusarov/8a/a40/54a
-* @version      3.0.0
-*/
+
 .rd-parallax-inner {
   overflow: hidden;
   position: relative;
@@ -11376,11 +11368,7 @@ html.boxed .rd-navbar--is-clone {
   color: #fff;
 }
 
-/*
-* @subsection   ToTop
-* @license      MIT license - http://opensource.org/licenses/MIT
-* @version      1.0.0
-*/
+
 .ui-to-top {
   width: 63px;
   height: 63px;
@@ -11421,15 +11409,7 @@ html.boxed .rd-navbar--is-clone {
     bottom: 40px;
   }
 }
-/*
-* @subsection   Easy Responsive Tabs
-*
-* @description  Describes style declarations for Easy Responsive Tabs extension
-*
-* @author       Samson Onna
-* @link         samson3d@gmail.com
-* @version      1.0.0
-*/
+
 .resp-tabs-list li {
   cursor: pointer;
 }
@@ -11561,14 +11541,6 @@ html.boxed .rd-navbar--is-clone {
   }
 }
 
-/**
- * @subsection   Swiper 3.1.7
- * @description  Most modern mobile touch slider and framework with
- *               hardware accelerated transitions
- * @author       Vladimir Kharlampidi
- * @see          http://www.idangero.us/swiper/
- * @licesne      MIT License
- */
 .swiper-container {
   height: 91vh;
   margin: 0 auto;
@@ -12079,9 +12051,7 @@ html.boxed .rd-navbar--is-clone {
     opacity: 0;
   }
 }
-/* 
- * 	Owl Carousel - Auto Height Plugin
- */
+
 .owl-height {
   -webkit-transition: height 500ms ease-in-out;
   -moz-transition: height 500ms ease-in-out;
@@ -12090,9 +12060,7 @@ html.boxed .rd-navbar--is-clone {
   transition: height 500ms ease-in-out;
 }
 
-/* 
- *  Core Owl Carousel CSS File
- */
+
 .owl-carousel {
   display: none;
   width: 100%;
@@ -12684,9 +12652,6 @@ img.mfp-img {
 }
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
-  /**
-   * Remove all paddings around the image on small screen
-   */
   .mfp-img-mobile .mfp-image-holder {
     padding-left: 0;
     padding-right: 0;
@@ -12774,26 +12739,9 @@ img.mfp-img {
   right: 0;
   padding-top: 0;
 }
-
-/*
-* @section      Page Header
-* @description  This section holds specific style redeclarations for some
-*               of common elements in page header
-*/
-/*
-* @section      Page Content
-* @description  This section holds specific style redeclarations for some
-*               of common elements in page content
-*/
 .desktop .page-content {
   min-height: 100vh;
 }
-
-/*
-* @section      Page Footer
-* @description  This section holds specific style redeclarations for some
-*               of common elements in page footer
-*/
 .page-footer {
   margin-top: 31px;
   margin-bottom: 33px;
