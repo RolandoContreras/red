@@ -9,15 +9,18 @@ and open the template in the editor.
 */
 .icon-wrapp_face:hover, .focus-icon .icon-wrapp {
     /*background-color: #fff;*/
-    color: #1db8ea;
+    color: #151515;
+    /*color: #1db8ea;*/
 }
 .icon-wrapp_you:hover, .focus-icon .icon-wrapp {
     /*background-color: #fff;*/
-    color: #1db8ea;
+    color: #151515;
 }
 
 .icon-wrapp_face {
-color:#3b5998;
+/*color:#3b5998;*/
+
+color: rgb(254,182,69);
 display: inline-flex;
 justify-content: center;
 align-items: center;
@@ -30,7 +33,8 @@ box-sizing: border-box;
 padding: 15px !important;
 }
 .icon-wrapp_you {
-color:red;
+/*color:red;*/
+color: rgb(254,182,69);
 display: inline-flex;
 justify-content: center;
 align-items: center;

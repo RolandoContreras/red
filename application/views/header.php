@@ -8,7 +8,7 @@
                     <!-- RD Navbar Toggle --><button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar"><span></span></button>
                     <!-- END RD Navbar Toggle -->
                     <!-- RD Navbar Brand -->
-                    <div class="rd-navbar-brand"> <img src="<?php echo site_url().'static/page_front/images/logo_b.png';?>" class="brand-logo" alt="" width="44" height="40" style="margin-top: -4px;"> <a href="<?php echo site_url();?>" class="brand-name" style="margin-left: -9px !important;"> IT<span>S</span>HARE </a> </div>
+                    <div class="rd-navbar-brand"><a href="<?php echo site_url();?>" class="brand-name" style="margin-left: -9px !important;">BIT<span>S</span>HARE</a></div>
                     <!-- END RD Navbar Brand -->
                 </div>
                 <!-- END RD Navbar Panel -->
