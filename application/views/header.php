@@ -42,26 +42,26 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide" data-slide-bg="<?php echo site_url().'static/page_front/images/nuevo_concepto.jpg';?>">
             </div>
-            <div class="swiper-slide" data-slide-bg="<?php echo site_url().'static/page_front/images/incio-1.jpg';?>">
+<!--            <div class="swiper-slide" data-slide-bg="<?php echo site_url().'static/page_front/images/incio-1.jpg';?>">
                 <div class="swiper-slide-caption text-center"></div>
-            </div>
-            <div class="swiper-slide" data-slide-bg="<?php echo site_url().'static/page_front/images/slide-1.jpg';?>">
+            </div>-->
+<!--            <div class="swiper-slide" data-slide-bg="<?php echo site_url().'static/page_front/images/slide-1.jpg';?>">
                 <div class="swiper-slide-caption text-center">
                     <h2>Te apoyamos en tu crecimiento personal y financiero</h2>
                     <p>Valoramos las tradiciones de un trabajo eficiente con las herramientas necesarias y creemos que esto es una piedra angular de cualquier empresa exitosa.</p>
                     <div class="btn-group"> <a href="<?php echo site_url().'registro';?>" class="btn btn-md btn-secondary-3">Convi&eacute;rtete en un socio</a> </div>
                 </div>
-            </div>
-            <div class="swiper-slide" data-slide-bg="<?php echo site_url().'static/page_front/images/slide-3.jpg';?>">
+            </div>-->
+<!--            <div class="swiper-slide" data-slide-bg="<?php echo site_url().'static/page_front/images/slide-3.jpg';?>">
                 <div class="swiper-slide-caption text-center">
                     <h2>Una manera innovadora de comercializar un bien o servicio.</h2>
                     <p>
                         <?php echo replace_vocales_voculeshtml("La tecnología de Bitcoin y BlockChain permite que profesionales y empresas puedan sortear las barreras para recibir pagos de una manera mucho más eficiente.");?>
                     </p>
                     <div class="btn-group">
-                        <!--<a href="#" class="btn btn-md btn-secondary-2">Learn More</a>--><a href="<?php echo site_url().'registro';?>" class="btn btn-md btn-secondary-3">Convi&eacute;rtete en un socio</a> </div>
+                        <a href="#" class="btn btn-md btn-secondary-2">Learn More</a><a href="<?php echo site_url().'registro';?>" class="btn btn-md btn-secondary-3">Convi&eacute;rtete en un socio</a> </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <!-- Swiper Navigation -->
         <div class="swiper-button-prev"></div>

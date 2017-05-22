@@ -1,7 +1,7 @@
 <footer class="page-footer">
     <div class="container text-center">
-        <p> <a style="color:#1db8ea;">Inversiones BitShare S.A.C.&nbsp;&nbsp;RUC: 20601940087</a> </p>
-        <p> <a href="./">BitShare</a> &copy; <span id="copyright-year"></span> &bull; <span class="rd-navbar--switch-to-desktop"></span> Privacy Policy &bull; <span class="rd-navbar--switch-to-desktop"></span> <a href="<?php echo site_url()." faq ";?>">FAQ</a>
+        <p><a style="color:rgba(248,181,0,1);"><b>Inversiones BitShare S.A.C.&nbsp;&nbsp;RUC: 20601940087</b></a></p>
+        <p> <a href="./">Bitshare</a> &copy; <span id="copyright-year"></span> &bull; <span class="rd-navbar--switch-to-desktop"></span> Privacy Policy &bull; <span class="rd-navbar--switch-to-desktop"></span> <a href="<?php echo site_url()." faq ";?>">FAQ</a>
             <!-- {%FOOTER_LINK} -->
         </p>
         <p> <span class="siguenos">S&iacute;guenos</span>

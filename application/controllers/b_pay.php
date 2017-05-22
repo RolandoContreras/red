@@ -29,6 +29,7 @@ class B_pay extends CI_Controller {
 	{
          //GET CUSTOMER_ID $_SESSION   
          $customer_id = $_SESSION['customer']['customer_id'];
+         date_default_timezone_set('America/Lima');
          
         //VERIFIRY GET SESSION    
          $this->get_session();
@@ -92,6 +93,7 @@ class B_pay extends CI_Controller {
         
         if($this->input->is_ajax_request()){   
             //GET MONTO
+            date_default_timezone_set('America/Lima');
             $monto = trim($this->input->post('monto'));
             //GET CUSTOMER_ID FROM $_SESSION
             $customer_id = $_SESSION['customer']['customer_id'];

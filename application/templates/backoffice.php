@@ -18,6 +18,11 @@
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/animate.min.css';?>">
        <!-- WHIRL (spinners)-->
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/whirl.css';?>">
+       
+       <!--CSS ONE-->
+       <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/one/style_one.css';?>">
+       <!------>
+       
        <!-- =============== PAGE VENDOR STYLES ===============-->
        <!-- WEATHER ICONS-->
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/weather-icons.min.css';?>">
@@ -335,20 +340,20 @@
                                     
 	                  		<li class="<?php echo $style_inicio?>">
                                             <a href="<?php echo site_url().'backoffice'?>" title="Inicio">
-                                            <em class="icon-home"></em>
-                                            <span>Inicio</span>
+                                            <em class="fa fa-tachometer fa-lg" aria-hidden="true"></em>
+                                            <span>Tablero</span>
 	                     		</a>
                                             
 	                  		</li>
                                         <li class="<?php echo $style_misdatos ?>">
                                             <a href="<?php echo site_url().'backoffice/misdatos'?>" title="Mi Datos">
-                                            <em class="icon-menu"></em>
-                                            <span>Mis Datos</span>
+                                            <em class="fa fa-address-book fa-lg" aria-hidden="true"></em>
+                                            <span>Mi Perfil</span>
 	                     		</a>
 	                  		</li>
                                         <li class="<?php echo $style_mired;?>">
 			                    <a href="#tree" title="Solicitudes" data-toggle="collapse">
-			                        <em class="icon-organization"></em>
+			                        <em class="icon-organization fa-lg"></em>
 			                        <span>Mi red</span>
 			                    </a>
                                             <ul id="tree" class="nav sidebar-subnav collapse">
@@ -367,13 +372,13 @@
 	                  		</li>
                                         <li class="<?php echo $style_information_center;?>">
                                             <a href="<?php echo site_url().'backoffice/centro-informacion';?>" title="Billetera">
-                                                <em class="icon-cloud-download"></em>
+                                                <em class="fa fa-cloud-download fa-lg" aria-hidden="true"></em>
                                                 <span><?php echo replace_vocales_voculeshtml("Centro de Información");?></span>
                                             </a>
 	                  		</li>
 	                  		<li class="<?php echo $style_comisiones;?>">
                                             <a href="#comisiones" title="Comisiones" data-toggle="collapse">
-			                        <em class="icon-chart"></em>
+			                        <em class="icon-chart fa-lg"></em>
 			                        <span>Mis Comisiones</span>
 			                    </a>
                                             <ul id="comisiones" class="nav sidebar-subnav collapse">
@@ -393,13 +398,13 @@
 
 	                  		<li class="<?php echo $style_billetera;?>">
                                             <a href="<?php echo site_url().'backoffice/billetera';?>" title="Billetera">
-                                                <em class="icon-wallet"></em>
+                                                <em class="icon-wallet fa-lg"></em>
                                                 <span>Mi Billetera</span>
                                             </a>
 	                  		</li>
 	                  		<li class="<?php echo $style_pagos;?>">
 			                    <a href="<?php echo site_url().'backoffice/pagos';?>" title="Pagos">
-			                        <em class="icon-note"></em>
+                                                <em class="fa fa-university fa-lg" aria-hidden="true"></em>
 			                        <span>Solicitar Pago</span>
 			                    </a>
 	                  		</li>
@@ -414,7 +419,8 @@
             <?php echo $body;?> 
       <!--START FOOTER-->
 <footer>
- <span>&copy; 2016 - BitShare</span>
+    <span>Inversiones Bitshare S.A.C.   &copy; 2016 - BitShare</span><br>
+    <!--<span>&copy; 2017 - BitShare</span>-->
 </footer>
    </div>
 		   <!-- MODERNIZR-->

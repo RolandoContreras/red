@@ -38,9 +38,6 @@ class B_home extends CI_Controller {
                                         );
            $obj_customer = $this->obj_customer->get_search_row($params);
            
-           
-           
-           
            //GET TOTAL AMOUNT
                 $params_total = array(
                         "select" =>"sum(amount) as total,
@@ -64,10 +61,9 @@ class B_home extends CI_Controller {
            $obj_total = $obj_commissions->total;
            $obj_balance = $obj_commissions->balance;
            
-             $today = date("Y-m-j");
+             $today = date("Y-m-d");
              //GET DATE END CONTRACT
              $date_end_contract = $obj_customer->date_end;
-            
             
              if($date_end_contract != "0000-00-00" && $today > $date_end_contract && $obj_customer->franchise_id != 6){
                      if($obj_customer->active == 1){

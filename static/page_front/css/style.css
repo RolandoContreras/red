@@ -4216,7 +4216,8 @@ body {
 h1, h2, h3, h4, h5, h6,
 .heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
   display: block;
-  color: #303334;
+  color: rgb(254,182,69); /* Old browsers */
+
   font-weight: 400;
 }
 
@@ -4848,12 +4849,19 @@ html body .page .text-primary {
 */
 .bg-primary, .bg-grayscale-lighten {
   color: #fff;
-  background: radial-gradient(#37caf5 1%, #1db8ea 100%);
-  background-repeat: no-repeat;
-  background-size: 150% 190%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
+background: #45484d; /* Old browsers */
+background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+/*  background: radial-gradient(#37caf5 1%, #1db8ea 100%);
+  background-repeat: no-repeat;*/
+  /*background-size: 150% 190%;*/
 }
 .bg-primary, .bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary h4, .bg-primary h5, .bg-primary h6, .bg-primary .heading-1, .bg-primary .heading-2, .bg-primary .heading-3, .bg-primary .heading-4, .bg-primary .heading-5, .bg-primary .heading-6, .bg-grayscale-lighten, .bg-grayscale-lighten h1, .bg-grayscale-lighten h2, .bg-grayscale-lighten h3, .bg-grayscale-lighten h4, .bg-grayscale-lighten h5, .bg-grayscale-lighten h6, .bg-grayscale-lighten .heading-1, .bg-grayscale-lighten .heading-2, .bg-grayscale-lighten .heading-3, .bg-grayscale-lighten .heading-4, .bg-grayscale-lighten .heading-5, .bg-grayscale-lighten .heading-6 {
-  color: #fff;
+  /*color: #fff;*/
+  color: rgb(254,182,69);
 }
 .bg-primary p, .bg-primary .contact-info, .bg-grayscale-lighten p, .bg-grayscale-lighten .contact-info {
   color: #fff;
@@ -8635,7 +8643,18 @@ html:not(.lt-ie10) .not-animated {
   font-size: 190px;
   font-family: "Montserrat", sans-serif;
   letter-spacing: -0.07em;
-  color: #1db8ea;
+  
+/*  background: rgba(252,205,77,1);
+background: -moz-linear-gradient(top, rgba(252,205,77,1) 0%, rgba(230,169,16,1) 21%, rgba(252,234,187,1) 50%, rgba(242,196,89,1) 74%, rgba(248,181,0,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(252,205,77,1)), color-stop(21%, rgba(230,169,16,1)), color-stop(50%, rgba(252,234,187,1)), color-stop(74%, rgba(242,196,89,1)), color-stop(100%, rgba(248,181,0,1)));
+background: -webkit-linear-gradient(top, rgba(252,205,77,1) 0%, rgba(230,169,16,1) 21%, rgba(252,234,187,1) 50%, rgba(242,196,89,1) 74%, rgba(248,181,0,1) 100%);
+background: -o-linear-gradient(top, rgba(252,205,77,1) 0%, rgba(230,169,16,1) 21%, rgba(252,234,187,1) 50%, rgba(242,196,89,1) 74%, rgba(248,181,0,1) 100%);
+background: -ms-linear-gradient(top, rgba(252,205,77,1) 0%, rgba(230,169,16,1) 21%, rgba(252,234,187,1) 50%, rgba(242,196,89,1) 74%, rgba(248,181,0,1) 100%);
+background: linear-gradient(to bottom, rgba(252,205,77,1) 0%, rgba(230,169,16,1) 21%, rgba(252,234,187,1) 50%, rgba(242,196,89,1) 74%, rgba(248,181,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccd4d', endColorstr='#f8b500', GradientType=0 );*/
+  
+  
+  color: #e6a910;
   line-height: 1;
 }
 .pricing-table .pricing-table__item .pricing-table__title:before {
@@ -8830,11 +8849,12 @@ hr.devider:after {
 
 .btn-primary {
   color: #fff;
-  background: #1db8ea;
-  border-color: #1db8ea;
+  /*background: #1db8ea;*/
+  background: rgba(248,181,0,1);
+  border-color:#b59a62;
 }
 .btn-primary:hover {
-  color: #1db8ea;
+  color: rgba(248,181,0,1);
   background: transparent;
 }
 
@@ -9427,7 +9447,8 @@ a.icon-primary:hover {
 }
 
 .rd-navbar--is-stuck {
-  border-bottom: 1px solid #14a9d9;
+  /*border-bottom: 1px solid #e6a910;*/
+  border-bottom: 1px solid black;
 }
 
 .rd-navbar.rd-navbar-fixed + .rd-navbar.rd-navbar--is-clone,
@@ -9493,7 +9514,8 @@ a.icon-primary:hover {
 }
 .rd-navbar-static .rd-navbar-nav > li.focus > a, .rd-navbar-static .rd-navbar-nav > li > a:hover, .rd-navbar-static .rd-navbar-nav > li.active > a, .rd-navbar-fullwidth .rd-navbar-nav > li.focus > a, .rd-navbar-fullwidth .rd-navbar-nav > li > a:hover, .rd-navbar-fullwidth .rd-navbar-nav > li.active > a {
   color: #fff;
-  background: #1db8ea;
+  background: rgb(254,182,69);
+  /*background: #1db8ea;*/
 }
 .rd-navbar-static .rd-navbar-nav > .rd-navbar-submenu li, .rd-navbar-fullwidth .rd-navbar-nav > .rd-navbar-submenu li {
   font-size: 16px;
@@ -9943,7 +9965,12 @@ a.icon-primary:hover {
 .rd-navbar-wrap.absolute .rd-navbar-static.rd-navbar--is-stuck {
   position: fixed;
   width: auto;
-  background: #1db8ea;
+  /*background: #1db8ea;*/
+background: rgb(254,182,69); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(254,182,69,1) 0%, rgba(254,182,69,1) 18%, rgba(241,231,103,1) 50%, rgba(241,231,103,1) 50%, rgba(241,231,103,1) 51%, rgba(241,231,103,1) 54%, rgba(241,231,103,1) 54%, rgba(241,231,103,1) 56%, rgba(254,182,69,1) 67%, rgba(254,182,69,1) 75%, rgba(254,182,69,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(254,182,69,1) 0%,rgba(254,182,69,1) 18%,rgba(241,231,103,1) 50%,rgba(241,231,103,1) 50%,rgba(241,231,103,1) 51%,rgba(241,231,103,1) 54%,rgba(241,231,103,1) 54%,rgba(241,231,103,1) 56%,rgba(254,182,69,1) 67%,rgba(254,182,69,1) 75%,rgba(254,182,69,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(254,182,69,1) 0%,rgba(254,182,69,1) 18%,rgba(241,231,103,1) 50%,rgba(241,231,103,1) 50%,rgba(241,231,103,1) 51%,rgba(241,231,103,1) 54%,rgba(241,231,103,1) 54%,rgba(241,231,103,1) 56%,rgba(254,182,69,1) 67%,rgba(254,182,69,1) 75%,rgba(254,182,69,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feb645', endColorstr='#feb645',GradientType=1 ); /* IE6-9 */
 }
 
 .rd-navbar-static {
@@ -9953,7 +9980,16 @@ a.icon-primary:hover {
 .rd-navbar-static.rd-navbar--is-stuck {
   position: fixed;
   width: auto;
-  background: #1db8ea;
+  background: rgba(248,181,0,1);
+background: -moz-linear-gradient(left, rgba(248,181,0,1) 0%, rgba(248,181,0,1) 18%, rgba(230,222,71,1) 47%, rgba(240,176,14,1) 84%, rgba(240,176,14,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,181,0,1)), color-stop(18%, rgba(248,181,0,1)), color-stop(47%, rgba(230,222,71,1)), color-stop(84%, rgba(240,176,14,1)), color-stop(100%, rgba(240,176,14,1)));
+background: -webkit-linear-gradient(left, rgba(248,181,0,1) 0%, rgba(248,181,0,1) 18%, rgba(230,222,71,1) 47%, rgba(240,176,14,1) 84%, rgba(240,176,14,1) 100%);
+background: -o-linear-gradient(left, rgba(248,181,0,1) 0%, rgba(248,181,0,1) 18%, rgba(230,222,71,1) 47%, rgba(240,176,14,1) 84%, rgba(240,176,14,1) 100%);
+background: -ms-linear-gradient(left, rgba(248,181,0,1) 0%, rgba(248,181,0,1) 18%, rgba(230,222,71,1) 47%, rgba(240,176,14,1) 84%, rgba(240,176,14,1) 100%);
+background: linear-gradient(to right, rgba(248,181,0,1) 0%, rgba(248,181,0,1) 18%, rgba(230,222,71,1) 47%, rgba(240,176,14,1) 84%, rgba(240,176,14,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8b500', endColorstr='#f0b00e', GradientType=1 );
+  
+  /*background: #1db8ea;*/
 }
 .rd-navbar-static .rd-navbar-inner {
   display: -webkit-box;
