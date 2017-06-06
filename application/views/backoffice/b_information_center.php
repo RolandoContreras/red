@@ -80,6 +80,15 @@
                                             </tr>
                                             <tr>
                                                 <td>
+                                                <em class="fa fa-file-image-o fa-2x"/>
+                                                </td>
+                                                <td>Cuenta Corriente Depositos BITSHARE (JPG)</td>
+                                                <td class="text-center">
+                                                    <a href="<?php echo site_url().'static/plan/document/n_cuenta.jpg';?>" download="Numero_Cuenta_Bitshare.jpg" class="btn btn-info" title="Descargar Número de Cuenta BITSHARE">Descargar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
                                                     <em class="fa fa-file-pdf-o fa-2x"/>
                                                 </td>
                                                 <td>Plan de Compensación (PDF)</td>

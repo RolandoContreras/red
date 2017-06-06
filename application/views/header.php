@@ -1,6 +1,9 @@
+<body>
+
 <header class="page-header">
     <!-- RD Navbar -->
     <div class="rd-navbar-wrap absolute">
+               
         <nav class="rd-navbar" data-rd-navbar-lg="rd-navbar-static">
             <div class="rd-navbar-inner">
                 <!-- RD Navbar Panel -->

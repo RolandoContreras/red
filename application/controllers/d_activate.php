@@ -93,8 +93,6 @@ class D_activate extends CI_Controller{
                );
                 //GET DATA FROM CUSTOMER
                 $obj_customer= $this->obj_customer->get_search_row($params);
-                //GET PRICE TO CREATE NEGATIVE
-                $price = 0 - $obj_customer->price;
                 
                 //SELECT TOY AND TODAY+76
                 $today = date('Y-m-j');
@@ -111,19 +109,6 @@ class D_activate extends CI_Controller{
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
                     $this->obj_customer->update($customer_id,$data);
-                    
-                    //CREATE REGISTER ON COMMISSION
-                    $data_comission = array(
-                        'customer_id' => $customer_id,
-                        'bonus_id' => 2,
-                        'name' => "Financiado",
-                        'amount' => $price,
-                        'date' => $today,
-                        'status_value' => 4,
-                        'created_at' => date("Y-m-d H:i:s"),
-                        'created_by' => $_SESSION['usercms']['user_id'],
-                    ); 
-                    $this->obj_commissions->insert($data_comission);
                 }
                     echo json_encode($data);            
         exit();
