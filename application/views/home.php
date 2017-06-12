@@ -25,19 +25,29 @@
         <!-- Pricing table -->
         <section>
             
-            
-            <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
-
+  
+<script>
+  $( function() {
+    $( "#dialog-message" ).dialog({
+      autoOpen: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  } );
+  </script>
+  
+ <div id="dialog-message" title="Download complete">
+  <p>
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+    Your files have downloaded successfully into the My Downloads folder.
+  </p>
+  <p>
+    Currently using <b>36% of your storage space</b>.
+  </p>
 </div>
 
 <style>

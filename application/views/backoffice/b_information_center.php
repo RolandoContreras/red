@@ -93,10 +93,10 @@
                                                 </td>
                                                 <td>Plan de Compensación (PDF)</td>
                                                 <td class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/presentacion-bitshares.pptx';?>" download="presentacion_ppt_es" class="btn btn-info" title="Descargar Presentación">Descargar</a>
+                                                    <a href="<?php echo site_url().'static/plan/document/presentacion_bitshares.pdf';?>" download="presentacion_ppt_es" class="btn btn-info" title="Descargar Presentación">Descargar</a>
                                                 </td>
                                             </tr>
-                                            <tr>
+<!--                                            <tr>
                                                 <td>
                                                     <em class="fa fa-file-powerpoint-o fa-2x"/>
                                                 </td>
@@ -104,14 +104,14 @@
                                                 <td class="text-center">
                                                     <a href="<?php echo site_url().'static/plan/document/presentacion-bitshares.pptx';?>" download="presentacion_ppt_es" class="btn btn-info" title="Descargar Presentación">Descargar</a>
                                                 </td>
-                                            </tr>
+                                            </tr>-->
                                             <tr>
                                                 <td>
-                                                    <em class="fa fa-file-archive-o fa-2x"/>
+                                                    <em class="fa fa-file-image-o fa-2x"/>
                                                 </td>
-                                                <td>Plan de Compensación (RAR)</td>
+                                                <td>Correos Corporativos (JPG)</td>
                                                 <td class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/files/imagenes_bitshare.rar';?>" download="imagenes_presetacion" class="btn btn-info" title="Descargar Imagenes Presentación">Descargar</a>
+                                                    <a href="<?php echo site_url().'static/plan/document/correos.jpg';?>" download="correos_corporativos" class="btn btn-info" title="Descargar Correos">Descargar</a>
                                                 </td>
                                             </tr>
                                             

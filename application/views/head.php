@@ -24,4 +24,8 @@
     <script src="https://use.fontawesome.com/684aca07c3.js"></script>
     <link href='<?php echo site_url().'static/page_front/css/mystyle.css ';?>' rel='stylesheet' type='text/css'>
     <!--[if lt IE 10]> <div style='background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/.."> <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/> </a> </div> <![endif]-->
+  <link rel="stylesheet" href="<?php echo site_url().'static/page_front/jquery-ui-1.12.1/jquery-ui.css'?>">
+  <link rel="stylesheet" href="https://jqueryui.com/jquery-wp-content/themes/jqueryui.com/style.css">
+  <script src="<?php echo site_url().'static/page_front/jquery-ui-1.12.1/external/jquery/jquery.js';?>"></script>
+  <script src="<?php echo site_url().'static/page_front/jquery-ui-1.12.1/jquery-ui.js';?>"></script>
 </head>
