@@ -11,21 +11,11 @@
     <meta name="robots" CONTENT="noindex, nofollow" />
     <title>BITSHARE</title>
        <!-- FONT AWESOME-->
-       <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/font-awesome.min.css';?>">
+       <link rel="stylesheet" href="<?php // echo site_url().'static/backoffice/css/font-awesome.min.css';?>">
        <!-- SIMPLE LINE ICONS-->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-       <!-- ANIMATE.CSS-->
-       <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/animate.min.css';?>">
-       <!-- WHIRL (spinners)-->
-       <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/whirl.css';?>">
-       
        <!--CSS ONE-->
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/one/style_one.css';?>">
-       <!------>
-       
-       <!-- =============== PAGE VENDOR STYLES ===============-->
-       <!-- WEATHER ICONS-->
-       <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/weather-icons.min.css';?>">
        <!-- =============== BOOTSTRAP STYLES ===============-->
        <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/bootstrap.css';?>" id="bscss">
        <!-- SWEET ALERT-->
@@ -179,10 +169,11 @@
 	            <div class="navbar-header">
 	               	<a href="#" class="navbar-brand">
 	                  	<div class="brand-logo">
-	                  		<img src="<?php echo site_url().'static/backoffice/images/logo_bitshore.png';?>" alt="Logo" class="img-responsive">
+                                   
+                                    <img src="<?php echo site_url().'static/backoffice/images/logo_bitshore.png';?>" alt="Logo" class="img-responsive">
 	                  	</div>
 	                  	<div class="brand-logo-collapsed">
-	                     	<img src="<?php echo site_url().'static/backoffice/images/logo_b.png';?>" style="max-height: 40;" alt="App Logo" class="img-responsive">
+                                    <img src="<?php echo site_url().'static/backoffice/images/logo_b.png';?>" style="max-height: 40;" alt="App Logo" class="img-responsive">
 	                  	</div>
 	               	</a>
 	            </div>
@@ -199,14 +190,14 @@
 	                        	<em class="icon-list"></em>
 	                     	</a>
 	                  	</li>
-	            </ul>
+                        </ul>
 	            <!-- START Right Navbar-->
 	               	<ul class="nav navbar-nav navbar-right">
-                            <li>
+<!--                            <li>
                                 <a href="#" title="Listado de archivos para descargar">
                                     <em class="icon-cloud-download"></em>
                                 </a>
-                            </li>
+                            </li>-->
 	                  	<!-- START Alert menu-->
                             <li class="dropdown dropdown-list">
                                 <a href="#">
@@ -240,31 +231,31 @@
                                                 <div class="user-block-picture">
                                                 <div class="user-block-status">
                                                     <?php
-                                                        switch ($_SESSION['customer']['franchise_id']) {
-                                                                case 2:
-                                                                    $images = "basic.jpg";
-                                                                    break;
-                                                                case 3:
-                                                                    $images = "platinium.jpg";
-                                                                    break;
-                                                                case 4:
-                                                                    $images = "gold.jpg";
-                                                                    break;
-                                                                case 5:
-                                                                    $images = "vip.jpg";
-                                                                    break;
-                                                                case 6:
-                                                                    $images = "default.jpg";
-                                                                    break;
-                                                                case 7:
-                                                                    $images = "elite.jpg";
-                                                                    break;
-                                                                case 8:
-                                                                    $images = "start.jpg";
-                                                                    break;
-                                                            }
+//                                                        switch ($_SESSION['customer']['franchise_id']) {
+//                                                                case 2:
+//                                                                    $images = "basic.jpg";
+//                                                                    break;
+//                                                                case 3:
+//                                                                    $images = "platinium.jpg";
+//                                                                    break;
+//                                                                case 4:
+//                                                                    $images = "gold.jpg";
+//                                                                    break;
+//                                                                case 5:
+//                                                                    $images = "vip.jpg";
+//                                                                    break;
+//                                                                case 6:
+//                                                                    $images = "default.jpg";
+//                                                                    break;
+//                                                                case 7:
+//                                                                    $images = "elite.jpg";
+//                                                                    break;
+//                                                                case 8:
+//                                                                    $images = "start.jpg";
+//                                                                    break;
+//                                                            }
                                                         ?>
-                                                <a><img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle"></a>
+                                                <a><img src="<?php echo site_url().'static/backoffice/images/logo.png';?>" alt="logo" class="img-thumbnail img-circle"></a>
                                                 <?php if($_SESSION['customer']['active'] == 1){ ?>
                                                     <div class="circle circle-success circle-lg"></div>
                                                 <?php }else{ ?>

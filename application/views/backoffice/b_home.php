@@ -4,15 +4,14 @@
             <h1 class="title text-uppercase">Tablero</h1>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-            <a href="/backend/bonuses/start-up" class="white">until next bonus round.</a>
-            <div id="myCounter" data-countdown="1494244800000"></div>
+            <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
         </div>
     </div> 
          <!-- Page content-->
          <div class="content-wrapper">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                  <!-- START widget-->
+<!--                <div class="col-lg-3 col-md-6 col-sm-12">
+                   START widget
                   <div class="panel widget bg-green">
                      <div class="row row-table">
                         <div class="col-xs-4 text-center bg-green-dark pv-lg">
@@ -24,11 +23,11 @@
                         </div>
                      </div>
                   </div>
-               </div>
+               </div>-->
 
                 
-               <div class="col-lg-3 col-sm-6">
-                  <!-- START widget-->
+<!--               <div class="col-lg-3 col-sm-6">
+                   START widget
                   <div class="panel widget bg-primary">
                      <div class="row row-table">
                         <div class="col-xs-4 text-center bg-primary-dark pv-lg">
@@ -40,45 +39,10 @@
                         </div>
                      </div>
                   </div>
-               </div>
-                
-                
-<!--               <div class="col-lg-3 col-sm-6">
-                   START widget
-                  <div class="panel widget bg-purple">
-                     <div class="row row-table">
-                        <div class="col-xs-4 text-center bg-purple-dark pv-lg">
-                           <em class="icon-wallet fa-3x"></em>
-                        </div>
-                        <div class="col-xs-8 pv-lg">
-                           <div class="h2 mt0">0</div>
-                           <div class="text-uppercase">Cuenta Mandatoria</div>
-                        </div>
-                     </div>
-                  </div>
                </div>-->
-
-               <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-               <div class="col-lg-3 col-md-6 col-sm-12">
-                  <!-- START widget-->
+  
+<!--               <div class="col-lg-3 col-md-6 col-sm-12">
+                   START widget
                   <div class="panel widget bg-success">
                      <div class="row row-table">
                         <div class="col-xs-4 text-center bg-success-dark pv-lg">
@@ -90,77 +54,69 @@
                         </div>
                      </div>
                   </div>
-               </div>
+               </div>-->
             </div>
-
-             <?php if($obj_customer->active == 0){ ?>
-                    <div class="row">
-                        <div role="alert" class="alert alert-info">
-                                    <strong>Seleccion tu paquete:</strong>
+             
+             
+             
+        <div class="row fix-box-height package-box-fix mt-30">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="well media media-badges box-height box">
+                            <div class="media-body media-middle">
+                            <h5 class="media-heading text-uppercase title-small">TOTAL PAGADO</h5>
+                            <p class="title"><?php if(count($obj_total)>0){echo "$".$obj_total;}else{echo "$0.00";}?></p>
+                            <div class="mt-10"></div>
+                            </div>
+                        <div class="media-right media-middle">
+                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/money.png';?>" alt="total ganado" height="90"/>
                         </div>
-                        <div class="form-group">
-                                <div class="col-sm-9">
-                                    <?php 
-                                    if($_SESSION['customer']['country'] == 95){ ?>
-                                        <label class="radio-inline">
-                                        <input  type="radio" name="kit" id="kit" value="8" 
-                                        <?php if($obj_customer->franchise_id == 8){ ?> checked="" <?php } ?> >
-                                        <span class=""></span><b>START</b> $50.00 &nbsp;&nbsp;&nbsp;</label>
-                                    <?php } ?>
-                                    <img src="<?php echo site_url().'static/backoffice/images/basic.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
-                                    <label class="radio-inline">
-                                        <input  type="radio" name="kit" id="kit" value="2" 
-                                        <?php if($obj_customer->franchise_id == 2){ ?> checked="" <?php } ?> >
-                                        <span class=""></span><b>BASIC</b> $100.00 &nbsp;&nbsp;&nbsp;</label>
-                                    <img src="<?php echo site_url().'static/backoffice/images/platinium.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
-                                    <label class="radio-inline">
-                                        <input type="radio" name="kit" id="kit" value="3"
-                                        <?php if($obj_customer->franchise_id == 3){ ?> checked="" <?php } ?> >
-                                       <span class=""></span><b>PLATINIUM</b> $250.00 &nbsp;&nbsp;&nbsp;</label>
-                                    <img src="<?php echo site_url().'static/backoffice/images/gold.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
-                                    <label class="radio-inline">
-                                        <input  type="radio" name="kit" id="kit" value="4"
-                                        <?php if($obj_customer->franchise_id == 4){ ?> checked="" <?php } ?> >
-                                       <span class=""></span><b>GOLD</b> $500.00 &nbsp;&nbsp;&nbsp;</label>
-                                    <img src="<?php echo site_url().'static/backoffice/images/vip.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
-                                    <label class="radio-inline">
-                                        <input  type="radio" name="kit" id="kit" value="5"
-                                        <?php if($obj_customer->franchise_id == 5){ ?> checked="" <?php } ?> >        
-                                       <span class=""></span><b>VIP</b> $1000.00 &nbsp;&nbsp;&nbsp;</label>
-                                    <img src="<?php echo site_url().'static/backoffice/images/elite.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
-                                    <label class="radio-inline">
-                                        <input  type="radio" name="kit" id="kit" value="7"
-                                        <?php if($obj_customer->franchise_id == 7){ ?> checked="" <?php } ?> >        
-                                       <span class=""></span><b>ELITE</b> $5000.00
-                                    </label>
-                                    <br/><br/>
-                                    <button type="button" onclick="make_pedido();" class="btn btn-sm btn-primary bg-danger-dark"><?php echo replace_vocales_voculeshtml("Hacer Pedido");?></button>
-                                </div>
-                          </div>
-                     </div>
-            <?php  } ?>
-             
-             
-             <br/><br/>
-            <div class="row">
-              <div class="col-lg-12">
-                <strong>Tu links para referir: </strong><a href="<?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link" target="_blank"><?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>
-                <strong>Aqui esta la dirección para pago con bitcoin:</strong><a>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</a><br>
-                <?php 
-                if($obj_customer->active != "1"){ ?>
-                    <strong>Para la activación debe enviar a nuestra dirección de bitcoin: </strong>
-                    <a class="alert-link">
-                        <?php if($obj_customer->franchise_id != 6){echo "$".number_format($obj_customer->price,2)."($obj_customer->franchise)";}
-                        if($obj_customer->franchise_id == 1 || $obj_customer->franchise_id == 3 || $obj_customer->franchise_id == 4 || $obj_customer->franchise_id == 5 || $obj_customer->franchise_id == 6 || $obj_customer->franchise_id == 7){
-                            echo " + $15.00 (Membership)";}?>
-                    </a>
-                <?php } ?>
-                
-                
-                <br><br>
-                
-              </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="well media media-badges box-height box">
+                            <div class="media-body media-middle">
+                            <h5 class="media-heading text-uppercase title-small">BALANCE POR DISPONER</h5>
+                            <p class="title"><?php if(count($obj_balance)>0){echo "$".$obj_balance;}else{echo "$0.00";}?></p>
+                            <div class="mt-10">
+                            </div>
+                            </div>
+                        <div class="media-right media-middle">
+                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/wallet-icon.png';?>" alt="total ganado" height="90"/>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
+                 
+            <div class="col-lg-4">
+                <div class="well media media-badges box box-height">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="media-body media-middle">
+                            <p class="title">PAQUETE ACTUAL:</p>
+                            <h5 class="media-heading text-uppercase pt-10 title-small">Membership</h5>
+                            </div>
+                        <hr class="style-1 display-custom hidden-sm">
+                        </div>
+                        <div class="col-xs-4  col-md-4 border">
+<!--                            <p class="title pb-10">YOU NEED:</p>
+                            <p class="title-small">7 000 BV points on Left & Right </p>-->
+                            <div class="media-right media-middle">
+                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/logo.png';?>" alt="total ganado" height="90"/>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+             
+             
+            
              
              
              
@@ -387,6 +343,160 @@ Super splits </h5>
 </div>
 </div>
 </div>
+             
+             <h4><p class="title">Selecciona tu Paquete</p></h4>
+    <div class="row fix-box-height package-box-fix mt-30">
+            <div class="col-lg-14">
+                <div class="well media media-badges box box-height">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="media-body media-middle">
+                            <p class="title">BASIC:</p>
+                            <input  type="radio" name="kit" id="kit" value="2"/> $100.00
+                            </div>
+                        <hr class="style-1 display-custom hidden-sm">
+                        <div class="media-right media-middle">
+                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/basic.jpg';?>" alt="total ganado" height="70"/>
+                        </div>
+                        </div>
+                        <div class="col-sm-3 border">
+                            <div class="media-body media-middle">
+                            <p class="title">PLATINIUM:</p>
+                            <input  type="radio" name="kit" id="kit" value="2"/> $250.00
+                            </div>
+                        <hr class="style-1 display-custom hidden-sm">
+                        <div class="media-right media-middle">
+                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/platinium.jpg';?>" alt="total ganado" height="70"/>
+                        </div>
+                        </div>
+                        <div class="col-sm-2 border">
+                            <div class="media-body media-middle">
+                            <p class="title">GOLD:</p>
+                            <input  type="radio" name="kit" id="kit" value="2"/> $500.00
+                            </div>
+                        <hr class="style-1 display-custom hidden-sm">
+                        <div class="media-right media-middle">
+                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/gold.jpg';?>" alt="total ganado" height="70"/>
+                        </div>
+                        </div>
+                        <div class="col-sm-2 border">
+                            <div class="media-body media-middle">
+                            <p class="title">VIP:</p>
+                            <input  type="radio" name="kit" id="kit" value="2"/> $1 000.00
+                            </div>
+                        <hr class="style-1 display-custom hidden-sm">
+                        <div class="media-right media-middle">
+                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/vip.jpg';?>" alt="total ganado" height="70"/>
+                        </div>
+                        </div>
+                        <div class="col-sm-2 border">
+                            <div class="media-body media-middle">
+                            <p class="title">ELITE:</p>
+                            <input  type="radio" name="kit" id="kit" value="2"/> $5 000.00
+                            </div>
+                        <hr class="style-1 display-custom hidden-sm">
+                        <div class="media-right media-middle">
+                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/elite.jpg';?>" alt="total ganado" height="70"/>
+                        </div>
+                        </div>
+                        <div class="col-sm-2 border">
+                            <div class="media-body media-middle">
+                            <p class="title">PLATINIUM:</p>
+                            <input  type="radio" name="kit" id="kit" value="2"/> $250.00
+                            </div>
+                        <hr class="style-1 display-custom hidden-sm">
+                        <div class="media-right media-middle">
+                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/basic.jpg';?>" alt="total ganado" height="70"/>
+                        </div>
+                        </div>
+                        <div class="col-sm-2 border">
+                            <div class="media-body media-middle">
+                            <p class="title">PLATINIUM:</p>
+                            <input  type="radio" name="kit" id="kit" value="2"/> $250.00
+                            </div>
+                        <hr class="style-1 display-custom hidden-sm">
+                        <div class="media-right media-middle">
+                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/basic.jpg';?>" alt="total ganado" height="70"/>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+             
+             
+                  
+
+             <?php if($obj_customer->active == 0){ ?>
+                    <div class="row">
+                        <div role="alert" class="alert alert-info">
+                                    <strong>Seleccion tu paquete:</strong>
+                        </div>
+                        <div class="form-group">
+                                <div class="col-sm-9">
+                                    <?php 
+                                    if($_SESSION['customer']['country'] == 95){ ?>
+                                        <label class="radio-inline">
+                                        <input  type="radio" name="kit" id="kit" value="8" 
+                                        <?php if($obj_customer->franchise_id == 8){ ?> checked="" <?php } ?> >
+                                        <span class=""></span><b>START</b> $50.00 &nbsp;&nbsp;&nbsp;</label>
+                                    <?php } ?>
+                                    <img src="<?php echo site_url().'static/backoffice/images/basic.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
+                                    <label class="radio-inline">
+                                        <input  type="radio" name="kit" id="kit" value="2" 
+                                        <?php if($obj_customer->franchise_id == 2){ ?> checked="" <?php } ?> >
+                                        <span class=""></span><b>BASIC</b> $100.00 &nbsp;&nbsp;&nbsp;</label>
+                                    <img src="<?php echo site_url().'static/backoffice/images/platinium.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="kit" id="kit" value="3"
+                                        <?php if($obj_customer->franchise_id == 3){ ?> checked="" <?php } ?> >
+                                       <span class=""></span><b>PLATINIUM</b> $250.00 &nbsp;&nbsp;&nbsp;</label>
+                                    <img src="<?php echo site_url().'static/backoffice/images/gold.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
+                                    <label class="radio-inline">
+                                        <input  type="radio" name="kit" id="kit" value="4"
+                                        <?php if($obj_customer->franchise_id == 4){ ?> checked="" <?php } ?> >
+                                       <span class=""></span><b>GOLD</b> $500.00 &nbsp;&nbsp;&nbsp;</label>
+                                    <img src="<?php echo site_url().'static/backoffice/images/vip.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
+                                    <label class="radio-inline">
+                                        <input  type="radio" name="kit" id="kit" value="5"
+                                        <?php if($obj_customer->franchise_id == 5){ ?> checked="" <?php } ?> >        
+                                       <span class=""></span><b>VIP</b> $1000.00 &nbsp;&nbsp;&nbsp;</label>
+                                    <img src="<?php echo site_url().'static/backoffice/images/elite.jpg';?>" alt="" class="img-responsive img-circle thumb48" style="display: inline !important;">
+                                    <label class="radio-inline">
+                                        <input  type="radio" name="kit" id="kit" value="7"
+                                        <?php if($obj_customer->franchise_id == 7){ ?> checked="" <?php } ?> >        
+                                       <span class=""></span><b>ELITE</b> $5000.00
+                                    </label>
+                                    <br/><br/>
+                                    <button type="button" onclick="make_pedido();" class="btn btn-sm btn-primary bg-danger-dark"><?php echo replace_vocales_voculeshtml("Hacer Pedido");?></button>
+                                </div>
+                          </div>
+                     </div>
+            <?php  } ?>
+             
+              <br/><br/>
+            <div class="row">
+              <div class="col-lg-12">
+                <strong>Tu links para referir: </strong><a href="<?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?>" class="alert-link" target="_blank"><?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?></a><br>
+                <strong>Aqui esta la dirección para pago con bitcoin:</strong><a>188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN</a><br>
+                <?php 
+                if($obj_customer->active != "1"){ ?>
+                    <strong>Para la activación debe enviar a nuestra dirección de bitcoin: </strong>
+                    <a class="alert-link">
+                        <?php if($obj_customer->franchise_id != 6){echo "$".number_format($obj_customer->price,2)."($obj_customer->franchise)";}
+                        if($obj_customer->franchise_id == 1 || $obj_customer->franchise_id == 3 || $obj_customer->franchise_id == 4 || $obj_customer->franchise_id == 5 || $obj_customer->franchise_id == 6 || $obj_customer->franchise_id == 7){
+                            echo " + $15.00 (Membership)";}?>
+                    </a>
+                <?php } ?>
+                
+                
+                <br><br>
+                
+              </div>
+            </div>
+             
+             
+             
 <div class="row fix-box-height-byrow">
 <div class="col-lg-12">
 <div class="well media media-badges">
@@ -398,6 +508,17 @@ Super splits </h5>
 <div class="status-frozen"></div>
 </div>
 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 <div class="col-md-8 col-xs-12 pull-left">
 <div class="media-body media-middle">
 <div class="mb-20">

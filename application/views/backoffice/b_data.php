@@ -4,8 +4,7 @@
             <h1 class="title text-uppercase">Perfil</h1>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-            <a href="/backend/bonuses/start-up" class="white">until next bonus round.</a>
-            <div id="myCounter" data-countdown="1494244800000"></div>
+            <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
         </div>
     </div> 
          <!-- Page content-->

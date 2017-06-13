@@ -56,7 +56,7 @@ class B_home extends CI_Controller {
                                      "where" => "otros_id = 1");
                 
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
-           $price_btc = number_format($obj_otros->precio_btc,8);
+           $price_btc = "$".number_format($obj_otros->precio_btc,2);
            
            $obj_total = $obj_commissions->total;
            $obj_balance = $obj_commissions->balance;
