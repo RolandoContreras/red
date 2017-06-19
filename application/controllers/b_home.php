@@ -43,9 +43,12 @@ class B_home extends CI_Controller {
                         "select" =>"sum(amount) as total,
                                     (select sum(amount) FROM commissions WHERE status_value <= 2 and customer_id = $customer_id) as balance,"
                         . "         (select sum(mandatory_account) FROM commissions WHERE customer_id = $customer_id) as mandatory",
-                         "where" => "commissions.customer_id = $customer_id",
+                         "where" => "commissions.customer_id = $customer_id and bonus_id <> 2",
                     );
              $obj_commissions = $this->obj_commissions->get_search_row($params_total); 
+             
+//             var_dump($obj_commissions);
+//             die();
              
              //GET MANDATORY ACCOUNT
              $obj_madatory = $obj_commissions->mandatory;
