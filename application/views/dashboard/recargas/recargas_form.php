@@ -1,72 +1,75 @@
-<link href="<?php echo site_url();?>static/cms/css/uploadimg.css" rel="stylesheet" />
-<script src="<?php echo site_url();?>static/cms/js/core/bootstrap-fileupload.js"></script>
-<link href="<?php echo site_url();?>static/cms/plugins/tags/chosen.css" rel="stylesheet" />
-<script src="<?php echo site_url();?>static/cms/plugins/tags/chosen.jquery.js"></script>
-<script src="<?php echo site_url();?>static/cms/js/recargar.js"></script>
-<script src="<?php echo site_url();?>static/cms/plugins/ckeditor/ckeditor.js"></script>
-<!-- main content -->
+<script src="static/cms/js/core/bootstrap-modal.js"></script>
+<script src="static/cms/js/core/bootbox.min.js"></script>
+<script src="static/cms/js/core/jquery-1.11.1.min.js"></script>
+<script src="static/cms/js/core/jquery.dataTables.min.js"></script>
+<link href="static/cms/css/core/jquery.dataTables.css" rel="stylesheet"/>
 
-<form id="customer-form" name="customer-form" enctype="multipart/form-data" method="post" action="<?php echo site_url()."dashboard/recargas/validate";?>">
-<div id="main_content" class="span7">
+<!-- main content -->
+<div id="main_content" class="span9">
     <div class="row-fluid">
         <div class="widget_container">
             <div class="well">
-                <div class="navbar navbar-static navbar_as_heading">
-                        <div class="navbar-inner">
-                                <div class="container" style="width: auto;">
-                                        <a class="brand"></i> Formulario de Recargas</a>
-                                </div>
-                        </div>
-                </div>
-                <!--GET CUSTOMER ID-->
-                <input type="hidden" name="commissions_id" id="commissions_id" value="<?php echo isset($commissions_id)?$commissions_id->commissions_id:"";?>">
-              
-                <div class="well nomargin" style="width: 800px;">
-                    <div class="inner">
-                    <strong>Usuario:</strong>
-                        <select name="username" id="username">
-                        <option value="">[ Seleccionar ]</option>
-                            <?php foreach ($obj_customer as $value ): ?>
-                        <option onclick="buscar_customer('<?php echo $value->customer_id;?>');" value="<?php echo $value->customer_id;?>"><?php echo $value->username;?>
-                        </option>
-                            <?php endforeach; ?>
-                        </select>
-                       
+                    <div class="navbar navbar-static navbar_as_heading">
+                            <div class="navbar-inner">
+                                    <div class="container" style="width: auto;">
+                                            <a class="brand">LISTADO DE  USUARIOS PARA RECARGA</a>
+                                    </div>
+                            </div>
                     </div>
-                    <br/>
-                </div>
-              <br><br>
-              <div id="mensaje">
-              </div>
-                <br><br>
-                <br><br>
-            
-                 
-                <div class="subnav nobg">
-                    <button class="btn btn-danger btn-small pull-left" type="reset" onclick="cancelar_recarga();">Cancelar</button>                    
-                    <button class="btn btn-primary btn-small pull-right"  type="submit">Guardar</button>
-                </div>
+                
+             <!--<form>-->
+                <div class="well nomargin" style="width: 100%;">
+                    <!--- INCIO DE TABLA DE RE4GISTRO -->
+                   <table id="table" class="display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>CODIGO</th>
+                                <th>USERNAME</th>
+                                <th>NOMBRE</th>
+                                <th>DNI</th>
+                                <th>ESTADO</th>
+                                <th>ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <?php foreach ($obj_customer as $value): ?>
+                                <td align="center"><?php echo $value->customer_id;?></td>
+                                <td align="center"><b><?php echo $value->username;?></b></td>
+                                <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
+                                <td align="center"><?php echo $value->dni;?></td>
+                                <td align="center">
+                                    <?php if ($value->status_value == 0) {
+                                        $valor = "No Recargado";
+                                        $stilo = "label label-important";
+                                    }else{
+                                        $valor = "Recargado";
+                                        $stilo = "label label-success";
+                                    } ?>
+                                    <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
+                                </td>
+                                <td>
+                                    <div class="operation">
+                                            <div class="btn-group">
+                                                    <button class="btn btn-small" onclick="details_customer('<?php echo $value->customer_id;?>');">Recargar</button>
+                                          </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
             </div>
+           <!--</form>-->         
         </div>
     </div>
 </div><!-- main content -->
-</form>
+</div>
 <script type="text/javascript">
-    var show = '<?php echo $modulos?>';
-    $(".chzn-select").chosen();
-    
-    $("#tags").chosen().change( function(e){
-        $("#tag").val($(this).val());
-    });         
-    
-    $('#timepicker1').timepicker({
-        minuteStep: 1,    
-        showSeconds: true,
-        showMeridian: false,
-        showInputs: true
-    });
-        
-    $('#timepicker1').on('change', function() {                
-        $("#time").val($(this).val());        
-    });
+   $(document).ready(function() {
+    $('#table').dataTable( {
+         "order": [[ 0, "desc" ]]
+    } );
+} );
 </script>
+<script src="static/cms/js/recargar.js"></script>

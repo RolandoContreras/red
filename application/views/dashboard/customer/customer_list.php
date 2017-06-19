@@ -23,6 +23,7 @@
                    <table id="table" class="display" cellspacing="0" width="100%">
                         <thead>
                             <tr>
+                                <th>CODIGO</th>
                                 <th>USUARIO</th>
                                 <th>ASOCIADO</th>
                                 <th>E-MAIL</th>
@@ -36,6 +37,7 @@
                         <tbody>
                             <tr>
                             <?php foreach ($obj_customer as $value): ?>
+                                <td align="center"><b><?php echo $value->customer_id;?></b></td>
                                 <td align="center"><b><?php echo $value->username;?></b></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center"><?php echo $value->email;?></td>

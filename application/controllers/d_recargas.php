@@ -5,6 +5,7 @@ class D_Recargas extends CI_Controller{
     public function __construct(){
         parent::__construct();
         $this->load->model("customer_model","obj_customer");
+        $this->load->model("franchise_model","obj_franchise");
         $this->load->model("commissions_model","obj_commissions");
     }   
                 
@@ -12,7 +13,8 @@ class D_Recargas extends CI_Controller{
         
            $this->get_session();
            $params = array(
-                        "select" =>"customer.username,
+                        "select" =>"customer.customer_id,
+                                    customer.username,
                                     customer.first_name,
                                     customer.last_name,
                                     customer.dni,
@@ -41,11 +43,37 @@ class D_Recargas extends CI_Controller{
             $this->tmp_mastercms->render("dashboard/recargas/recargas_list");
     }
     
+    public function details($customer_id=NULL){  
+           //VERIFY IF ISSET CUSTOMER_ID
+            $this->get_session();
+           //SELECT USERNAME
+            $params = array("select" => "username,
+                                         customer.first_name,
+                                         customer.email,
+                                         customer.dni,
+                                         customer.last_name,
+                                         customer_id",
+                            "where" => "status_value = 1 and customer_id = $customer_id");
+            $obj_customer  = $this->obj_customer->get_search_row($params); 
+            
+            // PAGINADO
+            $modulos ='Recargas'; 
+            $seccion = 'Lista';        
+            $link_modulo =  site_url().'dashboard/recargas'; 
+            
+            /// VISTA
+            $this->tmp_mastercms->set('link_modulo',$link_modulo);
+            $this->tmp_mastercms->set('modulos',$modulos);
+            $this->tmp_mastercms->set('seccion',$seccion);
+            $this->tmp_mastercms->set("obj_customer",$obj_customer);
+            $this->tmp_mastercms->render("dashboard/recargas/recargas_details");
+    }
+    
     public function validate(){
         
         //GET CUSTOMER_ID
-        $customer_id = $this->input->post("username");
-        $amount = $this->input->post("amoun");
+        $customer_id = $this->input->post("customer_id");
+        $amount = $this->input->post("amount");
         
         if($customer_id != "" && $amount != 0){
                 $data = array(
@@ -60,27 +88,10 @@ class D_Recargas extends CI_Controller{
                 );          
             //SAVE DATA IN TABLE    
             $this->obj_commissions->insert($data);
+            redirect(site_url()."dashboard/recargas");
+        }else{
+            redirect(site_url()."dashboard/recargas/load/$customer_id");
         }
-            
-        redirect(site_url()."dashboard/recargas");
-    }
-    
-    public function active_customer(){
-        //ACTIVE CUSTOMER
-        if($this->input->is_ajax_request()){  
-            
-                $customer_id = $this->input->post("customer_id");
-                if(count($customer_id) > 0){
-                    $data = array(
-                        'calification' => 1,
-                        'updated_at' => date("Y-m-d H:i:s"),
-                        'updated_by' => $_SESSION['usercms']['user_id'],
-                    ); 
-                    $this->obj_customer->update($customer_id,$data);
-                }
-                echo json_encode($data);            
-        exit();
-            }
     }
     
     public function buscar_customer(){
@@ -104,17 +115,30 @@ class D_Recargas extends CI_Controller{
             }
     }
     
-    
-    public function load($obj_customer=NULL){
+    public function load(){
         //VERIFY IF ISSET CUSTOMER_ID
 //        
-          
-            //SELECT USERNAME
-            $params = array("select" => "username,
-                                        customer_id",
-                            "where" => "status_value = 1");
-            $obj_customer  = $this->obj_customer->search($params);   
-            
+        $this->get_session();
+           $params = array(
+                        "select" =>"customer.customer_id,
+                                    customer.username,
+                                    customer.dni,
+                                    customer.first_name,
+                                    customer.email,
+                                    customer.last_name,
+                                    customer.calification,
+                                    customer.created_at,
+                                    customer.active,
+                                    franchise.name as franchise,
+                                    customer.status_value",
+                        "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
+                        "group" => "customer.customer_id"
+               
+               );
+           
+           //GET DATA FROM CUSTOMER
+           $obj_customer= $this->obj_customer->search($params);
+                    
             $modulos ='recargas'; 
             $seccion = 'Formulario';        
             $link_modulo =  site_url().'dashboard/'.$modulos; 
@@ -124,23 +148,6 @@ class D_Recargas extends CI_Controller{
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
             $this->tmp_mastercms->render("dashboard/recargas/recargas_form");    
-    }
-    
-    public function no_active_customer(){
-            //NO ACTIVE CUSTOMER
-        if($this->input->is_ajax_request()){   
-            $customer_id = $this->input->post("customer_id");
-                if(count($customer_id) > 0){
-                    $data = array(
-                        'calification' => 0,
-                        'updated_at' => date("Y-m-d H:i:s"),
-                        'updated_by' => $_SESSION['usercms']['user_id'],
-                    ); 
-                    $this->obj_customer->update($customer_id,$data);
-                }
-                echo json_encode($data);            
-        exit();
-            }
     }
     
     public function get_session(){          

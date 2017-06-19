@@ -119,6 +119,7 @@ $route['dashboard/cobros/devolver'] = "d_pays/devolver";
 
 $route['dashboard/recargas'] = "d_recargas";
 $route['dashboard/recargas/load'] = "d_recargas/load";
+$route['dashboard/recargas/load/([0-9]+)'] = "d_recargas/details/$1";
 $route['dashboard/recargar/buscar_customer'] = "d_recargas/buscar_customer";
 $route['dashboard/recargas/validate'] = "d_recargas/validate";
 
