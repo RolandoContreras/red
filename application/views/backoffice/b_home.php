@@ -302,7 +302,7 @@
                         </div>
                         </div>
                         <div class="media-body media-middle">
-                            <button type="button" onclick="alter_data();" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                            <button type="button" onclick="make_pedido('2');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div>
                     </div>
                     <div class="col-sm-2">
@@ -318,7 +318,7 @@
                         </div>
                         </div>
                            <div class="media-body media-middle">
-                            <button type="button" onclick="alter_data();" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                            <button type="button" onclick="make_pedido('3');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div>                        
 
                     </div>
@@ -335,7 +335,7 @@
                         </div>
                         </div>
                         <div class="media-body media-middle">
-                            <button type="button" onclick="alter_data();" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                            <button type="button" onclick="make_pedido('4');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div> 
                     </div>
                     <div class="col-sm-2">
@@ -351,7 +351,7 @@
                         </div>
                         </div>
                         <div class="media-body media-middle">
-                            <button type="button" onclick="alter_data();" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                            <button type="button" onclick="make_pedido('5');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div> 
                     </div>
                     <div class="col-sm-2">
@@ -367,30 +367,30 @@
                         </div>
                         </div>
                         <div class="media-body media-middle">
-                            <button type="button" onclick="alter_data();" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                            <button type="button" onclick="make_pedido('7');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div> 
                     </div>
                     <div class="col-sm-2">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
                             <h5 class="media-heading text-uppercase title-small">SUPER VIP</h5>
-                            <p class="title">$5,000.00</p>
-                            <p>5000 PTS</p>
+                            <p class="title">$12,000.00</p>
+                            <p>12000 PTS</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url()."static/backoffice/images/elite.jpg";?>" alt="Paquete Elite" height="70" class="img-circle"/>
+                            <img src="<?php echo site_url()."static/backoffice/images/elite.jpg";?>" alt="Paquete Super Vip" height="70" class="img-circle"/>
                         </div>
                         </div>
                         <div class="media-body media-middle">
-                            <button type="button" onclick="alter_data();" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                            <button type="button" onclick="make_pedido('9');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div> 
                     </div>
                 </div>
             </div>
         </div>
 
-             <?php if($obj_customer->active == 0){ ?>
+             <?php //if($obj_customer->active == 0){ ?>
                     <div class="row">
                         <div role="alert" class="alert alert-info">
                                     <strong>Seleccion tu paquete:</strong>
@@ -435,7 +435,7 @@
                                 </div>
                           </div>
                      </div>
-            <?php  } ?>
+            <?php // } ?>
              
               <br/><br/>
             <div class="row">
@@ -486,7 +486,7 @@
                     <div class="col-lg-9 col-sm-8 pull-right box-height-byrow border">
                         <p class="uppercase ralewaybold22px">NOTA IMPORTANTE</p>
                         <div class="small">
-                            <p>Estimado usuario tiene 15 días para hacer la activación de la cuenta que ha seleccionado, de lo contrario será tomada por el sistema y no tendrá opción a recuperarla. Datos para la activación: <br><strong>1)	Activación a través de bitcoin:</strong> enviar el monto del paquete seleccionado a la siguiente dirección de bitcoin: 188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN  enviando un mensaje de correo electrónico a accounts@yourbitshares.com indicando el usuario, el paquete pagado y el comprobante o el código de identificación de la transacción realizada.<br><strong>2)	Activación a través de cuenta bancaria (solo Perú):</strong> enviar monto del paquete seleccionado a la siguiente cuenta bancaria; Cuenta Corriente Dólares Interbank, 194-56985236214213-7 luego enviar un mensaje al correo electrónico accounts@yourbitshares.com indicando el usuario, el paquete pagado y el comprobante del envio.
+                            <p>Estimado usuario tiene 15 días para hacer la activación de la cuenta que ha seleccionado, de lo contrario será tomada por el sistema y no tendrá opción a recuperarla. Datos para la activación: <br><strong>1)	Activación a través de bitcoin:</strong> enviar el monto del paquete seleccionado a la siguiente dirección de bitcoin: 188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN  enviando un mensaje de correo electrónico a accounts@yourbitshares.com indicando el usuario, el paquete pagado y el comprobante o el código de identificación de la transacción realizada.<br><strong>2)	Activación a través de cuenta bancaria (solo Perú):</strong> enviar monto del paquete seleccionado a la siguiente cuenta bancaria; Cuenta Corriente Dólares Interbank, 009-300132221-0 luego enviar un mensaje al correo electrónico accounts@yourbitshares.com indicando el usuario, el paquete pagado y el comprobante del envio.
 <br>La activación será hará efectiva en 24 horas luego de hacer el envió del correo a BITSHARE. 
 </p>
                         </div>

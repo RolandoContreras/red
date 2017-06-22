@@ -118,10 +118,17 @@ class B_home extends CI_Controller {
     
     public function make_pedido(){
 
+        echo "hola";
+        die();
+        
              if($this->input->is_ajax_request()){   
                 //SELECT ID FROM CUSTOMER
-               $kit = $this->input->post('kit');
+               $franchise_id = $this->input->post('franchise_id');
                $customer_id = $_SESSION['customer']['customer_id'];;
+               
+               
+                var_dump($customer_id);
+                die();
                
                if($kit != "" && $customer_id != ""){
                             //UPDATE DATA EN CUSTOMER TABLE

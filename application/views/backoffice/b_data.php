@@ -226,6 +226,3 @@
          <!--</div>-->
       </section>
 <script src="<?php echo site_url().'static/backoffice/js/data.js';?>"></script>
-<script src="<?php // echo site_url().'static/page_front/js/core.min.js';?>"></script>
-<script src="<?php // echo site_url().'static/page_front/js/script.js';?>"></script>
-<script src="<?php // echo site_url().'static/bootstrap/js/bootstrap.js';?>"></script>
