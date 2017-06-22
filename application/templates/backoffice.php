@@ -262,6 +262,7 @@
                                     $url = explode("/",uri_string()); 
                                     $style_inicio = "";
                                     $style_misdatos = "";
+                                    $style_upgrade = "";
                                     $style_comisiones = "";
                                     $style_information_center = "";
                                     $style_mired = "";
@@ -273,6 +274,9 @@
                                             ////////
                                                     case "misdatos":
                                                         $style_misdatos = "active";
+                                                        break;
+                                                    case "upgrade":
+                                                        $style_upgrade = "active";
                                                         break;
                                                     case "comisiones":
                                                         $style_comisiones = "active";
@@ -319,6 +323,12 @@
                                             <a href="<?php echo site_url().'backoffice/misdatos'?>" title="Mi Datos">
                                             <em class="fa fa-address-book fa-lg" aria-hidden="true"></em>
                                             <span>Mi Perfil</span>
+	                     		</a>
+	                  		</li>
+                                        <li class="<?php echo $style_misdatos ?>">
+                                            <a href="" title="Upgrade">
+                                            <em class="fa fa-arrow-up fa-lg" aria-hidden="true"></em>
+                                            <span>Upgrade</span>
 	                     		</a>
 	                  		</li>
                                         <li class="<?php echo $style_mired;?>">
@@ -368,7 +378,7 @@
 
 	                  		<li class="<?php echo $style_billetera;?>">
                                             <a href="<?php echo site_url().'backoffice/billetera';?>" title="Billetera">
-                                                <em class="icon-wallet fa-lg"></em> fa-external-link-square
+                                                <em class="icon-wallet fa-lg"></em> 
                                                 <span>Mi Billetera</span>
                                             </a>
 	                  		</li>

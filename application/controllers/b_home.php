@@ -16,7 +16,8 @@ class B_home extends CI_Controller {
         /// VISTA
         $customer_id = $_SESSION['customer']['customer_id'];
         $params = array(
-                        "select" =>"customer.customer_id,
+                        "select" =>"(select count(customer_id) from customer where parents_id = $customer_id) as direct,
+                                    customer.customer_id,
                                     customer.parents_id,
                                     customer.username,
                                     customer.email,
@@ -26,7 +27,14 @@ class B_home extends CI_Controller {
                                     customer.active,
                                     customer.dni,
                                     customer.birth_date,
+                                    customer.calification,
+                                    customer.point_calification_left,
+                                    customer.point_calification_rigth,
+                                    customer.point_left,
+                                    customer.point_rigth,
+                                    customer.date_start,
                                     customer.date_end,
+                                    customer.created_at,
                                     customer.address,
                                     customer.status_value,
                                     customer.franchise_id,
@@ -37,6 +45,10 @@ class B_home extends CI_Controller {
                          "join" => array('franchise, customer.franchise_id = franchise.franchise_id',)
                                         );
            $obj_customer = $this->obj_customer->get_search_row($params);
+           //SET 5 VECES MAS EL VALOR DEL PAQUETE
+           $max_gain = $obj_customer->price * 5;
+           $points_left = $obj_customer->point_left / 0.12;
+           $points_rigth = $obj_customer->point_rigth / 0.12;
            
            //GET TOTAL AMOUNT
                 $params_total = array(
@@ -46,9 +58,6 @@ class B_home extends CI_Controller {
                          "where" => "commissions.customer_id = $customer_id and bonus_id <> 2",
                     );
              $obj_commissions = $this->obj_commissions->get_search_row($params_total); 
-             
-//             var_dump($obj_commissions);
-//             die();
              
              //GET MANDATORY ACCOUNT
              $obj_madatory = $obj_commissions->mandatory;
@@ -99,6 +108,9 @@ class B_home extends CI_Controller {
                 $this->tmp_backoffice->set("price_btc",$price_btc);
                 $this->tmp_backoffice->set("obj_total",$obj_total);
                 $this->tmp_backoffice->set("obj_balance",$obj_balance);
+                $this->tmp_backoffice->set("max_gain",$max_gain);
+                $this->tmp_backoffice->set("points_left",$points_left);
+                $this->tmp_backoffice->set("points_rigth",$points_rigth);
                 $this->tmp_backoffice->set("obj_customer",$obj_customer);
                 $this->tmp_backoffice->render("backoffice/b_home");
              }

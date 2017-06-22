@@ -1,28 +1,37 @@
 <section>
+    <?php 
+    
+//    var_dump($obj_customer);
+//    die();
+    ?>
     <?php
         switch ($_SESSION['customer']['franchise_id']) {
-                case 1:
-                    $images = "membership.jpg";
-                    break;
                 case 2:
                     $images = "basic.jpg";
+                    $text = "Basic";
                     break;
                 case 3:
                     $images = "platinium.jpg";
+                    $text = "Platinium";
                     break;
                 case 4:
                     $images = "gold.jpg";
+                    $text = "Gold";
                     break;
                 case 5:
                     $images = "vip.jpg";
+                    $text = "Vip";
                     break;
                 case 6:
+                    $text = "Membership";
                     $images = "default.jpg";
                     break;
                 case 7:
+                    $text = "Elite";
                     $images = "elite.jpg";
                     break;
                 case 8:
+                    $text = "Start";
                     $images = "start.jpg";
                     break;
             }
@@ -36,57 +45,7 @@
         </div>
     </div> 
          <!-- Page content-->
-         <div class="content-wrapper">
-            <div class="row">
-<!--                <div class="col-lg-3 col-md-6 col-sm-12">
-                   START widget
-                  <div class="panel widget bg-green">
-                     <div class="row row-table">
-                        <div class="col-xs-4 text-center bg-green-dark pv-lg">
-                           <em class="icon-diamond fa-3x"></em>
-                        </div>
-                        <div class="col-xs-8 pv-lg">
-                            <div class="h2 mt0"><?php if(count($obj_total)>0){echo "$".$obj_total;}else{echo "$0.00";}?></div>
-                           <div class="text-uppercase">Total Pagado</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>-->
-
-                
-<!--               <div class="col-lg-3 col-sm-6">
-                   START widget
-                  <div class="panel widget bg-primary">
-                     <div class="row row-table">
-                        <div class="col-xs-4 text-center bg-primary-dark pv-lg">
-                           <em class="icon-credit-card fa-3x"></em>
-                        </div>
-                        <div class="col-xs-8 pv-lg">
-                           <div class="h2 mt0"><?php if(count($obj_balance)>0){echo "$".$obj_balance;}else{echo "$0.00";}?></div>
-                           <div class="text-uppercase">Balance por disponer</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>-->
-  
-<!--               <div class="col-lg-3 col-md-6 col-sm-12">
-                   START widget
-                  <div class="panel widget bg-success">
-                     <div class="row row-table">
-                        <div class="col-xs-4 text-center bg-success-dark pv-lg">
-                           <em class="icon-badge fa-3x"></em>
-                        </div>
-                        <div class="col-xs-8 pv-lg">
-                           <div class="h2 mt0"><?php echo $obj_customer->franchise;?></div>
-                           <div class="text-uppercase">Calificaci&oacute;n</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>-->
-            </div>
-             
-             
-             
+    <div class="content-wrapper">
         <div class="row fix-box-height package-box-fix mt-30">
             <div class="col-lg-6">
                 <div class="row">
@@ -117,280 +76,219 @@
                     </div>
                 </div>
             </div>
-                 
             <div class="col-lg-6">
                 <div class="well media media-badges box box-height">
                 <div class="row">
                     <div class="col-sm-8">
                         
                             <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">TOTAL PAGADO</h5>
-                            <p class="title"><?php if(count($obj_total)>0){echo "$".$obj_total;}else{echo "$0.00";}?></p>
+                            <h5 class="media-heading text-uppercase title-small">PAQUETE ACTUAL</h5>
+                            <p class="title"><?php echo $text;?></p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/money.png';?>" alt="total ganado" height="90"/>
+                            <img src="<?php echo site_url()."static/backoffice/images/$images";?>" alt="Paquete Actual" height="90" class="img-circle"/>
                         </div>
                         </div>
                     
                 </div>
-                    </div>
+                </div>
             </div>
-            
-            
-<!--            <div class="col-lg-6">
-                <div class="well media media-badges box box-height">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="media-body media-middle">
-                            <p class="title">PAQUETE ACTUAL:</p>
-                            <h5 class="media-heading text-uppercase pt-10 title-small">Membership</h5>
+             
+             
+    <div class="row">
+        <div class="col-sm-12 mb-25">
+            <div class="panel panel-default panel-tab-box">
+                <div class="panel-body">
+                    <div class="flex-container fix-box-height">
+                        <a href="/backend/my-accounts/onecoin-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Calificación Binario")?></h5>
+                                <strong><?php if($obj_customer->calification==1){echo "Calificado";}else{echo "No Calificado";}?></strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-onecoin fa-3x"></i>
+                                </div>
                             </div>
+                        </a>
+                        
+                        <a href="/backend/my-accounts/tokens-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Puntos de Calificación Izquierda");?></h5>
+                                <strong><?php if($obj_customer->point_calification_left==0){echo "Calificado";}else{echo "No Calificado";}?></strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-money-3 fa-3x"></i>
+                                </div>
+                            </div>
+                        <span class="read-more-icon" data-tooltip data-tooltip-class="tooltip-info" title="The tokens account shows the total amount of promotional tokens available for mining.">?</span>
+                        </a>
+                            
+                        <a href="/backend/my-accounts/cash-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Puntos de Calificación Derecha");?></h5>
+                                <strong><?php if($obj_customer->point_calification_rigth==0){echo "Calificado";}else{echo "No Calificado";}?></strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-euro fa-3x"></i>
+                                </div>
+                            </div>
+                        <span class="read-more-icon" data-tooltip data-tooltip-class="tooltip-info" title="The cash account shows the available amount funds for purchases or withdrawals.">?</span>
+                        </a>
+                        
+                        <a href="/backend/my-accounts/trading-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                <h5 class="media-heading">Puntos Izquierda</h5>
+                                <strong><?php echo $points_left." "."PTS";?></strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-clock fa-3x"></i>
+                                </div>
+                            </div>
+                        <span class="read-more-icon" data-tooltip data-tooltip-class="tooltip-info" title="The trading account shows how much funds you have to use for trading purchases.">?</span>
+                        </a>
+                        
+                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                <h5 class="media-heading">Puntos Derecha</h5>
+                                <strong><?php echo $points_rigth." "."PTS";?></strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-money fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                <h5 class="media-heading">Patrocinios Directos</h5>
+                                <strong><?php echo $obj_customer->direct;?></strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-money fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                         <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                <h5 class="media-heading">Tope de Ganancia</h5>
+                                <strong><?php echo $max_gain." "."USD";?></strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-money fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Fecha de Activación");?></h5>
+                                    <strong><?php echo formato_fecha_barras($obj_customer->date_start);?></strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-money fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Fecha de Termino");?></h5>
+                                <strong><?php echo formato_fecha_barras($obj_customer->date_end);?></strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-money fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Fecha de Creación");?></h5>
+                                <strong><?php echo formato_fecha_barras($obj_customer->created_at);?></strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-money fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Promoción Viaje Cusco");?></h5>
+                                <strong>5,000 PTS</strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-money fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Fecha Inicio");?></h5>
+                                <strong>01/06/17</strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-money fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Fecha Termino");?></h5>
+                                <strong>30/06/17</strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-money fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>    
+
+                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Puntos");?></h5>
+                                <strong>Pronto</strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                <i class="icon-money fa-3x"></i>
+                                </div>
+                            </div>
+                        </a>  
+
+                        <div class="col-flex box-height box-shadow-inset-coming-soon">
+                        <div class="media">
+                        <div class="media-body media-middle uppercase text-center">
+                        <h3 class="media-heading"><strong>Muy Pronto</strong></h3>
                         </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/wallet-icon.png';?>" alt="Balance Por Disponer" height="90"/>
                         </div>
-                        
-                        <div class="col-xs-4  col-md-4 border">
-                            <div class="media-right media-middle">
-                                <img src='<?php echo site_url()."static/backoffice/images/$images";?>' alt="Paquete Actual" height="90" class="img-thumbnail img-circle" style="max-width: 47% !important;"/>
-                            </div>
+                        </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>-->
-        
+        </div>
+    </div>
              
-             
-            
-             
-             
-             
-             <div class="row">
-<div class="col-sm-12 mb-25">
-<div class="panel panel-default panel-tab-box">
-<div class="panel-body">
-<div class="flex-container fix-box-height">
-<a href="/backend/my-accounts/onecoin-account" class="col-flex box-height">
-<div class="media">
-<div class="media-body media-middle">
-<h5 class="media-heading">Onecoin Account</h5>
-<strong>0.00 ONE</strong>
-</div>
-<div class="media-right media-middle">
-<i class="icon-onecoin fa-3x"></i>
-</div>
-</div>
-</a>
-<a href="/backend/my-accounts/tokens-account" class="col-flex box-height">
-<div class="media">
-<div class="media-body media-middle">
-<h5 class="media-heading">Tokens account</h5>
-<strong>0.00 TKN</strong>
-</div>
-<div class="media-right media-middle">
-<i class="icon-money-3 fa-3x"></i>
-</div>
-</div>
-<span class="read-more-icon" data-tooltip data-tooltip-class="tooltip-info" title="The tokens account shows the total amount of promotional tokens available for mining.">?</span>
-</a>
-<a href="/backend/my-accounts/cash-account" class="col-flex box-height">
-<div class="media">
-<div class="media-body media-middle">
-<h5 class="media-heading">Cash account</h5>
-<strong>0.00 EUR</strong>
-</div>
-<div class="media-right media-middle">
-<i class="icon-euro fa-3x"></i>
-</div>
-</div>
-<span class="read-more-icon" data-tooltip data-tooltip-class="tooltip-info" title="The cash account shows the available amount funds for purchases or withdrawals.">?</span>
-</a>
-<a href="/backend/my-accounts/trading-account" class="col-flex box-height">
-<div class="media">
-<div class="media-body media-middle">
-<h5 class="media-heading">Trading account</h5>
-<strong>0.00 EUR</strong>
-</div>
-<div class="media-right media-middle">
-<i class="icon-clock fa-3x"></i>
-</div>
-</div>
-<span class="read-more-icon" data-tooltip data-tooltip-class="tooltip-info" title="The trading account shows how much funds you have to use for trading purchases.">?</span>
-</a>
-<a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
-<div class="media">
-<div class="media-body media-middle">
-<h5 class="media-heading">CoinSafe</h5>
-<strong>0.00 ONE</strong>
-</div>
-<div class="media-right media-middle">
-<i class="icon-money fa-3x"></i>
-</div>
-</div>
-</a>
-<div class="col-flex box-height box-shadow-inset-coming-soon">
-<div class="media">
-<div class="media-body media-middle uppercase text-center">
-<h3 class="media-heading"><strong>coming soon</strong></h3>
-</div>
-<div class="media-right media-middle">
-</div>
-</div>
-</div>
-<a href="/backend/recognition/onelife" class="col-flex box-height">
-<div class="media">
-<div class="media-body media-middle">
-<h5 class="media-heading">One life Points</h5>
-<strong>0 OLP</strong>
-</div>
-<div class="media-right media-middle">
-<i class="icon-cloud fa-3x"></i>
-</div>
-<span class="read-more-icon" data-tooltip data-tooltip-class="tooltip-info" title="OneLife Points show the accumulated amount of OLP you have collected since the day you
-                    registered.
-                ">?</span>
-</div>
-</a>
-<div class="col-flex box-height">
-<div class="media">
-<div class="media-body media-middle">
-<div class="clearfix">
-<h5 class="media-heading pull-left">Directly sponsored</h5>
-<strong class="pull-right">0</strong>
-</div>
-<div class="clearfix">
-<h5 class="media-heading pull-left">Rookie</h5>
-<strong class="pull-right">0</strong>
-</div>
-</div>
-<div class="media-right media-middle">
-<i class="icon-profile fa-3x"></i>
-</div>
-</div>
-<span class="read-more-icon" data-tooltip data-tooltip-class="tooltip-info" title="Directly sponsored shows how many personal sales you have made.">?</span>
-</div>
-<div class="col-flex box-height">
-<div class="media">
-<div class="media-body media-middle">
-<div class="row">
-<h5 class="media-heading col-xs-6">Weekly <strong>
-0
-</strong>
-</h5>
-<div class="col-xs-6">Total <strong>
-0
-</strong>
-</div>
-</div>
-<div class="">
-110
-BVs to Starter
-</div>
-</div>
-<div class="media-right media-middle">
-<i class=" icon-exchange-arrows fa-3x"></i>
-</div>
-</div>
-</div>
-<div class="col-flex box-height">
-<div class="media">
-<div class="media-body">
-<h5 class="media-heading">Bonus earned This week</h5>
-<strong>0.00 EUR </strong>
-<h5 class="media-heading">Total Bonus Earned</h5>
-<strong>0.00 EUR</strong>
-</div>
-<div class="media-right media-middle">
-<i class="icon-euro fa-3x"></i>
-</div>
-</div>
-<span class="read-more-icon" data-tooltip data-tooltip-class="tooltip-info" title="Bonus earned this week - last received bonus.
-                    Total bonus earned - total bonus accumulated since your first bonus payment.
-                ">?</span>
-</div>
-<div class="col-flex box-height">
-<a href="/backend/tools-and-analysis/tools">
-<div class="media">
-<div class="media-body media-middle clearfix">
-<h5 class="media-heading pull-left">Account splits</h5>
-<strong class="pull-right">0 of 0</strong>
-</div>
-<div class="media-right media-middle">
-<i class="icon-split fa-lg icon-fix">
-<span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span>
-</i>
-</div>
-</div>
-<div class="media no-margin">
-<div class="media-body media-middle clearfix">
-<h5 class="media-heading pull-left">
-Super splits </h5>
-<strong class="pull-right">0 of 0</strong>
-</div>
-<div class="media-right media-middle">
-<i class="icon-super-split fa-2x icon-fix">
-<span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span>
-</i>
-</div>
-</div>
-<a href="/backend/tools-and-analysis/tools" class="read-more-icon calculator"><i class="fa fa-calculator"></i></a>
-</a>
-</div>
-<div class="col-flex box-height">
-<a href="/backend/tools-and-analysis/analysis">
-<div class="media">
-<div class="media-body media-middle">
-<div class="row vertical-center ">
-<h5 class="media-heading col-xs-7">SPLIT BAROMETER</h5>
-<strong class="col-xs-5">0%</strong>
-</div>
-<div class="row vertical-center ">
-<h5 class="media-heading col-xs-7">DIFFICULTY INCREASE BAROMETER</h5>
-<strong class="col-xs-5">58%</strong>
-</div>
-</div>
-<div class="media-right media-middle">
-<i class=" icon-speed-meter fa-3x"></i>
-</div>
-</div>
-</a>
-</div>
-<div class="col-flex box-height">
-<div class="media">
-<div class="media-body media-middle">
-<div class="row">
-<h5 class="media-heading col-xs-4 text-uppercase">TOKEN</h5>
-<strong class="col-xs-8">0.14 EUR</strong>
-</div>
-<div class="row">
-<h5 class="media-heading col-xs-4 text-uppercase">ONE</h5>
-<strong class="col-xs-8">9.85 EUR</strong>
-</div>
-</div>
-<div class="media-right media-middle">
-<i class="icon-line fa-3x"></i>
-</div>
-</div>
-</div>
-<div class="col-flex box-height">
-<div class="media">
-<div class="media-body media-middle">
-<h5 class="media-heading">difficulty</h5>
-<strong>99.00 TKN</strong>
-</div>
-<div class="media-right media-middle">
-<i class=" icon-inclined-picker fa-3x"></i>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-             
-             <h5><p class="title">Selecciona tu Paquete</p></h5>
+             <h5><p class="title uppercase" >Selecciona tu Paquete</p></h5>
              <div class="row fix-box-height package-box-fix mt-30">
             <div class="col-lg-6">
                 <div class="row">
@@ -453,90 +351,6 @@ Super splits </h5>
                 </div>
             </div>
         </div>
-             
-             
-             
-<!--    <div class="row fix-box-height package-box-fix mt-30">
-            <div class="col-lg-14">
-                <div class="well media media-badges box box-height">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="media-body media-middle">
-                            <p class="title">BASIC:</p>
-                            <input  type="radio" name="kit" id="kit" value="2"/> $100.00
-                            </div>
-                        <hr class="style-1 display-custom hidden-sm">
-                        <div class="media-right media-middle">
-                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/basic.jpg';?>" alt="total ganado" height="70"/>
-                        </div>
-                        </div>
-                        <div class="col-sm-3 border">
-                            <div class="media-body media-middle">
-                            <p class="title">PLATINIUM:</p>
-                            <input  type="radio" name="kit" id="kit" value="2"/> $250.00
-                            </div>
-                        <hr class="style-1 display-custom hidden-sm">
-                        <div class="media-right media-middle">
-                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/platinium.jpg';?>" alt="total ganado" height="70"/>
-                        </div>
-                        </div>
-                        <div class="col-sm-2 border">
-                            <div class="media-body media-middle">
-                            <p class="title">GOLD:</p>
-                            <input  type="radio" name="kit" id="kit" value="2"/> $500.00
-                            </div>
-                        <hr class="style-1 display-custom hidden-sm">
-                        <div class="media-right media-middle">
-                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/gold.jpg';?>" alt="total ganado" height="70"/>
-                        </div>
-                        </div>
-                        <div class="col-sm-2 border">
-                            <div class="media-body media-middle">
-                            <p class="title">VIP:</p>
-                            <input  type="radio" name="kit" id="kit" value="2"/> $1 000.00
-                            </div>
-                        <hr class="style-1 display-custom hidden-sm">
-                        <div class="media-right media-middle">
-                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/vip.jpg';?>" alt="total ganado" height="70"/>
-                        </div>
-                        </div>
-                        <div class="col-sm-2 border">
-                            <div class="media-body media-middle">
-                            <p class="title">ELITE:</p>
-                            <input  type="radio" name="kit" id="kit" value="2"/> $5 000.00
-                            </div>
-                        <hr class="style-1 display-custom hidden-sm">
-                        <div class="media-right media-middle">
-                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/elite.jpg';?>" alt="total ganado" height="70"/>
-                        </div>
-                        </div>
-                        <div class="col-sm-2 border">
-                            <div class="media-body media-middle">
-                            <p class="title">PLATINIUM:</p>
-                            <input  type="radio" name="kit" id="kit" value="2"/> $250.00
-                            </div>
-                        <hr class="style-1 display-custom hidden-sm">
-                        <div class="media-right media-middle">
-                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/basic.jpg';?>" alt="total ganado" height="70"/>
-                        </div>
-                        </div>
-                        <div class="col-sm-2 border">
-                            <div class="media-body media-middle">
-                            <p class="title">PLATINIUM:</p>
-                            <input  type="radio" name="kit" id="kit" value="2"/> $250.00
-                            </div>
-                        <hr class="style-1 display-custom hidden-sm">
-                        <div class="media-right media-middle">
-                            <img class="img-circle" src="<?php echo site_url().'static/backoffice/images/basic.jpg';?>" alt="total ganado" height="70"/>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>   -->
-             
-             
-                  
 
              <?php if($obj_customer->active == 0){ ?>
                     <div class="row">
@@ -658,6 +472,8 @@ Based on statistics for the last calendar month. </p>
              
              
              
+         </div>
+         </div>
          </div>
       </section>
 <script src="<?php echo site_url().'static/backoffice/js/home.js';?>"></script>
