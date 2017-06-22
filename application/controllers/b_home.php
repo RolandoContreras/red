@@ -118,9 +118,6 @@ class B_home extends CI_Controller {
     
     public function make_pedido(){
 
-        echo "hola";
-        die();
-        
              if($this->input->is_ajax_request()){   
                 //SELECT ID FROM CUSTOMER
                $franchise_id = $this->input->post('franchise_id');

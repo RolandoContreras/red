@@ -390,7 +390,7 @@
             </div>
         </div>
 
-             <?php //if($obj_customer->active == 0){ ?>
+             <?php if($obj_customer->active == 0){ ?>
                     <div class="row">
                         <div role="alert" class="alert alert-info">
                                     <strong>Seleccion tu paquete:</strong>
@@ -435,7 +435,7 @@
                                 </div>
                           </div>
                      </div>
-            <?php // } ?>
+            <?php  } ?>
              
               <br/><br/>
             <div class="row">
@@ -473,20 +473,18 @@
                             <div class="col-md-8 col-xs-12 pull-left">
                                 <div class="media-body media-middle">
                                     <div class="mb-20">
-                                    <p class="uppercase ralewaybold22px lh-1 mb-15">MODO DE ACTIVACIÓN</p>
-                                    <p class="">
-                                    <span class="uppercase arial14px bold">x</span> <span class="uppercase ariabold22px">1299</span>
-                                    </p>
+                                    <p class="uppercase ralewaybold22px lh-1 mb-15">CUENTA SELECCIONADA</p>
                                     </div>
-                                <p class="small">Based on statistics for the last calendar month. </p>
+                                    <img src="<?php echo site_url()."static/backoffice/images/default.jpg";?>" alt="Paquete Membershi´p" height="120" class="img-circle text-center"/>
+                                <!--<p class="small">Based on statistics for the last calendar month. </p>-->
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-9 col-sm-8 pull-right box-height-byrow border">
-                        <p class="uppercase ralewaybold22px">NOTA IMPORTANTE</p>
+                        <p class="uppercase ralewaybold22px"><?php echo replace_vocales_voculeshtml("MODO DE ACTIVACIÓN");?></p>
                         <div class="small">
-                            <p>Estimado usuario tiene 15 días para hacer la activación de la cuenta que ha seleccionado, de lo contrario será tomada por el sistema y no tendrá opción a recuperarla. Datos para la activación: <br><strong>1)	Activación a través de bitcoin:</strong> enviar el monto del paquete seleccionado a la siguiente dirección de bitcoin: 188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN  enviando un mensaje de correo electrónico a accounts@yourbitshares.com indicando el usuario, el paquete pagado y el comprobante o el código de identificación de la transacción realizada.<br><strong>2)	Activación a través de cuenta bancaria (solo Perú):</strong> enviar monto del paquete seleccionado a la siguiente cuenta bancaria; Cuenta Corriente Dólares Interbank, 009-300132221-0 luego enviar un mensaje al correo electrónico accounts@yourbitshares.com indicando el usuario, el paquete pagado y el comprobante del envio.
+                            <p>Estimado usuario tiene 15 días para hacer la activación de la cuenta que ha seleccionado, de lo contrario será tomada por el sistema y no tendrá opción a recuperarla. Datos para la activación: <br><strong>1)	Activación a través de bitcoin:</strong> enviar el monto de la cuenta seleccionada a la siguiente dirección de bitcoin: 188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN  enviando un mensaje de correo electrónico a accounts@yourbitshares.com indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada.<br><strong>2)	Activación a través de cuenta bancaria (solo Perú):</strong> enviar monto de la cuenta seleccionada a la siguiente cuenta bancaria; Cuenta Corriente Dólares Interbank, 009-300132221-0 luego enviar un mensaje al correo electrónico accounts@yourbitshares.com indicando el usuario, el tipo de cuenta pagada y el comprobante del envio.
 <br>La activación será hará efectiva en 24 horas luego de hacer el envió del correo a BITSHARE. 
 </p>
                         </div>
@@ -495,11 +493,43 @@
             </div>
         </div>
     </div>
-             
-             
-             
+              
+    <div class="row fix-box-height-byrow">
+        <div class="col-lg-12">
+            <div class="well media media-badges">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-4 box-height-byrow text-center-md flex-items-center mb-xs-30">
+                        <div class="row">
+                            <div class="col-md-4 col-xs-12 pull-right-lg text-center">
+                                <div class="media-middle">
+                                <div class="status-frozen"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-xs-12 pull-left">
+                                <div class="media-body media-middle">
+                                    <div class="mb-20">
+                                    </div>
+                                    <img src="<?php echo site_url()."static/backoffice/images/share.png";?>" alt="Compartir" height="140" class="text-center"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-sm-8 pull-right box-height-byrow border">
+                        <p class="uppercase ralewaybold22px"><?php echo replace_vocales_voculeshtml("LINK DE PATROCINIO");?></p>
+                        <div class="small">
+                            <p>Estimado usuario tiene 15 días para hacer la activación de la cuenta que ha seleccionado, de lo contrario será tomada por el sistema y no tendrá opción a recuperarla. Datos para la activación: <br><strong>1)	Activación a través de bitcoin:</strong> enviar el monto de la cuenta seleccionada a la siguiente dirección de bitcoin: 188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN  enviando un mensaje de correo electrónico a accounts@yourbitshares.com indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada.<br><strong>2)	Activación a través de cuenta bancaria (solo Perú):</strong> enviar monto de la cuenta seleccionada a la siguiente cuenta bancaria; Cuenta Corriente Dólares Interbank, 009-300132221-0 luego enviar un mensaje al correo electrónico accounts@yourbitshares.com indicando el usuario, el tipo de cuenta pagada y el comprobante del envio.
+<br>La activación será hará efectiva en 24 horas luego de hacer el envió del correo a BITSHARE. 
+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>          
+              
+              
          </div>
          </div>
-         </div>
+         
       </section>
 <script src="<?php echo site_url().'static/backoffice/js/home.js';?>"></script>
