@@ -12,7 +12,7 @@
                     <div class="navbar navbar-static navbar_as_heading">
                             <div class="navbar-inner">
                                     <div class="container" style="width: auto;">
-                                            <a class="brand">LISTADO DE  USUARIOS PARA RECARGA</a>
+                                            <a class="brand">LISTADO DE RECARGAS</a>
                                             <button class="btn btn-small" onclick="nueva_recargar();">Nueva Recarga</button>
                                     </div>
                             </div>
@@ -24,11 +24,12 @@
                    <table id="table" class="display" cellspacing="0" width="100%">
                         <thead>
                             <tr>
+                                <th>FECHA ORDEN</th>  
+                                <th>FECHA</th>  
                                 <th>USERNAME</th>
                                 <th>NOMBRE</th>
                                 <th>DNI</th>
                                 <th>MONTO</th>
-                                <th>FECHA</th>  
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
                             </tr>
@@ -36,11 +37,12 @@
                         <tbody>
                             <tr>
                             <?php foreach ($obj_commissions as $value): ?>
+                                <td align="center"><?php echo $value->date;?></td>
+                                <td align="center"><?php echo formato_fecha($value->date);?></td>
                                 <td align="center"><b><?php echo $value->username;?></b></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center"><?php echo $value->dni;?></td>
                                 <td align="center"><a class="pending"><?php echo $value->amount;?></a></td>
-                                <td align="center"><?php echo formato_fecha($value->date);?></td>
                                 <td align="center">
                                     <?php if ($value->status_value == 0) {
                                         $valor = "No Recargado";
