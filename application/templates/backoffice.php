@@ -230,31 +230,6 @@
                                             <!-- User picture-->
                                                 <div class="user-block-picture">
                                                 <div class="user-block-status">
-                                                    <?php
-//                                                        switch ($_SESSION['customer']['franchise_id']) {
-//                                                                case 2:
-//                                                                    $images = "basic.jpg";
-//                                                                    break;
-//                                                                case 3:
-//                                                                    $images = "platinium.jpg";
-//                                                                    break;
-//                                                                case 4:
-//                                                                    $images = "gold.jpg";
-//                                                                    break;
-//                                                                case 5:
-//                                                                    $images = "vip.jpg";
-//                                                                    break;
-//                                                                case 6:
-//                                                                    $images = "default.jpg";
-//                                                                    break;
-//                                                                case 7:
-//                                                                    $images = "elite.jpg";
-//                                                                    break;
-//                                                                case 8:
-//                                                                    $images = "start.jpg";
-//                                                                    break;
-//                                                            }
-                                                        ?>
                                                 <a><img src="<?php echo site_url().'static/backoffice/images/logo.png';?>" alt="logo" class="img-thumbnail img-circle"></a>
                                                 <?php if($_SESSION['customer']['active'] == 1){ ?>
                                                     <div class="circle circle-success circle-lg"></div>
@@ -290,6 +265,7 @@
                                     $style_comisiones = "";
                                     $style_information_center = "";
                                     $style_mired = "";
+                                    $style_holding = "";
                                     $style_billetera = "";
                                     $style_pagos = "";
                                     if(isset($url[1])){
@@ -315,6 +291,9 @@
                                                         break;
                                                     case "billetera":
                                                         $style_billetera = "active";
+                                                        break;
+                                                    case "holding":
+                                                        $style_holding = "active";
                                                         break;
                                                     case "pagos":
                                                         $style_pagos = "active";
@@ -389,8 +368,14 @@
 
 	                  		<li class="<?php echo $style_billetera;?>">
                                             <a href="<?php echo site_url().'backoffice/billetera';?>" title="Billetera">
-                                                <em class="icon-wallet fa-lg"></em>
+                                                <em class="icon-wallet fa-lg"></em> fa-external-link-square
                                                 <span>Mi Billetera</span>
+                                            </a>
+	                  		</li>
+                                        <li class="<?php echo $style_holding;?>">
+                                            <a href="#" title="Holding">
+                                                <em class="fa fa-link fa-lg"></em>
+                                                <span>Enlaces de Holding</span>
                                             </a>
 	                  		</li>
 	                  		<li class="<?php echo $style_pagos;?>">

@@ -1,4 +1,32 @@
 <section>
+    <?php
+        switch ($_SESSION['customer']['franchise_id']) {
+                case 1:
+                    $images = "membership.jpg";
+                    break;
+                case 2:
+                    $images = "basic.jpg";
+                    break;
+                case 3:
+                    $images = "platinium.jpg";
+                    break;
+                case 4:
+                    $images = "gold.jpg";
+                    break;
+                case 5:
+                    $images = "vip.jpg";
+                    break;
+                case 6:
+                    $images = "default.jpg";
+                    break;
+                case 7:
+                    $images = "elite.jpg";
+                    break;
+                case 8:
+                    $images = "start.jpg";
+                    break;
+            }
+        ?>
     <div class="section-heading row">
         <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
             <h1 class="title text-uppercase">Tablero</h1>
@@ -83,15 +111,34 @@
                             </div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/wallet-icon.png';?>" alt="total ganado" height="90"/>
+                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/wallet-icon.png';?>" alt="Balance Por Disponer" height="90"/>
                         </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
                  
-            <div class="col-lg-4">
+            <div class="col-lg-6">
+                <div class="well media media-badges box box-height">
+                <div class="row">
+                    <div class="col-sm-8">
+                        
+                            <div class="media-body media-middle">
+                            <h5 class="media-heading text-uppercase title-small">TOTAL PAGADO</h5>
+                            <p class="title"><?php if(count($obj_total)>0){echo "$".$obj_total;}else{echo "$0.00";}?></p>
+                            <div class="mt-10"></div>
+                            </div>
+                        <div class="media-right media-middle">
+                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/money.png';?>" alt="total ganado" height="90"/>
+                        </div>
+                        </div>
+                    
+                </div>
+                    </div>
+            </div>
+            
+            
+<!--            <div class="col-lg-6">
                 <div class="well media media-badges box box-height">
                     <div class="row">
                         <div class="col-sm-6">
@@ -99,20 +146,19 @@
                             <p class="title">PAQUETE ACTUAL:</p>
                             <h5 class="media-heading text-uppercase pt-10 title-small">Membership</h5>
                             </div>
-                        <hr class="style-1 display-custom hidden-sm">
                         </div>
+                        <div class="media-right media-middle">
+                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/wallet-icon.png';?>" alt="Balance Por Disponer" height="90"/>
+                        </div>
+                        
                         <div class="col-xs-4  col-md-4 border">
-<!--                            <p class="title pb-10">YOU NEED:</p>
-                            <p class="title-small">7 000 BV points on Left & Right </p>-->
                             <div class="media-right media-middle">
-                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/logo.png';?>" alt="total ganado" height="90"/>
+                                <img src='<?php echo site_url()."static/backoffice/images/$images";?>' alt="Paquete Actual" height="90" class="img-thumbnail img-circle" style="max-width: 47% !important;"/>
                             </div>
-                            
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         
              
              
@@ -344,8 +390,73 @@ Super splits </h5>
 </div>
 </div>
              
-             <h4><p class="title">Selecciona tu Paquete</p></h4>
-    <div class="row fix-box-height package-box-fix mt-30">
+             <h5><p class="title">Selecciona tu Paquete</p></h5>
+             <div class="row fix-box-height package-box-fix mt-30">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="well media media-badges box-height box">
+                            <div class="media-body media-middle">
+                            <h5 class="media-heading text-uppercase title-small">TOTAL PAGADO</h5>
+                            <p class="title"><?php if(count($obj_total)>0){echo "$".$obj_total;}else{echo "$0.00";}?></p>
+                            <div class="mt-10"></div>
+                            </div>
+                        <div class="media-right media-middle">
+                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/money.png';?>" alt="total ganado" height="90"/>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="well media media-badges box-height box">
+                            <div class="media-body media-middle">
+                            <h5 class="media-heading text-uppercase title-small">BALANCE POR DISPONER</h5>
+                            <p class="title"><?php if(count($obj_balance)>0){echo "$".$obj_balance;}else{echo "$0.00";}?></p>
+                            <div class="mt-10">
+                            </div>
+                            </div>
+                        <div class="media-right media-middle">
+                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/wallet-icon.png';?>" alt="total ganado" height="90"/>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+                  <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="well media media-badges box-height box">
+                            <div class="media-body media-middle">
+                            <h5 class="media-heading text-uppercase title-small">TOTAL PAGADO</h5>
+                            <p class="title"><?php if(count($obj_total)>0){echo "$".$obj_total;}else{echo "$0.00";}?></p>
+                            <div class="mt-10"></div>
+                            </div>
+                        <div class="media-right media-middle">
+                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/money.png';?>" alt="total ganado" height="90"/>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="well media media-badges box-height box">
+                            <div class="media-body media-middle">
+                            <h5 class="media-heading text-uppercase title-small">BALANCE POR DISPONER</h5>
+                            <p class="title"><?php if(count($obj_balance)>0){echo "$".$obj_balance;}else{echo "$0.00";}?></p>
+                            <div class="mt-10">
+                            </div>
+                            </div>
+                        <div class="media-right media-middle">
+                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/wallet-icon.png';?>" alt="total ganado" height="90"/>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+             
+             
+             
+<!--    <div class="row fix-box-height package-box-fix mt-30">
             <div class="col-lg-14">
                 <div class="well media media-badges box box-height">
                     <div class="row">
@@ -422,7 +533,7 @@ Super splits </h5>
                     </div>
                 </div>
             </div>
-        </div>   
+        </div>   -->
              
              
                   
