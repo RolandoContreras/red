@@ -1,9 +1,4 @@
 <section>
-    <?php 
-    
-//    var_dump($obj_customer);
-//    die();
-    ?>
     <?php
         switch ($_SESSION['customer']['franchise_id']) {
                 case 2:
@@ -101,39 +96,39 @@
             <div class="panel panel-default panel-tab-box">
                 <div class="panel-body">
                     <div class="flex-container fix-box-height">
-                        <a href="/backend/my-accounts/onecoin-account" class="col-flex box-height">
+                        <a href="" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
                                     <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Calificación Binario")?></h5>
                                 <strong><?php if($obj_customer->calification==1){echo "Calificado";}else{echo "No Calificado";}?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-onecoin fa-3x"></i>
+                                    <i class="fa fa-tree fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
                         
-                        <a href="/backend/my-accounts/tokens-account" class="col-flex box-height">
+                        <a href="" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
                                     <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Puntos de Calificación Izquierda");?></h5>
                                 <strong><?php if($obj_customer->point_calification_left==0){echo "Calificado";}else{echo "No Calificado";}?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-money-3 fa-3x"></i>
+                                    <i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                                   
                                 </div>
                             </div>
-                        <span class="read-more-icon" data-tooltip data-tooltip-class="tooltip-info" title="The tokens account shows the total amount of promotional tokens available for mining.">?</span>
                         </a>
                             
-                        <a href="/backend/my-accounts/cash-account" class="col-flex box-height">
+                        <a href="" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
                                 <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Puntos de Calificación Derecha");?></h5>
                                 <strong><?php if($obj_customer->point_calification_rigth==0){echo "Calificado";}else{echo "No Calificado";}?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-euro fa-3x"></i>
+                                    <i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         <span class="read-more-icon" data-tooltip data-tooltip-class="tooltip-info" title="The cash account shows the available amount funds for purchases or withdrawals.">?</span>
@@ -146,7 +141,7 @@
                                 <strong><?php echo $points_left." "."PTS";?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-clock fa-3x"></i>
+                                    <i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         <span class="read-more-icon" data-tooltip data-tooltip-class="tooltip-info" title="The trading account shows how much funds you have to use for trading purchases.">?</span>
@@ -159,7 +154,8 @@
                                 <strong><?php echo $points_rigth." "."PTS";?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-money fa-3x"></i>
+                                    <i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i>
+                                    
                                 </div>
                             </div>
                         </a>
@@ -171,7 +167,7 @@
                                 <strong><?php echo $obj_customer->direct;?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-money fa-3x"></i>
+                                    <i class="fa fa-users fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
@@ -183,7 +179,7 @@
                                 <strong><?php echo $max_gain." "."USD";?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-money fa-3x"></i>
+                                <i class="fa fa-usd fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
@@ -195,7 +191,7 @@
                                     <strong><?php echo formato_fecha_barras($obj_customer->date_start);?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-money fa-3x"></i>
+                                   <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
@@ -207,7 +203,7 @@
                                 <strong><?php echo formato_fecha_barras($obj_customer->date_end);?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-money fa-3x"></i>
+                                    <i class="fa fa-stop fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
@@ -219,7 +215,7 @@
                                 <strong><?php echo formato_fecha_barras($obj_customer->created_at);?></strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-money fa-3x"></i>
+                                    <i class="fa fa-area-chart fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
@@ -231,7 +227,7 @@
                                 <strong>5,000 PTS</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-money fa-3x"></i>
+                                    <i class="fa fa-suitcase fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
@@ -243,7 +239,7 @@
                                 <strong>01/06/17</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-money fa-3x"></i>
+                                    <i class="fa fa-plane fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
@@ -255,7 +251,7 @@
                                 <strong>30/06/17</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-money fa-3x"></i>
+                                    <i class="fa fa-pause fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>    
@@ -267,7 +263,7 @@
                                 <strong>Pronto</strong>
                                 </div>
                                 <div class="media-right media-middle">
-                                <i class="icon-money fa-3x"></i>
+                                   <i class="fa fa-line-chart fa-3x" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>  
