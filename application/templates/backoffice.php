@@ -11,7 +11,7 @@
     <meta name="robots" CONTENT="noindex, nofollow" />
     <title>BITSHARE</title>
        <!-- FONT AWESOME-->
-       <link rel="stylesheet" href="<?php // echo site_url().'static/backoffice/css/font-awesome.min.css';?>">
+       <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/font-awesome.min.css';?>">
        <!-- SIMPLE LINE ICONS-->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
        <!--CSS ONE-->
@@ -199,12 +199,15 @@
                                 </a>
                             </li>-->
 	                  	<!-- START Alert menu-->
-                            <li class="dropdown dropdown-list">
+                                
+                                <!--//MENSAJE-->
+                                
+<!--                            <li class="dropdown dropdown-list">
                                 <a href="#">
                                     <em class="icon-envelope-open"></em>
                                     <div class="count-mensajes label label-danger"></div>
                                 </a>
-                            </li>
+                            </li>-->
                             <li>
                                 <a href="<?php echo site_url().'Login/logout';?>" title="Salir">
                                    <em class="icon-logout"></em>
