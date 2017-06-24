@@ -34,19 +34,11 @@
                 <?php echo replace_vocales_voculeshtml("Número de Ruc: 20601940087");?>
               </p><br> </div>
             <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
-              <p style="color: rgb(254,182,69);"><strong><?php echo replace_vocales_voculeshtml("¿Quiénes son los dueños de BITSHARE?");?></strong></p>
+              <p style="color: rgb(254,182,69);"><strong><?php echo replace_vocales_voculeshtml("¿Quién es el dueño de BITSHARE?");?></strong></p>
               <p>
-                <?php echo replace_vocales_voculeshtml("- Son 3 dueños quienes están al frente de compañía BITSHARE:");?>
+                <?php echo replace_vocales_voculeshtml("Dr. Carlos Gómez: Presidente de la cooperativa del EMPRENDIMIENTO MINERO con más de 150,000 mineros independientes asociados. Empresario de minas de oro, plata, cobre y ex magistrado en el Perú.");?>
               </p>
-              <p>
-                <?php echo replace_vocales_voculeshtml("1) Dr. Carlos Gómez: Presidente de la cooperativa de los más importante mineros independiente del Perú. Empresario de minas de oro, plata y cobre.");?>
-              </p>
-              <p>
-                <?php echo replace_vocales_voculeshtml("2) Silene Carrasco: Networker de la industria por más de 10 años de experiencia con grandes resultados y a la vez ejecutiva de administración y negocios internacionales.");?>
-              </p>
-              <p>
-                <?php echo replace_vocales_voculeshtml("3) Rolando Contreras: Experto en informática y desarrollador de software para grandes empresas a nivel internacional y a la vez networker de la industria MLM.");?>
-              </p><br> </div>
+              <br></div>
             <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
               <p style="color: rgb(254,182,69);"><strong><?php echo replace_vocales_voculeshtml("¿Por qué BITSHARE no es una pirámide financiera o un esquema ponzi?");?></strong></p>
               <p>
@@ -127,7 +119,7 @@
                 <?php echo replace_vocales_voculeshtml("188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN");?>
               </p>
               <p>
-                <?php echo replace_vocales_voculeshtml("Una vez realizado el envío, enviar el comprobante de transferencia en imagen perfectamente legible al correo payments@yourbitshares.com especificando el login de registro que desea activar.");?>
+                <?php echo replace_vocales_voculeshtml("Una vez realizado el envío, enviar el comprobante de transferencia en imagen perfectamente legible al correo accounts@yourbitshares.com especificando el login de registro que desea activar.");?>
               </p><br> </div>
             <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
               <p style="color: rgb(254,182,69);"><strong><?php echo replace_vocales_voculeshtml("¿Cuánto es lo máximo que puedo ganar por cuenta?");?></strong></p>
