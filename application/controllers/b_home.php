@@ -123,13 +123,9 @@ class B_home extends CI_Controller {
                $franchise_id = $this->input->post('franchise_id');
                $customer_id = $_SESSION['customer']['customer_id'];;
                
-               
-                var_dump($customer_id);
-                die();
-               
-               if($kit != "" && $customer_id != ""){
+               if($franchise_id != "" && $customer_id != ""){
                             //UPDATE DATA EN CUSTOMER TABLE
-                            if($kit == 2){
+                            if($franchise_id == 2){
                                 //CHANGE TO BASIC
                                  $data = array(
                                             
@@ -140,7 +136,7 @@ class B_home extends CI_Controller {
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
                                         $this->obj_customer->update($customer_id,$data);
-                            }elseif($kit == 3){
+                            }elseif($franchise_id == 3){
                                 //CHANGE TO PLATINIUM
                                  $data = array(
                                             
@@ -151,7 +147,7 @@ class B_home extends CI_Controller {
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
                                         $this->obj_customer->update($customer_id,$data);
-                            }elseif($kit == 4){
+                            }elseif($franchise_id == 4){
                                 //CHANGE TO GOLD
                                  $data = array(
                                             
@@ -162,7 +158,7 @@ class B_home extends CI_Controller {
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
                                         $this->obj_customer->update($customer_id,$data);
-                            }elseif($kit == 5){
+                            }elseif($franchise_id == 5){
                                 //CHANGE TO VIP
                                  $data = array(
                                             
@@ -173,8 +169,8 @@ class B_home extends CI_Controller {
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
                                         $this->obj_customer->update($customer_id,$data);
-                            }elseif($kit == 7){
-                                //CHANGE TO VIP
+                            }elseif($franchise_id == 7){
+                                //CHANGE TO ELITE
                                  $data = array(
                                             
                                             'franchise_id' => 7,
@@ -184,29 +180,43 @@ class B_home extends CI_Controller {
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
                                         $this->obj_customer->update($customer_id,$data);
-                            }elseif($kit == 8){
-                                //CHANGE TO VIP
+                            }elseif($franchise_id == 9){
+                                //CHANGE TO SUPER VIP
                                  $data = array(
                                             
-                                            'franchise_id' => 8,
-                                            'point_calification_left' => 50,
-                                            'point_calification_rigth' => 50,
+                                            'franchise_id' => 9,
+                                            'point_calification_left' => 12000,
+                                            'point_calification_rigth' => 12000,
                                             'updated_by' => $customer_id,
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 
                                         $this->obj_customer->update($customer_id,$data);
                             }
-
-                                $data['message'] = "true";
-                                $data['print'] = "La contraseña de cambio con exito";
-                                $data['url'] = "misdatos";
+                            
+                            //alter session franchise_id
+                            
+//                            $data_customer_session['customer_id'] = $obj_customer->customer_id;
+//                $data_customer_session['name'] = $obj_customer->first_name.' '.$obj_customer->last_name;
+//                $data_customer_session['username'] = $obj_customer->username;
+//                $data_customer_session['franchise_id'] = $obj_customer->franchise_id;
+//                $data_customer_session['email'] = $obj_customer->email;
+//                $data_customer_session['country'] = $obj_customer->country;
+//                $data_customer_session['active'] = $obj_customer->active;
+//                $data_customer_session['logged_customer'] = "TRUE";
+//                $data_customer_session['status'] = $obj_customer->status_value;
+//                $_SESSION['customer'] = $data_customer_session;
+                            
+                            
+                            
+                            
+                             $data['message'] = "true";
                              echo json_encode($data); 
+                             exit();
                     
                }else{
-                     $data['message'] = "false";
-                     $data['print'] = "Las contraseñas no deben estan en blanco";
-                     $data['url'] = "misdatos";
+                     $data['message'] = "true";
                      echo json_encode($data); 
+                     exit();
                }
             }
         }
