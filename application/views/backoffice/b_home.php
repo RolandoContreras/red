@@ -518,7 +518,33 @@
                 </div>
             </div>
         </div>
-       </div>  
+       </div>
+    
+    <div class="row fix-box-height-byrow">
+        <div class="col-lg-12">
+            <div class="well media media-badges">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-4 box-height-byrow text-center-md flex-items-center mb-xs-30">
+                        <div class="row">
+                            <div class="col-md-8 col-xs-12 pull-left">
+                                <div class="media-body media-middle">
+                                    <div class="mb-20">
+                                    </div>
+                                    <img src="<?php echo site_url()."static/assets/news/images/inversiones.jpg";?>" alt="inversiones" height="140" width="180" class="text-center"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-sm-8 pull-right box-height-byrow border">
+                        <p class="uppercase ralewaybold22px"><?php echo replace_vocales_voculeshtml("SEMINARIO DE INVERSIONES - CRIPTOMONEDA Y ORO");?></p>
+                        <div class="small">
+                            <p>Ven y participa de este seminario con todos tus invitados y capacitate en inversiones.<br><b>Fecha:</b> Viernes 30 de Junio<br><b>Hora:</b> Pre registro 6:00 pm , Inicio 6:15 pm<br><b>Lugar:</b> Hotel Brinatia Miraflores, Calle Independencia #211 - Miraflores<br><b>Referencia:</b> a 3 cuadras del parque kenedy, paralela a la av. pardo.<br><b>¡TE ESPERAMOS!</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
               
     </div>
     </div>
