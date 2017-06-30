@@ -383,49 +383,42 @@
 </div>    
     
  <div id="password" class="tabcontent">
-    
-     
-     
-     
-     <div class="row ml-custom">
-<div class="col-xs-12">
-<div class="row">
-<div class="col-md-9">
-<div class="row">
-<div class="col-md-6">
-<div class="panel panel-default panel-form">
-<div class="panel-heading text-uppercase">
-Change password </div>
-<div class="panel-body">
-<div class="">
-<form name="change_password" method="post">
-<div class="row">
-<div class="col-sm-12">
-<div class="form-group"><label class="control-label required" for="change_password_old_password">Current password</label><input type="password" id="change_password_old_password" name="change_password[old_password]" required="required" class="form-control form-control"/></div>
-</div>
-</div>
-<hr class="style-1">
-<div class="row">
-<div class="col-sm-12">
-<div class="form-group"><label class="control-label required" for="change_password_new_password_first">New password</label><input type="password" id="change_password_new_password_first" name="change_password[new_password][first]" required="required" class="form-control form-control"/></div>
-</div>
-</div>
-<hr class="style-1">
-<div class="row">
-<div class="col-sm-12">
-<div class="form-group"><label class="control-label required" for="change_password_new_password_second">New password again</label><input type="password" id="change_password_new_password_second" name="change_password[new_password][second]" required="required" class="form-control form-control"/></div>
-</div>
-</div>
-<hr class="style-1">
-<div class="row">
-<div class="col-md-12">
-<button type="submit" id="change_password_save" name="change_password[save]" class="btn-success break-word btn-block btn">Change password</button>
-</div>
-</div>
-<input type="hidden" id="change_password__token" name="change_password[_token]" value="A7wxJ_wtWO1VwcyueWZWL2_p-dPFLDrTwpcTmZg1k2s"/></form>
-</div>
-</div>
-</div>
+    <div class="row ml-custom">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default panel-form">
+                                <div class="panel-heading text-uppercase"><?php echo replace_vocales_voculeshtml("Cambiar Contraseña");?></div>
+                                <div class="panel-body">
+                                    <div class="">
+                                        <div class="row">
+                                        <div class="col-sm-12">
+                                        <div class="form-group"><label class="control-label required"><?php echo replace_vocales_voculeshtml("Contraseña Actual");?></label><input type="password" required="required" class="form-control form-control"/></div>
+                                        </div>
+                                        </div>
+                                    <hr class="style-1">
+                                        <div class="row">
+                                        <div class="col-sm-12">
+                                        <div class="form-group"><label class="control-label required"><?php echo replace_vocales_voculeshtml("Nueva Contraseña");?></label><input type="password"   required="required" class="form-control form-control"/></div>
+                                        </div>
+                                        </div>
+                                    <hr class="style-1">
+                                        <div class="row">
+                                        <div class="col-sm-12">
+                                        <div class="form-group"><label class="control-label required"><?php echo replace_vocales_voculeshtml("Repita Nueva Contraseña");?></label><input type="password" equired="required" class="form-control form-control"/></div>
+                                        </div>
+                                        </div>
+                                    <hr class="style-1">
+                                        <div class="row">
+                                            <div class="mb-10">
+                                                <a class="btn btn-primary btn-block" disabled="disabled" onclick="alter_password();" style="word-wrap: break-word; white-space: normal !important;"><?php echo replace_vocales_voculeshtml("Cambiar Contraseña");?></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 </div>
 <div class="col-md-6">
     <div class="panel panel-default panel-form">
@@ -454,14 +447,10 @@ Change password </div>
             <hr class="style-1">
                 <div class="row">
                 <div class="col-md-12 mb-10">
-                <button type="submit" id="change_transaction_password_save" name="" class="btn-success btn-block break-word btn">Cambiar Contraseña de transacción</button>
+                    <button type="submit" disabled="disabled" id="" name="" class="btn-success btn-block break-word btn">Cambiar Contraseña de transacción</button>
                 </div>
-<!--                <div class="col-md-12">
-                <button type="button" data-reset-button="true" class="btn-danger break-word btn btn-block">
-                Reset transaction Password </button>
-                </div>-->
                 </div>
-            <input type="hidden" id="change_transaction_password__token" name="change_transaction_password[_token]" value="gBGXMzY3LmVB8W6PvKfta3nVJhzzZdFrJapYoJHdiZQ"/></form>
+            
             </div>
         </div>
     </div>
@@ -471,15 +460,14 @@ Change password </div>
 </div>
 </div>
 </div>
-    
   </div> 
 
 <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>    
-    
-                                    <button type="button" onclick="alter_password();" class="btn btn-sm btn-primary bg-danger-dark"><?php echo replace_vocales_voculeshtml("Guardar Contraseña");?></button>
-               
-      </section>
 <script src="<?php echo site_url().'static/backoffice/js/data.js';?>"></script>
+<!--<button type="button" onclick="alter_password();" class="btn btn-sm btn-primary bg-danger-dark"><?php echo replace_vocales_voculeshtml("Guardar Contraseña");?></button>-->
+               
+</section>
+
 <script>
 function openCity(evt, cityName) {
     // Declare all variables
