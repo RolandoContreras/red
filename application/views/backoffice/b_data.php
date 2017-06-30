@@ -7,249 +7,477 @@
             <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
         </div>
     </div> 
+    <!--SPINNER-->
+        <div id="spinner"></div>
+    <!--END SPINNER-->
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'principal')"><?php echo replace_vocales_voculeshtml("INFORMACIÓN PRINCIPAL");?></button>
+        <button class="tablinks" onclick="openCity(event, 'payments')"><?php echo replace_vocales_voculeshtml("INFORMACIÓN DE PAGO");?></button>
+        <button class="tablinks" onclick="openCity(event, 'password')">CONTRASEÑAS</button>
+    </div>
     
-   
+                             
     
-         <!-- Page content-->
-         <!--<div class="content-wrapper">-->
-            <div class="row">
-               <div class="col-lg-12">
-                  <div class="panel panel-info">
-                      <div class="panel-heading text-uppercase">usuario: <b><?php echo $obj_customer->username;?></b></div>
-                     <div class="panel-body">
-                         
-                         
-                         <div class="tab">
-                                <button class="tablinks" onclick="openCity(event, 'London')">INFORMACION PRINCIPAL</button>
-                                <button class="tablinks" onclick="openCity(event, 'Tokyo')">INFORMACION BANCARIA</button>
-                                <button class="tablinks" onclick="openCity(event, 'Paris')">CONTRASEÑAS</button>
-                                
-                              </div>
-
-                              <div id="London" class="tabcontent">
-                                <h3>London</h3>
-                                <p>London is the capital city of England.</p>
-                              </div>
-
-                              <div id="Paris" class="tabcontent">
-                                <h3>Paris</h3>
-                                <p>Paris is the capital of France.</p> 
-                              </div>
-
-                              <div id="Tokyo" class="tabcontent">
-                                <h3>Tokyo</h3>
-                                <p>Tokyo is the capital of Japan.</p>
-                              </div> 
-                        <form name="FormEditarAfiliados" class="form-horizontal" data-parsley-validate>
-                           <div class="col-lg-4">
-                              <legend>Datos Principales</legend>
-                              <div class="form-group">
-                                 <label for="usuario" class="col-lg-3 control-label">Usuario</label>
-                                 <div class="col-lg-9">
-                                     <input type="text" class="form-control" id="usuario" disabled value="<?php echo $obj_customer->username;?>">
-                                     <input type="hidden" id="customer_id" name="customer_id" disabled value="<?php echo $obj_customer->customer_id;?>">
-                                 </div>
-                              </div>
-
-                              <div class="form-group">
-                                 <label for="email" class="col-lg-3 control-label">Email</label>
-                                 <div class="col-lg-9">
-                                    <input type="email" class="form-control" disabled required data-parsley-type="email" value="<?php echo $obj_customer->email;?>" />
-                                 </div>
-                              </div>
-
-                              <div class="form-group">
-                                  <label for="identidad" class="col-lg-3 control-label"><?php echo replace_vocales_voculeshtml("DNI  # de identificación")?></label>
-                                 <div class="col-lg-9">
-                                     <input type="text" class="form-control" disabled required value="<?php echo $obj_customer->dni;?>">
-                                 </div>
-                              </div>
-                              <div class="form-group">
-                                 <label for="fecha_nacimiento" class="col-lg-3 control-label">Fecha de Nacimiento</label>
-                                 <div class="col-lg-9">
-                                     <input type="text" class="form-control" id="fecha_registro" disabled value="<?php echo formato_fecha_barras($obj_customer->birth_date);?>">
-                                 </div>
-                              </div>  
-                              <div class="form-group">
-                                 <label for="fecha_registro" class="col-lg-3 control-label">Fecha de Registro</label>
-                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="fecha_registro" disabled value="<?php echo $obj_customer->created_at;?>">
-                                 </div>
-                              </div>
-
-                            <div class="form-group">
-                                 <label for="inlineradio1" class="col-sm-3 control-label">Lado Binario</label>
-                                    <div class="col-sm-9">
-                                        <label class="radio-inline">
-                                            <input id="inlineradio2" type="radio" name="pierna" id="pierna" value="1" 
-                                                <?php if($obj_customer->position_temporal == 1){ ?> checked="" <?php } ?> >
-                                           <span class=""></span>P. Izquierda</label>
-                                        <label class="radio-inline">
-                                            <input id="inlineradio3" type="radio" name="pierna" id="pierna" value="2"
-                                                <?php if($obj_customer->position_temporal == 2){ ?> checked="" <?php } ?> >
-                                           <span class=""></span>P. Derecha</label>
+<div id="principal" class="tabcontent" style="display:block !important">
+    <div class="row ml-custom">
+        <div class="col-xs-12">
+            <div class="profile-section">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default panel-form" data-behaviour="container">
+                            <div class="panel-heading text-uppercase clearfix">
+                                <h3 class="title"><?php echo replace_vocales_voculeshtml("Información Principal");?>
+                                    <button type="button" onclick="alter_movil();" class="btn btn-primary btn-sm edit-btn"><i class="fa fa-floppy-o" aria-hidden="true"></i>Guardar</button>
+                                </h3>
+                            </div>
+                            <hr class="style-2"/>
+                            <div class="panel-body">         
+                    <div data-behaviour="content">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <div class="media-left"><i class="fa fa-male fa-4x" aria-hidden="true"></i></div>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="user-name-info"><span><?php echo $obj_customer->username;?></span></div>
+                                                <p class="form-control">
+                                                    <span><?php echo $obj_customer->first_name." ".$obj_customer->last_name;?></span>
+                                                </p>
+                                        </div>
                                     </div>
-                              </div>
-                              
-                              <div class="form-group">
-                                 <div class="col-lg-offset-3 col-lg-9">
-                                     <br><br>
-                                    <input type="hidden" name="GuardarEdicionAfiliado" value="">
-                                    <button type="button" onclick="alter_data();" class="btn btn-sm btn-primary bg-danger-dark">Guardar Cambios</button>
-                                 </div>
-                              </div> 
-                              <br>
-                               <div class="form-group" id="messages">
-                              </div>                          
-
-                              
-                              
-                               <legend>Datos Bancarios</legend>
-                               <div class="form-group">
-                                 <label for="Nombre del Banco" class="col-lg-3 control-label">Nombre del Banco</label>
-                                 <div class="col-lg-9">
-                                     <input type="text" id="bank_name" class="form-control" placeholder="Nombre de Banco" value="<?php echo $obj_customer->bank_name;?>">
-                                 </div>
-                              </div>
-                               <div class="form-group">
-                                 <label for="Nombre del Títular" class="col-lg-3 control-label">Nombre del Títular</label>
-                                 <div class="col-lg-9">
-                                     <input type="text" id="titular_name" class="form-control" placeholder="Títular" value="<?php echo $obj_customer->titular_name;?>">
-                                 </div>
-                              </div>
-                              <div class="form-group">
-                                 <label for="N° Cuenta Bancaria" class="col-lg-3 control-label">N° Cuenta Bancaria</label>
-                                 <div class="col-lg-9">
-                                     <textarea class="form-control" id="bank_account" name="address" placeholder="<?php echo replace_vocales_voculeshtml("Especificar Soles y/o Dólares");?>"><?php echo $obj_customer->bank_account;?></textarea>
-                                 </div>
-                              </div>
-                               <div class="form-group">
-                                 <div class="col-lg-offset-3 col-lg-9">
-                                     <br><br>
-                                    <input type="hidden" name="GuardarDatos" value="">
-                                    <button type="button" onclick="save_bank();" class="btn btn-sm btn-primary bg-danger-dark"><?php echo replace_vocales_voculeshtml("Guardar Datos Bancarios");?></button>
-                                 </div>
-                              </div> 
-                               <div class="form-group" id="messages_bank">
-                              </div>
-                           </div>
-
-                            
-                           <div class="col-lg-4">
-                               <legend><?php echo replace_vocales_voculeshtml("Información Personal");?></legend>
-                              <div class="form-group">
-                                 <label for="nombre" class="col-lg-3 control-label">Nombre</label>
-                                 <div class="col-lg-9">
-                                     <input type="text" class="form-control" disabled placeholder="Nombre" value="<?php echo $obj_customer->first_name;?>">
-                                 </div>
-                              </div>
-                              <div class="form-group">
-                                 <label for="apellido" class="col-lg-3 control-label">Apellido</label>
-                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" disabled placeholder="Apellido" value="<?php echo $obj_customer->last_name;?>">
-                                 </div>
-                              </div>
-
-                              <div class="form-group">
-                                  <label for="direccion" class="col-lg-3 control-label"><?php echo replace_vocales_voculeshtml("Dirección");?></label>
-                                 <div class="col-lg-9">
-                                    <textarea class="form-control" name="address" id="address" placeholder="Direccion"><?php echo $obj_customer->address;?></textarea>
-                                 </div>
-                              </div>
-
-                              <div class="form-group">
-                                 <label for="telefono" class="col-lg-3 control-label">Telefono</label>
-                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Telefono" value="<?php echo $obj_customer->phone;?>">
-                                 </div>
-                              </div>
-                                       
-                              <div class="form-group">
-                                 <label for="pais" class="col-lg-3 control-label">Pais</label>
-                                 <div class="col-lg-9">
-                                    <select id="pais" class="form-control" disabled>
-                                       <option value="<?php echo $obj_customer->phone;?>"><?php echo $obj_customer->pais;?></option>
-                                    </select>
-                                 </div>
-                              </div>
-
-                              <div class="form-group">
-                                 <label for="estado_pais" class="col-lg-3 control-label">Estado</label>
-                                 <div class="col-lg-9 ajax_estado_pais">
-                                    <select id="estado_pais" class="form-control" disabled>
-                                       <option value="<?php echo $obj_customer->phone;?>"><?php echo $obj_customer->region;?></option>
-                                    </select>
                                 </div>
-                              </div>
-
-                              <div class="form-group">
-                                 <label for="ciudad" class="col-lg-3 control-label">Ciudad</label>
-                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" disabled placeholder="Ciudad" value="<?php echo $obj_customer->city;?>">
-                                 </div>
-                              </div>
-                               <div class="form-group" id="messages">
-                              </div>
-                           </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 border-left">
+                                <div class="form-group">
+                                    <div class="media">
+                                        <div class="media-left"><i class="icon-envelope fa-3x"></i></div>
+                                        <div class="media-body">
+                                            <div class="control-label"><?php echo replace_vocales_voculeshtml("Dirección e-mail");?></div>
+                                            <p class="form-control">
+                                                <span><?php echo $obj_customer->email;?></span>
+                                                <input type="hidden" id="customer_id" name="customer_id" disabled value="<?php echo $obj_customer->customer_id;?>">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             
-                            
-                            
-                            <div class="col-lg-4">
-                               <legend>Datos de Bitcoin</legend>
-                              <div class="form-group">
-                                  <label for="telefono" class="col-lg-3 control-label"><?php echo replace_vocales_voculeshtml("Dirección de BTC");?></label>
-                                 <div class="col-lg-9">
-                                     <input type="text" class="form-control" name="btc" id="btc" placeholder="Direccion de BTC" value="<?php echo $obj_customer->btc_address;?>">
-                                 </div>
-                              </div>
-                               <div class="form-group">
-                                 <div class="col-lg-offset-3 col-lg-9">
-                                     <br><br>
-                                    <input type="hidden" name="GuardarEdicionAfiliado" value="">
-                                    <button type="button" onclick="alter_btc();" class="btn btn-sm btn-primary bg-danger-dark"><?php echo replace_vocales_voculeshtml("Guardar Dirección");?></button>
-                                 </div>
-                              </div> 
-                               <div class="form-group" id="messages">
-                              </div>
-                           </div>
-                            
-                            <div class="col-lg-4">
-                                <legend><?php echo replace_vocales_voculeshtml("Cambiar Contraseñas");?></legend>
-                              <div class="form-group">
-                                  <label for="telefono" class="col-lg-3 control-label"><?php echo replace_vocales_voculeshtml("Nueva Contraseña");?></label>
-                                 <div class="col-lg-9">
-                                     <input type="password" class="form-control" name="password" id="password" placeholder="Nueva Contraseña" value="">
-                                 </div>
-                                  
-                              </div>
-                               
-                              <div class="form-group">
-                                  <label for="telefono" class="col-lg-3 control-label"><?php echo replace_vocales_voculeshtml("Repetir Nueva Contraseña");?></label>
-                                 <div class="col-lg-9">
-                                     <input type="password" class="form-control" name="password2" id="password2" placeholder="Repetir Nueva Contraseña" value="">
-                                 </div>
-                                  
-                              </div>
-                               
-                               <div class="form-group">
-                                 <div class="col-lg-offset-3 col-lg-9">
-                                     <br><br>
-                                    <button type="button" onclick="alter_password();" class="btn btn-sm btn-primary bg-danger-dark"><?php echo replace_vocales_voculeshtml("Guardar Contraseña");?></button>
-                                 </div>
-                              </div> 
-                               <div class="form-group" id="messages">
-                              </div>
-                           </div>
-                            
-                           <div class="clearfix"></div>
-                        </form>
-                     </div>
-                     
-                  </div>
-               </div>
-               
+                            <div class="col-md-3 col-sm-6 border-left">
+                                <div class="form-group">
+                                    <div class="media">
+                                        <div class="media-left"><i class="icon-phone fa-3x"></i></div>
+                                        <div class="media-body">
+                                            <div class="control-label"><?php echo replace_vocales_voculeshtml("Teléfono Movil:");?></div>
+                                            <p class="form-control">
+                                                <input id="phone" type="text" class="form-control" value="<?php echo $obj_customer->phone;?>">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                </div>
             </div>
-         <!--</div>-->
+        </div>
+    </div>
+             <!--<div id="spinner"></div>-->
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default panel-form" data-behaviour="container">
+                        <div class="panel-heading text-uppercase clearfix">
+                            <h3 class="title"><?php echo replace_vocales_voculeshtml("Activación");?></h3>
+                        </div>
+                       <hr class="style-2"/> 
+                        <div class="panel-body">
+                                <div data-behaviour="content">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label"><?php echo "Fecha de Inicio :";?></label>
+                                                <p class="form-control"><span><?php echo formato_fecha_barras("$obj_customer->date_start");?></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label"><?php echo "Fecha de Termino :";?></label>
+                                                <p class="form-control">
+                                                    <span><?php echo formato_fecha_barras("$obj_customer->date_end");?></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default panel-form" data-behaviour="container">
+                        <div class="panel-heading text-uppercase clearfix">
+                            <h3 class="title">
+                                <?php echo replace_vocales_voculeshtml("Dirección");?>
+                                <button type="button" onclick="alter_address();" class="btn btn-primary btn-sm edit-btn" ><i class="fa fa-floppy-o" aria-hidden="true"></i>Guardar</button>
+                            </h3>
+                        </div>
+                       <hr class="style-2"/> 
+                        <div class="panel-body">
+                                <div data-behaviour="content">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label"><?php echo replace_vocales_voculeshtml("País :");?></label>
+                                                <p class="form-control"><span><?php echo $obj_customer->pais;?></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label"><?php echo replace_vocales_voculeshtml("Región :");?></label>
+                                                <p class="form-control">
+                                                    <span><?php echo $obj_customer->region;?></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <hr class="style-1"/>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label"><?php echo replace_vocales_voculeshtml("Dirección :");?></label>
+                                                <p class="form-control">
+                                                    <input type="text" id="address" class="form-control" value="<?php echo $obj_customer->address;?>">
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label"><?php echo replace_vocales_voculeshtml("Ciudad :");?></label>
+                                                <p class="form-control"><span data-target="postcode"><?php echo $obj_customer->city;?></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default panel-form fix-info">
+                            <div class="panel-heading text-uppercase">
+                                <div class="clearfix">
+                                    <h3 class="title"><?php echo replace_vocales_voculeshtml("Información de Nacimiento");?></h3>
+                                </div>
+                            </div>
+                            <hr class="style-1"/>
+                            <div class="panel-body">
+                                <div data-behaviour="content">
+                                    <div class="form-group has-feedback">
+                                        <label class="control-label">Fecha de Nacimiento :</label>
+                                        <p class="form-control"><span><?php echo formato_fecha_barras($obj_customer->birth_date);?></span></p>
+                                    </div>
+                                <hr class="style-1"/>
+                                    <div class="form-group has-feedback">
+                                        <label class="control-label"><?php echo replace_vocales_voculeshtml("País de Nacimiento");?></label>
+                                        <p class="form-control"><span><?php echo $obj_customer->pais;?></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <div class="col-md-6">
+                    <div class="panel panel-default panel-form fix-info">
+                        <div class="panel-heading text-uppercase">
+                            <div class="clearfix">
+                                <h3 class="title"><?php echo replace_vocales_voculeshtml("Identificación");?></h3>
+                            </div>
+                        </div>
+                        <hr class="style-1"/>
+                        <div class="panel-body">
+                            <div data-behaviour="content">
+                                <div class="form-group has-feedback" data-behaviour="element-content">
+                                    <label class="control-label">
+                                    Pasaporte / Numero de Identidad:
+                                    </label>
+                                    <p class="form-control relative">
+                                    <span><?php echo $obj_customer->dni;?></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default panel-form">
+                        <div class="panel-heading text-uppercase relative">
+                            <h3 class="title">Patrocinador:</h3>
+                        </div>
+                        <hr class="style-2"/>
+                        <div class="panel-body">
+                            <div class="user-name-info"><?php echo $obj_sponsor->username;?>
+                                <hr class="style-1"/>
+                                    <p class="form-control">
+                                        <?php echo $obj_sponsor->first_name." ".$obj_sponsor->last_name;?>
+                                    </p>
+                            </div>
+                        </div>
+                        
+                </div>
+                
+            <div class="col-md-12">
+                <div class="panel panel-default panel-form">
+                    <div class="panel-heading text-uppercase relative">
+                        <h3 class="title">Link de Patrocinio</h3>
+                    </div>
+                    <hr class="style-2"/>
+                    <div class="panel-body">
+                        <div>
+                        <input type="text" class="form-control" data-select value="<?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?>" readonly="readonly">
+                        <hr class="style-2"/>
+                            <div class="form-group mb-10">
+                                <div class="mb-10">
+                                <a href="<?php echo site_url().'registro/afiliate/'.str_to_minuscula($obj_customer->username);?>" target="_blank" class="btn btn-primary btn-block" style="word-wrap: break-word; white-space: normal !important;">
+                                Ckick aquí para agregar a un nuevo miembro</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="panel panel-default panel-form">
+                    <div class="panel-heading text-uppercase relative">
+                    <h3 class="title">Nuevos miembros</h3>
+                        <span class="invite-link-more-info" data-tooltip data-tooltip-class="tooltip-info" title="Antes de crear una cuenta es fundamental indicar la posición para crear una organización de acuerdo a su requerimiento.">
+                            <i class="fa fa-lg fa-question-circle"></i>
+                        </span>
+                    </div>
+                    
+                    <div class="panel-body">
+                        <div class="">
+                        <form name="new_member_placement" method="post">
+                            <div id="new_member_placement">
+                                <div class="form-group">
+                                    <div id="new_member_placement_side" data-submit-on-change="data-submit-on-change">
+                                        <div class="radio"> 
+                                            <label class="required"><input type="radio" name="pierna" required="required" <?php if($obj_customer->position_temporal == 1){ ?> checked="" <?php } ?> value="1"/> Izquierda</label>
+                                        </div>
+                                        <div class="radio"> 
+                                            <label class="required"><input type="radio" name="pierna" required="required" <?php if($obj_customer->position_temporal == 2){ ?> checked="" <?php } ?> value="2" /> Derecha</label>
+                                        </div>
+                                    </div>
+                                     <div class="form-group mb-10">
+                                        <div class="mb-10">
+                                            <a class="btn btn-primary btn-block" onclick="alter_position();" style="word-wrap: break-word; white-space: normal !important;"><?php echo replace_vocales_voculeshtml("Guardar Posición");?></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>  
+<!--BANK DETAILS-->    
+<div id="payments" class="tabcontent">
+    <div class="row ml-custom">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default panel-form">
+                        <div class="panel-heading text-uppercase">
+                            <div class="clearfix">
+                            <h3 class="title">Datos Bancarios</h3>
+                                <div class="pull-right">
+                                        <button type="button" onclick="alter_bank();" class="btn btn-primary btn-sm edit-btn">
+                                    <i class="fa fa-floppy-o" aria-hidden="true"></i>Guardar </button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="style-2"/>
+                        <div class="panel-body">
+                            <div data-behaviour="content">
+                                <div class="form-group">
+                                <label class="control-label">Nombre del Títular de la Cuenta:</label>
+                                    <p class="form-control">
+                                        <input type="text" id="titular_name" class="form-control" value="<?php echo $obj_customer->titular_name;?>">
+                                    </p>
+                                </div>
+                            <hr class="style-1"/>
+                                <div class="form-group">
+                                <label class="control-label">Nombre del Banco:</label>
+                                <p class="form-control">
+                                    <input type="text" id="bank_name" class="form-control" disabled="disabled" value="<?php echo replace_vocales_voculeshtml("Banco Internacional del Perú - INTERBANK");?>">
+                                </p>
+                                </div>
+                            <hr class="style-1"/>
+                                <div class="form-group">
+                                <label class="control-label">País del Banco:</label>
+                                <p class="form-control">
+                                    <span data-target="country"><?php echo replace_vocales_voculeshtml("Perú");?></span>
+                                </p>
+                                </div>
+                            <hr class="style-2"/>
+                                <div class="form-group">
+                                    <label class="control-label"><?php echo replace_vocales_voculeshtml("Número de Cuenta Dolares:");?></label>
+                                    <div class="form-group">
+                                        <p class="form-control">
+                                            <input type="text" id="bank_account" class="form-control" value="<?php echo $obj_customer->bank_account;?>">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="panel panel-default panel-form" data-behaviour="container">
+                        <div class="panel-heading text-uppercase clearfix">
+                            <h3 class="title pull-left"><?php echo replace_vocales_voculeshtml("Billetera de bitcoin");?></h3>
+                            <div class="pull-right">
+                                <button type="button" onclick="alter_btc();" class="btn btn-primary btn-sm edit-btn">
+                                    <i class="fa fa-floppy-o" aria-hidden="true"></i>Guardar </button>
+                                </div>                            
+                        </div>
+                        <hr class="style-2"/>
+                        <div class="panel-body">
+                            <div data-behaviour="content">
+                                <div class="form-group">
+                                    <label class="control-label"><?php echo replace_vocales_voculeshtml("Dirección de bitcoin: ");?></label>
+                                    <div class="form-group">
+                                        <p class="form-control">
+                                            <input type="text" id="btc" class="form-control" value="<?php echo $obj_customer->btc_address;?>">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>    
+    
+ <div id="password" class="tabcontent">
+    
+     
+     
+     
+     <div class="row ml-custom">
+<div class="col-xs-12">
+<div class="row">
+<div class="col-md-9">
+<div class="row">
+<div class="col-md-6">
+<div class="panel panel-default panel-form">
+<div class="panel-heading text-uppercase">
+Change password </div>
+<div class="panel-body">
+<div class="">
+<form name="change_password" method="post">
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group"><label class="control-label required" for="change_password_old_password">Current password</label><input type="password" id="change_password_old_password" name="change_password[old_password]" required="required" class="form-control form-control"/></div>
+</div>
+</div>
+<hr class="style-1">
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group"><label class="control-label required" for="change_password_new_password_first">New password</label><input type="password" id="change_password_new_password_first" name="change_password[new_password][first]" required="required" class="form-control form-control"/></div>
+</div>
+</div>
+<hr class="style-1">
+<div class="row">
+<div class="col-sm-12">
+<div class="form-group"><label class="control-label required" for="change_password_new_password_second">New password again</label><input type="password" id="change_password_new_password_second" name="change_password[new_password][second]" required="required" class="form-control form-control"/></div>
+</div>
+</div>
+<hr class="style-1">
+<div class="row">
+<div class="col-md-12">
+<button type="submit" id="change_password_save" name="change_password[save]" class="btn-success break-word btn-block btn">Change password</button>
+</div>
+</div>
+<input type="hidden" id="change_password__token" name="change_password[_token]" value="A7wxJ_wtWO1VwcyueWZWL2_p-dPFLDrTwpcTmZg1k2s"/></form>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+    <div class="panel panel-default panel-form">
+        <div class="panel-heading text-uppercase">Change transaction password </div>
+        <div class="panel-body">
+            <div class="">
+            <form name="change_transaction_password" method="post">
+            <div class="alert hidden" data-reset-password="true"></div>
+                <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group"><label class="control-label required">Current transaction password</label><input type="password" disabled="disable" id="" name="" required="required" class="form-control form-control"/></div>
+                </div>
+                </div>
+            <hr class="style-1">
+                <div class="row">
+                <div class="col-sm-12">
+                <div class="form-group"><label class="control-label required" for="">New transaction password</label><input type="password" disabled="disable" id="" name="change_transaction_password[new_transaction_password][first]" required="required" class="form-control form-control"/></div>
+                </div>
+                </div>
+            <hr class="style-1">
+                <div class="row">
+                <div class="col-sm-12">
+                <div class="form-group"><label class="control-label required" for="">New transaction password again</label><input type="password" disabled="disable" id="" name="change_transaction_password[new_transaction_password][second]" required="required" class="form-control form-control"/></div>
+                </div>
+                </div>
+            <hr class="style-1">
+                <div class="row">
+                <div class="col-md-12 mb-10">
+                <button type="submit" id="change_transaction_password_save" name="" class="btn-success btn-block break-word btn">Cambiar Contraseña de transacción</button>
+                </div>
+<!--                <div class="col-md-12">
+                <button type="button" data-reset-button="true" class="btn-danger break-word btn btn-block">
+                Reset transaction Password </button>
+                </div>-->
+                </div>
+            <input type="hidden" id="change_transaction_password__token" name="change_transaction_password[_token]" value="gBGXMzY3LmVB8W6PvKfta3nVJhzzZdFrJapYoJHdiZQ"/></form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+    
+  </div> 
+
+<script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>    
+    
+                                    <button type="button" onclick="alter_password();" class="btn btn-sm btn-primary bg-danger-dark"><?php echo replace_vocales_voculeshtml("Guardar Contraseña");?></button>
+               
       </section>
 <script src="<?php echo site_url().'static/backoffice/js/data.js';?>"></script>
 <script>

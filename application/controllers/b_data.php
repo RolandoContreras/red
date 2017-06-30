@@ -44,6 +44,8 @@ class B_data extends CI_Controller {
                                     customer.dni,
                                     customer.birth_date,
                                     customer.address,
+                                    customer.date_start,
+                                    customer.date_end,
                                     customer.btc_address,
                                     customer.city,
                                     customer.bank_name,
@@ -58,8 +60,15 @@ class B_data extends CI_Controller {
                                         'regiones, customer.region = regiones.id')
                                         );
 
-         $obj_customer = $this->obj_customer->get_search_row($params);      
+         $obj_customer = $this->obj_customer->get_search_row($params);  
          
+         //GET SPONSOR
+         $parent = $obj_customer->parents_id;
+         $params = array(
+                        "select" =>"customer.username,customer.first_name,customer.last_name",
+                        "where" => "customer.customer_id = $parent");
+
+         $obj_sponsor = $this->obj_customer->get_search_row($params);
          
           //GET PRICE BTC
             $params_price_btc = array(
@@ -72,22 +81,58 @@ class B_data extends CI_Controller {
          //SEND DATA TO VIEW  
          $this->tmp_backoffice->set("price_btc",$price_btc);
          $this->tmp_backoffice->set("obj_customer",$obj_customer);
+         $this->tmp_backoffice->set("obj_sponsor",$obj_sponsor);
          $this->tmp_backoffice->render("backoffice/b_data");
 	}
         
-        public function update_data(){
+        public function update_movil(){
             
-         if($this->input->is_ajax_request()){   
-            //SELECT ID FROM CUSTOMER
-           $address = $this->input->post('address');
+         if($this->input->is_ajax_request()){  
+           //SELECT ID FROM CUSTOMER
            $phone = $this->input->post('phone');
-           $pierna = $this->input->post('pierna');
+           $customer_id = $this->input->post('customer_id');
+
+           //UPDATE DATA EN CUSTOMER TABLE
+           $data = array(
+                           'phone' => $phone,
+                           'updated_by' => $customer_id,
+                           'updated_at' => date("Y-m-d H:i:s")
+                       ); 
+                       $this->obj_customer->update($customer_id,$data);
+
+                $data['message'] = "true";
+            echo json_encode($data); 
+            }
+        }
+    
+        public function udpate_address(){
+            
+         if($this->input->is_ajax_request()){  
+           //SELECT ID FROM CUSTOMER
+           $address = $this->input->post('address');
            $customer_id = $this->input->post('customer_id');
 
            //UPDATE DATA EN CUSTOMER TABLE
            $data = array(
                            'address' => $address,
-                           'phone' => $phone,
+                           'updated_by' => $customer_id,
+                           'updated_at' => date("Y-m-d H:i:s")
+                       ); 
+                       $this->obj_customer->update($customer_id,$data);
+
+                $data['message'] = "true";
+            echo json_encode($data); 
+            }
+        }
+    
+        public function update_position(){
+         if($this->input->is_ajax_request()){   
+            //SELECT ID FROM CUSTOMER
+           $pierna = $this->input->post('pierna');
+           $customer_id = $this->input->post('customer_id');
+           
+           //UPDATE DATA EN CUSTOMER TABLE
+           $data = array(
                            'position_temporal' => $pierna,
                            'updated_by' => $customer_id,
                            'updated_at' => date("Y-m-d H:i:s")
@@ -95,12 +140,10 @@ class B_data extends CI_Controller {
                        $this->obj_customer->update($customer_id,$data);
 
                 $data['message'] = "true";
-                $data['print'] = "Datos cambiados con éxito";
-                $data['url'] = "misdatos";
             echo json_encode($data); 
             }
-    }
-    
+        }
+        
         public function update_password(){
 
              if($this->input->is_ajax_request()){   
@@ -176,15 +219,14 @@ class B_data extends CI_Controller {
                 $bool = mail("$email",$titulo,$mensaje,$headers);
                        
                 $data['message'] = "true";
-                $data['print'] = "Datos cambiados con éxito";
-                $data['url'] = "misdatos";
             echo json_encode($data); 
             }
     }
     
-    public function update_bank(){
+        public function update_bank(){
             
-         if($this->input->is_ajax_request()){   
+         if($this->input->is_ajax_request()){ 
+             
             //SELECT ID FROM CUSTOMER
            $customer_id = $this->input->post('customer_id');
            $bank_name = $this->input->post('bank_name');
@@ -204,8 +246,6 @@ class B_data extends CI_Controller {
            }
                        
             $data['message'] = "true";
-            $data['print'] = "Datos guardos con éxito";
-            $data['url'] = "misdatos";
             echo json_encode($data); 
             }
     }
