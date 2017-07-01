@@ -130,6 +130,15 @@ $route['dashboard/activaciones/active'] = "d_activate/active";
 $route['dashboard/pagos_diarios'] = "d_pay_dialy";
 $route['dashboard/pagos_diarios/hacer_pago'] = "d_pay_dialy/hacer_pago";
 
+$route['dashboard/reportes/asociados'] = "d_asociate";
+
+$route['dashboard/reportes/cuentas'] = "d_cuentas";
+
+$route['dashboard/reportes/pagos'] = "d_pagos";
+
+$route['reportes/activaciones/active_customer'] = "d_activate/active_customer";
+$route['reportes/activaciones/active'] = "d_activate/active";
+
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

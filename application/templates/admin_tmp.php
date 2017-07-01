@@ -155,20 +155,26 @@
                         
                             <div class="accordion-group">
                                 <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#recursos">
-                                    Recursos
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#reportes">
+                                    Reportes
                                     </a>
                                 </div>
-                                <div id="recursos" class="accordion-body collapse">
+                                <div id="reportes" class="accordion-body collapse">
                                     <div class="accordion-inner">
                                         <ul class="nav nav-list">
                                             <li>
-                                                <a href="<?php echo site_url()."dashboard/people";?>"><i class="icon-large icon-th"></i>Personas</a>
+                                                <a href="<?php echo site_url()."dashboard/reportes/asociados";?>"><i class="icon-large icon-th"></i>Asociados</a>
                                             </li>
                                             <li>                                        
-                                                <a href="<?php echo site_url()."dashboard/roles";?>"><i class="icon-large icon-th"></i>Roles</a>
+                                                <a href="<?php echo site_url()."dashboard/reportes/cuentas";?>"><i class="icon-large icon-th"></i>Cuentas</a>
                                             </li>
-                                        </ul>                                     
+                                            <li>                                        
+                                                <a href="<?php echo site_url()."dashboard/reportes/pagos";?>"><i class="icon-large icon-th"></i>Pagos</a>
+                                            </li>
+                                            <li>                                        
+                                                <a><i class="icon-large icon-th"></i>Proyecciones</a>
+                                            </li>
+                                            </ul>                                     
                                     </div>
                                 </div>
                             </div>
