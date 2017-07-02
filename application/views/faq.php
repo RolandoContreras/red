@@ -33,12 +33,12 @@
               <p>
                 <?php echo replace_vocales_voculeshtml("Número de Ruc: 20601940087");?>
               </p><br> </div>
-            <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
+<!--            <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
               <p style="color: rgb(254,182,69);"><strong><?php echo replace_vocales_voculeshtml("¿Quién es el dueño de BITSHARE?");?></strong></p>
               <p>
                 <?php echo replace_vocales_voculeshtml("Dr. Carlos Gómez: Presidente de la cooperativa del EMPRENDIMIENTO MINERO con más de 150,000 mineros independientes asociados. Empresario de minas de oro, plata, cobre y ex magistrado en el Perú.");?>
               </p>
-              <br></div>
+              <br></div>-->
             <div class="col-md-12 text-left" style="padding-bottom: 10px !important;">
               <p style="color: rgb(254,182,69);"><strong><?php echo replace_vocales_voculeshtml("¿Por qué BITSHARE no es una pirámide financiera o un esquema ponzi?");?></strong></p>
               <p>
