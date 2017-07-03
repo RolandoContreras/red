@@ -21,3 +21,31 @@ function guardar_btc(comment_id){
         }
     ]);
 }
+function message_public(){
+    
+    var title = $("#title").val();
+    var message_content = $("#message_content").val();
+    
+     bootbox.dialog("Confirma que desea enviar el mensaje?", [        
+        { "label" : "Cancelar"},
+        {
+            "label" : "Confirmar",
+            "class" : "btn-success",
+            "callback": function() {
+               $.ajax({
+                   type: "post",
+                   url: site+"dashboard/panel/masive_messages",
+                   dataType: "json",
+                   data: {title : title,
+                          message_content : message_content},
+                   success:function(data){                             
+                        bootbox.dialog("El mensaje se envio correctamente", [        
+                            { "label" : "Cancelar"}
+                        ]);
+//                   location.reload();
+                   }         
+           });
+            }
+        }
+    ]);
+}

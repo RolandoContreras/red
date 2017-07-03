@@ -86,13 +86,13 @@
                             <div class="navbar navbar-static navbar_as_heading">
                                     <div class="navbar-inner">
                                             <div class="container" style="width: auto;">
-                                                    <a class="brand">Mensaje Masivo Rápido</a>
+                                                    <a class="brand">Mensaje Correo Masivo</a>
                                             </div>
                                     </div>
                             </div>
 
                             <div class="btn-group" data-toggle="buttons-radio" style="margin-bottom:20px;">
-                                    <button class="btn btn-duadua active">Article</button>
+                                    <button class="btn btn-duadua active">Red</button>
                                     <button class="btn btn-duadua">Page</button>
                                     <button class="btn btn-duadua">Report</button>
                                     <button class="btn btn-duadua">Event</button>
@@ -103,20 +103,19 @@
                             <div class="control-group">
                             <div class="controls">
                             <div class="input-prepend">
-                            <span class="add-on"><i class="icon-edit"></i></span><input class="input-large" size="16" type="text" id="input01" style="width:88%;" placeholder="Title" />
+                            <span class="add-on"><i class="icon-edit"></i></span>
+                            <input class="input-large" size="16" type="text" id="title"  name="title" style="width:88%;" placeholder="<?php echo replace_vocales_voculeshtml("Título");?>" />
                             </div>
                             </div>
                             </div>
 
                             <div class="control-group">
                             <div class="controls">
-                            <textarea class="input-large" id="textarea_normal" rows="5" style="width:97%;height:180px;" placeholder="Content"></textarea>
+                            <textarea class="input-large" id="message_content" name="message_content" rows="5" style="width:97%;height:180px;" placeholder="Content"></textarea>
                             </div>
                             </div>
 
-                            <button type="submit" class="btn btn-info">Save as draft</button>
-                            <button type="submit" class="btn btn-primary">Publish</button>
-                            <button class="btn btn-warning">Reset</button>
+                            <a onclick="message_public();" class="btn btn-primary">Publicar</a>
 
                             </fieldset>
                             </form>

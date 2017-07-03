@@ -93,6 +93,7 @@ $route['backoffice/pagos/validar'] = "b_pay/validate";
 $route['dashboard'] = "dashboard";
 $route['dashboard/panel'] = "panel";
 $route['dashboard/panel/guardar_btc'] = "panel/guardar_btc";
+$route['dashboard/panel/masive_messages'] = "panel/masive_messages";
 
 
 $route['dashboard/clientes'] = "d_customer";

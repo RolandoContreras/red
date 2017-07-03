@@ -83,7 +83,51 @@ class Panel extends CI_Controller{
                     echo json_encode($data);            
         exit();
             }
-    } 
+    }
+    
+    public function masive_messages(){
+        //ACTIVE CUSTOMER
+        if($this->input->is_ajax_request()){  
+                //GET TITLE AND MESSAGES
+                $title = $this->input->post("title");
+                $message_content = $this->input->post("message_content");
+                
+                $params = array(
+                        "select" =>"customer.email",
+                        "where" => "customer.active = 1"
+               
+               );
+                //GET DATA FROM CUSTOMER
+                $obj_customer= $this->obj_customer->search($params);
+                
+                $array_email = "";
+                    foreach ($obj_customer as $key => $value) {
+                        $array_email .= "$value->email".",";
+                    }
+                
+                
+                // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
+                $mensaje = wordwrap("$message_content", 70, "\n", true);
+                //Titulo
+                $titulo = "$title";
+                //cabecera
+                $headers = "MIME-Version: 1.0\r\n"; 
+                $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                //dirección del remitente 
+                $headers .= "From: Bitshare - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
+                //Enviamos el mensaje a tu_dirección_email 
+//                $bool = mail("$array_email",$titulo,$mensaje,$headers);
+                $bool = mail("software.contreras@gmail.com",$titulo,$mensaje,$headers);
+                
+//                if($bool){
+//                    echo "Mensaje enviado";
+//                }else{
+//                    echo "Mensaje no enviado";
+//                }
+                echo json_encode($data);            
+        exit();
+            }
+    }
      
     public function get_session(){          
         if (isset($_SESSION['usercms'])){
