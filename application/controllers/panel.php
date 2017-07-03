@@ -105,26 +105,28 @@ class Panel extends CI_Controller{
                         $array_email .= "$value->email".",";
                     }
                 
+                $images = "static/cms/messages/images/flyer-webinar.jpg";
+                $img_path = "<img src='".site_url().'/'.$images."' alt='".$title."' height='800' width='800'/>";
                 
                 // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
-                $mensaje = wordwrap("$message_content", 70, "\n", true);
+                $mensaje = wordwrap("<html><body>$message_content<p>$img_path</p></body></html>", 70, "\n", true);
                 //Titulo
                 $titulo = "$title";
                 //cabecera
                 $headers = "MIME-Version: 1.0\r\n"; 
                 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
                 //dirección del remitente 
-                $headers .= "From: Bitshare - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
+                $headers .= "From: BITSHARE - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
                 //Enviamos el mensaje a tu_dirección_email 
 //                $bool = mail("$array_email",$titulo,$mensaje,$headers);
-                $bool = mail("software.contreras@gmail.com",$titulo,$mensaje,$headers);
+                $bool = mail("$array_email",$titulo,$mensaje,$headers);
                 
 //                if($bool){
 //                    echo "Mensaje enviado";
 //                }else{
 //                    echo "Mensaje no enviado";
 //                }
-                echo json_encode($data);            
+                echo json_encode($data); 
         exit();
             }
     }
