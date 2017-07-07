@@ -48,7 +48,7 @@
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
                             <h5 class="media-heading text-uppercase title-small">TOTAL PAGADO</h5>
-                            <p class="title"><?php if(count($obj_total)>0){echo "$".$obj_total;}else{echo "$0.00";}?></p>
+                            <p class="title"><?php if(count($obj_total)>0){echo "$".number_format($obj_total,'2','.',',');}else{echo "$0.00";}?></p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
@@ -60,7 +60,7 @@
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
                             <h5 class="media-heading text-uppercase title-small">BALANCE POR DISPONER</h5>
-                            <p class="title"><?php if(count($obj_balance)>0){echo "$".$obj_balance;}else{echo "$0.00";}?></p>
+                            <p class="title"><?php if(count($obj_balance)>0){echo "$".number_format($obj_balance,'2','.',',');}else{echo "$0.00";}?></p>
                             <div class="mt-10">
                             </div>
                             </div>
@@ -449,7 +449,7 @@
                     <div class="col-lg-9 col-sm-8 pull-right box-height-byrow border">
                         <p class="uppercase ralewaybold22px"><?php echo replace_vocales_voculeshtml("MODO DE ACTIVACIÓN");?></p>
                         <div class="small">
-                            <p>Estimado usuario tiene 15 días para hacer la activación de la cuenta que ha seleccionado, de lo contrario será tomada por el sistema y no tendrá opción a recuperarla.<br><strong>1) Activación a través de bitcoin:</strong> enviar el monto de <b><a><?php echo $amount;?></a></b> a la siguiente dirección de bitcoin: 188DatosEDdynmC6AWMdiHjsgM4pLF4fvX36LbN  enviando un mensaje de correo electrónico a accounts@yourbitshares.com indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada.<br><strong>2)	Activación a través de cuenta bancaria (solo Perú):</strong> enviar monto de <b><a><?php echo $amount;?></a></b> a la siguiente cuenta bancaria de Inversiones BITSHARE S.A.C.; Cuenta Corriente Dólares Interbank, <b>009-300132221-0</b> luego enviar un mensaje al correo electrónico accounts@yourbitshares.com indicando el usuario, el tipo de cuenta pagada y el comprobante del envio.
+                            <p>Estimado usuario tiene 15 días para hacer la activación de la cuenta que ha seleccionado, de lo contrario será tomada por el sistema y no tendrá opción a recuperarla.<br><strong>1) Activación a través de bitcoin:</strong> enviar el monto de <b><a><?php echo $amount;?></a></b> a la siguiente dirección de bitcoin: 188EDdynmC6AWMdiHjsgM4pLF4fvX36LbN  enviando un mensaje de correo electrónico a accounts@yourbitshares.com indicando el usuario, el tipo de cuenta pagada y el comprobante o el código de identificación de la transacción realizada.<br><strong>2)	Activación a través de cuenta bancaria (solo Perú):</strong> enviar monto de <b><a><?php echo $amount;?></a></b> a la siguiente cuenta bancaria de Inversiones BITSHARE S.A.C.; Cuenta Corriente Dólares Interbank, <b>009-300132221-0</b> luego enviar un mensaje al correo electrónico accounts@yourbitshares.com indicando el usuario, el tipo de cuenta pagada y el comprobante del envio.
 <br>La activación será hará efectiva en 24 horas luego de hacer el envió del correo a BITSHARE. 
 </p>
                         </div>

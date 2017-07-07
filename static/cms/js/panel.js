@@ -39,8 +39,8 @@ function message_public(){
                    data: {title : title,
                           message_content : message_content},
                    success:function(data){                             
-                        bootbox.dialog("El mensaje se envio correctamente", [        
-                            { "label" : "Cancelar"}
+                        bootbox.dialog(data.message, [        
+                            { "label" : "Cerrar"}
                         ]);
 //                   location.reload();
                    }         

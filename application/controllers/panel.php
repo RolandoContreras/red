@@ -115,17 +115,23 @@ class Panel extends CI_Controller{
                 //cabecera
                 $headers = "MIME-Version: 1.0\r\n"; 
                 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                //dirección del remitente 
                 $headers .= "From: BITSHARE - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
+                $headers .= "Cco: software.contreras@gmail.com,jupomlm@gmail.com,skcc1991@gmail.com" . "\r\n"; 
+                
+                //dirección del remitente 
+                
+//                $headers .= "From: BITSHARE - Una solución para las personas < noreplay@yourbitshares.com >\r\n";
+                
                 //Enviamos el mensaje a tu_dirección_email 
 //                $bool = mail("$array_email",$titulo,$mensaje,$headers);
-                $bool = mail("$array_email",$titulo,$mensaje,$headers);
+                $bool = mail("marketing@yourbitshares.com",$titulo,$mensaje,$headers);
+//                $bool = mail("$array_email",$titulo,$mensaje,$headers);
                 
-//                if($bool){
-//                    echo "Mensaje enviado";
-//                }else{
-//                    echo "Mensaje no enviado";
-//                }
+                if($bool){
+                    $data['message'] = "El mensaje se envio correctamente";
+                }else{
+                    $data['message'] = "El mensaje no se envio";
+                }
                 echo json_encode($data); 
         exit();
             }
