@@ -227,7 +227,6 @@ function alter_bank(){
 
 function alter_password(){
         var customer_id = document.getElementById("customer_id").value;
-        var password = document.getElementById("password").value;
         var password_one = document.getElementById("password_one").value;
         var password_two = document.getElementById("password_two").value;
         
@@ -253,23 +252,25 @@ function alter_password(){
       , hwaccel: false // Whether to use hardware acceleration
       , position: 'absolute' // Element positioning
     }
-        var target = document.getElementById('spinner')
-        var spinner = new Spinner(opts).spin(target);
+        
         
         if(password_one == password_two){
+            var target = document.getElementById('spinner')
+            var spinner = new Spinner(opts).spin(target);
                 $.ajax({
                     type: "post",
-                    url: site + "b_data/validate_password",
+                    url: site + "b_data/update_password",
                     dataType: "json",
-                    data: {password: password,
-                           customer_id: customer_id},
+                    data: {customer_id: customer_id,
+                           password_one: password_one
+                       },
                     success:function(data){            
                             if(data.message == "true"){         
-                            $(".alert-0").removeClass('text-danger').addClass('text-success').html(data.print);
-                                document.form.password_one.disabled = false;
-                                document.form.password_two.disabled = false;
+                            $(".alert-1").removeClass('text-danger').addClass('text-success').html(data.print);
+                            spinner.spin(stop);
                         }else{
-                            $(".alert-0").removeClass('text-success').addClass('text-danger').html(data.print)
+                            $(".alert-1").removeClass('text-success').addClass('text-danger').html(data.print)
+                            spinner.spin(stop);
                         }
                     }            
                 });

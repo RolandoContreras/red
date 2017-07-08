@@ -148,14 +148,13 @@ class B_data extends CI_Controller {
 
              if($this->input->is_ajax_request()){   
                 //SELECT ID FROM CUSTOMER
-               $password = $this->input->post('password');
                $password_one = $this->input->post('password_one');
                $customer_id = $this->input->post('customer_id');
                
-               if($password != ""){
+               if($password_one != ""){
                             //UPDATE DATA EN CUSTOMER TABLE
                             $data = array(
-                                            'password' => $password,
+                                            'password' => $password_one,
                                             'updated_by' => $customer_id,
                                             'updated_at' => date("Y-m-d H:i:s")
                                         ); 

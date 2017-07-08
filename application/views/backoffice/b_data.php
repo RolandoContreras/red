@@ -399,7 +399,7 @@
                                         <div class="col-sm-12">
                                         <div class="form-group">
                                             <label class="control-label required"><?php echo replace_vocales_voculeshtml("Contraseña Actual");?></label>
-                                            <input type="password" onblur="validate_password(this.value);" id="password" name="password" class="form-control form-control" maxlength="50" data-constraints="@NotEmpty"/>
+                                            <input type="password" id="password" name="password" onblur="validate_password(this.value);" class="form-control form-control" maxlength="50" data-constraints="@NotEmpty"/>
                                             <!--<input type="password" required="required" class="form-control form-control"/>-->
                                             <span class="alert-0"></span>
                                         </div>
@@ -417,15 +417,17 @@
                                         <div class="col-sm-12">
                                         <div class="form-group"><label class="control-label required"><?php echo replace_vocales_voculeshtml("Repita Nueva Contraseña");?></label>
                                             <input type="password" id="password_two" name="password_two" required="required" disabled  class="form-control form-control"/></div>
-                                            <span class="alert-1"></span>
+                                            
                                         </div>
                                         </div>
                                     <hr class="style-1">
                                         <div class="row">
                                             <div class="mb-10">
-                                                <a class="btn btn-primary btn-block" name="button_password" style="word-wrap: break-word; white-space: normal !important;"><?php echo replace_vocales_voculeshtml("Cambiar Contraseña");?></a>
+                                                <a class="btn btn-primary btn-block" onclick="alter_password();" name="button_password" style="word-wrap: break-word; white-space: normal !important;"><?php echo replace_vocales_voculeshtml("Cambiar Contraseña");?></a>
+                                                <span style="position: relative;left: 25%;top: 50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);" class="alert-1"></span>
                                             </div>
                                         </div>
+                                    
                                     </div>
                                 </div>
                             </div>
