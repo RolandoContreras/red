@@ -228,7 +228,8 @@ function alter_bank(){
 function alter_password(){
         var customer_id = document.getElementById("customer_id").value;
         var password = document.getElementById("password").value;
-        var password2 = document.getElementById("password2").value;
+        var password_one = document.getElementById("password_one").value;
+        var password_two = document.getElementById("password_two").value;
         
        var opts = {
         lines: 13 // The number of lines to draw
@@ -252,35 +253,47 @@ function alter_password(){
       , hwaccel: false // Whether to use hardware acceleration
       , position: 'absolute' // Element positioning
     }
+        var target = document.getElementById('spinner')
+        var spinner = new Spinner(opts).spin(target);
         
-        
-        if(password == password2){
-            $.ajax({
-            type: "post",
-            url: site +"b_data/update_password",
-            dataType: "json",
-            data: {password: password,
-                   customer_id:customer_id },
-            success:function(data){            
-                  if(data.message == "true"){  
-                     $("#messages").html();
-                     var texto = "";
-                     texto = texto+'<label style="color:green;">'+data.print+'</label>';
-                     $("#messages").html(texto);
-                    $(location).attr('href',data.url);  
-                }else{
-                    $("#messages").html();
-                     var texto = "";
-                     texto = texto+'<label style="color:red;">'+data.print+'</label>';
-                     $("#messages").html(texto);
-                }
-             }            
-            });
+        if(password_one == password_two){
+                $.ajax({
+                    type: "post",
+                    url: site + "b_data/validate_password",
+                    dataType: "json",
+                    data: {password: password,
+                           customer_id: customer_id},
+                    success:function(data){            
+                            if(data.message == "true"){         
+                            $(".alert-0").removeClass('text-danger').addClass('text-success').html(data.print);
+                                document.form.password_one.disabled = false;
+                                document.form.password_two.disabled = false;
+                        }else{
+                            $(".alert-0").removeClass('text-success').addClass('text-danger').html(data.print)
+                        }
+                    }            
+                });
         }else{
-            $("#messages").html();
-             var texto = "";
-             texto = texto+'<label style="color:red;">Las contraseñas no coinciden</label>';
-             $("#messages").html(texto);
+           $(".alert-1").removeClass('text-success').addClass('text-danger').html("Las contraseñas no coinciden");
         }
-        
+}
+
+function validate_password(password){
+        var customer_id = document.getElementById("customer_id").value;
+        $.ajax({
+        type: "post",
+        url: site + "b_data/validate_password",
+        dataType: "json",
+        data: {password: password,
+               customer_id: customer_id},
+        success:function(data){            
+                if(data.message == "true"){         
+                $(".alert-0").removeClass('text-danger').addClass('text-success').html(data.print);
+                    document.form.password_one.disabled = false;
+                    document.form.password_two.disabled = false;
+            }else{
+                $(".alert-0").removeClass('text-success').addClass('text-danger').html(data.print)
+            }
+        }            
+    });
 }

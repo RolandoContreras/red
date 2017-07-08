@@ -11,9 +11,9 @@
         <div id="spinner"></div>
     <!--END SPINNER-->
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'principal')"><?php echo replace_vocales_voculeshtml("INFORMACIÓN PRINCIPAL");?></button>
-        <button class="tablinks" onclick="openCity(event, 'payments')"><?php echo replace_vocales_voculeshtml("INFORMACIÓN DE PAGO");?></button>
-        <button class="tablinks" onclick="openCity(event, 'password')">CONTRASEÑAS</button>
+        <button class="tablinks active"  onclick="openCity(event, 'principal')"><b><?php echo replace_vocales_voculeshtml("INFORMACIÓN PRINCIPAL");?></b></button>
+        <button class="tablinks" onclick="openCity(event, 'payments')"><b><?php echo replace_vocales_voculeshtml("INFORMACIÓN DE PAGO");?></b></button>
+        <button class="tablinks" onclick="openCity(event, 'password')"><b><?php echo replace_vocales_voculeshtml("CONTRASEÑAS");?></b></button>
     </div>
     
                              
@@ -389,40 +389,52 @@
                 <div class="col-md-9">
                     <div class="row">
                         <div class="col-md-6">
+                            <form name="form">
                             <div class="panel panel-default panel-form">
-                                <div class="panel-heading text-uppercase"><?php echo replace_vocales_voculeshtml("Cambiar Contraseña");?></div>
+                                <div class="panel-heading text-uppercase"><h3><?php echo replace_vocales_voculeshtml("Cambiar Contraseña");?></h3></div>
+                                <hr class="style-2">
                                 <div class="panel-body">
                                     <div class="">
                                         <div class="row">
                                         <div class="col-sm-12">
-                                        <div class="form-group"><label class="control-label required"><?php echo replace_vocales_voculeshtml("Contraseña Actual");?></label><input type="password" required="required" class="form-control form-control"/></div>
+                                        <div class="form-group">
+                                            <label class="control-label required"><?php echo replace_vocales_voculeshtml("Contraseña Actual");?></label>
+                                            <input type="password" onblur="validate_password(this.value);" id="password" name="password" class="form-control form-control" maxlength="50" data-constraints="@NotEmpty"/>
+                                            <!--<input type="password" required="required" class="form-control form-control"/>-->
+                                            <span class="alert-0"></span>
                                         </div>
                                         </div>
-                                    <hr class="style-1">
+                                        </div>
+                                    
                                         <div class="row">
                                         <div class="col-sm-12">
-                                        <div class="form-group"><label class="control-label required"><?php echo replace_vocales_voculeshtml("Nueva Contraseña");?></label><input type="password"   required="required" class="form-control form-control"/></div>
+                                        <div class="form-group"><label class="control-label required"><?php echo replace_vocales_voculeshtml("Nueva Contraseña");?></label>
+                                            <input type="password" id="password_one" name="password_one" disabled  required="required" class="form-control form-control"/>
                                         </div>
                                         </div>
-                                    <hr class="style-1">
+                                        </div>
                                         <div class="row">
                                         <div class="col-sm-12">
-                                        <div class="form-group"><label class="control-label required"><?php echo replace_vocales_voculeshtml("Repita Nueva Contraseña");?></label><input type="password" equired="required" class="form-control form-control"/></div>
+                                        <div class="form-group"><label class="control-label required"><?php echo replace_vocales_voculeshtml("Repita Nueva Contraseña");?></label>
+                                            <input type="password" id="password_two" name="password_two" required="required" disabled  class="form-control form-control"/></div>
+                                            <span class="alert-1"></span>
                                         </div>
                                         </div>
                                     <hr class="style-1">
                                         <div class="row">
                                             <div class="mb-10">
-                                                <a class="btn btn-primary btn-block" disabled="disabled" onclick="alter_password();" style="word-wrap: break-word; white-space: normal !important;"><?php echo replace_vocales_voculeshtml("Cambiar Contraseña");?></a>
+                                                <a class="btn btn-primary btn-block" name="button_password" style="word-wrap: break-word; white-space: normal !important;"><?php echo replace_vocales_voculeshtml("Cambiar Contraseña");?></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                         </form>
 </div>
 <div class="col-md-6">
     <div class="panel panel-default panel-form">
-        <div class="panel-heading text-uppercase">Change transaction password </div>
+        <div class="panel-heading text-uppercase"><h3>Change transaction password</h3></div>
+        <hr class="style-2">
         <div class="panel-body">
             <div class="">
             <form name="change_transaction_password" method="post">
@@ -432,13 +444,13 @@
                     <div class="form-group"><label class="control-label required">Current transaction password</label><input type="password" disabled="disable" id="" name="" required="required" class="form-control form-control"/></div>
                 </div>
                 </div>
-            <hr class="style-1">
+            <!--<hr class="style-1">-->
                 <div class="row">
                 <div class="col-sm-12">
                 <div class="form-group"><label class="control-label required" for="">New transaction password</label><input type="password" disabled="disable" id="" name="change_transaction_password[new_transaction_password][first]" required="required" class="form-control form-control"/></div>
                 </div>
                 </div>
-            <hr class="style-1">
+            <!--<hr class="style-1">-->
                 <div class="row">
                 <div class="col-sm-12">
                 <div class="form-group"><label class="control-label required" for="">New transaction password again</label><input type="password" disabled="disable" id="" name="change_transaction_password[new_transaction_password][second]" required="required" class="form-control form-control"/></div>
@@ -516,7 +528,13 @@ div.tab button:hover {
 
 /* Create an active/current tablink class */
 div.tab button.active {
-    background-color: #ccc;
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
+background: #45484d; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #45484d 0%, #000000 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+color:white;
 }
 
 /* Style the tab content */

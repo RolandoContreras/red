@@ -149,7 +149,7 @@ class B_data extends CI_Controller {
              if($this->input->is_ajax_request()){   
                 //SELECT ID FROM CUSTOMER
                $password = $this->input->post('password');
-               $password2 = $this->input->post('password2');
+               $password_one = $this->input->post('password_one');
                $customer_id = $this->input->post('customer_id');
                
                if($password != ""){
@@ -248,6 +248,26 @@ class B_data extends CI_Controller {
             $data['message'] = "true";
             echo json_encode($data); 
             }
+    }
+    
+        public function validate_password() {
+        //SELECT ID FROM CUSTOMER
+        $password = str_to_minuscula(trim($this->input->post('password')));
+        $customer_id = trim($this->input->post('customer_id'));
+        
+        $param_customer = array(
+            "select" => "password",
+            "where" => "customer_id = '$customer_id' and password = '$password'");
+        $customer = count($this->obj_customer->get_search_row($param_customer));
+        
+        if ($customer > 0) {
+            $data['message'] = "true";
+            $data['print'] = "✔ Verificado";
+        } else {
+            $data['message'] = "false";
+            $data['print'] = "Contraseña Incorrecta";
+        }
+        echo json_encode($data);
     }
         
         public function get_session(){          

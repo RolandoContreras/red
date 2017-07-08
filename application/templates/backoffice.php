@@ -264,6 +264,7 @@
                                     <?php 
                                     $url = explode("/",uri_string()); 
                                     $style_inicio = "";
+                                    $infoproductos = "";
                                     $style_misdatos = "";
                                     $style_upgrade = "";
                                     $style_comisiones = "";
@@ -277,6 +278,9 @@
                                             ////////
                                                     case "misdatos":
                                                         $style_misdatos = "active";
+                                                        break;
+                                                    case "infoproductos":
+                                                        $infoproductos = "active";
                                                         break;
                                                     case "upgrade":
                                                         $style_upgrade = "active";
@@ -322,13 +326,19 @@
 	                     		</a>
                                             
 	                  		</li>
+                                        <li class="<?php echo $infoproductos ?>">
+                                            <a href="" title="Info Productos">
+                                            <em class="fa fa-cart-plus fa-lg" aria-hidden="true"></em>
+                                            <span>Info Productos</span>
+	                     		</a>
+	                  		</li>
                                         <li class="<?php echo $style_misdatos ?>">
                                             <a href="<?php echo site_url().'backoffice/misdatos'?>" title="Mi Datos">
                                             <em class="fa fa-address-book fa-lg" aria-hidden="true"></em>
                                             <span>Mi Perfil</span>
 	                     		</a>
 	                  		</li>
-                                        <li class="<?php echo $style_misdatos ?>">
+                                        <li class="<?php echo $style_upgrade ?>">
                                             <a href="" title="Upgrade">
                                             <em class="fa fa-arrow-up fa-lg" aria-hidden="true"></em>
                                             <span>Upgrade</span>
