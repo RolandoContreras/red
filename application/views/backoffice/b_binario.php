@@ -5,12 +5,142 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
             <a href="/backend/bonuses/start-up" class="white">until next bonus round.</a>
-            <div id="myCounter" data-countdown="1494244800000"></div>
         </div>
     </div>
-    
-    
     <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
+    
+    
+
+<!------------------------------------------->
+<div id="page-content-wrapper" class="">
+    <main>
+        <div class="container-fluid">
+            <div class="row ml-custom">
+                <div class="col-xs-12">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default network-tree-panel">
+                            <div class="panel-body">
+                                <div class="clearfix btn-holder">
+                                    <a class="btn btn-success btn-sm pull-left" aria-label="Left Align">
+                                        <span class="rotate-top-left"><i class="icon-arrows-5" aria-hidden="true"></i></span>Scroll to top
+                                    </a>
+                                    <a  class="btn btn-success btn-sm pull-right" aria-label="Right Align"> Go one level up
+                                        <span class="rotate-top-right"><i class="icon-arrows-6 in-right" aria-hidden="true"></i></span>
+                                    </a>
+                                </div>
+                                    <div class="network-tree-stucture">
+                                        <ul>
+                                            <li>
+                                                <span class="inline-block relative">
+                                                    <a href="" class="status-1 user-packet">
+                                                        <span class="user-name">riopison1</span>
+                                                    </a>
+                                                    <span class="tooltip-icon" data-tooltip title="&#x20;&#x20;&#x20;&#x20;&lt;h5&gt;riopison1&#x20;&lt;span&#x20;class&#x3D;&quot;close-tooltip&#x20;pull-right&#x20;pointer&#x20;visible-xs&quot;&gt;X&lt;&#x2F;span&gt;&lt;&#x2F;h5&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&lt;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Country&#x3A;&#x20;&lt;&#x2F;strong&gt;&amp;nbsp&#x3B;&lt;span&#x20;class&#x3D;&quot;flag&#x20;flag-pe&quot;&gt;&lt;&#x2F;span&gt;&#x20;&amp;nbsp&#x3B;&#x20;Peru&lt;br&#x2F;&gt;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Status&#x3A;&lt;&#x2F;strong&gt;&#x20;&lt;span&#x20;class&#x3D;&quot;green&quot;&gt;Rookie&lt;&#x2F;span&gt;&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Sponsored&#x3A;&lt;&#x2F;strong&gt;&#x20;globalcryptoinvest&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;table&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&gt;&lt;strong&gt;Package&#x3A;&#x20;&lt;&#x2F;strong&gt;&lt;br&#x2F;&gt;Rookie&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&#x20;class&#x3D;&quot;t-right&quot;&gt;&lt;img&#x20;src&#x3D;&quot;&#x2F;media&#x2F;images&#x2F;200x150_2016_06_20_rookie.png&quot;&#x20;alt&#x3D;&quot;&quot;&#x20;height&#x3D;&quot;50&quot;&#x20;&#x2F;&gt;&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;table&gt;&#x0A;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;div&#x20;class&#x3D;&quot;text-center&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;a&#x20;href&#x3D;&quot;&#x2F;backend&#x2F;messages&#x2F;new&#x2F;globalcryptoinvest&quot;&#x20;class&#x3D;&quot;btn&#x20;btn-primary&#x20;btn-block&#x20;btn-sm&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;i&#x20;class&#x3D;&quot;icon-envelope&quot;&#x20;aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;Contact&#x20;sponsor&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;a&gt;&#x0A;&#x20;&#x20;&#x20;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;" data-tooltip-position="r" data-tooltip-class="tooltip-tree-style">?</span> 
+                                                </span>
+                                        <ul class="">
+                                            <li>
+                                                <span class="inline-block relative">
+                                                    <a href="" class="status-1 user-packet">
+                                                        <span class="user-name">takeshito</span>
+                                                    </a>
+                                                    <span class="tooltip-icon" data-tooltip title="&#x20;&#x20;&#x20;&#x20;&lt;h5&gt;takeshito&#x20;&lt;span&#x20;class&#x3D;&quot;close-tooltip&#x20;pull-right&#x20;pointer&#x20;visible-xs&quot;&gt;X&lt;&#x2F;span&gt;&lt;&#x2F;h5&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&lt;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Country&#x3A;&#x20;&lt;&#x2F;strong&gt;&amp;nbsp&#x3B;&lt;span&#x20;class&#x3D;&quot;flag&#x20;flag-pe&quot;&gt;&lt;&#x2F;span&gt;&#x20;&amp;nbsp&#x3B;&#x20;Peru&lt;br&#x2F;&gt;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Status&#x3A;&lt;&#x2F;strong&gt;&#x20;&lt;span&#x20;class&#x3D;&quot;green&quot;&gt;Rookie&lt;&#x2F;span&gt;&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Sponsored&#x3A;&lt;&#x2F;strong&gt;&#x20;globalcryptoinvest&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;table&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&gt;&lt;strong&gt;Package&#x3A;&#x20;&lt;&#x2F;strong&gt;&lt;br&#x2F;&gt;Rookie&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&#x20;class&#x3D;&quot;t-right&quot;&gt;&lt;img&#x20;src&#x3D;&quot;&#x2F;media&#x2F;images&#x2F;200x150_2016_06_20_rookie.png&quot;&#x20;alt&#x3D;&quot;&quot;&#x20;height&#x3D;&quot;50&quot;&#x20;&#x2F;&gt;&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;table&gt;&#x0A;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;div&#x20;class&#x3D;&quot;text-center&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;a&#x20;class&#x3D;&quot;btn&#x20;btn-primary&#x20;btn-sm&quot;&#x20;aria-label&#x3D;&quot;Left&#x20;Align&quot;&#x20;href&#x3D;&quot;&#x2F;backend&#x2F;messages&#x2F;new&#x2F;takeshito&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;i&#x20;class&#x3D;&quot;icon-envelope&quot;&#x20;aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;Send&#x20;Message&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;a&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;" data-tooltip-position="r" data-tooltip-class="tooltip-tree-style">
+                                                        i
+                                                    </span> 
+                                                </span>
+                                            <ul class="">
+                                                <li>
+                                                    <span class="inline-block relative">
+                                                        <a href="" class="status-1 user-packet">
+                                                            <span class="user-name">miguelangel120</span>
+                                                        </a>
+                                                        <span class="tooltip-icon" data-tooltip title="&#x20;&#x20;&#x20;&#x20;&lt;h5&gt;miguelangel120&#x20;&lt;span&#x20;class&#x3D;&quot;close-tooltip&#x20;pull-right&#x20;pointer&#x20;visible-xs&quot;&gt;X&lt;&#x2F;span&gt;&lt;&#x2F;h5&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&lt;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Country&#x3A;&#x20;&lt;&#x2F;strong&gt;&amp;nbsp&#x3B;&lt;span&#x20;class&#x3D;&quot;flag&#x20;flag-pe&quot;&gt;&lt;&#x2F;span&gt;&#x20;&amp;nbsp&#x3B;&#x20;Peru&lt;br&#x2F;&gt;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Status&#x3A;&lt;&#x2F;strong&gt;&#x20;&lt;span&#x20;class&#x3D;&quot;green&quot;&gt;Rookie&lt;&#x2F;span&gt;&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Sponsored&#x3A;&lt;&#x2F;strong&gt;&#x20;globalcryptoinvest&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;table&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&gt;&lt;strong&gt;Package&#x3A;&#x20;&lt;&#x2F;strong&gt;&lt;br&#x2F;&gt;Rookie&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&#x20;class&#x3D;&quot;t-right&quot;&gt;&lt;img&#x20;src&#x3D;&quot;&#x2F;media&#x2F;images&#x2F;200x150_2016_06_20_rookie.png&quot;&#x20;alt&#x3D;&quot;&quot;&#x20;height&#x3D;&quot;50&quot;&#x20;&#x2F;&gt;&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;table&gt;&#x0A;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;div&#x20;class&#x3D;&quot;text-center&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;a&#x20;class&#x3D;&quot;btn&#x20;btn-primary&#x20;btn-sm&quot;&#x20;aria-label&#x3D;&quot;Left&#x20;Align&quot;&#x20;href&#x3D;&quot;&#x2F;backend&#x2F;messages&#x2F;new&#x2F;miguelangel120&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;i&#x20;class&#x3D;&quot;icon-envelope&quot;&#x20;aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;Send&#x20;Message&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;a&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;" data-tooltip-position="r" data-tooltip-class="tooltip-tree-style">
+                                                            i
+                                                        </span> 
+                                                    </span>
+                                                    <ul class="hidden-xs">
+                                                        <li>
+                                                                <span class="inline-block relative">
+                                                                    <a href="/backend/my-network/network-tree/position/4rt4HH4dMo8TSF1wj%252F%252F0qHm3aYQUkdu5oumvCQKMy8A%253D" class="status-1 user-packet">
+                                                                        <span class="user-name">OneCoinHispano</span>
+                                                                    </a>
+                                                                    <span class="tooltip-icon" data-tooltip title="&#x20;&#x20;&#x20;&#x20;&lt;h5&gt;OneCoinHispano&#x20;&lt;span&#x20;class&#x3D;&quot;close-tooltip&#x20;pull-right&#x20;pointer&#x20;visible-xs&quot;&gt;X&lt;&#x2F;span&gt;&lt;&#x2F;h5&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&lt;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Country&#x3A;&#x20;&lt;&#x2F;strong&gt;&amp;nbsp&#x3B;&lt;span&#x20;class&#x3D;&quot;flag&#x20;flag-pe&quot;&gt;&lt;&#x2F;span&gt;&#x20;&amp;nbsp&#x3B;&#x20;Peru&lt;br&#x2F;&gt;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Status&#x3A;&lt;&#x2F;strong&gt;&#x20;&lt;span&#x20;class&#x3D;&quot;green&quot;&gt;Rookie&lt;&#x2F;span&gt;&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Sponsored&#x3A;&lt;&#x2F;strong&gt;&#x20;globalcryptoinvest&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;table&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&gt;&lt;strong&gt;Package&#x3A;&#x20;&lt;&#x2F;strong&gt;&lt;br&#x2F;&gt;Rookie&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&#x20;class&#x3D;&quot;t-right&quot;&gt;&lt;img&#x20;src&#x3D;&quot;&#x2F;media&#x2F;images&#x2F;200x150_2016_06_20_rookie.png&quot;&#x20;alt&#x3D;&quot;&quot;&#x20;height&#x3D;&quot;50&quot;&#x20;&#x2F;&gt;&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;table&gt;&#x0A;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;div&#x20;class&#x3D;&quot;text-center&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;a&#x20;class&#x3D;&quot;btn&#x20;btn-primary&#x20;btn-sm&quot;&#x20;aria-label&#x3D;&quot;Left&#x20;Align&quot;&#x20;href&#x3D;&quot;&#x2F;backend&#x2F;messages&#x2F;new&#x2F;OneCoinHispano&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;i&#x20;class&#x3D;&quot;icon-envelope&quot;&#x20;aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;Send&#x20;Message&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;a&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;" data-tooltip-position="r" data-tooltip-class="tooltip-tree-style">
+                                                                        i
+                                                                    </span> 
+                                                                </span>
+                                                            <ul class="visible-lg">
+                                                                <li>
+                                                                    <span class="inline-block relative">
+                                                                        <a href="/backend/my-network/network-tree/position/v2oINAcLwnGlEEWQwcy8gkOXkKLD8xrr9G0UxH87JnA%253D" class="status-1 user-packet">
+                                                                            <span class="user-name">RICHDADWORLD1105</span>
+                                                                        </a>
+                                                                        <span class="tooltip-icon" data-tooltip title="&#x20;&#x20;&#x20;&#x20;&lt;h5&gt;RICHDADWORLD1105&#x20;&lt;span&#x20;class&#x3D;&quot;close-tooltip&#x20;pull-right&#x20;pointer&#x20;visible-xs&quot;&gt;X&lt;&#x2F;span&gt;&lt;&#x2F;h5&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&lt;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Country&#x3A;&#x20;&lt;&#x2F;strong&gt;&amp;nbsp&#x3B;&lt;span&#x20;class&#x3D;&quot;flag&#x20;flag-pe&quot;&gt;&lt;&#x2F;span&gt;&#x20;&amp;nbsp&#x3B;&#x20;Peru&lt;br&#x2F;&gt;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Status&#x3A;&lt;&#x2F;strong&gt;&#x20;&lt;span&#x20;class&#x3D;&quot;green&quot;&gt;Rookie&lt;&#x2F;span&gt;&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Sponsored&#x3A;&lt;&#x2F;strong&gt;&#x20;globalcryptoinvest&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;table&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&gt;&lt;strong&gt;Package&#x3A;&#x20;&lt;&#x2F;strong&gt;&lt;br&#x2F;&gt;Rookie&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&#x20;class&#x3D;&quot;t-right&quot;&gt;&lt;img&#x20;src&#x3D;&quot;&#x2F;media&#x2F;images&#x2F;200x150_2016_06_20_rookie.png&quot;&#x20;alt&#x3D;&quot;&quot;&#x20;height&#x3D;&quot;50&quot;&#x20;&#x2F;&gt;&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;table&gt;&#x0A;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;div&#x20;class&#x3D;&quot;text-center&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;a&#x20;class&#x3D;&quot;btn&#x20;btn-primary&#x20;btn-sm&quot;&#x20;aria-label&#x3D;&quot;Left&#x20;Align&quot;&#x20;href&#x3D;&quot;&#x2F;backend&#x2F;messages&#x2F;new&#x2F;RICHDADWORLD1105&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;i&#x20;class&#x3D;&quot;icon-envelope&quot;&#x20;aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;Send&#x20;Message&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;a&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;" data-tooltip-position="r" data-tooltip-class="tooltip-tree-style">
+                                                                            i
+                                                                        </span> 
+                                                                    </span>
+                                                                </li>
+
+                                                                <li>
+                                                                    <a href="/backend/my-network/network-tree/add-customer/99gu4O%252B8L6rD6Qf4l8R0ZpSEutS6tG9IMvW6LJzDRK0%253D/right" class="user-packet"></a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="/backend/my-network/network-tree/add-customer/kZGJivA8JCXIzbFlKU0d9eT58jbWvaFFxV%252BwoiKxXvc%253D/right" class="user-packet"></a>
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/backend/my-network/network-tree/add-customer/vYIJWuF1E8n21bA2wQAqZGmPiQ%252F4m4LMdm0M796f%252BSQ%253D/right" class="user-packet"></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <a href="/backend/my-network/network-tree/add-customer/UngL27brPkDgI7skzmsazyaAqP6s7KqshWaNRnZHMmU%253D/right" class="user-packet"></a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+    
+                        </div>
+                                
+                        <div class="clearfix btn-holder">
+                            <a class="btn btn-success btn-sm pull-left" aria-label="Left Align" href="/backend/my-network/network-tree/first-available-position/left">
+                                <i class="icon-arrows-5" aria-hidden="true"></i>
+                                First available position left
+                            </a>
+                            <a type="button" class="btn btn-success btn-sm pull-right" aria-label="Right Align" href="/backend/my-network/network-tree/first-available-position/right">
+                                First available position right
+                                <i class="icon-arrows-6 in-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        
+                        <hr class="style-4 mb-20">
+                            <div class="position-info-list">
+                                <div class="frachise_elite"><span class="">Elite</span></div>
+                                <div class="frachise_vip"><span class="">Vip</span></div>
+                                <div class="frachise_gold"><span class="">Gold</span></div>
+                                <div class="frachise_platinium"><span class="">Platinium</span></div>
+                                <div class="frachise_basic"><span class="">Basic</span></div>
+                                <div class="frachise_membership"><span class="">Membership</span></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                        
+        </div>
+    </main>
+</div>
+            
+
+<!---------------------------------->
+
+
+    
  <!-- Page content-->
  <div class="content-wrapper">
     <div class="container-fluid">

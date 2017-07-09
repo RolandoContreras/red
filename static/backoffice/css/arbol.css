@@ -127,6 +127,13 @@
 .tree li nodo:hover+ul ul::before{
     border-color:  #94a0b4;
 }
+.frachise_elite{
+    background-image: url(../../../static/backoffice/images/elite_small.png) !important;
+    background-size: 50px 50px;
+/*    width: 55px;
+    height: 95px;*/
+}
+
 
 /*Thats all. I hope you enjoyed it.
 Thanks :)*/
