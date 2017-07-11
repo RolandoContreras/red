@@ -279,7 +279,7 @@
                                                     case "misdatos":
                                                         $style_misdatos = "active";
                                                         break;
-                                                    case "infoproductos":
+                                                    case "info-productos":
                                                         $infoproductos = "active";
                                                         break;
                                                     case "upgrade":
@@ -327,7 +327,7 @@
                                             
 	                  		</li>
                                         <li class="<?php echo $infoproductos ?>">
-                                            <a href="" title="Info Productos">
+                                            <a href="<?php echo site_url().'backoffice/info-productos'?>" title="Info Productos">
                                             <em class="fa fa-cart-plus fa-lg" aria-hidden="true"></em>
                                             <span>Info Productos</span>
 	                     		</a>
@@ -339,7 +339,7 @@
 	                     		</a>
 	                  		</li>
                                         <li class="<?php echo $style_upgrade ?>">
-                                            <a href="" title="Upgrade">
+                                            <a href="<?php echo site_url().'backoffice/upgrade'?>" title="Upgrade">
                                             <em class="fa fa-arrow-up fa-lg" aria-hidden="true"></em>
                                             <span>Upgrade</span>
 	                     		</a>
