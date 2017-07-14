@@ -1,267 +1,649 @@
 <!DOCTYPE html>
-<html lang="es" class="wide wow-animation">
-<!--======================================================== HEAD =========================================================-->
+<html lang="en">
 <?php $this->load->view("head"); ?>
-<!-- The Main Wrapper -->
-<div class="page">
-    <!--======================================================== HEADER =========================================================-->
-    <?php $this->load->view("header");?>
-    <!--======================================================== CONTENT =========================================================-->
-    <main class="page-content">
-        <!-- Hello -->
-        <section class="well-md well-md-inset-2 bg-primary text-center">
-            <div class="container wow fadeInUp">
-                <h1>
-                    <?php echo replace_vocales_voculeshtml("¿QUÉ ES EL BITCOIN?");?>
-                </h1>
-                <div class="row">
-                    <div class="col-md-10 col-md-preffix-1">
-                        <p>Primera criptodivisa creada en el 2009 que destaca por su eficiencia, seguridad y facilidad de intercambio. Es una moneda descentralizada ya que no necesita un repositorio central o administrador individual, no necesita de un tercero para transaccionar. EL BITCOIN ES EL FUTURO<br><br><br><img class="logo_btc" src="<?php echo site_url().'static/page_front/images/logo-btc2.png';?>" alt="logo_bitcoin" /></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END Hello-->
-        <!-- Pricing table -->
-        <section>
-            
+<body>
+<!-- PRELOADER -->
+<img id="preloader" src="images/preloader.gif" alt="" />
+<!-- //PRELOADER -->
+<div class="preloader_hide">
+	<!-- PAGE -->
+	<div id="page">
+	
+		<!-- HEADER -->
+		<header>
+			
+			<!-- MENU BLOCK -->
+			<div class="menu_block">
+			
+				<!-- CONTAINER -->
+				<div class="container clearfix">
+					
+					<!-- LOGO -->
+					<div class="logo pull-left">
+						<a href="index.html" >
+                                                    <span class="b1">w</span><span class="b2">h</span><span class="b3">i</span><span class="b4">t</span><span class="b5">e</span>
+                                                </a>
+					</div><!-- //LOGO -->
+					
+					<!-- SEARCH FORM -->
+					<div id="search-form" class="pull-right">
+						<form method="get" action="#">
+							<input type="text" name="Search" value="Search" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
+						</form>
+					</div><!-- SEARCH FORM -->
+					
+					<!-- MENU -->
+					<div class="pull-right">
+						<nav class="navmenu center">
+							<ul>
+								<li class="first active scroll_btn"><a href="#home" >Home</a></li>
+								<li class="scroll_btn"><a href="#about" >About Us</a></li>
+								<li class="scroll_btn"><a href="#projects" >Projects</a></li>
+								<li class="scroll_btn"><a href="#team" >Team</a></li>
+								<li class="scroll_btn"><a href="#news" >News</a></li>
+								<li class="scroll_btn last"><a href="#contacts" >Contacts</a></li>
+								<li class="sub-menu">
+									<a href="javascript:void(0);" >Pages</a>
+									<ul>
+										<li><a href="blog.html" >Blog</a></li>
+										<li><a href="blog-post.html" >Blog Post</a></li>
+										<li><a href="portfolio-post.html" >Portfolio Single Work</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div><!-- //MENU -->
+				</div><!-- //MENU BLOCK -->
+			</div><!-- //CONTAINER -->
+		</header><!-- //HEADER -->
+		
+		
+		<!-- HOME -->
+		<section id="home" class="padbot0">
+				
+			<!-- TOP SLIDER -->
+			<div class="flexslider top_slider">
+				<ul class="slides">
+					<li class="slide1">
+						<div class="flex_caption1">
+							<p class="title1 captionDelay2 FromTop">Creative</p>
+							<p class="title2 captionDelay4 FromTop">White</p>
+							<p class="title3 captionDelay6 FromTop">Templates</p>
+							<p class="title4 captionDelay7 FromBottom">The template is suitable for any company and the direction that appreciates style, purity and quality of the web site.</p>
+						</div>
+						<a class="slide_btn FromRight" href="javascript:void(0);" >Read More</a>
+					<li class="slide2">
+						<div class="flex_caption1">
+							<p class="title1 captionDelay6 FromLeft">Responsive</p>
+							<p class="title2 captionDelay4 FromLeft">Design</p>
+							<p class="title3 captionDelay2 FromLeft">Theme</p>
+							<p class="title4 captionDelay7 FromLeft">The template is suitable for any company and the direction that appreciates style, purity and quality of the web site.</p>
+						</div>
+						<a class="slide_btn FromRight" href="javascript:void(0);" >Read More</a>
+					</li>
+					<li class="slide3">
+						<div class="flex_caption1">
+							<p class="title1 captionDelay1 FromBottom">Amazing</p>
+							<p class="title2 captionDelay2 FromBottom">Video</p>
+							<p class="title3 captionDelay3 FromBottom">Background</p>
+							<p class="title4 captionDelay5 FromBottom">The template is suitable for any company and the direction that appreciates style, purity and quality of the web site.</p>
+						</div>
+						<a class="slide_btn FromRight" href="javascript:void(0);" >Read More</a>
+					</li>
+				</ul>
+				
+				<!-- VIDEO BACKGROUND -->
+				<a id="P2" class="player" data-property="{videoURL:'tDvBwPzJ7dY',containment:'.top_slider',autoPlay:true, mute:true, startAt:0, opacity:1}" ></a>
+				<!-- //VIDEO BACKGROUND -->
+			</div><!-- //TOP SLIDER -->
+		</section><!-- //HOME -->
+		
+		
+		<!-- ABOUT -->
+		<section id="about">
+			
+			<!-- SERVICES -->
+			<div class="services_block padbot40" data-appear-top-offset="-200" data-animated="fadeInUp">
+				
+				<!-- CONTAINER -->
+				<div class="container">
+				
+					<!-- ROW -->
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+							<a class="services_item" href="javascript:void(0);" >
+								<p><b>Easy</b> Customize</p>
+								<span>Quality and very comfortable design, does not hurt the eyes and pleasant to use.</span>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+							<a class="services_item" href="javascript:void(0);" >
+								<p><b>Modern</b> Design</p>
+								<span>Quality and unique design that meets all the requirements and trends of modern web design.</span>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+							<a class="services_item" href="javascript:void(0);" >
+								<p><b>Responsive</b> Design</p>
+								<span>Design that will be equally beautifully displayed on all your devices, tablet, smartphone or computer.</span>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+							<a class="services_item" href="javascript:void(0);" >
+								<p><b>Free</b> Updates & Support</p>
+								<span>Hour and great support template. You can always ask a question and we will help you.</span>
+							</a>
+						</div>
+					</div><!-- //ROW -->
+				</div><!-- //CONTAINER -->
+			</div><!-- //SERVICES -->
+			
+			<!-- CLEAN CODE -->
+			<div class="cleancode_block">
+				
+				<!-- CONTAINER -->
+				<div class="container" data-appear-top-offset="-200" data-animated="fadeInUp">
+					
+					<!-- CASTOM TAB -->
+					<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade in active clearfix" id="tab1">
+							<p class="title"><b>Clean</b> Code</p>
+							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
+						</div>
+						<div class="tab-pane fade clearfix" id="tab2">
+							<p class="title"><b>Technical</b> Support</p>
+							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
+						</div>
+						<div class="tab-pane fade clearfix" id="tab3">
+							<p class="title"><b>Responsive</b></p>
+							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
+						</div>
+						<div class="tab-pane fade clearfix" id="tab4">
+							<p class="title"><b>Documentation</b></p>
+							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
+						</div>
+						<div class="tab-pane fade clearfix" id="tab5">
+							<p class="title"><b>Quality</b></p>
+							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
+						</div>
+						<div class="tab-pane fade clearfix" id="tab6">
+							<p class="title"><b>Support</b></p>
+							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
+						</div>
+					</div>
+					<ul id="myTab" class="nav nav-tabs">
+						<li class="active"><a class="i1" href="#tab1" data-toggle="tab" ><i></i><span>Clean Code</span></a></li>
+						<li><a class="i2" href="#tab2" data-toggle="tab" ><i></i><span>Support</span></a></li>
+						<li><a class="i3" href="#tab3" data-toggle="tab" ><i></i><span>Responsive</span></a></li>
+						<li><a class="i4" href="#tab4" data-toggle="tab" ><i></i><span>Documentation</span></a></li>
+						<li><a class="i5" href="#tab5" data-toggle="tab" ><i></i><span>Quality</span></a></li>
+						<li><a class="i6" href="#tab6" data-toggle="tab" ><i></i><span>Support</span></a></li>
+					</ul><!-- CASTOM TAB -->
+				</div><!-- //CONTAINER -->
+			</div><!-- //CLEAN CODE -->
+			
+			<!-- MULTI PURPOSE -->
+			<div class="purpose_block">
+				
+				<!-- CONTAINER -->
+				<div class="container">
+					
+					<!-- ROW -->
+					<div class="row">
+					
+						<div class="col-lg-7 col-md-7 col-sm-7" data-appear-top-offset="-200" data-animated="fadeInLeft">
+							<h2><b>Multi-purpose</b> WordPress Theme</h2>
+							<p>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</p>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+							<a class="btn btn-active" href="javascript:void(0);" ><span data-hover="Yes I want it">Byu This theme</span></a>
+							<a class="btn" href="javascript:void(0);" >View more templates</a>
+						</div>
+						
+						<div class="col-lg-5 col-md-5 col-sm-5 ipad_img_in" data-appear-top-offset="-200" data-animated="fadeInRight">
+							<img class="ipad_img1" src="images/img1.png" alt="" />
+						</div>
+					</div><!-- //ROW -->
+				</div><!-- //CONTAINER -->
+			</div><!-- //MULTI PURPOSE -->
+		</section><!-- //ABOUT -->
+		
+		
+		<!-- PROJECTS -->
+		<section id="projects" class="padbot20">
+		
+			<!-- CONTAINER -->
+			<div class="container">
+				<h2><b>Featured</b> Works</h2>
+			</div><!-- //CONTAINER -->
+			
+				
+			<div class="projects-wrapper" data-appear-top-offset="-200" data-animated="fadeInUp">
+				<!-- PROJECTS SLIDER -->
+				<div class="owl-demo owl-carousel projects_slider">
+					
+					<!-- work1 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="images/works/1.jpg" alt="" />
+								<a class="zoom" href="images/works/1.jpg" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="portfolio-post.html" >Ginger Beast</a>
+									<span>17 March, 2041</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- //work1 -->
+					
+					<!-- work2 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="images/works/2.jpg" alt="" />
+								<a class="zoom" href="images/works/2.jpg" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="portfolio-post.html" >Ginger Beast</a>
+									<span>17 March, 2041</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- //work2 -->
+					
+					<!-- work3 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="images/works/3.jpg" alt="" />
+								<a class="zoom" href="images/works/3.jpg" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="portfolio-post.html" >Ginger Beast</a>
+									<span>17 March, 2041</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- //work3 -->
+					
+					<!-- work4 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="images/works/4.jpg" alt="" />
+								<a class="zoom" href="images/works/4.jpg" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="portfolio-post.html" >Ginger Beast</a>
+									<span>17 March, 2041</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- //work4 -->
+					
+					<!-- work5 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="images/works/5.jpg" alt="" />
+								<a class="zoom" href="images/works/5.jpg" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="portfolio-post.html" >Ginger Beast</a>
+									<span>17 March, 2041</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- //work5 -->
+					
+					<!-- work6 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="images/works/6.jpg" alt="" />
+								<a class="zoom" href="images/works/6.jpg" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="portfolio-post.html" >Ginger Beast</a>
+									<span>17 March, 2041</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- //work6 -->
+					
+					<!-- work7 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="images/works/7.jpg" alt="" />
+								<a class="zoom" href="images/works/7.jpg" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="portfolio-post.html" >Ginger Beast</a>
+									<span>17 March, 2041</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- //work7 -->
+				</div><!-- //PROJECTS SLIDER -->
+			</div>
+			
+			
+			<!-- OUR CLIENTS -->
+			<div class="our_clients">
+			
+				<!-- CONTAINER -->
+				<div class="container" data-appear-top-offset="-200" data-animated="fadeInUp">
+					
+					<!-- ROW -->
+					<div class="row">
+						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+							<img src="images/clients/1.jpg" alt="" />
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+							<img src="images/clients/2.jpg" alt="" />
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+							<img src="images/clients/3.jpg" alt="" />
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+							<img src="images/clients/4.jpg" alt="" />
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+							<img src="images/clients/5.jpg" alt="" />
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+							<img src="images/clients/6.jpg" alt="" />
+						</div>
+					</div><!-- //ROW -->
+				</div><!-- CONTAINER -->
+			</div><!-- //OUR CLIENTS -->
+		</section><!-- //PROJECTS -->
+		
+		
+		<!-- TEAM -->
+		<section id="team">
+		
+			<!-- CONTAINER -->
+			<div class="container">
+				<h2><b>Our</b> Team</h2>
+				
+				<!-- ROW -->
+				<div class="row" data-appear-top-offset="-200" data-animated="fadeInUp">
+						
+					<!-- TEAM SLIDER -->
+					<div class="owl-demo owl-carousel team_slider">
+				
+						<!-- crewman1 -->
+						<div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/1.jpg" alt="" />
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>Sarah Brown</p>
+										<span>Director</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div><!-- crewman1 -->
+						
+						<!-- crewman2 -->
+						<div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/2.jpg" alt="" />
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>David Jones</p>
+										<span>Creative Director</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div><!-- crewman1 -->
+						
+						<!-- crewman3 -->
+						<div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/3.jpg" alt="" />
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>Kate Smith</p>
+										<span>Manager</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div><!-- crewman3 -->
+						
+						<!-- crewman4 -->
+						<div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/4.jpg" alt="" />
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>Peter Parker</p>
+										<span>Manager</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div><!-- crewman4 -->
+						
+						<!-- crewman5 -->
+						<div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/5.jpg" alt="" />
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>Jim Moss</p>
+										<span>Designer</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div><!-- crewman5 -->
+						
+						<!-- crewman6 -->
+						<div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/6.jpg" alt="" />
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>John Marks</p>
+										<span>Designer</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div><!-- crewman6 -->
+						
+						<!-- crewman7 -->
+						<div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/7.jpg" alt="" />
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>Joe Mades</p>
+										<span>Developer</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div><!-- crewman7 -->
+						
+						<!-- crewman8 -->
+						<div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/8.jpg" alt="" />
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>Julia Anderson</p>
+										<span>Developer</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div><!-- crewman8 -->
+					</div><!-- TEAM SLIDER -->
+				</div><!-- //ROW -->
+			</div><!-- //CONTAINER -->
+		</section><!-- //TEAM -->
+		
+		
+		<!-- NEWS -->
+		<section id="news">
+		
+			<!-- CONTAINER -->
+			<div class="container">
+				<h2><b>Clients</b> say about us</h2>
+				
+				<!-- TESTIMONIALS -->
+				<div class="testimonials" data-appear-top-offset="-200" data-animated="fadeInUp">
+						
+					<!-- TESTIMONIALS SLIDER -->
+					<div class="owl-demo owl-carousel testim_slider">
+						
+						<!-- TESTIMONIAL1 -->
+						<div class="item">
+							<div class="testim_content">“There is nothing scary in the darkness, if you encounter it face-to-face. The inevitable price we pay for our happiness is eternal fear to lose it. When you start thinking a lot about your past, it becomes your present and you can't see your future without it.”</div>
+							<div class="testim_author">—  Anna Balashova, <b>Philosopher</b></div>
+						</div><!-- TESTIMONIAL1 -->
+						
+						<!-- TESTIMONIAL2 -->
+						<div class="item">
+							<div class="testim_content">“There is nothing scary in the darkness, if you encounter it face-to-face. The inevitable price we pay for our happiness is eternal fear to lose it. When you start thinking a lot about your past, it becomes your present and you can't see your future without it.”</div>
+							<div class="testim_author">—  Anna Balashova, <b>Philosopher</b></div>
+						</div><!-- TESTIMONIAL2 -->
+						
+						<!-- TESTIMONIAL3 -->
+						<div class="item">
+							<div class="testim_content">“There is nothing scary in the darkness, if you encounter it face-to-face. The inevitable price we pay for our happiness is eternal fear to lose it. When you start thinking a lot about your past, it becomes your present and you can't see your future without it.”</div>
+							<div class="testim_author">—  Anna Balashova, <b>Philosopher</b></div>
+						</div><!-- TESTIMONIAL3 -->
+					</div><!-- TESTIMONIALS SLIDER -->
+				</div><!-- //TESTIMONIALS -->
+				
+				<!-- RECENT POSTS -->
+				<div class="row recent_posts" data-appear-top-offset="-200" data-animated="fadeInUp">
+					<div class="col-lg-4 col-md-4 col-sm-4 padbot30 post_item_block">
+						<div class="post_item">
+							<div class="post_item_img">
+								<img src="images/blog/1.jpg" alt="" />
+								<a class="link" href="blog-post.html" ></a>
+							</div>
+							<div class="post_item_content">
+								<a class="title" href="blog-post.html" >Inteligent Transitions In UX Design</a>
+								<ul class="post_item_inf">
+									<li><a href="javascript:void(0);" >Anna</a> |</li>
+									<li><a href="javascript:void(0);" >Photography</a> |</li>
+									<li><a href="javascript:void(0);" >10 Comments</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 padbot30 post_item_block">
+						<div class="post_item">
+							<div class="post_item_img">
+								<img src="images/blog/2.jpg" alt="" />
+								<a class="link" href="blog-post.html"></a>
+							</div>
+							<div class="post_item_content">
+								<a class="title" href="blog-post.html" >Recent trends in storytelling</a>
+								<ul class="post_item_inf">
+									<li><a href="javascript:void(0);" >Anna</a> |</li>
+									<li><a href="javascript:void(0);" >Web Design</a> |</li>
+									<li><a href="javascript:void(0);" >No comment</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 padbot30 post_item_block">
+						<div class="post_item">
+							<div class="post_item_img">
+								<img src="images/blog/3.jpg" alt="" />
+								<a class="link" href="blog-post.html"></a>
+							</div>
+							<div class="post_item_content">
+								<a class="title" href="blog-post.html" >Supernatural FX Showreel</a>
+								<ul class="post_item_inf">
+									<li><a href="javascript:void(0);" >Anna</a> |</li>
+									<li><a href="javascript:void(0);" >Creative</a> |</li>
+									<li><a href="javascript:void(0);" >3 Comments</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div><!-- RECENT POSTS -->
+			</div><!-- //CONTAINER -->
+		</section><!-- //NEWS -->
+	</div><!-- //PAGE -->
+	
+	<!-- CONTACTS -->
+	<section id="contacts">
+	</section><!-- //CONTACTS -->
+	
+	<!-- FOOTER -->
+	<?php $this->load->view("footer");?>
+        <!-- //FOOTER -->
+	
+	
+	<!-- MAP -->
+	<div id="map">
+		<a class="map_hide" href="javascript:void(0);" ><i class="fa fa-angle-right"></i><i class="fa fa-angle-left"></i></a>
+		<iframe src="http://maps.google.com/maps?f=q&amp;give%20a%20hand=s_q&amp;hl=en&amp;geocode=&amp;q=london&amp;sll=37.0625,-95.677068&amp;sspn=42.631141,90.263672&amp;ie=UTF8&amp;hq=&amp;hnear=London,+United+Kingdom&amp;ll=51.500141,-0.126257&amp;spn=0.026448,0.039396&amp;z=14&amp;output=embed" ></iframe>
+	</div><!-- //MAP -->
 
-  
-<script>
-  $( function() {
-    $( "#dialog-message" ).dialog({
-      autoOpen: true,
-      buttons: {
-        Ok: function() {
-          $( this ).dialog( "close" );
-        }
-      }
-    });
-  } );
-  </script>
-  
- <div id="dialog-message" title="Download complete">
-  <p>
-    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
-    Your files have downloaded successfully into the My Downloads folder.
-  </p>
-  <p>
-    Currently using <b>36% of your storage space</b>.
-  </p>
 </div>
-
-<style>
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}    
-    
-    </style>
-    <script>
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal 
-    function modal() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-    </script>
-            
-            
-            <div class="row row-no-gutter pricing-table text-center">
-                <div class="col-md-4 wow fadeInLeft bg-grayscale-lighten-2" data-wow-duration="0.4s" data-wow-delay="1s">
-                    <div class="pricing-table__item well-sm">
-                        <div class="pricing-table__title">100</div>
-                        <h1 class="pricing-table__plan-name">BASIC</h1>
-                        <div class="pricing-table__price">100 puntos para
-                            <p>binario</p>
-                        </div>
-                        <p>Genera una rentabilidad del (15%) <br>de la compra del paquete en 120 d&iacute;as.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 accented wow fadeInLeft bg-grayscale-lighten-3" data-wow-duration="0.4s" data-wow-delay="0.5s">
-                    <div class="pricing-table__item well-sm">
-                        <div class="pricing-table__title">250</div>
-                        <h1 class="pricing-table__plan-name">PLATINIUM</h1>
-                        <div class="pricing-table__price">250 puntos para
-                            <p>binario</p>
-                        </div>
-                        <p>Genera una rentabilidad del (20%) <br>de la compra del paquete en 120 d&iacute;as.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 wow fadeInLeft bg-grayscale-lighten-2" data-wow-duration="0.4s" data-wow-delay="1s">
-                    <div class="pricing-table__item well-sm">
-                        <div class="pricing-table__title">500</div>
-                        <h1 class="pricing-table__plan-name">GOLD</h1>
-                        <div class="pricing-table__price">500 puntos para
-                            <p>binario</p>
-                        </div>
-                        <p>Genera una rentabilidad del (25%) <br>de la compra del paquete en 120 d&iacute;as.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Pricing table two -->
-        <section>
-            <div class="row row-no-gutter pricing-table text-center">
-                <div class="col-md-6 wow fadeInLeft bg-grayscale-lighten-2" data-wow-duration="0.8s" data-wow-delay="0s">
-                    <div class="pricing-table__item">
-                        <div class="pricing-table__title">1000</div>
-                        <h1 class="pricing-table__plan-name">VIP</h1>
-                        <div class="pricing-table__price">1000 puntos para
-                            <p>binario</p>
-                        </div>
-                        <p style="padding-bottom: 100px !important;">Genera una rentabilidad del (30%) <br>de la compra del paquete en 120 d&iacute;as.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 wow fadeInLeft bg-grayscale-lighten-3" data-wow-duration="1.2s" data-wow-delay="0s">
-                    <div class="pricing-table__item">
-                        <div class="pricing-table__title">5000</div>
-                        <h1 class="pricing-table__plan-name">ELITE</h1>
-                        <div class="pricing-table__price">5000 puntos para
-                            <p>binario</p>
-                        </div>
-                        <p style="padding-bottom: 100px !important;">Genera una rentabilidad del (35%) <br>de la compra del paquete en 120 d&iacute;as.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END Pricing table -->
-        <!-- About -->
-        <section class="relative well-xl">
-            <div class="absolute wow fadeInLeft">
-                <div class="row">
-                    <div class="col-md-preffix-6 col-md-6">
-                        <div class="image-wrap"><img src="<?php echo site_url().'static/page_front/images/page-01_img01.jpg';?>" width="1010" height="1125" alt=""></div>
-                    </div>
-                </div>
-            </div>
-            <div class="container wow fadeInRight">
-                <div class="row">
-                    <div class="col-md-5">
-                        <h1>Acerca</h1>
-                        <p class="inset-2">
-                            <?php echo replace_vocales_voculeshtml("BitShare (compartir bitcoin) es una tienda online de mercadeo en red con un concepto revolucionario de negocio en donde se ha fusionado los metales preciosos con la criptomoneda.");?>
-                        </p> <a href="<?php echo site_url().'acerca';?>" class="btn btn-primary btn-md">Explorar M&aacute;s</a> </div>
-                </div>
-            </div>
-        </section>
-        <!-- END About-->
-        <!-- Testimonials -->
-        <!-- <section class="well-md well-md-inset-1 bg-primary text-center"> <h1 class="wow fadeInUp">Testimonials</h1> <div class="row wow fadeInUp"> Owl Carousel <div class="owl-carousel" data-nav="true" data-loop="true" data-items="1"> <div class="owl-item inset-5"> <p>I just don't know how to describe your services... They are extraordinary! I am quite happy with them! Just keep up going this way!</p> <hr class="devider"> <h4><a href="#">Marie Hoffman</a></h4> <p>Female from United States</p> </div> <div class="owl-item inset-5"> <p>Wow, I'm so happy with your service. You managed to exceed my expectations! You guys are very efficient and I will refer more people to your company!</p> <hr class="devider"> <h4><a href="#">Tom Brown</a></h4> <p>Male from United States</p> </div> </div> END Owl Carousel </div> </section>-->
-        <!-- END Testimonials-->
-        <!-- Quality -->
-        <section class="relative well-lg">
-            <div class="absolute wow fadeInRight">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="image-wrap"><img src="<?php echo site_url().'static/page_front/images/pasarelas/blockchain.jpg';?>" width="1010" height="1125" alt=""></div>
-                    </div>
-                </div>
-            </div>
-            <div class="container wow fadeInLeft">
-                <div class="row">
-                    <div class="col-md-preffix-7 col-md-5">
-                        <h1>
-                            <?php echo replace_vocales_voculeshtml("EL MUNDO ESTÁ ABIERTO AHORA PARA LOS NEGOCIOS BLOCKCHAIN")?>
-                        </h1>
-                        <p class="inset-2">
-                            <?php echo replace_vocales_voculeshtml("Es el corazón de la moneda digital, la tecnología descentralizada que está revolucionando la manera en que la gente intercambia; millones de usuarios y cientos de miles de comerciantes utilizan bitcoin. La tecnología de cadena de bloques es una contabilidad pública entre pares que se mantiene mediante una red distribuida de ordenadores y que no requiere ninguna autoridad central no terceras partes que actúen como intermediario. ")?>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END Quality-->
-        <!-- Partners -->
-        <section class="well-sm bg-primary text-center">
-            <div class="container wow fadeInUp">
-                <h1>Pasarelas de BitCoin</h1>
-                <div class="row row-xs-center">
-                    <p class="inset-1">
-                        <?php echo replace_vocales_voculeshtml("A nivel mundial existen más de 200 pasarelas de pago que aceptan la primera criptomenda EL BITCOIN, negocios y grandes marcas han invertidos más de $927 millones de dólares americanos en infraestructura de esta criptomoneda tales como: visa, citi ventures, goldman sachs, bbva, nyse (new york stock exchanger), overstock, entre otras.")?>
-                    </p>
-                    <!-- Flex list -->
-                    <ul class="flex-list">
-                        <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/blockchain.png';?>" alt="" width="117" height="86"></li>
-                        <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/bitinka.png';?>" alt="" width="117" height="86"></li>
-                        <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/xapo.png';?>" alt="" width="117" height="86"></li>
-                        <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/coinbase.png';?>" alt="" width="117" height="86"></li>
-                        <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/uphold.png';?>" alt="" width="117" height="86"></li>
-                        <li><img src="<?php echo site_url().'static/page_front/images/pasarelas/bitcointoyou.png';?>" alt="" width="117" height="86"></li>
-                    </ul>
-                    <!-- END Flex list -->
-                </div>
-            </div>
-        </section>
-        <!-- END Partners-->
-        <!-- Get in touch -->
-        <!-- END Get in touch-->
-    </main>
-</body>    
-    <!--======================================================== FOOTER ==========================================================-->
-    <?php $this->load->view("footer");?>
-</div>
-<!-- Core Scripts -->
-<script src="<?php echo site_url().'static/page_front/js/core.min.js';?>"></script>
-<!-- Additional Functionality Scripts -->
-<script src="<?php echo site_url().'static/page_front/js/script.js';?>"></script>
-<!-- begin olark code -->
-<!-- Login Backoffice-->
-<script src="static/page_front/js/login.js"></script>
-<!-- End Login-->
 </body>
-<!-- Google Tag Manager -->
-
 </html>
