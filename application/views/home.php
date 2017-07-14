@@ -21,7 +21,7 @@
 					<!-- LOGO -->
 					<div class="logo pull-left">
 						<a href="index.html" >
-                                                    <span class="b1">w</span><span class="b2">h</span><span class="b3">i</span><span class="b4">t</span><span class="b5">e</span>
+                                                    <span class="b1">B</span><span class="b2">I</span><span class="b3">T</span><span class="b4">S</span><span class="b5">H</span><span class="b4">A</span><span class="b3">R</span><span class="b2">E</span>
                                                 </a>
 					</div><!-- //LOGO -->
 					
@@ -36,14 +36,14 @@
 					<div class="pull-right">
 						<nav class="navmenu center">
 							<ul>
-								<li class="first active scroll_btn"><a href="#home" >Home</a></li>
-								<li class="scroll_btn"><a href="#about" >About Us</a></li>
-								<li class="scroll_btn"><a href="#projects" >Projects</a></li>
-								<li class="scroll_btn"><a href="#team" >Team</a></li>
-								<li class="scroll_btn"><a href="#news" >News</a></li>
-								<li class="scroll_btn last"><a href="#contacts" >Contacts</a></li>
+								<li class="first active scroll_btn"><a href="#home" >Inicio</a></li>
+								<li class="scroll_btn"><a href="#about" >Acerca</a></li>
+								<li class="scroll_btn"><a href="#projects" >Plan</a></li>
+								<li class="scroll_btn"><a href="#team" >Equipo</a></li>
+								<li class="scroll_btn"><a href="#news" >FAQs</a></li>
+                                                                <li class="scroll_btn last"><a href="#contacts" >Contacto</a></li>
 								<li class="sub-menu">
-									<a href="javascript:void(0);" >Pages</a>
+									<a href="blog.html">Login</a>
 									<ul>
 										<li><a href="blog.html" >Blog</a></li>
 										<li><a href="blog-post.html" >Blog Post</a></li>
@@ -112,26 +112,26 @@
 					<div class="row">
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
 							<a class="services_item" href="javascript:void(0);" >
-								<p><b>Easy</b> Customize</p>
-								<span>Quality and very comfortable design, does not hurt the eyes and pleasant to use.</span>
+								<p><b>Alianzas</b></p>
+                                                                <span><b>World Travel Vacation</b><?php echo replace_vocales_voculeshtml(" prestigiosa empresa mayorista de viajes turísticos con convenios en los mejores hoteles del mundo y primera empresa en aceptar bitcoin en el Perú.");?></span>
 							</a>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
 							<a class="services_item" href="javascript:void(0);" >
-								<p><b>Modern</b> Design</p>
-								<span>Quality and unique design that meets all the requirements and trends of modern web design.</span>
+								<p><b>Legalidad</b></p>
+                                                                <span><?php echo replace_vocales_voculeshtml("Empresa 100% legal que reside en Perú con avales y permisos en dicha jurisdicción con oficinas en una zona exclusiva abierta los asociados.");?></span>
 							</a>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
 							<a class="services_item" href="javascript:void(0);" >
-								<p><b>Responsive</b> Design</p>
-								<span>Design that will be equally beautifully displayed on all your devices, tablet, smartphone or computer.</span>
+								<p><b>Momento</b></p>
+                                                                <span><?php echo replace_vocales_voculeshtml("Nace el 03 de Marzo del 2017 lo cual indica que toda persona que entre a la multiplaforma sea pionero en una empresa de gran envergadura.");?></span>
 							</a>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
 							<a class="services_item" href="javascript:void(0);" >
-								<p><b>Free</b> Updates & Support</p>
-								<span>Hour and great support template. You can always ask a question and we will help you.</span>
+								<p><b>Oportunidad</b></p>
+                                                                <span><?php echo replace_vocales_voculeshtml("Somos globales desde el día uno,  tenemos un crecimiento exponencial, alianzas estratégicas con compañías prestigiosas y  abrimos puertas a personas para que desarrollen sus habilidades.")?></span>
 							</a>
 						</div>
 					</div><!-- //ROW -->
@@ -147,11 +147,11 @@
 					<!-- CASTOM TAB -->
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade in active clearfix" id="tab1">
-							<p class="title"><b>Clean</b> Code</p>
-							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
+							<p class="title"><b>BITSHARE</b> ES</p>
+                                                        <span><?php echo replace_vocales_voculeshtml("Multiplataforma virtual que brinda distintos servicios e info-productos, a través de las criptodivisas (Bitcoin), que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca, de esta forma pudiendo diversificar nuestro activo más importante (clientes) en masa crítica a otras distintas empresas.")?></span>
 						</div>
 						<div class="tab-pane fade clearfix" id="tab2">
-							<p class="title"><b>Technical</b> Support</p>
+                                                    <p class="title"><?php echo replace_vocales_voculeshtml("¿Porqué ")?><b><?php echo replace_vocales_voculeshtml("Nosotros?")?></b></p>
 							<span>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</span>
 						</div>
 						<div class="tab-pane fade clearfix" id="tab3">
@@ -172,7 +172,7 @@
 						</div>
 					</div>
 					<ul id="myTab" class="nav nav-tabs">
-						<li class="active"><a class="i1" href="#tab1" data-toggle="tab" ><i></i><span>Clean Code</span></a></li>
+                                                <li class="active"><a class="i3" href="#tab1" data-toggle="tab" ><i></i><span><?php echo replace_vocales_voculeshtml("¿Qué es?")?></span></a></li>
 						<li><a class="i2" href="#tab2" data-toggle="tab" ><i></i><span>Support</span></a></li>
 						<li><a class="i3" href="#tab3" data-toggle="tab" ><i></i><span>Responsive</span></a></li>
 						<li><a class="i4" href="#tab4" data-toggle="tab" ><i></i><span>Documentation</span></a></li>
@@ -192,15 +192,14 @@
 					<div class="row">
 					
 						<div class="col-lg-7 col-md-7 col-sm-7" data-appear-top-offset="-200" data-animated="fadeInLeft">
-							<h2><b>Multi-purpose</b> WordPress Theme</h2>
-							<p>We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.</p>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-							<a class="btn btn-active" href="javascript:void(0);" ><span data-hover="Yes I want it">Byu This theme</span></a>
-							<a class="btn" href="javascript:void(0);" >View more templates</a>
+                                                    <h2><b><?php echo replace_vocales_voculeshtml("Propósito");?></b> BITSHARE</h2>
+                                                    <p><?php echo replace_vocales_voculeshtml("Nuestra visión es ser la primera marca pionera que abre brecha al mundo para dar a conocer la utilidad real de las criptomedas en un mundo tecnológico dónde reemplacemos la forma cotidiana de compra y venta presencial por una virtual, que en consecuencia, logremos un upgrade integral en la vida de las personas, a trevés de los servicios de nuestra multiplataforma.");?></p>
+                                                    <p><?php echo replace_vocales_voculeshtml("Nuestra misión es mediante las redes de mercadeo y el constante desarrollo de nuestros productos vamos a poder ayudar a que las personas puedan desarrollar distintas áeras y experiencias con nosotros adaptando como un estilo de vida cotidiano la facilidad del  mundo virtual.");?></p>
+							<a class="btn btn-active" href="javascript:void(0);" ><span data-hover="Si, yo quiero">Registrarme</span></a>
 						</div>
 						
 						<div class="col-lg-5 col-md-5 col-sm-5 ipad_img_in" data-appear-top-offset="-200" data-animated="fadeInRight">
-							<img class="ipad_img1" src="images/img1.png" alt="" />
+                                                    <img class="ipad_img1" src="<?php echo site_url().'static/page_front/white/images/front/img1.png'?>" alt="" />
 						</div>
 					</div><!-- //ROW -->
 				</div><!-- //CONTAINER -->
@@ -213,7 +212,7 @@
 		
 			<!-- CONTAINER -->
 			<div class="container">
-				<h2><b>Featured</b> Works</h2>
+				<h2><b>Paquetes</b> BITSHARE</h2>
 			</div><!-- //CONTAINER -->
 			
 				
@@ -225,13 +224,13 @@
 					<div class="item">
 						<div class="work_item">
 							<div class="work_img">
-								<img src="images/works/1.jpg" alt="" />
-								<a class="zoom" href="images/works/1.jpg" rel="prettyPhoto[portfolio1]" ></a>
+								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/a1.jpg'?>" alt="" />
+								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/work/1.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
+									<a href="portfolio-post.html" >BASIC</a>
+									<span>$125.00</span>
 								</div>
 							</div>
 						</div>
@@ -241,13 +240,13 @@
 					<div class="item">
 						<div class="work_item">
 							<div class="work_img">
-								<img src="images/works/2.jpg" alt="" />
-								<a class="zoom" href="images/works/2.jpg" rel="prettyPhoto[portfolio1]" ></a>
+								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/a2.jpg'?>" alt="" />
+								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/work/2.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
+									<a href="portfolio-post.html" >EXECUTIVE</a>
+									<span>$250.00</span>
 								</div>
 							</div>
 						</div>
@@ -257,13 +256,13 @@
 					<div class="item">
 						<div class="work_item">
 							<div class="work_img">
-								<img src="images/works/3.jpg" alt="" />
-								<a class="zoom" href="images/works/3.jpg" rel="prettyPhoto[portfolio1]" ></a>
+								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/a3.jpg'?>" alt="" />
+								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/work/3.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
+									<a href="portfolio-post.html" >SENIOR EXECUTIVE</a>
+									<span>$1,000.00</span>
 								</div>
 							</div>
 						</div>
@@ -273,76 +272,28 @@
 					<div class="item">
 						<div class="work_item">
 							<div class="work_img">
-								<img src="images/works/4.jpg" alt="" />
-								<a class="zoom" href="images/works/4.jpg" rel="prettyPhoto[portfolio1]" ></a>
+								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/a4.jpg'?>" alt="" />
+								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/work/a4.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
+									<a href="portfolio-post.html" >MASTER</a>
+									<span>$3,000.00</span>
 								</div>
 							</div>
 						</div>
 					</div><!-- //work4 -->
-					
-					<!-- work5 -->
-					<div class="item">
-						<div class="work_item">
-							<div class="work_img">
-								<img src="images/works/5.jpg" alt="" />
-								<a class="zoom" href="images/works/5.jpg" rel="prettyPhoto[portfolio1]" ></a>
-							</div>
-							<div class="work_description">
-								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
-								</div>
-							</div>
-						</div>
-					</div><!-- //work5 -->
-					
-					<!-- work6 -->
-					<div class="item">
-						<div class="work_item">
-							<div class="work_img">
-								<img src="images/works/6.jpg" alt="" />
-								<a class="zoom" href="images/works/6.jpg" rel="prettyPhoto[portfolio1]" ></a>
-							</div>
-							<div class="work_description">
-								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
-								</div>
-							</div>
-						</div>
-					</div><!-- //work6 -->
-					
-					<!-- work7 -->
-					<div class="item">
-						<div class="work_item">
-							<div class="work_img">
-								<img src="images/works/7.jpg" alt="" />
-								<a class="zoom" href="images/works/7.jpg" rel="prettyPhoto[portfolio1]" ></a>
-							</div>
-							<div class="work_description">
-								<div class="work_descr_cont">
-									<a href="portfolio-post.html" >Ginger Beast</a>
-									<span>17 March, 2041</span>
-								</div>
-							</div>
-						</div>
-					</div><!-- //work7 -->
 				</div><!-- //PROJECTS SLIDER -->
 			</div>
 			
 			
 			<!-- OUR CLIENTS -->
-			<div class="our_clients">
+<!--			<div class="our_clients">
 			
-				<!-- CONTAINER -->
+				 CONTAINER 
 				<div class="container" data-appear-top-offset="-200" data-animated="fadeInUp">
 					
-					<!-- ROW -->
+					 ROW 
 					<div class="row">
 						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
 							<img src="images/clients/1.jpg" alt="" />
@@ -362,9 +313,9 @@
 						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
 							<img src="images/clients/6.jpg" alt="" />
 						</div>
-					</div><!-- //ROW -->
-				</div><!-- CONTAINER -->
-			</div><!-- //OUR CLIENTS -->
+					</div> //ROW 
+				</div> CONTAINER 
+			</div> //OUR CLIENTS -->
 		</section><!-- //PROJECTS -->
 		
 		
@@ -373,7 +324,7 @@
 		
 			<!-- CONTAINER -->
 			<div class="container">
-				<h2><b>Our</b> Team</h2>
+				<h2><b>Equipo</b> De Trabajo</h2>
 				
 				<!-- ROW -->
 				<div class="row" data-appear-top-offset="-200" data-animated="fadeInUp">
@@ -385,7 +336,7 @@
 						<div class="item">
 							<div class="crewman_item">
 								<div class="crewman">
-									<img src="images/team/1.jpg" alt="" />
+									<img src="<?php echo site_url().'static/page_front/white/images/front/team/1.jpg'?>" alt="" />
 								</div>
 								<div class="crewman_descr center">
 									<div class="crewman_descr_cont">
@@ -404,7 +355,7 @@
 						<div class="item">
 							<div class="crewman_item">
 								<div class="crewman">
-									<img src="images/team/2.jpg" alt="" />
+									<img src="<?php echo site_url().'static/page_front/white/images/front/team/2.jpg'?>" alt="" />
 								</div>
 								<div class="crewman_descr center">
 									<div class="crewman_descr_cont">
@@ -424,7 +375,7 @@
 						<div class="item">
 							<div class="crewman_item">
 								<div class="crewman">
-									<img src="images/team/3.jpg" alt="" />
+									<img src="<?php echo site_url().'static/page_front/white/images/front/team/3.jpg'?>" alt="" />
 								</div>
 								<div class="crewman_descr center">
 									<div class="crewman_descr_cont">
@@ -443,7 +394,7 @@
 						<div class="item">
 							<div class="crewman_item">
 								<div class="crewman">
-									<img src="images/team/4.jpg" alt="" />
+									<img src="<?php echo site_url().'static/page_front/white/images/front/team/4.jpg'?>" alt="" />
 								</div>
 								<div class="crewman_descr center">
 									<div class="crewman_descr_cont">
@@ -462,7 +413,7 @@
 						<div class="item">
 							<div class="crewman_item">
 								<div class="crewman">
-									<img src="images/team/5.jpg" alt="" />
+									<img src="i<?php echo site_url().'static/page_front/white/images/front/team/5.jpg'?>" alt="" />
 								</div>
 								<div class="crewman_descr center">
 									<div class="crewman_descr_cont">
@@ -482,7 +433,7 @@
 						<div class="item">
 							<div class="crewman_item">
 								<div class="crewman">
-									<img src="images/team/6.jpg" alt="" />
+									<img src="<?php echo site_url().'static/page_front/white/images/front/team/6.jpg'?>" alt="" />
 								</div>
 								<div class="crewman_descr center">
 									<div class="crewman_descr_cont">
@@ -501,7 +452,7 @@
 						<div class="item">
 							<div class="crewman_item">
 								<div class="crewman">
-									<img src="images/team/7.jpg" alt="" />
+									<img src="<?php echo site_url().'static/page_front/white/images/front/team/7.jpg'?>" alt="" />
 								</div>
 								<div class="crewman_descr center">
 									<div class="crewman_descr_cont">
@@ -520,7 +471,7 @@
 						<div class="item">
 							<div class="crewman_item">
 								<div class="crewman">
-									<img src="images/team/8.jpg" alt="" />
+									<img src="<?php echo site_url().'static/page_front/white/images/front/team/8.jpg'?>" alt="" />
 								</div>
 								<div class="crewman_descr center">
 									<div class="crewman_descr_cont">
@@ -546,7 +497,7 @@
 		
 			<!-- CONTAINER -->
 			<div class="container">
-				<h2><b>Clients</b> say about us</h2>
+				<h2><b>FAQ</b> - Preguntas Frecuentes</h2>
 				
 				<!-- TESTIMONIALS -->
 				<div class="testimonials" data-appear-top-offset="-200" data-animated="fadeInUp">
@@ -556,21 +507,37 @@
 						
 						<!-- TESTIMONIAL1 -->
 						<div class="item">
-							<div class="testim_content">“There is nothing scary in the darkness, if you encounter it face-to-face. The inevitable price we pay for our happiness is eternal fear to lose it. When you start thinking a lot about your past, it becomes your present and you can't see your future without it.”</div>
-							<div class="testim_author">—  Anna Balashova, <b>Philosopher</b></div>
+                                                    <div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Qué es BITSHARE?")?></b></div>
+                                                    <div class="testim_content"><?php echo replace_vocales_voculeshtml("“Es una multiplataforma Online que trabaja bajo el sistema de multinivel que brinda servicios e info-productos a través de las criptodivisas (Bitcoin)”."); ?></div>
 						</div><!-- TESTIMONIAL1 -->
 						
 						<!-- TESTIMONIAL2 -->
 						<div class="item">
-							<div class="testim_content">“There is nothing scary in the darkness, if you encounter it face-to-face. The inevitable price we pay for our happiness is eternal fear to lose it. When you start thinking a lot about your past, it becomes your present and you can't see your future without it.”</div>
-							<div class="testim_author">—  Anna Balashova, <b>Philosopher</b></div>
+							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿BITSHARE es una empresa legal?")?></b></div>
+                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("“Sí, somos una empresa legal registrada en la república del Perú con la siguiente denominación: Razón Social: INVERSIONES BITSHARE S.A.C . Número de Ruc: 20601940087”.");?></div>
 						</div><!-- TESTIMONIAL2 -->
 						
 						<!-- TESTIMONIAL3 -->
 						<div class="item">
-							<div class="testim_content">“There is nothing scary in the darkness, if you encounter it face-to-face. The inevitable price we pay for our happiness is eternal fear to lose it. When you start thinking a lot about your past, it becomes your present and you can't see your future without it.”</div>
-							<div class="testim_author">—  Anna Balashova, <b>Philosopher</b></div>
+							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Quién es el dueño de BITSHARE?")?></b></div>
+                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("“Silene Carrasco Cruz, una líder de la industria (MLM) con más de 10 años de experiencia con organizaciones de personas en los 5 continentes y resultados alrededor del mundo”.");?></div>
 						</div><!-- TESTIMONIAL3 -->
+                                                <!-- TESTIMONIAL4 -->
+						<div class="item">
+							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Cuándo ingreso a BITSHARE firmo algún contrato?")?></b></div>
+                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("“Sí, cuando una persona ingresa a BITSHARE, firma un contrato de distribución mercantil que será válido durante la permanencia en BITSHARE.”");?></div>
+						</div><!-- TESTIMONIAL4 -->
+                                                <!-- TESTIMONIAL5 -->
+						<div class="item">
+							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Tengo algún límite de personas para invitar a BITSHARE?")?></b></div>
+                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("“No, un distribuidor puede invitar a tantas personas como quiera lo único que se pide es que cumplan con reglas de ética de la empresa.”");?></div>
+						</div><!-- TESTIMONIAL5 -->
+                                                <!-- TESTIMONIAL6 -->
+						<div class="item">
+							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Qué riesgos tengo si soy parte de BITSHARE?")?></b></div>
+                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("Todo negocio tiene riesgos, Bitshare no es la excepción, pero lo que buscamos es minimizar los riegos con 3 puntos principales: Ser pionero, comercializamos los productos más consumidos del mercado y los cobros se efectúan de forma diaria.");?>
+</div>
+						</div><!-- TESTIMONIAL6 -->
 					</div><!-- TESTIMONIALS SLIDER -->
 				</div><!-- //TESTIMONIALS -->
 				
@@ -579,7 +546,7 @@
 					<div class="col-lg-4 col-md-4 col-sm-4 padbot30 post_item_block">
 						<div class="post_item">
 							<div class="post_item_img">
-								<img src="images/blog/1.jpg" alt="" />
+								<img src="<?php echo site_url().'static/page_front/white/images/front/blog/1.jpg'?>" alt="" />
 								<a class="link" href="blog-post.html" ></a>
 							</div>
 							<div class="post_item_content">
@@ -595,7 +562,7 @@
 					<div class="col-lg-4 col-md-4 col-sm-4 padbot30 post_item_block">
 						<div class="post_item">
 							<div class="post_item_img">
-								<img src="images/blog/2.jpg" alt="" />
+								<img src="<?php echo site_url().'static/page_front/white/images/front/blog/2.jpg'?>" alt="" />
 								<a class="link" href="blog-post.html"></a>
 							</div>
 							<div class="post_item_content">
@@ -611,7 +578,7 @@
 					<div class="col-lg-4 col-md-4 col-sm-4 padbot30 post_item_block">
 						<div class="post_item">
 							<div class="post_item_img">
-								<img src="images/blog/3.jpg" alt="" />
+								<img src="<?php echo site_url().'static/page_front/white/images/front/blog/3.jpg'?>" alt="" />
 								<a class="link" href="blog-post.html"></a>
 							</div>
 							<div class="post_item_content">

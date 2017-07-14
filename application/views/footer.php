@@ -11,7 +11,7 @@
 					<h4><b>Featured</b> posts</h4>
 					<div class="recent_posts_small clearfix">
 						<div class="post_item_img_small">
-							<img src="images/blog/1.jpg" alt="" />
+							<img src="<?php echo site_url().'static/page_front/white/images/front/blog/1.jpg'?>" alt="" />
 						</div>
 						<div class="post_item_content_small">
 							<a class="title" href="blog.html" >As we have developed a unique layout template</a>
@@ -22,7 +22,7 @@
 					</div>
 					<div class="recent_posts_small clearfix">
 						<div class="post_item_img_small">
-							<img src="images/blog/2.jpg" alt="" />
+							<img src="<?php echo site_url().'static/page_front/white/images/front/blog/2.jpg'?>" alt="" />
 						</div>
 						<div class="post_item_content_small">
 							<a class="title" href="blog.html" >How much is to develop a design for the game?</a>
@@ -33,7 +33,7 @@
 					</div>
 					<div class="recent_posts_small clearfix">
 						<div class="post_item_img_small">
-							<img src="images/blog/3.jpg" alt="" />
+							<img src="<?php echo site_url().'static/page_front/white/images/front/blog/3.jpg'?>" alt="" />
 						</div>
 						<div class="post_item_content_small">
 							<a class="title" href="blog.html" >How to pump designer</a>
