@@ -1,67 +1,66 @@
 <!DOCTYPE html>
-<html lang="es" class="wide wow-animation">
-<!--======================================================== HEAD =========================================================-->
+<html lang="en">
 <?php $this->load->view("head"); ?>
-
 <body>
-    <!-- The Main Wrapper -->
-    <div class="page">
-        <!--======================================================== HEADER =========================================================-->
-        <?php $this->load->view("header_secundary"); ?>
-        <!--======================================================== CONTENT =========================================================-->
-        <main class="page-content">
-            <!-- END Contact info-->
-            <!-- Get in touch -->
-            <section class="well-xs text-center">
-                <div class="container wow fadeInUp">
-                    <h1>
-                        <?php echo replace_vocales_voculeshtml("Iniciar Sesión");?>
-                    </h1>
-                    <!-- RD Mailform -->
-                    <form class='rd-mailform'>
-                        <fieldset>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <h6><a href="#">Usuario</a></h6> <label data-add-placeholder> <input type="text" id="username" name="username" placeholder="" data-constraints="@NotEmpty"/> </label> </div>
-                                <div class="col-sm-6">
-                                    <h6>
-                                        <a href="#">
-                                            <?php echo replace_vocales_voculeshtml("Contraseña");?>
-                                        </a>
-                                    </h6> <label data-add-placeholder> <input type="password" id="password" name="password" placeholder="" data-constraints="@NotEmpty"/> </label> </div>
-                                <div class="col-sm-12"><a></a></div>
-                                <div class="col-sm-12">
-                                    <h6 class="olvide">
-                                        <a href="<?php echo site_url().'recuperar';?>">
-                                            <?php echo replace_vocales_voculeshtml("¿Olvidaste tu contraseña?");?>
-                                        </a>
-                                    </h6>
-                                </div>
-                                <div class="col-xs-12 text-center">
-                                    <div class="mfControls"> <button onclick="send_login();" class="btn btn-md btn-primary" type="button"><?php echo replace_vocales_voculeshtml("Iniciar Sesión");?></button> </div>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form> <span class="alert-0"></span>
-                    <!-- END RD Mailform -->
-                    <!--<address>8901 Marmora Road, Glasgow, D04 89GR</address>--></div>
-            </section>
-            <!-- END Get in touch-->
-        </main>
-        <!--======================================================== FOOTER ==========================================================-->
-        <?php $this->load->view("footer");?>
-    </div>
-    <!-- Core Scripts -->
-    <script src="<?php echo site_url().'static/page_front/js/core.min.js';?>"></script>
-    <!-- Additional Functionality Scripts -->
-    <script src="<?php echo site_url().'static/page_front/js/script.js';?>"></script>
-    <!-- import Js contact -->
-    <script src="<?php echo site_url().'static/page_front/js/contact.js';?>"></script>
-    <!-- import bootbox.min -->
-    <script src="<?php echo site_url().'static/page_front/js/bootbox.min.js';?>"></script>
-    <!-- Login Backoffice-->
-    <!--<script src="static/page_front/js/login.js"></script>-->
-    <!-- End Login-->
-</body>
+<!-- PRELOADER -->
+<img id="preloader" src="images/preloader.gif" alt="" />
+<!-- //PRELOADER -->
+<div class="preloader_hide">
 
+	<!-- PAGE -->
+	<div id="page" class="single_page">
+		<!-- HEADER -->
+                <?php $this->load->view("header_secundary"); ?>
+		<!-- //HEADER -->
+		<!-- BREADCRUMBS -->
+		<section class="breadcrumbs_block clearfix parallax">
+			<div class="container center">
+				<h2><b>Inicio de Sesión </b></h2>
+				<p>Bienvenido a BITSHARE</p>
+			</div>
+		</section><!-- //BREADCRUMBS -->
+		
+		
+		<!-- BLOG -->
+		<section id="blog">
+			<!-- CONTAINER -->
+			<div class="container">
+				<!-- ROW -->
+				<div class="row">
+					<!-- BLOG BLOCK -->
+					<div class="blog_block col-lg-10 col-md-10 padbot50 col-md-offset-2">
+						<!-- BLOG POST -->
+						<div class="blog_post margbot100 clearfix" data-animated="fadeInUp">
+							<div class="blog_post_descr">
+                                                            <div id="fields">
+                                                                    <form>
+                                                                        <a class="blog_post_title" style="font-size: 26px !important;">Usuario</a>
+                                                                            <input type="text" name="username" id="username" class="password_text"/>
+                                                                            <br>
+                                                                            <a class="blog_post_title" style="font-size: 26px !important;">Contraseña</a>
+                                                                            <input type="password" name="password" id="password" class="password_text"/>
+                                                                            <hr>
+                                                                            <input class="contact_btn" onclick="send_login();" value="<?php echo replace_vocales_voculeshtml("Iniciar Sesión");?>" />
+                                                                    </form>
+                                                            </div>
+								<hr>
+                                                                <div class="blog_post_content"><a><?php echo replace_vocales_voculeshtml("¿Olvidaste tu contraseña?");?></a></div>
+							</div>
+						</div><!-- //BLOG POST -->
+					</div><!-- //BLOG BLOCK -->
+				</div><!-- //ROW -->
+			</div><!-- //CONTAINER -->
+		</section><!-- //BLOG -->
+	</div><!-- //PAGE -->
+        <script src="<?php echo site_url().'static/page_front/js/contact.js';?>"></script>
+	<!-- FOOTER -->
+        <?php $this->load->view("footer");?>
+	<!-- //FOOTER -->
+	<!-- MAP -->
+	<div id="map">
+		<a class="map_hide" href="javascript:void(0);" ><i class="fa fa-angle-right"></i><i class="fa fa-angle-left"></i></a>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.930880417326!2d-77.0350244846066!3d-12.116881791420631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c817d1ae2fd3%3A0x6979887ef7b081b5!2sCalle+Enrique+Palacios+420%2C+Miraflores+15074!5e0!3m2!1ses!2spe!4v1500097903604" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div><!-- //MAP -->
+</div>
+</body>
 </html>
