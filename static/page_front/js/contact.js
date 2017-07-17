@@ -34,15 +34,14 @@ function send_login(){
         data: {username : username, password:password},
         success:function(data){            
             if (data.message == "false"){                         
-                $(".alert-0").removeClass('text-danger').addClass('text-danger').html(data.print)
+                no_login();
             }else{
-                $(".alert-0").removeClass('text-success').addClass('text-success').html(data.print)
                 $(location).attr('href',data.url);  
             }
         }            
     });
   }else{
-       $(".alert-0").removeClass('text-danger').addClass('text-danger').html(data.print)
+   llene_campos();
   }   
 }
 
@@ -56,7 +55,13 @@ function enviado_correcto() {
         title: 'Mensaje',
         body: '<div class="w2ui-centered">El Mensaje no pudo enviarse.</div>'
     });
-}function llene_campos() {
+}function no_login() {
+    w2popup.open({
+        title: 'Mensaje',
+        body: '<div class="w2ui-centered">Usuario y/o contraseña incorrecta.</div>'
+    });
+}
+function llene_campos() {
     w2popup.open({
         title: 'Mensaje',
         body: '<div class="w2ui-centered">Debe llenar todos los campos.</div>'
