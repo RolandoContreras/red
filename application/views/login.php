@@ -3,7 +3,7 @@
 <?php $this->load->view("head"); ?>
 <body>
 <!-- PRELOADER -->
-<img id="preloader" src="images/preloader.gif" alt="" />
+<img id="preloader" src="<?php echo site_url().'static/page_front/white/gif/preloader.gif'?>" alt="preloader" />
 <!-- //PRELOADER -->
 <div class="preloader_hide">
 

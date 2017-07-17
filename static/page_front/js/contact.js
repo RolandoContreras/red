@@ -1,10 +1,9 @@
 function send_messages(){
-    
     name = $("#name").val();    
     email = $("#email").val();     
     message = $("#message").val();
-    
     if(name != "" && email != "" && message != ""){
+        
         $.ajax({
         type: "post",
         url: "contact/send_messages",
@@ -12,14 +11,14 @@ function send_messages(){
         data: {name : name, email:email, message:message,},
         success:function(data){            
             if (data.message == "false"){                         
-               $(".alert-0").removeClass('text-danger').addClass('text-danger').html(data.print)
+               no_enviado();
             }else{
-               $(".alert-0").removeClass('text-success').addClass('text-success').html(data.print)
+                enviado_correcto();
             }
         }            
         });
     }else{
-        $(".alert-0").removeClass('text-danger').addClass('text-danger').html("Llene todos los campos")
+        llene_campos();
     }
 }
 function send_login(){
@@ -45,4 +44,21 @@ function send_login(){
   }else{
        $(".alert-0").removeClass('text-danger').addClass('text-danger').html(data.print)
   }   
+}
+
+function enviado_correcto() {
+    w2popup.open({
+        title: 'Felicidades',
+        body: '<div class="w2ui-centered">Mensaje enviado correctamente</div>'
+    });
+}function no_enviado() {
+    w2popup.open({
+        title: 'Mensaje',
+        body: '<div class="w2ui-centered">El Mensaje no pudo enviarse.</div>'
+    });
+}function llene_campos() {
+    w2popup.open({
+        title: 'Mensaje',
+        body: '<div class="w2ui-centered">Debe llenar todos los campos.</div>'
+    });
 }

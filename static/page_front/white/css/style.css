@@ -1260,6 +1260,31 @@ input[type="color"]:focus {
 	transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
 }
+
+.contact_btn_home {
+        width: 50% !important;
+	display:inline-block;
+	cursor:pointer;
+	margin: 7px 7px 8px 0;
+	padding:13px 30px;
+	border: 2px solid #242424;
+	border-radius: 0;
+	box-shadow: 0;
+	text-shadow:none;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-family: 'Roboto', sans-serif;
+	font-weight:900;
+	line-height:20px;
+	font-size:13px;
+	color:#333;
+	background: none; 
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.contact_btn_home.active, .contact_btn_home:hover {background: none; color:#fff; border-color:#ccc;}
+
 .contact_btn.active, .contact_btn:hover {background: none; color:#fff; border-color:#ccc;}
 
 .notification_error {color:#30a67c;}

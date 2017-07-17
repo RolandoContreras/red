@@ -66,10 +66,18 @@
 						<div id="note"></div>
 						<div id="fields">
 							<form id="contact-form-face" class="clearfix" action="#">
-								<input type="text" name="name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
-								<textarea name="message" onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';">Message</textarea>
-								<!--<input class="contact_btn" type="submit" value="Send message" />-->
+                                                            <input type="text" name="name" id="name" placeholder="Nombre"/>
+                                                            <input type="text" name="email" id='email'  placeholder="Correo"/>
+                                                            <textarea name="message" id="message" placeholder="Mensaje"></textarea>
+                                                            <input class="contact_btn_home" onclick="send_messages();" value="<?php echo replace_vocales_voculeshtml("Enviar Mensaje");?>" />
+                                                            
+                                                            
 							</form>
+                                                    
+<script src="<?php echo site_url().'static/page_front/js/contact.js';?>"></script>
+<script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
+<script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>
 						</div>
 					</div><!-- //CONTACT FORM -->
 				</div>
