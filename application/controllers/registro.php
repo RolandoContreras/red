@@ -232,9 +232,8 @@ class Registro extends CI_Controller {
     }
 
     public function validate_region() {
-
+        if ($this->input->is_ajax_request()) {
         $id_pais = trim($this->input->post('id'));
-
         //SELECT ID FROM CUSTOMER
         $param_regiones = array(
             "select" => "id,nombre",
@@ -249,10 +248,12 @@ class Registro extends CI_Controller {
             $data['print'] = "Seleccionar un país";
         }
         echo json_encode($data);
+        }
     }
 
     public function validate_username() {
-        //SELECT ID FROM CUSTOMER
+        if ($this->input->is_ajax_request()) {
+            //SELECT ID FROM CUSTOMER
         $username = str_to_minuscula(trim($this->input->post('username')));
         $param_customer = array(
             "select" => "customer_id",
@@ -266,23 +267,27 @@ class Registro extends CI_Controller {
             $data['print'] = "✔ Disponible";
         }
         echo json_encode($data);
+        }
     }
 
     public function validate_dni() {
-        //SELECT ID FROM CUSTOMER
-        $dni = trim($this->input->post('dni'));
-        $param_customer = array(
-            "select" => "customer_id",
-            "where" => "dni = '$dni'");
-        $customer = count($this->obj_customer->search($param_customer));
-        if ($customer >= 5) {
-            $data['message'] = "true";
-            $data['print'] = "Alcanzo el maximo de cuentas por persona";
-        } else {
-            $data['message'] = "false";
-            $data['print'] = "Disponible";
+        if ($this->input->is_ajax_request()) {
+            
+            //SELECT ID FROM CUSTOMER
+            $dni = trim($this->input->post('dni'));
+            $param_customer = array(
+                "select" => "customer_id",
+                "where" => "dni = '$dni'");
+            $customer = count($this->obj_customer->search($param_customer));
+            if ($customer >= 5) {
+                $data['message'] = "true";
+                $data['print'] = "Alcanzo el maximo de cuentas por persona";
+            } else {
+                $data['message'] = "false";
+                $data['print'] = "Disponible";
+            }
+            echo json_encode($data);
         }
-        echo json_encode($data);
     }
 
 }

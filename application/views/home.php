@@ -529,7 +529,7 @@
 							</div>
 							<div class="post_item_content">
                                                             <a class="title" href="javascript:void(0);" ><?php echo replace_vocales_voculeshtml("Bitcoin la nueva realidad");?></a>
-							</div>
+						</div>
 						</div>
 					</div>
 				</div><!-- RECENT POSTS -->

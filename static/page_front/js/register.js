@@ -71,6 +71,33 @@ function validate_region(id) {
 
 function crear_registro() {
     
+    var opts = {
+  lines: 13 // The number of lines to draw
+, length: 28 // The length of each line
+, width: 14 // The line thickness
+, radius: 42 // The radius of the inner circle
+, scale: 1 // Scales overall size of the spinner
+, corners: 1 // Corner roundness (0..1)
+, color: '#000' // #rgb or #rrggbb or array of colors
+, opacity: 0.25 // Opacity of the lines
+, rotate: 0 // The rotation offset
+, direction: 1 // 1: clockwise, -1: counterclockwise
+, speed: 1 // Rounds per second
+, trail: 60 // Afterglow percentage
+, fps: 20 // Frames per second when using setTimeout() as a fallback for CSS
+, zIndex: 2e9 // The z-index (defaults to 2000000000)
+, className: 'spinner' // The CSS class to assign to the spinner
+, top: '50%' // Top position relative to parent
+, left: '50%' // Left position relative to parent
+, shadow: false // Whether to render a shadow
+, hwaccel: false // Whether to use hardware acceleration
+, position: 'absolute' // Element positioning
+}
+var target = document.getElementById('spinner')
+var spinner = new Spinner(opts).spin(target);
+    
+    
+    
         var clave = document.getElementById("clave").value;
         var repita_clave = document.getElementById("repita_clave").value;
 
@@ -114,10 +141,11 @@ function crear_registro() {
                           
                        success:function(data){            
                                if(data.message == "true"){         
-                                   $(".alert-4").removeClass('text-danger').addClass('text-success').html(data.print);
+                                   enviado_correcto();
                                    $(location).attr('href',data.url);  
                            }else{
-                                   $(".alert-4").removeClass('text-danger').addClass('text-danger').html("Debe llenar todos los datos");
+                               spinner.stop(); 
+                                llene_campos();   
                            }
                        }            
                    });
@@ -126,5 +154,15 @@ function crear_registro() {
                $(".alert-4").removeClass('text-danger').addClass('text-danger').html("Las contraseñas no coinciden");
             }
 }
-
-
+function llene_campos() {
+    w2popup.open({
+        title: 'Mensaje',
+        body: '<div class="w2ui-centered">Debe llenar todos los campos.</div>'
+    });
+}
+function enviado_correcto() {
+    w2popup.open({
+        title: 'Felicidades',
+        body: '<div class="w2ui-centered">Registro creado con éxito</div>'
+    });
+}

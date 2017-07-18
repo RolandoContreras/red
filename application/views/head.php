@@ -23,6 +23,9 @@
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <!--[if IE]><html class="ie" lang="en"> <![endif]-->
 	
+        <script type="text/javascript">
+            var site = '<?php echo site_url();?>';
+        </script>
 	<script src="<?php echo site_url().'static/page_front/white/js/jquery.min.js';?>" type="text/javascript"></script>
 	<script src="<?php echo site_url().'static/page_front/white/js/bootstrap.min.js';?>" type="text/javascript"></script>
 	<script src="<?php echo site_url().'static/page_front/white/js/jquery.prettyPhoto.js';?>" type="text/javascript"></script>

@@ -53,6 +53,10 @@
 		</section><!-- //BLOG -->
 	</div><!-- //PAGE -->
         <script src="<?php echo site_url().'static/page_front/js/contact.js';?>"></script>
+        <!-- CONTACTS -->
+	<section id="contacts">
+            
+        </section><!-- //CONTACTS -->
 	<!-- FOOTER -->
         <?php $this->load->view("footer");?>
 	<!-- //FOOTER -->
