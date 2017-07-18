@@ -169,7 +169,7 @@
 						<div class="work_item">
 							<div class="work_img">
 								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/a1.jpg'?>" alt="" />
-								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/work/1.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
+								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/packet/a1.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
@@ -185,7 +185,7 @@
 						<div class="work_item">
 							<div class="work_img">
 								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/a2.jpg'?>" alt="" />
-								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/work/2.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
+								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/packet/a2.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
@@ -201,7 +201,7 @@
 						<div class="work_item">
 							<div class="work_img">
 								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/a3.jpg'?>" alt="" />
-								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/work/3.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
+								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/packet/a3.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
@@ -218,7 +218,7 @@
 						<div class="work_item">
 							<div class="work_img">
 								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/a4.jpg'?>" alt="" />
-								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/work/a4.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
+								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/packet/a4.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
