@@ -51,8 +51,10 @@
 				</div><!-- //ROW -->
 			</div><!-- //CONTAINER -->
 		</section><!-- //BLOG -->
+                <div id="spinner"></div>
 	</div><!-- //PAGE -->
         <script src="<?php echo site_url().'static/page_front/js/contact.js';?>"></script>
+        <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>
         <!-- CONTACTS -->
 	<section id="contacts">
             
