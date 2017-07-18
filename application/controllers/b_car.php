@@ -23,7 +23,12 @@ class B_car extends CI_Controller {
 	 */
 	public function index()
 	{
-        $this->tmp_backoffice->render("backoffice/b_car");
+            $this->get_session();
+            
+            $this->load->view("backoffice/b_car");
+//            $this->load->view('name');
+            
+//        $this->tmp_backoffice->render("backoffice/b_car");
 	}
 
         public function get_session(){          

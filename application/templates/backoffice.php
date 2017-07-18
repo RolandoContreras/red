@@ -395,12 +395,12 @@
                                                 <span>Mi Billetera</span>
                                             </a>
 	                  		</li>
-                                        <li class="<?php echo $style_holding;?>">
+<!--                                        <li class="<?php echo $style_holding;?>">
                                             <a href="#" title="Holding">
                                                 <em class="fa fa-link fa-lg"></em>
                                                 <span>Enlaces de Holding</span>
                                             </a>
-	                  		</li>
+	                  		</li>-->
 	                  		<li class="<?php echo $style_pagos;?>">
 			                    <a href="<?php echo site_url().'backoffice/pagos';?>" title="Pagos">
                                                 <em class="fa fa-university fa-lg" aria-hidden="true"></em>
