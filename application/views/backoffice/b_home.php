@@ -6,7 +6,7 @@
                     $text = "Basic";
                     break;
                 case 3:
-                    $images = "platinium.png";
+                    $images = "executive.png";
                     $text = "Platinium";
                     break;
                 case 4:
@@ -14,20 +14,16 @@
                     $text = "Gold";
                     break;
                 case 5:
-                    $images = "vip.png";
-                    $text = "Vip";
+                    $images = "senior_executive.png";
+                    $text = "Senior Executive";
                     break;
                 case 6:
                     $text = "Membership";
-                    $images = "default.png";
+                    $images = "membership.png";
                     break;
                 case 7:
-                    $text = "Elite";
-                    $images = "elite.png";
-                    break;
-                case 8:
-                    $text = "Start";
-                    $images = "start.png";
+                    $text = "Master";
+                    $images = "master.png";
                     break;
             }
         ?>
@@ -82,7 +78,7 @@
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url()."static/backoffice/images/$images";?>" alt="Paquete Actual" height="100" width="120"/>
+                            <img src="<?php echo site_url()."static/backoffice/images/$images";?>" alt="Paquete Actual"/>
                         </div>
                         </div>
                     
@@ -291,12 +287,12 @@
              <div class="row fix-box-height package-box-fix mt-30">
             <div class="col-lg-12">
                 <div class="row">
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
                             <h5 class="media-heading text-uppercase title-small">BASIC</h5>
-                            <p class="title">$100.00</p>
-                            <p>100 PTS</p>
+                            <p class="title">$125.00</p>
+                            <p>182 BIT</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
@@ -307,16 +303,16 @@
                             <button type="button" onclick="make_pedido('2');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">PLATINIUM</h5>
+                            <h5 class="media-heading text-uppercase title-small">EXECUTIVE</h5>
                             <p class="title">$250.00</p>
-                            <p>250 PTS</p>
+                            <p>375 BIT</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url()."static/backoffice/images/platinium.png";?>" alt="Paquete Platinium" height="70" width="80"/>
+                            <img src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Paquete Executive" height="70" width="80"/>
                         </div>
                         </div>
                            <div class="media-body media-middle">
@@ -324,68 +320,36 @@
                         </div>                        
 
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">GOLD</h5>
-                            <p class="title">$500.00</p>
-                            <p>500 PTS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img src="<?php echo site_url()."static/backoffice/images/gold.png";?>" alt="Paquete Gold" height="70" width="80"/>
-                        </div>
-                        </div>
-                        <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('4');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
-                        </div> 
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">VIP</h5>
+                            <h5 class="media-heading text-uppercase title-small">SENIOR EXECUTIVE</h5>
                             <p class="title">$1,000.00</p>
-                            <p>1000 PTS</p>
+                            <p>1500 BIT</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url()."static/backoffice/images/vip.png";?>" alt="Paquete Vip" height="70" width="80"/>
+                            <img src="<?php echo site_url()."static/backoffice/images/senior_executive.png";?>" alt="Paquete Senior Executive" height="70" width="80"/>
                         </div>
                         </div>
                         <div class="media-body media-middle">
                             <button type="button" onclick="make_pedido('5');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div> 
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">ELITE</h5>
-                            <p class="title">$5,000.00</p>
-                            <p>5000 PTS</p>
+                            <h5 class="media-heading text-uppercase title-small">MASTER</h5>
+                            <p class="title">$3,000.00</p>
+                            <p>4500 PTS</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url()."static/backoffice/images/elite.png";?>" alt="Paquete Elite" height="70" width="80"/>
+                            <img src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Paquete Master" height="70" width="80"/>
                         </div>
                         </div>
                         <div class="media-body media-middle">
                             <button type="button" onclick="make_pedido('7');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
-                        </div> 
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="well media media-badges box-height box">
-                            <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">SUPER VIP</h5>
-                            <p class="title">$12,000.00</p>
-                            <p>12000 PTS</p>
-                            <div class="mt-10"></div>
-                            </div>
-                        <div class="media-right media-middle">
-                            <img src="<?php echo site_url()."static/backoffice/images/super_vip.png";?>" alt="Paquete Super Vip" height="70"  width="80"/>
-                        </div>
-                        </div>
-                        <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('9');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div> 
                     </div>
                 </div>
@@ -413,33 +377,26 @@
                                     <?php
                                     switch ($obj_customer->franchise_id) {
                                         case 2: 
-                                            $amount = "100 USD";?>
+                                            $amount = "125 USD";?>
                                              <img src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Cuenta Basic" height="120" width="130"/>
                                           <?php  break;
                                         case 3: 
                                             $amount = "250 USD"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/platinium.png";?>" alt="Cuenta Platinium" height="120" width="130"/>
-                                          <?php  break;
-                                        case 4: 
-                                            $amount = "500 USD"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/gold.png";?>" alt="Cuenta Gold" height="120" width="130"/>
+                                            <img src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Cuenta Executive" height="120" width="130"/>
                                         <?php break;
                                         case 5: 
                                             $amount = "1,000 USD"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/vip.png";?>" alt="Cuenta Vip" height="120" width="130"/>
+                                            <img src="<?php echo site_url()."static/backoffice/images/senior_executive.png";?>" alt="Cuenta Senior Executive" height="120" width="130"/>
                                         <?php break;
                                         case 6: 
                                             $amount = "15 USD"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/default.png";?>" alt="Cuenta Membership" height="120" width="130"/>
+                                            <img src="<?php echo site_url()."static/backoffice/images/membership.png";?>" alt="Cuenta Membership" height="120" width="130"/>
                                         <?php break;
                                         case 7: 
-                                            $amount = "5,000 USD"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/elite.png";?>" alt="Cuenta Elite" height="120" width="130"/>
+                                            $amount = "3,000 USD"?>
+                                            <img src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Cuenta Master" height="120" width="130"/>
                                         <?php break;
-                                        case 9: 
-                                            $amount = "12,000 USD"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/super_vip.png";?>" alt="Cuenta Super Vip" height="120" width="130"/>
-                                        <?php break; 
+                                       
                                     }?>
                                 </div>
                             </div>
