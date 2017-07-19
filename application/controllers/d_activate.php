@@ -158,7 +158,6 @@ class D_activate extends CI_Controller{
                     $data = array(
                         'active' => 1,
                         'date_start' => $today,
-                        'date_end' => $today_120,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
