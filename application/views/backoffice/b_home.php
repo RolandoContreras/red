@@ -1,6 +1,30 @@
 <section>
     <?php
         switch ($_SESSION['customer']['franchise_id']) {
+                case 2:
+                    $images = "basic.png";
+                    $text = "Basic";
+                    break;
+                case 3:
+                    $images = "executive.png";
+                    $text = "Executive";
+                    break;
+                case 4:
+                    $images = "gold.png";
+                    $text = "Gold";
+                    break;
+                case 5:
+                    $images = "senior_executive.png";
+                    $text = "Senior Executive";
+                    break;
+                case 6:
+                    $text = "Membership";
+                    $images = "membership.png";
+                    break;
+                case 7:
+                    $text = "Master";
+                    $images = "master.png";
+                    break;
                 case 11:
                     $images = "basic.png";
                     $text = "Basic";
@@ -9,17 +33,9 @@
                     $images = "executive.png";
                     $text = "Executive";
                     break;
-                case 4:
-                    $images = "gold.png";
-                    $text = "Gold";
-                    break;
                 case 13:
                     $images = "senior_executive.png";
                     $text = "Senior Executive";
-                    break;
-                case 6:
-                    $text = "Membership";
-                    $images = "membership.png";
                     break;
                 case 14:
                     $text = "Master";
@@ -389,6 +405,30 @@
                                     </div>
                                     <?php
                                     switch ($obj_customer->franchise_id) {
+                                        case 2:
+                                            $amount = "125 USD";?>
+                                             <img src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Cuenta Basic" height="120" width="130"/>
+                                          <?php  break;
+                                        case 3:
+                                            $amount = "250 USD"?>
+                                            <img src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Cuenta Executive" height="120" width="130"/>
+                                            <?php break;
+                                        case 4:
+                                            $amount = "500 USD"?>
+                                            <img src="<?php echo site_url()."static/backoffice/images/gold.png";?>" alt="Cuenta Gold" height="120" width="130"/>
+                                            <?php break;
+                                        case 5:
+                                            $amount = "1,000 USD"?>
+                                            <img src="<?php echo site_url()."static/backoffice/images/senior_executive.png";?>" alt="Cuenta Senior Executive" height="120" width="130"/>
+                                            <?php break;
+                                        case 6:
+                                            $amount = "15 USD"?>
+                                            <img src="<?php echo site_url()."static/backoffice/images/membership.png";?>" alt="Cuenta Membership" height="120" width="130"/>
+                                            <?php break;
+                                        case 7:
+                                            $amount = "3,000 USD"?>
+                                            <img src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Cuenta Master" height="120" width="130"/>
+                                        <?php break;
                                         case 11: 
                                             $amount = "125 USD";?>
                                              <img src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Cuenta Basic" height="120" width="130"/>
