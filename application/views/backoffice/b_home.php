@@ -230,7 +230,7 @@
                             </div>
                         </a>
 
-                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                        <a href="#" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
                                     <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Promoción Viaje Cusco");?></h5>
@@ -242,7 +242,7 @@
                             </div>
                         </a>
 
-                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                        <a href="#" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
                                     <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Fecha Inicio");?></h5>
@@ -254,7 +254,7 @@
                             </div>
                         </a>
 
-                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                        <a href="#" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
                                     <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Fecha Termino");?></h5>
@@ -266,7 +266,7 @@
                             </div>
                         </a>    
 
-                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                        <a href="#" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
                                     <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("Puntos de Viaje");?></h5>
@@ -278,7 +278,7 @@
                             </div>
                         </a>  
                         
-                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                        <a href="#" class="col-flex box-height">
                             <div class="media">
                                 <div class="media-body media-middle">
                                     <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("BIT");?></h5>
