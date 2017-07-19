@@ -139,6 +139,9 @@ class D_activate extends CI_Controller{
                 $price = $this->input->post("price");
                 $parents_id = $this->input->post("parents_id");
                 
+                //ADD BONUS BIT
+                $this->pay_bit($customer_id,$price);
+                
                 //GET BONUS DIRECT
                 $this->pay_directo($customer_id,$price,$parents_id);
                 
@@ -198,6 +201,45 @@ class D_activate extends CI_Controller{
            }   
             
     }
+    
+    public function pay_bit($customer_id,$price){
+                //GET PERCENT FROM BONUS
+                $params = array(
+                        "select" =>"percent",
+                        "where" => "bonus_id = 6 and status_value = 1"
+               );
+                //GET DATA FROM BONUS
+                $obj_bonus= $this->obj_bonus->get_search_row($params);
+                $percet = $obj_bonus->percent;
+                
+                //CALCULE AMOUNT
+                if(count($customer_id) > 0){
+                    if($price == "125"){
+                        //ITS BASIC ADD 182 BIT
+                        //INSERT CUSTOMER TABLE
+                            $data = array(
+                                        'bit' => 182,
+                                        'updated_at' => date("Y-m-d H:i:s"),
+                                        'updated_by' => $_SESSION['usercms']['user_id'],
+                                    ); 
+                                    $this->obj_customer->update($customer_id,$data); 
+                            $this->obj_customer->insert($data);
+                        
+                    }else{
+                        //ADD 50% FOR OTHER PACKATE
+                        $amount = ($price  * $percet) / 100;
+                        $amount_total = $price + $amount;
+                        //INSERT CUSTOMER TABLE
+                            $data = array(
+                                        'bit' => $amount_total,
+                                        'updated_at' => date("Y-m-d H:i:s"),
+                                        'updated_by' => $_SESSION['usercms']['user_id'],
+                                    ); 
+                                    $this->obj_customer->update($customer_id,$data); 
+                            $this->obj_customer->insert($data);
+                    }
+                }
+        }  
     
     public function pay_directo($customer_id,$price,$parents_id){
                 //GET PERCENT FROM BONUS
