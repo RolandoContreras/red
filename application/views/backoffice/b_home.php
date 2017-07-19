@@ -261,8 +261,21 @@
                                 </div>
                             </div>
                         </a>  
-
-                        <div class="col-flex box-height box-shadow-inset-coming-soon">
+                        
+                        <a href="/backend/my-accounts/coinsafe-account" class="col-flex box-height">
+                            <div class="media">
+                                <div class="media-body media-middle">
+                                    <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("BIT");?></h5>
+                                <strong>4500</strong>
+                                </div>
+                                <div class="media-right media-middle">
+                                   <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        
+<!--                        <div class="col-flex box-height box-shadow-inset-coming-soon">
                         <div class="media">
                         <div class="media-body media-middle uppercase text-center">
                         <h3 class="media-heading"><strong>Muy Pronto</strong></h3>
@@ -270,7 +283,7 @@
                         <div class="media-right media-middle">
                         </div>
                         </div>
-                        </div>
+                        </div>-->
 
                     </div>
                 </div>
@@ -300,7 +313,7 @@
                         </div>
                         </div>
                         <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('2');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                            <button type="button" onclick="make_pedido('11');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div>
                     </div>
                     <div class="col-sm-3">
@@ -316,7 +329,7 @@
                         </div>
                         </div>
                            <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('3');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                            <button type="button" onclick="make_pedido('12');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div>                        
 
                     </div>
@@ -333,7 +346,7 @@
                         </div>
                         </div>
                         <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('5');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                            <button type="button" onclick="make_pedido('13');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div> 
                     </div>
                     <div class="col-sm-3">
@@ -341,7 +354,7 @@
                             <div class="media-body media-middle">
                             <h5 class="media-heading text-uppercase title-small">MASTER</h5>
                             <p class="title">$3,000.00</p>
-                            <p>4500 PTS</p>
+                            <p>4500 BIT</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
@@ -349,7 +362,7 @@
                         </div>
                         </div>
                         <div class="media-body media-middle">
-                            <button type="button" onclick="make_pedido('7');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                            <button type="button" onclick="make_pedido('14');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div> 
                     </div>
                 </div>
@@ -376,15 +389,15 @@
                                     </div>
                                     <?php
                                     switch ($obj_customer->franchise_id) {
-                                        case 2: 
+                                        case 11: 
                                             $amount = "125 USD";?>
                                              <img src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Cuenta Basic" height="120" width="130"/>
                                           <?php  break;
-                                        case 3: 
+                                        case 12: 
                                             $amount = "250 USD"?>
                                             <img src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Cuenta Executive" height="120" width="130"/>
                                         <?php break;
-                                        case 5: 
+                                        case 13: 
                                             $amount = "1,000 USD"?>
                                             <img src="<?php echo site_url()."static/backoffice/images/senior_executive.png";?>" alt="Cuenta Senior Executive" height="120" width="130"/>
                                         <?php break;
@@ -392,7 +405,7 @@
                                             $amount = "15 USD"?>
                                             <img src="<?php echo site_url()."static/backoffice/images/membership.png";?>" alt="Cuenta Membership" height="120" width="130"/>
                                         <?php break;
-                                        case 7: 
+                                        case 14: 
                                             $amount = "3,000 USD"?>
                                             <img src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Cuenta Master" height="120" width="130"/>
                                         <?php break;
