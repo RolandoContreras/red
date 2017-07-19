@@ -51,6 +51,7 @@ class D_pay_dialy extends CI_Controller{
                                     customer.username,
                                     customer.point_left,
                                     customer.point_rigth,
+                                    customer.new_contract,
                                     customer.calification,
                                     customer.date_start,
                                     customer.date_end,
@@ -65,79 +66,82 @@ class D_pay_dialy extends CI_Controller{
                 //CODE BINARY
                 $this->binary($obj_customer);
                 //END BINARY
-              
+                
                 foreach ($obj_customer as $value) {
-                    
-                    if($value->date_end >= $today){
-                        if($value->date_start >= '2017-01-10'){
-                            
-                            switch ($value->franchise_id) {
-                            case 2:
-                                $amount= 0.95;
-                                break;
-                            case 3:
-                                $amount= 2.50;
-                                break;
-                            case 4:
-                                $amount= 5.20;
-                                break;
-                            case 5:
-                                $amount= 10.83;
-                                break;
-                            case 7:
-                                $amount= 56.25;
-                                break;
-                            case 8:
-                                $amount= 0.47;
-                                break;
-                            }
+                    //IF NOT NEW CONTRACT
+                    if($value->new_contract != 1){
+                        if($value->date_end >= $today){
+                            if($value->date_start >= '2017-01-10'){
+
+                                switch ($value->franchise_id) {
+                                case 2:
+                                    $amount= 0.95;
+                                    break;
+                                case 3:
+                                    $amount= 2.50;
+                                    break;
+                                case 4:
+                                    $amount= 5.20;
+                                    break;
+                                case 5:
+                                    $amount= 10.83;
+                                    break;
+                                case 7:
+                                    $amount= 56.25;
+                                    break;
+                                case 8:
+                                    $amount= 0.47;
+                                    break;
+                                }
+                                $data = array(
+                                    'customer_id' => $value->customer_id,
+                                    'bonus_id' => 3,
+                                    'name' => "Usufructo Diario",
+                                    'amount' => $amount,
+                                    'normal_account' => $amount,
+                                    'date' => date("Y-m-d H:i:s"),
+                                    'status_value' => 2,
+                                    'created_at' => date("Y-m-d H:i:s"),
+                                    'created_by' => $_SESSION['usercms']['user_id']
+                                    );
+                                $this->obj_commissions->insert($data);
+
+                            }elseif($value->date_start < '2017-01-10'){
+                                switch ($value->franchise_id) {
+                                case 2:
+                                    $amount= 1.86;
+                                    break;
+                                case 3:
+                                    $amount= 5.00;
+                                    break;
+                                case 4:
+                                    $amount= 10.60;
+                                    break;
+                                case 5:
+                                    $amount= 22.60;
+                                    break;
+                                }
+
+                            $mandatory_account = $amount*0.3;
+                            $normal_account = $amount*0.7;
+
                             $data = array(
                                 'customer_id' => $value->customer_id,
                                 'bonus_id' => 3,
                                 'name' => "Usufructo Diario",
                                 'amount' => $amount,
-                                'normal_account' => $amount,
+                                'mandatory_account' => $mandatory_account,
+                                'normal_account' => $normal_account,
                                 'date' => date("Y-m-d H:i:s"),
                                 'status_value' => 2,
                                 'created_at' => date("Y-m-d H:i:s"),
                                 'created_by' => $_SESSION['usercms']['user_id']
-                                );
+                            );
                             $this->obj_commissions->insert($data);
-                            
-                        }elseif($value->date_start < '2017-01-10'){
-                            switch ($value->franchise_id) {
-                            case 2:
-                                $amount= 1.86;
-                                break;
-                            case 3:
-                                $amount= 5.00;
-                                break;
-                            case 4:
-                                $amount= 10.60;
-                                break;
-                            case 5:
-                                $amount= 22.60;
-                                break;
-                            }
-                            
-                        $mandatory_account = $amount*0.3;
-                        $normal_account = $amount*0.7;
-                        
-                        $data = array(
-                            'customer_id' => $value->customer_id,
-                            'bonus_id' => 3,
-                            'name' => "Usufructo Diario",
-                            'amount' => $amount,
-                            'mandatory_account' => $mandatory_account,
-                            'normal_account' => $normal_account,
-                            'date' => date("Y-m-d H:i:s"),
-                            'status_value' => 2,
-                            'created_at' => date("Y-m-d H:i:s"),
-                            'created_by' => $_SESSION['usercms']['user_id']
-                        );
-                        $this->obj_commissions->insert($data);
-                     }
-                } 
+                         }
+                    } 
+                }
+                
             }
                 $data['message'] = "true";
                 echo json_encode($data);            
