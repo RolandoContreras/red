@@ -139,7 +139,7 @@
                                                     <h2><b><?php echo replace_vocales_voculeshtml("Propósito");?></b> BITSHARE</h2>
                                                     <p><?php echo replace_vocales_voculeshtml("Nuestra visión es ser la primera marca pionera que abre brecha al mundo para dar a conocer la utilidad real de las criptomedas en un mundo tecnológico dónde reemplacemos la forma cotidiana de compra y venta presencial por una virtual, que en consecuencia, logremos un upgrade integral en la vida de las personas, a trevés de los servicios de nuestra multiplataforma.");?></p>
                                                     <p><?php echo replace_vocales_voculeshtml("Nuestra misión es mediante las redes de mercadeo y el constante desarrollo de nuestros productos vamos a poder ayudar a que las personas puedan desarrollar distintas áeras y experiencias con nosotros adaptando como un estilo de vida cotidiano la facilidad del  mundo virtual.");?></p>
-							<a class="btn btn-active" href="javascript:void(0);" ><span data-hover="Si, yo quiero">Registrarme</span></a>
+                                                    <a class="btn btn-active" href="<?php echo site_url().'registro';?>" ><span data-hover="Si, yo quiero">Registrarme</span></a>
 						</div>
 						
 						<div class="col-lg-5 col-md-5 col-sm-5 ipad_img_in" data-appear-top-offset="-200" data-animated="fadeInRight">
