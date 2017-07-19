@@ -87,6 +87,7 @@ class D_activate extends CI_Controller{
                 $params = array(
                         "select" =>"franchise.name as franchise,
                                     franchise.price as price,
+                                    customer.new_contract,
                                     customer.status_value",
                         "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
                         "where" => "customer_id = $customer_id and customer.status_value = 1"
@@ -100,7 +101,19 @@ class D_activate extends CI_Controller{
                 $today_120 = date ( 'Y-m-j' , $today_120 );
                 
                 if(count($customer_id) > 0){
-                    $data = array(
+                    //CUSTOMER NEW CONTRACT - FINANCY
+                    if($obj_customer->new_contract = 1){
+                        $data = array(
+                        'active' => 1,
+                        'financy' => 1,
+                        'date_start' => $today,
+                        'updated_at' => date("Y-m-d H:i:s"),
+                        'updated_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_customer->update($customer_id,$data);
+                    }else{
+                        //CUSTOMER OLD CONTRACT - FINANCY
+                        $data = array(
                         'active' => 1,
                         'financy' => 1,
                         'date_start' => $today,
@@ -109,6 +122,9 @@ class D_activate extends CI_Controller{
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
                     $this->obj_customer->update($customer_id,$data);
+                        
+                    }
+                    
                 }
                     echo json_encode($data);            
         exit();

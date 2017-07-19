@@ -1,19 +1,19 @@
 <section>
     <?php
         switch ($_SESSION['customer']['franchise_id']) {
-                case 2:
+                case 11:
                     $images = "basic.png";
                     $text = "Basic";
                     break;
-                case 3:
+                case 12:
                     $images = "executive.png";
-                    $text = "Platinium";
+                    $text = "Executive";
                     break;
                 case 4:
                     $images = "gold.png";
                     $text = "Gold";
                     break;
-                case 5:
+                case 13:
                     $images = "senior_executive.png";
                     $text = "Senior Executive";
                     break;
@@ -21,7 +21,7 @@
                     $text = "Membership";
                     $images = "membership.png";
                     break;
-                case 7:
+                case 14:
                     $text = "Master";
                     $images = "master.png";
                     break;

@@ -4,12 +4,6 @@
 <script src="static/cms/js/core/jquery.dataTables.min.js"></script>
 <link href="static/cms/css/core/jquery.dataTables.css" rel="stylesheet"/>
 
-<?php 
-//var_dump($obj_customer);
-//die();
-
-?>
-
 <!-- main content -->
 <div id="main_content" class="span9">
     <div class="row-fluid">
