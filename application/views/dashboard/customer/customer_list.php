@@ -55,7 +55,7 @@
                                         $valor = "Inactivo para bonos";
                                         $stilo = "label label-important";
                                     }else{
-                                        $valor = "No activo para bonos";
+                                        $valor = "Activo para bonos";
                                         $stilo = "label label-success";
                                     } ?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
