@@ -102,7 +102,7 @@ class D_activate extends CI_Controller{
                 
                 if(count($customer_id) > 0){
                     //CUSTOMER NEW CONTRACT - FINANCY
-                    if($obj_customer->new_contract = 1){
+                    if($obj_customer->new_contract == 1){
                         $data = array(
                         'active' => 1,
                         'financy' => 1,
