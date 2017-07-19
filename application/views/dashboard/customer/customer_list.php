@@ -28,6 +28,7 @@
                                 <th>ASOCIADO</th>
                                 <th>E-MAIL</th>
                                 <th>PAQUETE</th>
+                                <th>NUEVO CONTRATO</th>
                                 <th>ACTIVACIÓN</th> 
                                 <th>CALIFICACIÓN BINARIO</th> 
                                 <th>ESTADO</th> 
@@ -42,6 +43,13 @@
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center"><?php echo $value->email;?></td>
                                 <td align="center"><?php echo $value->franchise;?></td>
+                                 <td align="center">
+                                    <?php if($value->new_contract == 1){ ?>
+                                        <span class="label label-success"><?php echo "Si";?></span>
+                                    <?php }else{ ?>
+                                        <span class="label label-important"><?php echo "No";?></span>
+                                    <?php } ?>
+                                </td>
                                 <td align="center">
                                     <?php if ($value->active == 0) {
                                         $valor = "Inactivo para bonos";

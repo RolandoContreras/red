@@ -18,6 +18,7 @@ class D_customer extends CI_Controller{
                                     customer.username,
                                     customer.first_name,
                                     customer.email,
+                                    customer.new_contract,
                                     customer.last_name,
                                     customer.calification,
                                     customer.created_at,
