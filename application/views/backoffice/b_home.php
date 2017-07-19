@@ -266,7 +266,7 @@
                             <div class="media">
                                 <div class="media-body media-middle">
                                     <h5 class="media-heading"><?php echo replace_vocales_voculeshtml("BIT");?></h5>
-                                <strong>4500</strong>
+                                <strong><?php echo $obj_customer->bit;?></strong>
                                 </div>
                                 <div class="media-right media-middle">
                                    <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
