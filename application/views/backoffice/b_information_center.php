@@ -32,7 +32,7 @@
                                                 </td>
                                                 <td>Ficha RUC (PDF)</td>
                                                 <td class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/ficha_ruc_bitshare.pdf';?>" download="ficha_ruc_bitshare" class="btn btn-info" title="Descargar Ficha Ruc">Descargar</a>
+                                                    <a href="<?php echo site_url().'static/plan/document/ficha_ruc_bitshare.pdf';?>" download="ficha_ruc_bitshare" class="btn btn-primary" title="Descargar Ficha Ruc">Descargar</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -41,7 +41,7 @@
                                                 </td>
                                                 <td>Registro Especial de Comercializadores y Procesadores de ORO (PDF)</td>
                                                 <td class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/registro_especial_de_comercializadores_y_procesadores_de_oro.pdf';?>" download="registro_de_comercializadores_oro" class="btn btn-info" title="Descargar Registro de Comercializadores">Descargar</a>
+                                                    <a href="<?php echo site_url().'static/plan/document/registro_especial_de_comercializadores_y_procesadores_de_oro.pdf';?>" download="registro_de_comercializadores_oro" class="btn btn-primary" title="Descargar Registro de Comercializadores">Descargar</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -50,7 +50,7 @@
                                                 </td>
                                                 <td><?php echo replace_vocales_voculeshtml("Plan de Acción (PDF)");?></td>
                                                 <td class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/presentacion-bitshares.pptx';?>" download="presentacion_ppt_es" disabled="true" class="btn btn-info" title="Descargar Presentación">Descargar</a>
+                                                    <a href="<?php echo site_url().'static/plan/document/presentacion-bitshares.pptx';?>" download="presentacion_ppt_es" disabled="true" class="btn btn-primary" title="Descargar Presentación">Descargar</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -59,7 +59,7 @@
                                                 </td>
                                                 <td>Contrato Bitshare (DOCX)</td>
                                                 <td class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/Contrato_de_Dsitribuidor_BITSHARE.docx';?>" download="contrato_distribuidor_bitshare" class="btn btn-info" title="Descargar Contrato Bitshare">Descargar</a>
+                                                    <a href="<?php echo site_url().'static/plan/document/Contrato_de_Dsitribuidor_BITSHARE.docx';?>" download="contrato_distribuidor_bitshare" class="btn btn-primary" title="Descargar Contrato Bitshare">Descargar</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -68,7 +68,7 @@
                                                 </td>
                                                 <td>Cuenta Corriente Depositos BITSHARE (JPG)</td>
                                                 <td class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/n_cuenta.jpg';?>" download="Numero_Cuenta_Bitshare.jpg" class="btn btn-info" title="Descargar Número de Cuenta BITSHARE">Descargar</a>
+                                                    <a href="<?php echo site_url().'static/plan/document/n_cuenta.jpg';?>" download="Numero_Cuenta_Bitshare.jpg" class="btn btn-primary" title="Descargar Número de Cuenta BITSHARE">Descargar</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -77,7 +77,7 @@
                                                 </td>
                                                 <td>Plan de Compensación (PDF)</td>
                                                 <td class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/presentacion_bitshare_espanol.pdf';?>" download="presentacion_pdf_es" class="btn btn-info" title="Descargar Presentación">Descargar</a>
+                                                    <a href="<?php echo site_url().'static/plan/document/presentacion_bitshare_espanol.pdf';?>" download="presentacion_pdf_es" class="btn btn-primary " title="Descargar Presentación">Descargar</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -86,7 +86,7 @@
                                                 </td>
                                                 <td>Correos Corporativos (JPG)</td>
                                                 <td class="text-center">
-                                                    <a href="<?php echo site_url().'static/plan/document/correos.jpg';?>" download="correos_corporativos" class="btn btn-info" title="Descargar Correos">Descargar</a>
+                                                    <a href="<?php echo site_url().'static/plan/document/correos.jpg';?>" download="correos_corporativos" class="btn btn-primary" title="Descargar Correos">Descargar</a>
                                                 </td>
                                             </tr>
                                             

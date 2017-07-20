@@ -29,23 +29,7 @@ class B_information_center extends CI_Controller {
          
         //VERIFIRY GET SESSION    
          $this->get_session();
-         
-//            $params = array(
-//                        "select" =>"customer.username,
-//                                    customer.first_name,
-//                                    customer.last_name,
-//                                    customer.dni,
-//                                    commissions.amount,
-//                                    commissions.date,
-//                                    commissions.status_value,
-//                                    bonus.name as bonus",
-//               "join" => array('customer, commissions.customer_id = customer.customer_id',
-//                                'bonus, commissions.bonus_id = bonus.bonus_id'),
-//                "where" => "customer.customer_id = $customer_id",
-//                "order" => "commissions.date DESC",
-//                "limit" => "50");
-//           //GET DATA FROM CUSTOMER
-//        $obj_commissions= $this->obj_commissions->search($params);  
+  
         //GET PRICE BTC
             $params_price_btc = array(
                     "select" =>"",
@@ -53,7 +37,7 @@ class B_information_center extends CI_Controller {
             );
                 
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
-           $price_btc = number_format($obj_otros->precio_btc,8);  
+           $price_btc = number_format($obj_otros->precio_btc,2);  
            
             
         $this->tmp_backoffice->set("price_btc",$price_btc);      
