@@ -28,61 +28,200 @@
                                         <span class="rotate-top-right"><i class="icon-arrows-6 in-right" aria-hidden="true"></i></span>
                                     </a>
                                 </div>
+                                
+                                <!--//ESTRUCTURE TREE-->
                                     <div class="network-tree-stucture">
                                         <ul>
                                             <li>
                                                 <span class="inline-block relative">
-                                                    <a href="" class="status-1 user-packet">
-                                                        <span class="user-name">riopison1</span>
+                                                    <a  href="#" title="<?php echo $obj_customer->first_name;?>" data-toggle="popover" data-placement="right" data-content="<?php if($obj_customer->active == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1 user-packet">
+                                                        <div class="row imagen-profile">
+                                                          <div class="col-sm" style="padding: 0;"></div>
+                                                            <div class="col-sm-8" style="padding: 0;">
+                                                                <div class="div-img">
+                                                                    <?php
+                                                                    switch ($obj_customer->franchise_id) {
+                                                                            case 2:
+                                                                                $images = "basic.png";
+                                                                                break;
+                                                                            case 3:
+                                                                                $images = "executive.png";
+                                                                                break;
+                                                                            case 4:
+                                                                                $images = "gold.jpg";
+                                                                                break;
+                                                                            case 5:
+                                                                                $images = "senior_executive.png";
+                                                                                break;
+                                                                            case 6:
+                                                                                $images = "membership.png";
+                                                                                break;
+                                                                            case 7:
+                                                                                $images = "elite.jpg";
+                                                                                break;
+                                                                        }
+                                                                    ?>
+                                                                    <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="thumb96">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-2" style="padding: 0;">
+                                                              <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
+                                                                  <?php if($obj_customer->active == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                <span class="<?php echo $style;?>"></span>
+                                                              </span>
+                                                            </div>
+                                                        </div>
+                                                        <span class="user-name"><?php echo $obj_customer->username;?></span>
                                                     </a>
-                                                    <span class="tooltip-icon" data-tooltip title="&#x20;&#x20;&#x20;&#x20;&lt;h5&gt;riopison1&#x20;&lt;span&#x20;class&#x3D;&quot;close-tooltip&#x20;pull-right&#x20;pointer&#x20;visible-xs&quot;&gt;X&lt;&#x2F;span&gt;&lt;&#x2F;h5&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&lt;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Country&#x3A;&#x20;&lt;&#x2F;strong&gt;&amp;nbsp&#x3B;&lt;span&#x20;class&#x3D;&quot;flag&#x20;flag-pe&quot;&gt;&lt;&#x2F;span&gt;&#x20;&amp;nbsp&#x3B;&#x20;Peru&lt;br&#x2F;&gt;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Status&#x3A;&lt;&#x2F;strong&gt;&#x20;&lt;span&#x20;class&#x3D;&quot;green&quot;&gt;Rookie&lt;&#x2F;span&gt;&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Sponsored&#x3A;&lt;&#x2F;strong&gt;&#x20;globalcryptoinvest&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;table&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&gt;&lt;strong&gt;Package&#x3A;&#x20;&lt;&#x2F;strong&gt;&lt;br&#x2F;&gt;Rookie&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&#x20;class&#x3D;&quot;t-right&quot;&gt;&lt;img&#x20;src&#x3D;&quot;&#x2F;media&#x2F;images&#x2F;200x150_2016_06_20_rookie.png&quot;&#x20;alt&#x3D;&quot;&quot;&#x20;height&#x3D;&quot;50&quot;&#x20;&#x2F;&gt;&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;table&gt;&#x0A;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;div&#x20;class&#x3D;&quot;text-center&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;a&#x20;href&#x3D;&quot;&#x2F;backend&#x2F;messages&#x2F;new&#x2F;globalcryptoinvest&quot;&#x20;class&#x3D;&quot;btn&#x20;btn-primary&#x20;btn-block&#x20;btn-sm&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;i&#x20;class&#x3D;&quot;icon-envelope&quot;&#x20;aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;Contact&#x20;sponsor&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;a&gt;&#x0A;&#x20;&#x20;&#x20;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;" data-tooltip-position="r" data-tooltip-class="tooltip-tree-style">?</span> 
                                                 </span>
+                                                
                                         <ul class="">
+                                            <!--//------2DO LEVEL LEFT------->
                                             <li>
                                                 <span class="inline-block relative">
-                                                    <a href="" class="status-1 user-packet">
-                                                        <span class="user-name">takeshito</span>
+                                                    <a  href="#" title="<?php echo $n2_iz[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n2_iz[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1 user-packet">
+                                                        <div class="row imagen-profile">
+                                                          <div class="col-sm-2" style="padding: 0;"></div>
+                                                            <div class="col-sm-8" style="padding: 0;">
+                                                                <div class="div-img">
+                                                                    <?php
+                                                                    switch ($n2_iz[10]) {
+                                                                        case 2:
+                                                                            $images = "basic.jpg";
+                                                                            break;
+                                                                        case 3:
+                                                                            $images = "platinium.jpg";
+                                                                            break;
+                                                                        case 4:
+                                                                            $images = "gold.jpg";
+                                                                            break;
+                                                                        case 5:
+                                                                            $images = "vip.jpg";
+                                                                            break;
+                                                                        case 6:
+                                                                            $images = "default.jpg";
+                                                                            break;
+                                                                        case 7:
+                                                                            $images = "elite.jpg";
+                                                                            break;
+                                                                        case 8:
+                                                                            $images = "start.jpg";
+                                                                            break;
+                                                                    }
+                                                                    ?>
+                                                                    <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-2" style="padding: 0;">
+                                                                <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
+                                                                    <?php if($n2_iz[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                  <span class="<?php echo $style;?>"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <span class="user-name"><?php echo $n2_iz[6];?></span>
                                                     </a>
-                                                    <span class="tooltip-icon" data-tooltip title="&#x20;&#x20;&#x20;&#x20;&lt;h5&gt;takeshito&#x20;&lt;span&#x20;class&#x3D;&quot;close-tooltip&#x20;pull-right&#x20;pointer&#x20;visible-xs&quot;&gt;X&lt;&#x2F;span&gt;&lt;&#x2F;h5&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&lt;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Country&#x3A;&#x20;&lt;&#x2F;strong&gt;&amp;nbsp&#x3B;&lt;span&#x20;class&#x3D;&quot;flag&#x20;flag-pe&quot;&gt;&lt;&#x2F;span&gt;&#x20;&amp;nbsp&#x3B;&#x20;Peru&lt;br&#x2F;&gt;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Status&#x3A;&lt;&#x2F;strong&gt;&#x20;&lt;span&#x20;class&#x3D;&quot;green&quot;&gt;Rookie&lt;&#x2F;span&gt;&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Sponsored&#x3A;&lt;&#x2F;strong&gt;&#x20;globalcryptoinvest&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;table&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&gt;&lt;strong&gt;Package&#x3A;&#x20;&lt;&#x2F;strong&gt;&lt;br&#x2F;&gt;Rookie&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&#x20;class&#x3D;&quot;t-right&quot;&gt;&lt;img&#x20;src&#x3D;&quot;&#x2F;media&#x2F;images&#x2F;200x150_2016_06_20_rookie.png&quot;&#x20;alt&#x3D;&quot;&quot;&#x20;height&#x3D;&quot;50&quot;&#x20;&#x2F;&gt;&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;table&gt;&#x0A;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;div&#x20;class&#x3D;&quot;text-center&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;a&#x20;class&#x3D;&quot;btn&#x20;btn-primary&#x20;btn-sm&quot;&#x20;aria-label&#x3D;&quot;Left&#x20;Align&quot;&#x20;href&#x3D;&quot;&#x2F;backend&#x2F;messages&#x2F;new&#x2F;takeshito&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;i&#x20;class&#x3D;&quot;icon-envelope&quot;&#x20;aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;Send&#x20;Message&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;a&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;" data-tooltip-position="r" data-tooltip-class="tooltip-tree-style">
-                                                        i
-                                                    </span> 
                                                 </span>
+                                                <!--//------END 2DO LEVEL LEFT------->
                                             <ul class="">
+                                                <!--//-----3ER LEVEL LEFT--------->
                                                 <li>
                                                     <span class="inline-block relative">
-                                                        <a href="" class="status-1 user-packet">
-                                                            <span class="user-name">miguelangel120</span>
-                                                        </a>
-                                                        <span class="tooltip-icon" data-tooltip title="&#x20;&#x20;&#x20;&#x20;&lt;h5&gt;miguelangel120&#x20;&lt;span&#x20;class&#x3D;&quot;close-tooltip&#x20;pull-right&#x20;pointer&#x20;visible-xs&quot;&gt;X&lt;&#x2F;span&gt;&lt;&#x2F;h5&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&lt;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Country&#x3A;&#x20;&lt;&#x2F;strong&gt;&amp;nbsp&#x3B;&lt;span&#x20;class&#x3D;&quot;flag&#x20;flag-pe&quot;&gt;&lt;&#x2F;span&gt;&#x20;&amp;nbsp&#x3B;&#x20;Peru&lt;br&#x2F;&gt;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Status&#x3A;&lt;&#x2F;strong&gt;&#x20;&lt;span&#x20;class&#x3D;&quot;green&quot;&gt;Rookie&lt;&#x2F;span&gt;&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Sponsored&#x3A;&lt;&#x2F;strong&gt;&#x20;globalcryptoinvest&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;table&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&gt;&lt;strong&gt;Package&#x3A;&#x20;&lt;&#x2F;strong&gt;&lt;br&#x2F;&gt;Rookie&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&#x20;class&#x3D;&quot;t-right&quot;&gt;&lt;img&#x20;src&#x3D;&quot;&#x2F;media&#x2F;images&#x2F;200x150_2016_06_20_rookie.png&quot;&#x20;alt&#x3D;&quot;&quot;&#x20;height&#x3D;&quot;50&quot;&#x20;&#x2F;&gt;&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;table&gt;&#x0A;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;div&#x20;class&#x3D;&quot;text-center&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;a&#x20;class&#x3D;&quot;btn&#x20;btn-primary&#x20;btn-sm&quot;&#x20;aria-label&#x3D;&quot;Left&#x20;Align&quot;&#x20;href&#x3D;&quot;&#x2F;backend&#x2F;messages&#x2F;new&#x2F;miguelangel120&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;i&#x20;class&#x3D;&quot;icon-envelope&quot;&#x20;aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;Send&#x20;Message&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;a&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;" data-tooltip-position="r" data-tooltip-class="tooltip-tree-style">
-                                                            i
-                                                        </span> 
+                                                    <a  href="#" title="<?php echo $n3_iz[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n3_iz[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1 user-packet">
+                                                        <div class="row imagen-profile">
+                                                          <div class="col-sm-2" style="padding: 0;"></div>
+                                                            <div class="col-sm-8" style="padding: 0;">
+                                                                <div class="div-img">
+                                                                    <?php
+                                                                    switch ($n3_iz[10]) {
+                                                                        case 2:
+                                                                            $images = "basic.jpg";
+                                                                            break;
+                                                                        case 3:
+                                                                            $images = "platinium.jpg";
+                                                                            break;
+                                                                        case 4:
+                                                                            $images = "gold.jpg";
+                                                                            break;
+                                                                        case 5:
+                                                                            $images = "vip.jpg";
+                                                                            break;
+                                                                        case 6:
+                                                                            $images = "default.jpg";
+                                                                            break;
+                                                                        case 7:
+                                                                            $images = "elite.jpg";
+                                                                            break;
+                                                                        case 8:
+                                                                            $images = "start.jpg";
+                                                                            break;
+                                                                    }
+                                                                    ?>
+                                                                    <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-2" style="padding: 0;">
+                                                                <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
+                                                                    <?php if($n3_iz[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                  <span class="<?php echo $style;?>"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <span class="user-name"><?php echo $n3_iz[6];?></span>
+                                                    </a>
                                                     </span>
+                                                            <!--//-----END 4TO LEVEL LEFT--------->
                                                     <ul class="hidden-xs">
                                                         <li>
+                                                            <!--//-----4TO LEVEL LEFT--------->
                                                                 <span class="inline-block relative">
-                                                                    <a href="/backend/my-network/network-tree/position/4rt4HH4dMo8TSF1wj%252F%252F0qHm3aYQUkdu5oumvCQKMy8A%253D" class="status-1 user-packet">
-                                                                        <span class="user-name">OneCoinHispano</span>
-                                                                    </a>
-                                                                    <span class="tooltip-icon" data-tooltip title="&#x20;&#x20;&#x20;&#x20;&lt;h5&gt;OneCoinHispano&#x20;&lt;span&#x20;class&#x3D;&quot;close-tooltip&#x20;pull-right&#x20;pointer&#x20;visible-xs&quot;&gt;X&lt;&#x2F;span&gt;&lt;&#x2F;h5&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&lt;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Country&#x3A;&#x20;&lt;&#x2F;strong&gt;&amp;nbsp&#x3B;&lt;span&#x20;class&#x3D;&quot;flag&#x20;flag-pe&quot;&gt;&lt;&#x2F;span&gt;&#x20;&amp;nbsp&#x3B;&#x20;Peru&lt;br&#x2F;&gt;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Status&#x3A;&lt;&#x2F;strong&gt;&#x20;&lt;span&#x20;class&#x3D;&quot;green&quot;&gt;Rookie&lt;&#x2F;span&gt;&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Sponsored&#x3A;&lt;&#x2F;strong&gt;&#x20;globalcryptoinvest&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;table&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&gt;&lt;strong&gt;Package&#x3A;&#x20;&lt;&#x2F;strong&gt;&lt;br&#x2F;&gt;Rookie&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&#x20;class&#x3D;&quot;t-right&quot;&gt;&lt;img&#x20;src&#x3D;&quot;&#x2F;media&#x2F;images&#x2F;200x150_2016_06_20_rookie.png&quot;&#x20;alt&#x3D;&quot;&quot;&#x20;height&#x3D;&quot;50&quot;&#x20;&#x2F;&gt;&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;table&gt;&#x0A;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;div&#x20;class&#x3D;&quot;text-center&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;a&#x20;class&#x3D;&quot;btn&#x20;btn-primary&#x20;btn-sm&quot;&#x20;aria-label&#x3D;&quot;Left&#x20;Align&quot;&#x20;href&#x3D;&quot;&#x2F;backend&#x2F;messages&#x2F;new&#x2F;OneCoinHispano&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;i&#x20;class&#x3D;&quot;icon-envelope&quot;&#x20;aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;Send&#x20;Message&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;a&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;" data-tooltip-position="r" data-tooltip-class="tooltip-tree-style">
-                                                                        i
-                                                                    </span> 
-                                                                </span>
-                                                            <ul class="visible-lg">
-                                                                <li>
-                                                                    <span class="inline-block relative">
-                                                                        <a href="/backend/my-network/network-tree/position/v2oINAcLwnGlEEWQwcy8gkOXkKLD8xrr9G0UxH87JnA%253D" class="status-1 user-packet">
-                                                                            <span class="user-name">RICHDADWORLD1105</span>
-                                                                        </a>
-                                                                        <span class="tooltip-icon" data-tooltip title="&#x20;&#x20;&#x20;&#x20;&lt;h5&gt;RICHDADWORLD1105&#x20;&lt;span&#x20;class&#x3D;&quot;close-tooltip&#x20;pull-right&#x20;pointer&#x20;visible-xs&quot;&gt;X&lt;&#x2F;span&gt;&lt;&#x2F;h5&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&lt;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Country&#x3A;&#x20;&lt;&#x2F;strong&gt;&amp;nbsp&#x3B;&lt;span&#x20;class&#x3D;&quot;flag&#x20;flag-pe&quot;&gt;&lt;&#x2F;span&gt;&#x20;&amp;nbsp&#x3B;&#x20;Peru&lt;br&#x2F;&gt;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Status&#x3A;&lt;&#x2F;strong&gt;&#x20;&lt;span&#x20;class&#x3D;&quot;green&quot;&gt;Rookie&lt;&#x2F;span&gt;&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;strong&gt;Sponsored&#x3A;&lt;&#x2F;strong&gt;&#x20;globalcryptoinvest&lt;br&#x2F;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;table&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&gt;&lt;strong&gt;Package&#x3A;&#x20;&lt;&#x2F;strong&gt;&lt;br&#x2F;&gt;Rookie&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;td&#x20;class&#x3D;&quot;t-right&quot;&gt;&lt;img&#x20;src&#x3D;&quot;&#x2F;media&#x2F;images&#x2F;200x150_2016_06_20_rookie.png&quot;&#x20;alt&#x3D;&quot;&quot;&#x20;height&#x3D;&quot;50&quot;&#x20;&#x2F;&gt;&lt;&#x2F;td&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;tr&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;table&gt;&#x0A;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;div&#x20;class&#x3D;&quot;text-center&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;a&#x20;class&#x3D;&quot;btn&#x20;btn-primary&#x20;btn-sm&quot;&#x20;aria-label&#x3D;&quot;Left&#x20;Align&quot;&#x20;href&#x3D;&quot;&#x2F;backend&#x2F;messages&#x2F;new&#x2F;RICHDADWORLD1105&quot;&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;i&#x20;class&#x3D;&quot;icon-envelope&quot;&#x20;aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;Send&#x20;Message&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;a&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&lt;&#x2F;div&gt;&#x0A;" data-tooltip-position="r" data-tooltip-class="tooltip-tree-style">
-                                                                            i
-                                                                        </span> 
-                                                                    </span>
-                                                                </li>
+                                                                    <a  href="#" title="<?php echo $n4_iz[0];?>" data-toggle="popover" data-placement="right" data-content="<?php if($n4_iz[7] == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="status-1 user-packet">
+                                                                        <div class="row imagen-profile">
+                                                                          <div class="col-sm-2" style="padding: 0;"></div>
+                                                                            <div class="col-sm-8" style="padding: 0;">
+                                                                                <div class="div-img">
+                                                                                    <?php
+                                                                                    switch ($n4_iz[10]) {
+                                                                                        case 2:
+                                                                                            $images = "basic.jpg";
+                                                                                            break;
+                                                                                        case 3:
+                                                                                            $images = "platinium.jpg";
+                                                                                            break;
+                                                                                        case 4:
+                                                                                            $images = "gold.jpg";
+                                                                                            break;
+                                                                                        case 5:
+                                                                                            $images = "vip.jpg";
+                                                                                            break;
+                                                                                        case 6:
+                                                                                            $images = "default.jpg";
+                                                                                            break;
+                                                                                        case 7:
+                                                                                            $images = "elite.jpg";
+                                                                                            break;
+                                                                                        case 8:
+                                                                                            $images = "start.jpg";
+                                                                                            break;
+                                                                                    }
+                                                                                    ?>
+                                                                                    <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="" class="img-responsive img-circle thumb48">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-2" style="padding: 0;">
+                                                                                <span class="pull-right"style="padding-right: 5px; padding-top: 5px;" >
+                                                                                    <?php if($n4_iz[7] == 1 ){$style = 'circle circle-success circle-lg';}else{$style = 'circle circle-danger circle-lg';}?>
+                                                                                  <span class="<?php echo $style;?>"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
 
-                                                                <li>
-                                                                    <a href="/backend/my-network/network-tree/add-customer/99gu4O%252B8L6rD6Qf4l8R0ZpSEutS6tG9IMvW6LJzDRK0%253D/right" class="user-packet"></a>
-                                                                </li>
-                                                            </ul>
+                                                                        <span class="user-name"><?php echo $n4_iz[6];?></span>
+                                                                    </a>
+                                                                    </span>
+                                                                    <!--//-----END 4TO LEVEL LEFT--------->
                                                         </li>
 
                                                         <li>
@@ -1110,3 +1249,13 @@
     </div>
  </div>
 </section>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('[data-toggle="popover"]').popover({ html : true });
+$('.btn').popover({title: "<h1><strong>HTML</strong> inside <code>the</code> <em>popover</em></h1>", content: "Blabla <br> <h2>Cool stuff!</h2>", html: true, placement: "right"}); 
+});
+</script>
