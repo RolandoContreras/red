@@ -9105,6 +9105,15 @@ select.form-control {
       position: relative;
       padding: 10px 0 0;
       width: 50%; }
+    
+    .network-tree-panel .network-tree-stucture li .unilevel{
+      float: left;
+      text-align: center;
+      list-style-type: none;
+      position: relative;
+      padding: 10px 0 0;
+      width: 10%; }
+    
       .network-tree-panel .network-tree-stucture li:before, .network-tree-panel .network-tree-stucture li:after {
         content: '';
         position: absolute;

@@ -1,6 +1,191 @@
 <section>
     <div class="section-heading row">
         <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
+            <h1 class="title text-uppercase">Arbol Binario</h1>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
+            <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
+        </div>
+    </div>
+<!------------------------------------------->
+<div id="page-content-wrapper">
+    <main>
+        <div class="container-fluid">
+            <div class="row ml-custom">
+                <div class="col-xs-12">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default network-tree-panel">
+                            <div class="panel-body">
+                                
+                                <hr>
+                                <div class="clearfix btn-holder">
+                                    <a href="<?php echo site_url().'backoffice/binario';?>" class="btn btn-success btn-sm pull-left" aria-label="Left Align">
+                                        <span class="rotate-top-left"><em class="fa fa-circle" aria-hidden="true"></em></span>Volver al inicio
+                                    </a>
+                                    <a href="javascript: history.back(-1)" class="btn btn-success btn-sm pull-right" aria-label="Right Align"> Subir un nivel
+                                        <span class="rotate-top-right"><em class="fa fa-arrow-down" aria-hidden="true"></em></span>
+                                    </a>
+                                </div>
+                                
+                                <!--//ESTRUCTURE TREE-->
+                                    <div class="network-tree-stucture">
+                                        <ul>
+                                            <li>
+                                                <span class="inline-block relative">
+                                                    <a  href="#" title="<?php echo $obj_customer->first_name;?>" data-toggle="popover" data-placement="right" data-content="<?php if($obj_customer->active == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="user-packet">
+                                                        <div class="row imagen-profile">
+                                                                <div class="div-img">
+                                                                    <?php
+                                                                    switch ($obj_customer->franchise_id) {
+                                                                            case 2:
+                                                                            $images = "basic.png";
+                                                                            break;
+                                                                        case 3:
+                                                                            $images = "executive.png";
+                                                                            break;
+                                                                        case 4:
+                                                                            $images = "gold.png";
+                                                                            break;
+                                                                        case 5:
+                                                                            $images = "senior_executive.png";
+                                                                            break;
+                                                                        case 6:
+                                                                            $images = "membership.png";
+                                                                            break;
+                                                                        case 7:
+                                                                            $images = "master.png";
+                                                                            break;
+                                                                        case 11:
+                                                                            $images = "basic.png";
+                                                                            break;
+                                                                        case 12:
+                                                                            $images = "executive.png";
+                                                                            break;
+                                                                        case 13:
+                                                                            $images = "senior_executive.png";
+                                                                            break;
+                                                                        case 14:
+                                                                            $text = "Master";
+                                                                            break;
+                                                                        }
+                                                                    ?>
+                                                                    <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="paquete" class="thumb96">
+                                                                </div>
+                                                        </div>
+                                                        <span class="user-name"><?php echo $obj_customer->username;?></span>
+                                                    </a>
+                                                </span>
+                                                
+                                    <?php if(count($obj_customer_n2) > 0){ ?>
+                                        <ul class="" style="overflow: scroll;">
+                                            <?php foreach ($obj_customer_n2 as $value) { ?>         
+                                            <!--//------2DO LEVEL ------->
+                                            <li class="unilevel">
+                                                <span class="">
+                                                        <a  href="#" title="<?php echo $value->first_name;?>" data-toggle="popover" data-placement="right" data-content="<?php if($value->active == 1){ echo "ACTIVO";?><?php }else{ echo "INACTIVO";?><?php } ?>" class="">
+                                                            <div class="row imagen-profile">
+                                                                    <div class="div-img">
+                                                                        <?php
+                                                                        switch ($value->franchise_id) {
+                                                                            case 2:
+                                                                                $images = "basic.png";
+                                                                                break;
+                                                                            case 3:
+                                                                                $images = "executive.png";
+                                                                                break;
+                                                                            case 4:
+                                                                                $images = "gold.png";
+                                                                                break;
+                                                                            case 5:
+                                                                                $images = "senior_executive.png";
+                                                                                break;
+                                                                            case 6:
+                                                                                $images = "membership.png";
+                                                                                break;
+                                                                            case 7:
+                                                                                $images = "master.png";
+                                                                                break;
+                                                                            case 11:
+                                                                                $images = "basic.png";
+                                                                                break;
+                                                                            case 12:
+                                                                                $images = "executive.png";
+                                                                                break;
+                                                                            case 13:
+                                                                                $images = "senior_executive.png";
+                                                                                break;
+                                                                            case 14:
+                                                                                $text = "Master";
+                                                                                break;
+                                                                        }
+                                                                        ?>
+                                                                        <img src="<?php echo site_url().'static/backoffice/images/'."$images";?>" alt="paquete" class="thumb96">
+                                                                    </div>
+                                                            </div>
+                                                        </a>
+                                                        <!--USERNAME-->
+                                                        <span class="tree_text"><a href="<?php echo site_url().'backoffice/unilevel/'.$value->customer_id;?>" class=""><?php echo $value->username;?></a></span>
+                                                 
+                                                </span>
+                                                <!--//------END 2DO LEVEL------->
+                                        </li>
+                                            <?php } ?>
+                                      </ul>
+                                    <?php } ?>
+                                </li>
+                            </ul>
+                        </div>
+                                <br><br><br>
+                        <hr class="style-4 mb-20">
+                            <div class="position-info-list">
+                                <div class="style_basic responsive"><span class="">BASIC</span></div>
+                                <div class="style_executive responsive"><span class="">EXECUTIVE</span></div>
+                                <div class="style_senior_executive responsive"><span class="">SENIOR EXECUTIVE</span></div>
+                                <div class="style_master responsive"><span class="">MASTER</span></div>
+                                <div class="style_membership responsive"><span class="">MEMBERSHIP</span></div>
+                                <div class="style_free_position responsive"><span class=""><?php echo replace_vocales_voculeshtml("POSICIÓN LIBRE");?></span></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                        
+        </div>
+    </main>
+</div>
+</section>
+
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('[data-toggle="popover"]').popover({ html : true });
+//$('.btn').popover({title: "<h1><strong>HTML</strong> inside <code>the</code> <em>popover</em></h1>", content: "Blabla <br> <h2>Cool stuff!</h2>", html: true, placement: "right"}); 
+});
+</script>
+
+<link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/arbol.css';?>" id="maincss">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section>
+    <div class="section-heading row">
+        <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
             <h1 class="title text-uppercase"><?php echo replace_vocales_voculeshtml("Arbol Unilevel");?></h1>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
