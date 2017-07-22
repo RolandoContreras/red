@@ -127,11 +127,151 @@
 .tree li nodo:hover+ul ul::before{
     border-color:  #94a0b4;
 }
-.frachise_elite{
-    background-image: url(../../../static/backoffice/images/elite_small.png) !important;
-    background-size: 50px 50px;
-/*    width: 55px;
-    height: 95px;*/
+.style_basic{
+    max-width: 200px !important;
+    min-width: 30px !important;
+    background-image: url(../../../static/backoffice/images/basic.png) !important;
+    background-position: 0 top !important;
+    padding-top: 200px !important;
+    width: 14% !important;
+    float: left;
+    line-height: 1.2em;
+    margin: 0 10px 10px;
+    font-size: 11px;
+    color: #333;
+    padding-top: 90px;
+    width: 55px;
+    text-align: center;
+}
+.style_executive{
+    max-width: 200px !important;
+    min-width: 30px !important;
+    background-image: url(../../../static/backoffice/images/executive.png) !important;
+    background-position: 0 top !important;
+    padding-top: 200px !important;
+    width: 14% !important;
+    float: left;
+    line-height: 1.2em;
+    margin: 0 10px 10px;
+    font-size: 11px;
+    color: #333;
+    padding-top: 90px;
+    width: 55px;
+    text-align: center;
+}
+.style_senior_executive{
+    max-width: 200px !important;
+    min-width: 30px !important;
+    background-image: url(../../../static/backoffice/images/senior_executive.png) !important;
+    background-position: 0 top !important;
+    padding-top: 200px !important;
+    width: 14% !important;
+    float: left;
+    line-height: 1.2em;
+    margin: 0 10px 10px;
+    font-size: 11px;
+    color: #333;
+    padding-top: 90px;
+    width: 55px;
+    text-align: center;
+}
+.style_master{
+    background-image: url(../../../static/backoffice/images/master.png) !important;
+    background-position: 0 top !important;
+    padding-top: 200px !important;
+    width: 14% !important;
+    float: left;
+    line-height: 1.2em;
+    margin: 0 10px 10px;
+    font-size: 11px;
+    color: #333;
+    padding-top: 90px;
+    width: 55px;
+    text-align: center;
+}
+.style_membership{
+    background-image: url(../../../static/backoffice/images/membership.png) !important;
+    background-position: 0 top !important;
+    padding-top: 200px !important;
+    width: 14% !important;
+    float: left;
+    line-height: 1.2em;
+    margin: 0 10px 10px;
+    font-size: 11px;
+    color: #333;
+    padding-top: 90px;
+    width: 55px;
+    text-align: center;
+}
+.style_free_position{
+    background-image: url(../../../static/backoffice/images/blank.png) !important;
+    background-position: 0 top !important;
+    padding-top: 200px !important;
+    width: 14% !important;
+    float: left;
+    line-height: 1.2em;
+    margin: 0 10px 10px;
+    font-size: 11px;
+    color: #333;
+    padding-top: 90px;
+    width: 55px;
+    text-align: center;
+}
+.user-blank{
+    margin-top: 6px;
+    margin-bottom: 23px;
+
+}
+
+@media only screen and (max-width: 1280px) {
+    .style_basic{
+   background-size: 100% !important;
+   
+    }
+    .style_executive{
+   background-size: 100% !important;
+    }
+    .style_senior_executive{
+   background-size: 100% !important;
+    }
+    .style_master{
+   background-size: 100% !important;
+    }
+    .style_membership{
+   background-size: 100% !important;
+    }
+    .style_free_position{
+   background-size: 100% !important;
+    }
+    
+}
+.tree_text a{
+    color: #000 !important;
+    font-size: 11px !important;
+    overflow-wrap: break-word;
+    line-height: 15px;
+}
+
+
+@media only screen and (max-width: 800px   ) {
+    .network-tree-panel .position-info-list div {
+        font-size: 10px;
+        width: 150px !important;
+        padding-top: 100px !important;
+    }
+}
+@media only screen and (max-width: 980px   ) {
+    .network-tree-panel .position-info-list div {
+        font-size: 10px;
+        width: 73px !important;
+        padding-top: 80px !important;
+    }
+}   
+@media only screen and (max-width: 1280px   ) {
+    .network-tree-panel .position-info-list div {
+        font-size: 10px;
+        padding-top: 120px !important;
+    }
 }
 
 
