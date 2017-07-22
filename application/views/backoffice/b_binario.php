@@ -859,7 +859,7 @@
                                                                                 </div>
                                                                         </div>
                                                                         </a>
-                                                                    <span class="tree_text"><a href="<?php echo site_url().'backoffice/binario/'.$n3_de[2];?>"><?php echo $n4_de[6];?></a></span>
+                                                                    <span class="tree_text"><a href="<?php echo site_url().'backoffice/binario/'.$n4_de[2];?>"><?php echo $n4_de[6];?></a></span>
                                                                     
                                                                     <?php }else{ ?>
                                                                         <img src="<?php echo site_url().'static/backoffice/images/blank.png';?>" alt="paquete blanco" class="thumb96 user-blank" />
