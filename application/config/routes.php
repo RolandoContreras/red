@@ -64,6 +64,10 @@ $route['registro/afiliate/([0-9a-z_-]+)'] = "registro/index/$1";
 
 //$route['registro'] = "home";
 //$route['registro/afiliate/([0-9a-z_-]+)'] = "home/index/$1";
+//
+
+
+$route['paquete/([0-9a-z_-]+)'] = "package/index/$1";
 
 
 $route['contacto'] = "contact";

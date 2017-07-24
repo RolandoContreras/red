@@ -173,7 +173,7 @@
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
-									<a href="javascript:void(0);" >BASIC</a>
+                                                                    <a href="<?php echo site_url().'paquete/basic';?>">BASIC</a>
                                                                         <span><b>$125.00</b></span>
 								</div>
 							</div>
@@ -189,7 +189,7 @@
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
-									<a href="javascript:void(0);" >EXECUTIVE</a>
+									<a href="<?php echo site_url().'paquete/executive';?>" >EXECUTIVE</a>
                                                                         <span><b>$250.00</b></span>
 								</div>
 							</div>
@@ -205,7 +205,7 @@
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
-									<a href="javascript:void(0);" >SENIOR EXECUTIVE</a>
+									<a href="<?php echo site_url().'paquete/senior_executive';?>" >SENIOR EXECUTIVE</a>
                                                                         <!--<a href="portfolio-post.html" >SENIOR EXECUTIVE</a>-->
                                                                         <span><b>$1,000.00</b></span>
 								</div>
@@ -222,7 +222,7 @@
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
-									<a href="javascript:void(0);" >MASTER</a>
+									<a href="<?php echo site_url().'paquete/master';?>" >MASTER</a>
                                                                         <span><b>$3,000.00</b></span>
 								</div>
 							</div>
@@ -230,216 +230,9 @@
 					</div><!-- //work4 -->
 				</div><!-- //PROJECTS SLIDER -->
 			</div>
-			
-			
-			<!-- OUR CLIENTS -->
-<!--			<div class="our_clients">
-			
-				 CONTAINER 
-				<div class="container" data-appear-top-offset="-200" data-animated="fadeInUp">
-					
-					 ROW 
-					<div class="row">
-						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
-							<img src="images/clients/1.jpg" alt="" />
-						</div>
-						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
-							<img src="images/clients/2.jpg" alt="" />
-						</div>
-						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
-							<img src="images/clients/3.jpg" alt="" />
-						</div>
-						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
-							<img src="images/clients/4.jpg" alt="" />
-						</div>
-						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
-							<img src="images/clients/5.jpg" alt="" />
-						</div>
-						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
-							<img src="images/clients/6.jpg" alt="" />
-						</div>
-					</div> //ROW 
-				</div> CONTAINER 
-			</div> //OUR CLIENTS -->
 		</section><!-- //PROJECTS -->
-		
-<!--		
-		 TEAM 
-		<section id="team">
-		
-			 CONTAINER 
-			<div class="container">
-				<h2><b>Equipo</b> De Trabajo</h2>
-				
-				 ROW 
-				<div class="row" data-appear-top-offset="-200" data-animated="fadeInUp">
-						
-					 TEAM SLIDER 
-					<div class="owl-demo owl-carousel team_slider">
-				
-						 crewman1 
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="<?php echo site_url().'static/page_front/white/images/front/team/1.jpg'?>" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>Sarah Brown</p>
-										<span>Director</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div> crewman1 
-						
-						 crewman2 
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="<?php echo site_url().'static/page_front/white/images/front/team/2.jpg'?>" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>David Jones</p>
-										<span>Creative Director</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div> crewman1 
-						
-						 crewman3 
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="<?php echo site_url().'static/page_front/white/images/front/team/3.jpg'?>" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>Kate Smith</p>
-										<span>Manager</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div> crewman3 
-						
-						 crewman4 
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="<?php echo site_url().'static/page_front/white/images/front/team/4.jpg'?>" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>Peter Parker</p>
-										<span>Manager</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div> crewman4 
-						
-						 crewman5 
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="i<?php echo site_url().'static/page_front/white/images/front/team/5.jpg'?>" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>Jim Moss</p>
-										<span>Designer</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div> crewman5 
-						
-						 crewman6 
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="<?php echo site_url().'static/page_front/white/images/front/team/6.jpg'?>" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>John Marks</p>
-										<span>Designer</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div> crewman6 
-						
-						 crewman7 
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="<?php echo site_url().'static/page_front/white/images/front/team/7.jpg'?>" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>Joe Mades</p>
-										<span>Developer</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div> crewman7 
-						
-						 crewman8 
-						<div class="item">
-							<div class="crewman_item">
-								<div class="crewman">
-									<img src="<?php echo site_url().'static/page_front/white/images/front/team/8.jpg'?>" alt="" />
-								</div>
-								<div class="crewman_descr center">
-									<div class="crewman_descr_cont">
-										<p>Julia Anderson</p>
-										<span>Developer</span>
-									</div>
-								</div>
-								<div class="crewman_social">
-									<a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
-									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
-								</div>
-							</div>
-						</div> crewman8 
-					</div> TEAM SLIDER 
-				</div> //ROW 
-			</div> //CONTAINER 
-		</section> //TEAM 
-		-->
-		
 		<!-- NEWS -->
 		<section id="news">
-		
 			<!-- CONTAINER -->
 			<div class="container">
 				<h2><b>FAQ</b> - Preguntas Frecuentes</h2>
@@ -553,16 +346,6 @@
 	</div><!-- //MAP -->
 <script src="static/cms/js/core/bootstrap-modal.js"></script>
 <script src="static/cms/js/core/bootbox.min.js"></script>
-<!--<script>
-// popup based on HTML already on the page
-$('#popup1').w2popup();
-
-// overlay based on the same HTML
-$(this).w2overlay($('#popup1 [rel=body]').html(), { css: { width: '600px', padding: '10px' } });
-</script>-->
-    
-
-<!--<script src="static/cms/js/core/jquery-1.11.1.min.js"></script>-->
 </div>
 </body>
 </html>
