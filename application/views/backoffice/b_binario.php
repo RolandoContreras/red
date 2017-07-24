@@ -41,7 +41,6 @@
                                          <b>IZQUIERDA: </b> 
                                          <span class="label label-primary"><?php echo $obj_customer->point_left / 0.12;?></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                          <b>DERECHA: </b><span class="label label-primary"><?php echo $obj_customer->point_rigth / 0.12;?></span> &nbsp;&nbsp;&nbsp;
-                                        </span>
                                     </div>
                                 </div>
                                 <!--//END INFORMATION POINT-->    
@@ -910,7 +909,6 @@
 </div>
 </section>
 
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">

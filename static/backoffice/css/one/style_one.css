@@ -9114,6 +9114,9 @@ select.form-control {
       padding: 10px 0 0;
       width: 10%; }
     
+/*    .network-tree-panel .network-tree-stucture li .unilevel{
+      width: 10%; }*/
+    
       .network-tree-panel .network-tree-stucture li:before, .network-tree-panel .network-tree-stucture li:after {
         content: '';
         position: absolute;

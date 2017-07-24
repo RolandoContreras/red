@@ -39,7 +39,8 @@ class B_unilevel extends CI_Controller {
 
         /// VISTA
         $params = array(
-                        "select" =>"customer.customer_id,
+                        "select" =>"(select count(customer_id) from customer where parents_id = $customer_id) as direct,
+                                    customer.customer_id,
                                     customer.parents_id,
                                     customer.username,
                                     customer.email,
@@ -106,7 +107,7 @@ class B_unilevel extends CI_Controller {
                     );
                 
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
-           $price_btc = number_format($obj_otros->precio_btc,8);  
+           $price_btc = "$".number_format($obj_otros->precio_btc,2);
            
             
          $this->tmp_backoffice->set("price_btc",$price_btc);
