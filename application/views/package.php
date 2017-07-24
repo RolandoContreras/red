@@ -38,6 +38,9 @@
 							<p><?php echo $content;?></p>
 						</div><!-- //TEXT WIDGET -->
 						<hr>
+                                                
+                                                <a id="btn_hover" class="btn btn-active" href="<?php echo site_url().'registro';?>" ><span data-hover="Si, yo quiero">Registrarme</span></a>
+                                                <hr>
                                                     <ul class="shared">
                                                         <li><a target="_blank" href="https://www.youtube.com/channel/UCnvEpHFTdj0LZ8JaMKKTUMQ" ><i class="fa fa-youtube"></i></a></li>
                                                             <li><a target="_blank" href="https://www.facebook.com/bitshareoficial/" ><i class="fa fa-facebook"></i></a></li>
@@ -152,8 +155,15 @@
 		<a class="map_hide" href="javascript:void(0);" ><i class="fa fa-angle-right"></i><i class="fa fa-angle-left"></i></a>
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.930880417326!2d-77.0350244846066!3d-12.116881791420631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c817d1ae2fd3%3A0x6979887ef7b081b5!2sCalle+Enrique+Palacios+420%2C+Miraflores+15074!5e0!3m2!1ses!2spe!4v1500097903604" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div><!-- //MAP -->
+        http://localhost/red/static/page_front/white/css/style.css
 <script src="static/cms/js/core/bootstrap-modal.js"></script>
 <script src="static/cms/js/core/bootbox.min.js"></script>
 </div>
+<style>
+    #btn_hover:hover{
+        color:black !important;
+        background-color: gainsboro;
+    }
+</style>
 </body>
 </html>
