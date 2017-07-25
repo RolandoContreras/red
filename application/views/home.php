@@ -291,10 +291,10 @@
 						<div class="post_item">
 							<div class="post_item_img">
                                                             <img src="<?php echo site_url().'static/page_front/white/images/front/blog/bitcoin.jpg'?>" alt="" width="1280" height="800"/>
-								<a class="link" href="javascript:void(0);" ></a>
+								<a class="link" href="<?php echo site_url().'noticias/que-es-criptomoneda';?>" ></a>
 							</div>
 							<div class="post_item_content">
-                                                            <a class="title" href="javascript:void(0);" ><?php echo replace_vocales_voculeshtml("¿Qué es la criptomoneda? - Bitcoin");?></a>
+                                                            <a class="title" href="<?php echo site_url().'noticias/que-es-criptomoneda';?>" ><?php echo replace_vocales_voculeshtml("¿Qué es la criptomoneda? - Bitcoin");?></a>
 <!--								<ul class="post_item_inf">
 									<li><a href="javascript:void(0);" >Anna</a> |</li>
 									<li><a href="javascript:void(0);" >Photography</a> |</li>
@@ -307,10 +307,10 @@
 						<div class="post_item">
 							<div class="post_item_img">
                                                             <img src="<?php echo site_url().'static/page_front/white/images/front/blog/blockchain.jpg'?>" alt="" width="1280" height="800"/>
-								<a class="link" href="javascript:void(0);"></a>
+                                                            <a class="link" href="<?php echo site_url().'noticias/blockchain-cadena-de-bloques';?>"></a>
 							</div>
 							<div class="post_item_content">
-								<a class="title" href="javascript:void(0);" ><?php echo replace_vocales_voculeshtml("Blockchain - Cadena de bloques");?></a>
+								<a class="title" href="<?php echo site_url().'noticias/blockchain-cadena-de-bloques';?>" ><?php echo replace_vocales_voculeshtml("Blockchain - Cadena de bloques");?></a>
 							</div>
 						</div>
 					</div>
@@ -318,10 +318,10 @@
 						<div class="post_item">
 							<div class="post_item_img">
 								<img src="<?php echo site_url().'static/page_front/white/images/front/blog/bank.jpg'?>" alt="" width="1280" height="800"/>
-								<a class="link" href="javascript:void(0);"></a>
+								<a class="link" href="<?php echo site_url().'noticias/bitcoin-la-nueva-realidad';?>"></a>
 							</div>
 							<div class="post_item_content">
-                                                            <a class="title" href="javascript:void(0);" ><?php echo replace_vocales_voculeshtml("Bitcoin la nueva realidad");?></a>
+                                                            <a class="title" href="<?php echo site_url().'noticias/bitcoin-la-nueva-realidad';?>" ><?php echo replace_vocales_voculeshtml("Bitcoin la nueva realidad");?></a>
 						</div>
 						</div>
 					</div>

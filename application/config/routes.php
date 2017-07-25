@@ -68,6 +68,7 @@ $route['registro/afiliate/([0-9a-z_-]+)'] = "registro/index/$1";
 
 
 $route['paquete/([0-9a-z_-]+)'] = "package/index/$1";
+$route['noticias/([0-9a-z_-]+)'] = "news/index/$1";
 
 
 $route['contacto'] = "contact";
