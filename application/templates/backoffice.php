@@ -203,7 +203,7 @@
                                             
 	                  		</li>
                                         <li class="<?php echo $infoproductos ?>">
-                                            <a href="<?php echo 'http://www.bitsharesuniversity.com/';?>" title="Info Productos">
+                                            <a target="_blank" href="<?php echo 'http://www.bitsharesuniversity.com/';?>" title="Info Productos">
                                             <em class="fa fa-cart-plus fa-lg" aria-hidden="true"></em>
                                             <span>Bitshares University</span>
 	                     		</a>
