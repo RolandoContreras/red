@@ -218,7 +218,7 @@
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
-									<a href="<?php echo site_url().'paquete/senior_executive';?>">BUSINESS</a>
+									<a href="<?php echo site_url().'paquete/business';?>">BUSINESS</a>
                                                                         <!--<a href="portfolio-post.html" >SENIOR EXECUTIVE</a>-->
                                                                         <span><b>$1,000.00</b></span>
 								</div>

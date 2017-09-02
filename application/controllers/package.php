@@ -46,17 +46,17 @@ class Package extends CI_Controller {
         }elseif($package == "investor"){
             $data['title'] = "INVESTOR";
             $data['title_content'] = "VIAJE EXCLUSIVO SORPRESA";
-            $data['content'] = "<b>PRECIO: $500</b><br><b>RECIBES</b><br>+375 PUNTOS<br>+MASTERMIND (Entrenamiento)<br> +EBOOK (libro digital)<br>+3 AUDIOS<br>+BLOCK<br>+4 WEBINARS";
+            $data['content'] = "<b>PRECIO: $500</b><br><b>RECIBES</b><br>+375 PUNTOS<br><b>DESARROLLO PERSONAL</b><br>+TODO EL PAQUETE EXECUTIVE<br>+PROGRAMA DE PNL Y PERSUASIÓN (E- book)<br>+LA VENTAJA DE VENDER EN 7 SEGUNDOS (Webinar)<br>+COMO CONSEGUIR ALIADOS (Audios)<br>+MULTIPLICA<br><b>CURSOS FOREX</b><br>+TODO EL PAQUETE EXECUTIVE<br>+BITSHARE ACADEMY Completo<br>+BITSHARE Graphics y Strategies";
             $data['image'] = "static/page_front/white/images/front/packet/investor.jpg";
-        }elseif($package == "senior_executive"){
+        }elseif($package == "business"){
             $data['title'] = "SENIOR EXECUTIVE";
             $data['title_content'] = "VIAJE AL INTERIOR DE TU PAÍS";
-            $data['content'] = "<b>PRECIO: $1000</b><br>TICKET AEREO<br>TRASLADO ENTRADA / SALIDA<br>ESTADIA<br>COMIDA<br>INCLUYE TOUR<b><br><br>RECIBES</b><br>+1500 BIT<br>+MASTERMIND (Entrenamiento)<br> +EBOOK (libro digital)<br>+3 AUDIOS<br>+BLOCK<br>+4 WEBINARS<br>+FXSHARE Y LEARN&SHARE (B-I)";
-            $data['image'] = "static/page_front/white/images/front/packet/senior.jpg";
+            $data['content'] = "<b>PRECIO: $1000</b><br>TICKET AEREO<br>TRASLADO ENTRADA / SALIDA<br>ESTADIA<br>COMIDA<br>INCLUYE TOUR<b><br>RECIBES</b><br>+750 PUNTOS<br><b>DESARROLLO PERSONAL</b><br>+TODO EL PAQUETE INVESTOR<br>+COMO HACER DINERO EN TIEMPO DE CRISIS (E- book)<br>+LA VENTAJA DE VENDER EN 7 SEGUNDOS (Webinar)<br>+MULTIPLICA (Audios)<br>+COMO CONSEGUIR ALIADOS <br><b>CURSOS FOREX</b><br>+TODO EL PAQUETE INVESTOR<br>+CURSO INTENSIVO DE FOREX (Conviértete en in trade profesional en 3 días)";
+            $data['image'] = "static/page_front/white/images/front/packet/business.jpg";
         }else{
             $data['title'] = "MASTER";
             $data['title_content'] = "VIAJE INTERNACIONAL";
-            $data['content'] = "<b>PRECIO: $3000</b><br>TICKET AEREO<br>TRASLADO ENTRADA / SALIDA<br>ALL INCLUDE (TODO INCLUIDO)<br>INCLUYE TOUR<b><br><br>RECIBES</b><br>+4500 BIT<br>+3 MASTERMIND (Entrenamiento)<br> +EBOOK (libro digital)<br>+6 AUDIOS<br>+BLOCK<br>+6 WEBINARS<br>+FXSHARE Y LEARN&SHARE (B-I-A)";
+            $data['content'] = "<b>PRECIO: $3000</b><br>TICKET AEREO<br>TRASLADO ENTRADA / SALIDA<br>ALL INCLUDE (TODO INCLUIDO)<br>INCLUYE TOUR<b><br>RECIBES</b><br>+2250 PUNTOS<br><b>DESARROLLO PERSONAL</b><br>+TODO EL PAQUETE BUSINESS<br>+PROGRAMA DE ADOCTRINAMIENTO (E- book)<br>+¿QUIÉN SOY REALMENTE?<br>+HIPNOSIS CONVERSACIONAL (Webinar)<br>+TU NOMBRE, TU BANDERA  (Audios)<br>+INGENIERÍA SOCIAL<br><b>CURSOS FOREX</b><br>+TODO EL PAQUETE BUSINESS<br>+CONVERSATORIO PRIVADOR CON NUESTRO TRADER EN JEFE SERGIO URBINA";
             $data['image'] = "static/page_front/white/images/front/packet/master.jpg";
         }
         

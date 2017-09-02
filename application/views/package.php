@@ -79,7 +79,7 @@
 					<div class="item">
 						<div class="work_item">
 							<div class="work_img">
-                                                            <img src="<?php echo site_url().'static/page_front/white/images/front/packet/basic.jpg';?>" alt="paquete" />
+                                                            <img src="<?php echo site_url().'static/page_front/white/images/front/packet/basic.jpg';?>" alt="paquete basic"/>
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
@@ -94,7 +94,7 @@
 					<div class="item">
 						<div class="work_item">
 							<div class="work_img">
-								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/executive.jpg';?>" alt="paquete" />
+								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/executive.jpg';?>" alt="paquete executive"/>
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
@@ -105,16 +105,30 @@
 						</div>
 					</div><!-- //work2 -->
 					
+                                        <!-- work5 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/investor.jpg';?>" alt="paquete investor"/>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="<?php echo site_url().'paquete/investor';?>">Paquete Investor</a>
+									<span><?php echo replace_vocales_voculeshtml("Actívate Ahora");?></span>
+								</div>
+							</div>
+						</div>
+					</div><!-- //work5 -->
+                                        
 					<!-- work3 -->
 					<div class="item">
 						<div class="work_item">
 							<div class="work_img">
-								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/senior.jpg';?>" alt="paquete" />
-								<a class="zoom" href="!projects/project3.html" ></a>
+								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/business.jpg';?>" alt="paquete business"/>
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
-									<a href="<?php echo site_url().'paquete/senior_executive';?>" >Paquete Senior Executive</a>
+									<a href="<?php echo site_url().'paquete/business';?>" >Paquete Business</a>
                                                                     <span><?php echo replace_vocales_voculeshtml("Actívate Ahora");?></span>
 								</div>
 							</div>
@@ -125,7 +139,7 @@
 					<div class="item">
 						<div class="work_item">
 							<div class="work_img">
-								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/master.jpg';?>" alt="paquete" />
+								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/master.jpg';?>" alt="paquete master"/>
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
