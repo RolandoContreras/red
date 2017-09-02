@@ -3,7 +3,7 @@
 <?php $this->load->view("head"); ?>
 <body>
 <!-- PRELOADER -->
-<img id="preloader" src="<?php echo site_url().'static/page_front/white/gif/preloader.gif'?>" alt="preloader" />
+<!--<img id="preloader" src="<?php echo site_url().'static/page_front/white/gif/preloader.gif'?>" alt="preloader" />-->
 <!-- //PRELOADER -->
 <div class="preloader_hide">
 	<!-- PAGE -->
@@ -164,7 +164,7 @@
 				<!-- PROJECTS SLIDER -->
 				<div class="owl-demo owl-carousel projects_slider">
 					
-					<!-- work1 -->
+					<!-- Plan1 -->
 					<div class="item">
 						<div class="work_item">
 							<div class="work_img">
@@ -178,9 +178,8 @@
 								</div>
 							</div>
 						</div>
-					</div><!-- //work1 -->
-					
-					<!-- work2 -->
+					</div><!-- //Plan1 -->
+					<!-- Plan2 -->
 					<div class="item">
 						<div class="work_item">
 							<div class="work_img">
@@ -194,8 +193,22 @@
 								</div>
 							</div>
 						</div>
-					</div><!-- //work2 -->
-					
+					</div>
+                                        <!-- //Plan3 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="<?php echo site_url().'static/page_front/white/images/front/packet/a5.jpg'?>" alt="" />
+								<a class="zoom" href="<?php echo site_url().'static/page_front/white/images/front/packet/a1.jpg'?>" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+                                                                    <a href="<?php echo site_url().'paquete/investor';?>">INVESTOR</a>
+                                                                        <span><b>$500.00</b></span>
+								</div>
+							</div>
+						</div>
+					</div><!-- //work1 -->
 					<!-- work3 -->
 					<div class="item">
 						<div class="work_item">
@@ -205,7 +218,7 @@
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
-									<a href="<?php echo site_url().'paquete/senior_executive';?>" >SENIOR EXECUTIVE</a>
+									<a href="<?php echo site_url().'paquete/senior_executive';?>">BUSINESS</a>
                                                                         <!--<a href="portfolio-post.html" >SENIOR EXECUTIVE</a>-->
                                                                         <span><b>$1,000.00</b></span>
 								</div>
@@ -222,7 +235,7 @@
 							</div>
 							<div class="work_description">
 								<div class="work_descr_cont">
-									<a href="<?php echo site_url().'paquete/master';?>" >MASTER</a>
+									<a href="<?php echo site_url().'paquete/master';?>">MASTER</a>
                                                                         <span><b>$3,000.00</b></span>
 								</div>
 							</div>

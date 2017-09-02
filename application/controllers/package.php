@@ -35,14 +35,19 @@ class Package extends CI_Controller {
         if($package == "basic"){
             $data['title'] = "BASIC";
             $data['title_content'] = "";
-            $data['content'] = "<b>PRECIO: $125</b><br><b>RECIBES</b><br>+182 BIT<br>+MASTERMIND (Entrenamiento)<br> +EBOOK (libro digital)<br>+BLOCK";
+            $data['content'] = "<b>PRECIO: $125</b><br><b>RECIBES</b><br>+93 PUNTOS<br><b>DESARROLLO PERSONAL</b><br>+¿Qué es MIND HACKING? (E- book)<br> +Introducción al MIND HACKING (Webinar)<br>+AUTO COACHING (Audios de Entrenamiento)<br>+ANCLAS<br>+¿CÓMO ENTENDER?";
             $data['image'] = "static/page_front/white/images/front/packet/basic.jpg";
             
         }elseif($package == "executive"){
             $data['title'] = "EXECUTIVE";
             $data['title_content'] = "ECO - CRUCERO (VIAJE EN YATE)";
-            $data['content'] = "<b>PRECIO: $250</b><br>LA PUNTA, EL CAMOTAL , SAN LORENZO, EL FRONTON, ISLAS CABINZAS, INCLUYE NADO CON LOBOS MARINOS Y SEGURO DE VIAJE<br><br><b>RECIBES</b><br>+375 BIT<br>+MASTERMIND (Entrenamiento)<br> +EBOOK (libro digital)<br>+3 AUDIOS<br>+BLOCK<br>+4 WEBINARS";
+            $data['content'] = "<b>PRECIO: $250</b><br>LA PUNTA, EL CAMOTAL , SAN LORENZO, EL FRONTON, ISLAS CABINZAS, INCLUYE NADO CON LOBOS MARINOS Y SEGURO DE VIAJE<br><b>RECIBES</b><br>+187 PUNTOS<br><b>DESARROLLO PERSONAL</b><br>+TODO EL PAQUETE BASIC<br>+COMO ENTRAR EN LA MENTE DE LOS DEMÁS (E- book)<br>+SECCIONES DE PREGUNTAS CON PÚBLICO EN VIVO  (Webinar)<br>+COMO COMERSE A UN ELEFANTE (Audios)<br>+PUNTOS DE QUIEBRE<br><b>CURSOS FOREX</b><br>+BITSHARE ACADEMY Básico<br>+BITSHARE Signal<br>+BITSHARE Forex New<br>+BITSHARE TV";
             $data['image'] = "static/page_front/white/images/front/packet/executive.jpg";
+        }elseif($package == "investor"){
+            $data['title'] = "INVESTOR";
+            $data['title_content'] = "VIAJE EXCLUSIVO SORPRESA";
+            $data['content'] = "<b>PRECIO: $500</b><br><b>RECIBES</b><br>+375 PUNTOS<br>+MASTERMIND (Entrenamiento)<br> +EBOOK (libro digital)<br>+3 AUDIOS<br>+BLOCK<br>+4 WEBINARS";
+            $data['image'] = "static/page_front/white/images/front/packet/investor.jpg";
         }elseif($package == "senior_executive"){
             $data['title'] = "SENIOR EXECUTIVE";
             $data['title_content'] = "VIAJE AL INTERIOR DE TU PAÍS";

@@ -1,7 +1,6 @@
 /* VALIDACIONES Y FUNCIONABILIDAD DEL MODULO LOGIN
      * ======================================================= */
 $(".btn-primary").on("click",function(){
-    
      username = $("#username").val();
      password = $("#password").val();     
     $.ajax({
