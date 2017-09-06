@@ -25,6 +25,8 @@ class D_activate extends CI_Controller{
                                     customer.parents_id,
                                     customer.created_at,
                                     franchise.price as price,
+                                    franchise.franchise_id,
+                                    franchise.point,
                                     franchise.name as franchise,
                                     customer.status_value",
                         "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
@@ -136,17 +138,18 @@ class D_activate extends CI_Controller{
         if($this->input->is_ajax_request()){  
                 //SELECT CUSTOMER_ID
                 $customer_id = $this->input->post("customer_id");
-                $price = $this->input->post("price");
+                $point = $this->input->post("point");
                 $parents_id = $this->input->post("parents_id");
+                $franchise_id = $this->input->post("franchise_id");
                 
                 //ADD BONUS BIT
-                $this->pay_bit($customer_id,$price);
+//                $this->pay_bit($customer_id,$price);
                 
                 //GET BONUS DIRECT
-                $this->pay_directo($customer_id,$price,$parents_id);
+                $this->pay_directo($customer_id,$point,$parents_id);
                 
                 //GET BONUS BINARY
-                $this->pay_binario($customer_id);
+//                $this->pay_binario($customer_id);
                 
                 //SELECT TOY AND TODAY+76
                 $today = date('Y-m-j');
@@ -240,7 +243,7 @@ class D_activate extends CI_Controller{
                 }
         }  
     
-    public function pay_directo($customer_id,$price,$parents_id){
+    public function pay_directo($customer_id,$point,$parents_id){
                 //GET PERCENT FROM BONUS
                 $params = array(
                         "select" =>"percent",
@@ -251,7 +254,7 @@ class D_activate extends CI_Controller{
                 $percet = $obj_bonus->percent;
                 
                 //CALCULE AMOUNT
-                $amount = ($price  * $percet) / 100;
+                $amount = ($point  * $percet) / 100;
                 
                 //INSERT COMMISSION TABLE
                 if(count($customer_id) > 0){
