@@ -42,6 +42,10 @@
                     $images = "master.png";
                     break;
             }
+            
+//            var_dump("static/backoffice/images/$images");
+//            die();
+            
         ?>
     <div class="section-heading row">
         <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
@@ -64,7 +68,7 @@
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/money.png';?>" alt="total ganado" height="90"/>
+                            <i class="fa fa-btc fa-4x" aria-hidden="true"></i>
                         </div>
                         </div>
                     </div>
@@ -77,7 +81,7 @@
                             </div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url().'static/backoffice/images/one/assets/wallet-icon.png';?>" alt="Balance Por Disponer" height="90"/>
+                            <i class="fa fa-credit-card-alt fa-3x" aria-hidden="true"></i>
                         </div>
                         </div>
                     </div>
@@ -94,7 +98,8 @@
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url()."static/backoffice/images/$images";?>" alt="Paquete Actual"/>
+                            <!--<img src="<?php echo site_url()."static/backoffice/images/$images";?>" alt="Paquete Actual" width="200px"/>-->
+                            <img style="max-width: 120px" src="static/backoffice/images/executive.png" alt="Paquete Actual"/>
                         </div>
                         </div>
                     
