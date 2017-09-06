@@ -1,16 +1,14 @@
 <!-- Main section-->
       <section>
          <!-- Page content-->
-         <div class="content-wrapper">
-            <div class="content-heading">
-              <div class="pull-right text-success">
-                Precio bitcoin: $<?php echo $price_btc;?>
-              </div>
-                              <div class="col-lg-3">
-                <img src="<?php echo site_url().'static/backoffice/images/logo-btc2.png';?>" class="responsive" height="100px;" id="LogoClienteMill">
-              </div>
-              <div class="clearfix"></div>           
+        <div class="section-heading row">
+            <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
+                <h1 class="title text-uppercase">Tablero</h1>
             </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
+                <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
+            </div>
+        </div> 
              
              <div class="row">
                 

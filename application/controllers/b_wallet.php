@@ -80,14 +80,13 @@ class B_wallet extends CI_Controller {
            
            $obj_balance_disponible = number_format($obj_balance_disponible,2);
         
-        //GET PRICE BTC
-            $params_price_btc = array(
-                    "select" =>"",
-                     "where" => "otros_id = 1",
-            );
+            //GET PRICE BTC
+             $params_price_btc = array(
+                                    "select" =>"",
+                                     "where" => "otros_id = 1");
                 
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
-           $price_btc = number_format($obj_otros->precio_btc,8);  
+           $price_btc = "$".number_format($obj_otros->precio_btc,2); 
          
          //GET ALL AMOUNT IN MANDATOTY ACCOUNT  
          $mandatory = $obj_data->mandatory;

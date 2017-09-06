@@ -48,12 +48,11 @@ class B_balance extends CI_Controller {
         $obj_commissions= $this->obj_commissions->search($params);  
         //GET PRICE BTC
             $params_price_btc = array(
-                    "select" =>"",
-                     "where" => "otros_id = 1",
-            );
+                                    "select" =>"",
+                                     "where" => "otros_id = 1");
                 
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
-           $price_btc = number_format($obj_otros->precio_btc,8);  
+           $price_btc = "$".number_format($obj_otros->precio_btc,2); 
            
             
         $this->tmp_backoffice->set("price_btc",$price_btc);      

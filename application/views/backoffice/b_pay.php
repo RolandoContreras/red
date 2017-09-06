@@ -6,13 +6,12 @@ $today = date("Y-m-d");
       <section>
           <div class="section-heading row">
             <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
-                <h1 class="title text-uppercase"><?php echo replace_vocales_voculeshtml("Pagos");?></h1>
+                <h1 class="title text-uppercase">Tablero</h1>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-                <a href="/backend/bonuses/start-up" class="white">until next bonus round.</a>
-                <div id="myCounter" data-countdown="1494244800000"></div>
+                <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
             </div>
-        </div>
+        </div> 
          <!-- Page content-->
          <!--<div class="content-wrapper">-->
             <div class="row">

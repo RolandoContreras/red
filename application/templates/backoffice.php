@@ -169,7 +169,7 @@
                                 </li>
                                 <li><a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Mensajes</a></li>
                                             <li class="divider"></li>
-                                            <li><a href="<?php echo site_url().'login/logout';?>"><i class="fa fa-sign-out fa-lg"></i>Salir</a></li>
+                                            <li><a href="<?php echo site_url().'Login/logout';?>"><i class="fa fa-sign-out fa-lg"></i>Salir</a></li>
                               </ul>
                                           <!-- /user action menu -->
 

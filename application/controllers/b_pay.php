@@ -69,13 +69,12 @@ class B_pay extends CI_Controller {
            
            $obj_balance_red = $obj_data->balance - ($mandatory_account + $normal_account);
            //GET PRICE BTC
-            $params_price_btc = array(
-                    "select" =>"",
-                     "where" => "otros_id = 1",
-            );
+             $params_price_btc = array(
+                                    "select" =>"",
+                                     "where" => "otros_id = 1");
                 
            $obj_otros = $this->obj_otros->get_search_row($params_price_btc); 
-           $price_btc = number_format($obj_otros->precio_btc,8);  
+           $price_btc = "$".number_format($obj_otros->precio_btc,2);  
            
         //SEND DATA OF DATA LIMIT TO PAY USUFRUCT
         $this->tmp_backoffice->set("date_limit_pay",$date_limit_pay);      
