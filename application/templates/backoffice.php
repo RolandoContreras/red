@@ -10,8 +10,7 @@
 <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
 
 <!-- Site favicon -->
-<link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.ico';?>" type="image/x-icon">
-<link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.ico';?>" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/5325b.ico'?>">
 <!-- /site favicon -->
 <!-- Entypo font stylesheet -->
 <link href="<?php echo site_url().'static/backoffice/css/assets/entypo.css';?>" rel="stylesheet">
