@@ -34,12 +34,16 @@
                     $text = "Executive";
                     break;
                 case 13:
-                    $images = "senior_executive.png";
-                    $text = "Senior Executive";
+                    $images = "business.png";
+                    $text = "Business";
                     break;
                 case 14:
                     $text = "Master";
                     $images = "master.png";
+                    break;
+                case 15:
+                    $text = "Investor";
+                    $images = "investor.png";
                     break;
             }
         ?>
@@ -94,8 +98,7 @@
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <!--<img src="<?php echo site_url()."static/backoffice/images/$images";?>" alt="Paquete Actual" width="200px"/>-->
-                            <img style="max-width: 120px" src="static/backoffice/images/executive.png" alt="Paquete Actual"/>
+                            <img style="max-width: 120px" src="<?php echo site_url()."static/backoffice/images/$images";?>" alt="<?php echo $text;?>" width="200px"/>
                         </div>
                         </div>
                     
