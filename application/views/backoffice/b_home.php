@@ -290,18 +290,6 @@
                                 </div>
                             </div>
                         </a>
-                        
-                        
-<!--                        <div class="col-flex box-height box-shadow-inset-coming-soon">
-                        <div class="media">
-                        <div class="media-body media-middle uppercase text-center">
-                        <h3 class="media-heading"><strong>Muy Pronto</strong></h3>
-                        </div>
-                        <div class="media-right media-middle">
-                        </div>
-                        </div>
-                        </div>-->
-
                     </div>
                 </div>
             </div>
@@ -310,56 +298,70 @@
             
             
         <?php if($obj_customer->active == 0){ ?>
-            
             <div class="media-body media-middle">
              <h4 class="media-heading text-uppercase">Selecciona tu Paquete</h4>
              </div>
              <div class="row fix-box-height package-box-fix mt-30">
             <div class="col-lg-12">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
                             <h5 class="media-heading text-uppercase title-small">BASIC</h5>
                             <p class="title">$125.00</p>
-                            <p>182 BIT</p>
+                            <p>93 PUNTOS</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Paquete Basic" height="70" width="80"/>
+                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/basic.png";?>" alt="Paquete Basic"/>
                         </div>
                         </div>
                         <div class="media-body media-middle">
                             <button type="button" onclick="make_pedido('11');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
                             <h5 class="media-heading text-uppercase title-small">EXECUTIVE</h5>
                             <p class="title">$250.00</p>
-                            <p>375 BIT</p>
+                            <p>187 PUNTOS</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Paquete Executive" height="70" width="80"/>
+                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/executive.png";?>" alt="Paquete Executive"/>
                         </div>
                         </div>
                            <div class="media-body media-middle">
                             <button type="button" onclick="make_pedido('12');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
                         </div>                        
-
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="well media media-badges box-height box">
+                            <div class="media-body media-middle">
+                            <h5 class="media-heading text-uppercase title-small">INVESTOR</h5>
+                            <p class="title">$500.00</p>
+                            <p>375 PUNTOS</p>
+                            <div class="mt-10"></div>
+                            </div>
+                        <div class="media-right media-middle">
+                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/investor.png";?>" alt="Paquete Investor"/>
+                        </div>
+                        </div>
+                           <div class="media-body media-middle">
+                            <button type="button" onclick="make_pedido('15');" class="btn btn-sm btn-primary bg-gray">Seleccionar</button>
+                        </div>                        
                     </div>
                     <div class="col-sm-3">
                         <div class="well media media-badges box-height box">
                             <div class="media-body media-middle">
-                            <h5 class="media-heading text-uppercase title-small">SENIOR EXECUTIVE</h5>
+                            <h5 class="media-heading text-uppercase title-small">BUSINESS</h5>
                             <p class="title">$1,000.00</p>
-                            <p>1500 BIT</p>
+                            <p>750 PUNTOS</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url()."static/backoffice/images/senior_executive.png";?>" alt="Paquete Senior Executive" height="70" width="80"/>
+                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/business.png";?>" alt="Paquete Business"/>
                         </div>
                         </div>
                         <div class="media-body media-middle">
@@ -371,11 +373,11 @@
                             <div class="media-body media-middle">
                             <h5 class="media-heading text-uppercase title-small">MASTER</h5>
                             <p class="title">$3,000.00</p>
-                            <p>4500 BIT</p>
+                            <p>2250 PUNTOS</p>
                             <div class="mt-10"></div>
                             </div>
                         <div class="media-right media-middle">
-                            <img src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Paquete Master" height="70" width="80"/>
+                            <img style="max-width: 80px" src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Paquete Master"/>
                         </div>
                         </div>
                         <div class="media-body media-middle">
@@ -440,7 +442,7 @@
                                         <?php break;
                                         case 13: 
                                             $amount = "1,000 USD"?>
-                                            <img src="<?php echo site_url()."static/backoffice/images/senior_executive.png";?>" alt="Cuenta Senior Executive" height="120" width="130"/>
+                                            <img src="<?php echo site_url()."static/backoffice/images/business.png";?>" alt="Cuenta Business" height="120" width="130"/>
                                         <?php break;
                                         case 6: 
                                             $amount = "15 USD"?>
@@ -449,6 +451,10 @@
                                         case 14: 
                                             $amount = "3,000 USD"?>
                                             <img src="<?php echo site_url()."static/backoffice/images/master.png";?>" alt="Cuenta Master" height="120" width="130"/>
+                                        <?php break;
+                                        case 15: 
+                                            $amount = "500 USD"?>
+                                            <img src="<?php echo site_url()."static/backoffice/images/investor.png";?>" alt="Cuenta Investor" height="120" width="130"/>
                                         <?php break;
                                        
                                     }?>
