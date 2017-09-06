@@ -75,8 +75,6 @@
 							</form>
                                                     
 <script src="<?php echo site_url().'static/page_front/js/contact.js';?>"></script>
-<script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
-<link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
 <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>
 						</div>
 					</div><!-- //CONTACT FORM -->

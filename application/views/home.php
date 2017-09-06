@@ -3,7 +3,7 @@
 <?php $this->load->view("head"); ?>
 <body>
 <!-- PRELOADER -->
-<!--<img id="preloader" src="<?php echo site_url().'static/page_front/white/gif/preloader.gif'?>" alt="preloader" />-->
+<img id="preloader" src="<?php echo site_url().'static/page_front/white/gif/preloader.gif'?>" alt="preloader" />
 <!-- //PRELOADER -->
 <div class="preloader_hide">
 	<!-- PAGE -->
@@ -341,8 +341,9 @@
 				</div><!-- RECENT POSTS -->
 			</div><!-- //CONTAINER -->
 		</section><!-- //NEWS -->
+                
 	</div><!-- //PAGE -->
-	
+	<div id="spinner"></div>
 	<!-- CONTACTS -->
 	<section id="contacts">
             

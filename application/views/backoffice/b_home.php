@@ -558,6 +558,6 @@
               
     </div>
     </div>
-      </section>
+   </section>
 <script src="<?php echo site_url().'static/backoffice/js/home.js';?>"></script>
 <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>
