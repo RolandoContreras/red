@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Multiplataforma virtual que brinda distintos servicios e info-productos, a través de las criptodivisas (Bitcoin), que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca.">
 <meta name="keywords" content="bitshare,software,mlm,bitcoin,mercado bursatil,bolsa de valores,forex,inversión,redes de mercadeo,multinivel,binario,dinero,millones,educacion,futuro">
-<title>BITSHARE | Dashboard</title>
+<title>BITSHARE | Back Office</title>
 <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
 
 <!-- Site favicon -->
@@ -139,7 +139,7 @@
                     <li class="has-sub"><a href="<?php echo site_url().'backoffice/comisiones'?>" class="<?php echo $style_comisiones;?>"><em class="fa fa-area-chart"></em><span class="title">Mis Comisiones</span></a></li>
                     <li class="has-sub"><a href="<?php echo site_url().'backoffice/billetera'?>" class="<?php echo $style_billetera;?>"><em class="fa fa-btc"></em><span class="title">Billetera</span></a></li>
                     <li class="has-sub"><a href="<?php echo site_url().'backoffice/pagos'?>" class="<?php echo $style_pagos;?>"><em class="fa fa-university"></em><span class="title">Pagos</span></a></li>
-                    <li class="has-sub"><a href="<?php echo site_url().'login/logout';?>"><em class="fa fa-sign-out"></em><span class="title">Salir</span></a></li>
+                    <li class="has-sub"><a href="<?php echo site_url().'Login/logout';?>"><em class="fa fa-sign-out"></em><span class="title">Salir</span></a></li>
 			
 		</ul>
 		<!-- /main navigation -->		

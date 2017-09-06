@@ -42,10 +42,6 @@
                     $images = "master.png";
                     break;
             }
-            
-//            var_dump("static/backoffice/images/$images");
-//            die();
-            
         ?>
     <div class="section-heading row">
         <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
