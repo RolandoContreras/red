@@ -133,6 +133,7 @@
                     <li class="has-sub"><a href="<?php echo site_url().'backoffice'?>" class="<?php echo $style_active;?>"><em class="icon-star"></em><span class="title"><?php echo $title_active;?></span></a></li>
                     <li class="has-sub"><a href="<?php echo site_url().'backoffice'?>" class="<?php echo $style_inicio;?>"><em class="fa fa-tachometer"></em><span class="title">Dashboard</span></a></li>
                     <li class="has-sub"><a href="<?php echo site_url().'backoffice/misdatos'?>" class="<?php echo $style_misdatos;?>"><em class="fa fa-address-book"></em><span class="title">Mi Perfil</span></a></li>
+                    <li class="has-sub"><a href="http://bitsharesuniversity.com/" class="" target="_blank"><em class="fa fa-graduation-cap" aria-hidden="true"></em><span class="title">University</span></a></li>
                     <li class="has-sub"><a href="#"><em class="fa fa-arrow-up" class=""></em><span class="title">Upgrade</span></a></li>
                     <li class="has-sub"><a href="<?php echo site_url().'backoffice/unilevel'?>" class="<?php echo $style_mired;?>"><em class="fa fa-cubes"></em><span class="title">Unilevel</span></a></li>
                     <li class="has-sub"><a href="<?php echo site_url().'backoffice/centro-informacion'?>"  class="<?php echo $style_information_center;?>"><em class="fa fa-cloud-download"></em><span class="title"><?php echo replace_vocales_voculeshtml("Centro de Información");?></span></a></li>
