@@ -21,7 +21,7 @@
 						<div class="flex_caption1">
                                                     <p class="title1 captionDelay2 FromTop">BITSHARE&nbsp;</p>
 							<p class="title2 captionDelay4 FromTop"> - Inicia</p>
-							<p class="title4 captionDelay7 FromBottom">Primera multiplataforma con servicios y productos en aceptar bitcoin a nivel mundial.</p>
+                                                        <p class="title4 captionDelay7 FromBottom"><?php echo replace_vocales_voculeshtml("Primera multiplataforma  peruana con servicios y productos en los rubros de viaje, desarrollo personal y comercio.");?></p>
 						</div>
 					<li class="slide2">
 						<div class="flex_caption1">
@@ -91,15 +91,15 @@
                                     <div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade in active clearfix" id="tab1">
 							<p class="title"><b>BITSHARE</b> ES</p>
-							<span><?php echo replace_vocales_voculeshtml("Multiplataforma virtual que brinda distintos servicios e info-productos, a través de las criptodivisas (Bitcoin), que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca, de esta forma pudiendo diversificar nuestro activo más importante (clientes) en masa crítica a otras distintas empresas.")?></span>
+							<span><?php echo replace_vocales_voculeshtml("Multiplataforma virtual que brinda distintos servicios e info-productos, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca, de esta forma pudiendo diversificar nuestro activo más importante (clientes) en masa crítica a otras distintas empresas.")?></span>
 						</div>
 						<div class="tab-pane fade clearfix" id="tab2">
                                                     <p class="title"><b><?php echo replace_vocales_voculeshtml("¿Porqué Nosotros?")?></b></p>
-                                                    <span><?php echo replace_vocales_voculeshtml("Somos la primera multiplataforma que trabaja con el bitcoin como método de pago en toda Latinoamérica con profesionales altamente calificados que aseguran la calidad de los productos y  servicio que brindamos,  productos altamente reconsumibles y compañía con una visión mundial.");?></span>
+                                                    <span><?php echo replace_vocales_voculeshtml("Primera multiplataforma latinoamericana con profesionales altamente calificados que aseguran la calidad de los productos y servicio que brindamos, productos altamente reconsumibles y compañía con una visión mundial.");?></span>
 						</div>
 						<div class="tab-pane fade clearfix" id="tab3">
 							<p class="title"><b>Momento</b></p>
-							<span><?php echo replace_vocales_voculeshtml("BITSHARE nace legalmente el 03 de Marzo del 2017 en Perú lo cual indica que toda persona que entre a la multiplaforma en este momento es pionera o fundador y te garantiza un porcentaje mayor de ganancia que una persona que entre en los últimos años.");?></span>
+							<span><?php echo replace_vocales_voculeshtml("BITSHARE nace legalmente el 03 de Marzo del 2017 en Perú lo cual indica que toda persona que entre a la multiplaforma en este momento es pionera o fundador.");?></span>
 						</div>
 						<div class="tab-pane fade clearfix" id="tab4">
 							<p class="title"><b>Fortaleza</b></p>
@@ -111,7 +111,7 @@
 						</div>
 						<div class="tab-pane fade clearfix" id="tab6">
 							<p class="title"><b>Cambios de Vida</b></p>
-                                                        <span><?php echo replace_vocales_voculeshtml("Cada persona que entra a la multiplataforma desde el primer día comienza a tener un cambio de vida, empieza a viajar, entrenarse, capacitarse y prepararse como profesional en los mercados bursátiles.");?></span>
+                                                        <span><?php echo replace_vocales_voculeshtml("Cada persona que entra a la multiplataforma desde el primer día comienza a tener un cambio de vida, empieza a viajar, entrenarse, capacitarse y prepararse como profesional en el mercado bursátil.");?></span>
 						</div>
 					</div>
                                         
@@ -137,7 +137,7 @@
 					
 						<div class="col-lg-7 col-md-7 col-sm-7" data-appear-top-offset="-200" data-animated="fadeInLeft">
                                                     <h2><b><?php echo replace_vocales_voculeshtml("Propósito");?></b> BITSHARE</h2>
-                                                    <p><?php echo replace_vocales_voculeshtml("Nuestra visión es ser la primera marca pionera que abre brecha al mundo para dar a conocer la utilidad real de las criptomedas en un mundo tecnológico dónde reemplacemos la forma cotidiana de compra y venta presencial por una virtual, que en consecuencia, logremos un upgrade integral en la vida de las personas, a trevés de los servicios de nuestra multiplataforma.");?></p>
+                                                    <p><?php echo replace_vocales_voculeshtml("Nuestra visión es ser la primera compañía de productos y servicios que trabaja bajo una plataforma virtual dónde reemplacemos la forma cotidiana de compra y venta presencial por una virtual, que en consecuencia, logremos un upgrade integral en la vida de las personas, a través de los servicios de nuestra multiplataforma.");?></p>
                                                     <p><?php echo replace_vocales_voculeshtml("Nuestra misión es mediante las redes de mercadeo y el constante desarrollo de nuestros productos vamos a poder ayudar a que las personas puedan desarrollar distintas áeras y experiencias con nosotros adaptando como un estilo de vida cotidiano la facilidad del  mundo virtual.");?></p>
                                                     <a class="btn btn-active" href="<?php echo site_url().'registro';?>" ><span data-hover="Si, yo quiero">Registrarme</span></a>
 						</div>
@@ -259,7 +259,7 @@
 						<!-- TESTIMONIAL1 -->
 						<div class="item">
                                                     <div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Qué es BITSHARE?")?></b></div>
-                                                    <div class="testim_content"><?php echo replace_vocales_voculeshtml("“Es una multiplataforma Online que trabaja bajo el sistema de multinivel que brinda servicios e info-productos a través de las criptodivisas (Bitcoin)”."); ?></div>
+                                                    <div class="testim_content"><?php echo replace_vocales_voculeshtml("“Es una multiplataforma Online que trabaja bajo el sistema de multinivel que brinda servicios e info-productos desarrollados en tres rubros: viajes, desarrollo personal y comercio”.”."); ?></div>
 						</div><!-- TESTIMONIAL1 -->
 						
 						<!-- TESTIMONIAL2 -->
@@ -267,32 +267,32 @@
 							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿BITSHARE es una empresa legal?")?></b></div>
                                                         <div class="testim_content"><?php echo replace_vocales_voculeshtml("“Sí, somos una empresa legal registrada en la república del Perú con la siguiente denominación: Razón Social: INVERSIONES BITSHARE S.A.C . Número de Ruc: 20601940087”.");?></div>
 						</div><!-- TESTIMONIAL2 -->
-						
-						<!-- TESTIMONIAL3 -->
-						<div class="item">
-							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Quién es el dueño de BITSHARE?")?></b></div>
-                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("“Silene Carrasco Cruz, una líder de la industria (MLM) con más de 10 años de experiencia con organizaciones de personas en los 5 continentes y resultados alrededor del mundo”.");?></div>
-						</div><!-- TESTIMONIAL3 -->
                                                 <!-- TESTIMONIAL4 -->
 						<div class="item">
-							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Cuándo ingreso a BITSHARE firmo algún contrato?")?></b></div>
-                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("“Sí, cuando una persona ingresa a BITSHARE, firma un contrato de distribución mercantil que será válido durante la permanencia en BITSHARE.”");?></div>
+							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Cómo puedo ser asociado de la empresa?")?></b></div>
+                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("1. Crear una cuenta en la sección de registro. <br/>2. Hacer una compra de cualquiera de los paquetes de BITSHARE.");?></div>
 						</div><!-- TESTIMONIAL4 -->
                                                 <!-- TESTIMONIAL5 -->
 						<div class="item">
-							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Tengo algún límite de personas para invitar a BITSHARE?")?></b></div>
-                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("“No, un distribuidor puede invitar a tantas personas como quiera lo único que se pide es que cumplan con reglas de ética de la empresa.”");?></div>
+							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Hay restricciones de edad para los distribuidores?")?></b></div>
+                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("“Sí, los distribuidores de BITSHARE deben ser sólo personas adultas mayores de 18 años.”");?></div>
 						</div><!-- TESTIMONIAL5 -->
                                                 <!-- TESTIMONIAL6 -->
 						<div class="item">
-							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Qué riesgos tengo si soy parte de BITSHARE?")?></b></div>
-                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("Todo negocio tiene riesgos, Bitshare no es la excepción, pero lo que buscamos es minimizar los riegos con 3 puntos principales: Ser pionero, comercializamos los productos más consumidos del mercado y los cobros se efectúan de forma diaria.");?>
+							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Cómo funciona el sistema de afiliados?")?></b></div>
+                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("El programa de afiliados de la empresa BITSHARE permite obtener ingresos adicionales con un esfuerzo mínimo vendiendo nuestros productos y servicios a otras personas y recomendando.");?>
 </div>
 						</div><!-- TESTIMONIAL6 -->
                                                 <!-- TESTIMONIAL7 -->
 						<div class="item">
-							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Por qué BITSHARE no es una pirámide financiera o un esquema ponzi?")?></b></div>
-                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("BITSHARE no trabaja dinero por dinero, tenemos un producto físico y tangible que vendemos, no es necesario reclutar nuevos miembros para mantener o sostener la compañía; BITSHARE tiene una ganancia por la comercialización de los productos y servicios, todas las personas tienen las mismas oportunidades de ganancia y no tan solo los primeros, para cobrar las comisiones no es necesario traer a nuevos socios a la compañía.");?>
+							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Es posible cambiar información introducida durante el registro?")?></b></div>
+                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("Tenga cuidado al llenar el formulario de registro, compruebe antes de confirmar la información introducida. Algunos datos para fines de seguridad no se pueden cambiar. En una situación de emergencia, póngase en contacto con el soporte a través del correo electrónico support@yourbitshares.com o contáctenos a través de la sección contacto.");?>
+</div>
+						</div><!-- TESTIMONIAL8 -->
+                                                <!-- TESTIMONIAL7 -->
+						<div class="item">
+							<div class="testim_content"><b><?php echo replace_vocales_voculeshtml("¿Cómo puedo encontrar mi enlace de referencia?")?></b></div>
+                                                        <div class="testim_content"><?php echo replace_vocales_voculeshtml("Su enlace de referencia se le asigna al registrarse y está disponible en su cuenta de backoffice (oficina virtual) en la pestaña mi perfil.");?>
 </div>
 						</div><!-- TESTIMONIAL8 -->
 					</div><!-- TESTIMONIALS SLIDER -->

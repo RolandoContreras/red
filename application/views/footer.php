@@ -44,7 +44,7 @@
 				
 				<div class="col-lg-4 col-md-4 col-sm-6 padbot30 foot_about_block">
 					<h4><b>Acerca de Nosotros</h4>
-					<p>Multiplataforma virtual que brinda distintos servicios e info-productos, a través de las criptodivisas (Bitcoin).</p>
+                                        <p><?php echo replace_vocales_voculeshtml("Primera multiplataforma latinoamericana con profesionales altamente calificados que aseguran la calidad de los productos y servicio que brindamos, productos altamente reconsumibles y compañía con una visión mundial.");?></p>
                                         <p>Utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca, de esta forma pudiendo diversificar nuestro activo más importante (clientes) en masa crítica a otras distintas empresas.</p>
 					<!--<p>Our team is intentionally small, eclectic, and skilled; with our in-house expertise, we provide sharp and</p>-->
 					<ul class="social">
