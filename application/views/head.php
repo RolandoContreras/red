@@ -2,9 +2,9 @@
 	<meta charset="utf-8">
 	<title>BITSHARE | Training - Travel - Trade</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Multiplataforma virtual que brinda distintos servicios e info-productos, a través de las criptodivisas (Bitcoin), que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca.">
+	<meta name="description" content="Empresa 100% peruana que brinda distintos servicios e info-productos, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca.">
 	<meta name="author" content="Inversiones Bitshare S.A.C">
-        <meta name="keywords" content="BITSHARE,training,travel,trade,bitcoin,criptocurrency,criptomoneda,inversion,invest,mlm,redes,multinivel,peruano,educacion,entrenamiento,forex,bursatil,viajes">
+        <meta name="keywords" content="BITSHARE,training,travel,trade,bitcoin,criptocurrency,criptomoneda,mlm,redes,multinivel,peruano,educacion,entrenamiento,forex,bursatil,viajes">
         <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/5325b.ico'?>">
 	<!-- CSS -->
         

@@ -62,7 +62,7 @@
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-ss-12 margbot30">
 							<a class="services_item" href="javascript:void(0);" >
 								<p><b>Alianzas</b></p>
-                                                                <span><b>World Travel Vacation</b><?php echo replace_vocales_voculeshtml(" prestigiosa empresa mayorista de viajes turísticos con convenios en los mejores hoteles del mundo y primera empresa en aceptar bitcoin en el Perú.");?></span>
+                                                                <span><b>World Travel Vacation</b><?php echo replace_vocales_voculeshtml("Prestigiosa empresa mayorista de viajes turísticos con convenios en los mejores hoteles y resort del mundo.");?></span>
 							</a>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-ss-12 margbot30">
